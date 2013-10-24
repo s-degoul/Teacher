@@ -1,0 +1,47 @@
+  
+
+/*********************************************************************
+Teacher
+
+Copyright 2013 by the contributors
+
+This file is part of Teacher.
+
+Teacher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Teacher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Teacher.  If not, see <http://www.gnu.org/licenses/>
+*********************************************************************/
+
+
+
+table.patient_list {
+	width: 800px;
+	margin-top: 30px;
+	border: 2px solid #49BFDD;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table.patient_list > thead > tr > th {
+	height: 4em; 
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	background-color: #49BFDD;
+}
+
+table.patient_list > tbody > tr > td {
+	border: 1px solid #000000;
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+	background-color: rgba(73,191,221,0.2); 
+}

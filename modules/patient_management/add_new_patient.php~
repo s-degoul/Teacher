@@ -1,0 +1,11 @@
+<?php
+
+if (isset ($_POST['valid_add_patient'])) {
+	require (MODEL_PATH.'add_patient.php');
+	header('location:.?module=patient_management&action=show_patient_list');
+}
+else {
+	require (VIEW_RELATIVE_PATH.'add_new_patient.php');
+}
+
+?>

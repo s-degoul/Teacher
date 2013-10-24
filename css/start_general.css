@@ -1,0 +1,145 @@
+  
+
+/*********************************************************************
+Teacher
+
+Copyright 2013 by the contributors
+
+This file is part of Teacher.
+
+Teacher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Teacher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Teacher.  If not, see <http://www.gnu.org/licenses/>
+*********************************************************************/
+
+
+
+body {
+	background-color: rgba(208,1,185,0.3);
+}
+
+
+
+header {
+	background-color: rgb(254,254,254);
+	background-image: url('../images/teacher_logo.jpg');
+	background-repeat: no-repeat;
+}
+
+	.header_top a {
+		padding: 0px;
+		margin-left: 0px;
+		border: none;
+	}
+
+	.header_middle {
+		padding-left: 140px;
+		padding-top: 60px;
+		color: rgb(0,0,0);
+	}
+
+	.start_header_high_letters {
+		font-size: 1.2em;
+		font-style: italic;
+		color: rgb(103,34,178);
+	}
+
+	.menu_top {
+		display: none;
+	}
+
+	.items_menu_top {
+		display: none;
+	}
+
+
+
+.middle_page {
+	background-color: rgb(29,23,95);
+}
+
+.menu_left {
+	background-image: none;
+}
+
+.content {
+	color: rgb(254,254,254);
+}
+
+.content_top {
+	display: none;
+}
+
+.start_title {
+	height: 200px;
+	padding-top: 50px;
+	padding-right: 50px;
+	text-align: justify;
+	font-size: 2.5em;
+}
+
+.start_subtitle {
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 30px;
+	padding-top: 50px;
+	width: 570px;
+	font-size: 2em;
+}
+
+.start_subtitle_green {
+	color: rgb(147,208,31);
+}
+
+.choice_user_type {
+	display: inline-block;
+	width: 200px;
+	height: 250px;
+	padding: 10px;
+	margin-bottom: 50px;
+	border-radius: 10px;
+	background-color: rgb(147,208,31);
+	color: rgb(0,0,0);
+}
+
+.choice_user_type p {
+	margin: 0;
+	margin-top: 20px;
+	padding: 0px;
+	font-size: 0.7em;
+}
+
+.choice_user_title {
+	border-bottom: 1px solid rgb(254,254,254);
+	font-size: 1.3em;
+	color: rgb(254,254,254);
+}
+
+.choice_user_type a {
+	display: block;
+	padding: 3px;
+	margin-bottom: 8px;
+	border-radius: 15px;
+	background-color: rgb(224,224,224);
+	font-size: 1.4em;
+	color: rgb(0,0,0);
+}
+
+.start_logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+footer {
+	display: none;
+}

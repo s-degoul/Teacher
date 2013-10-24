@@ -1,0 +1,240 @@
+  
+
+/*********************************************************************
+Teacher
+
+Copyright 2013 by the contributors
+
+This file is part of Teacher.
+
+Teacher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Teacher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Teacher.  If not, see <http://www.gnu.org/licenses/>
+*********************************************************************/
+
+
+﻿
+.info_section_body {
+	width: 750px;
+}
+
+.info_picto {
+	height: 65px;
+	line-height: 65px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #8F127D;
+}
+
+	.info_picto > img {
+		vertical-align: middle;
+	}
+
+.info_conseils {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+	.info_conseil {
+		text-align: justify;
+		font-size: 13px;
+		width: 145px;
+		margin: 0 13px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.info_conseil img {
+		margin-left: 62px;
+		margin-right: 52px;
+		text-align: center;
+	}
+	
+.info_conseils_spray {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+	
+	.info_conseil_spray {
+		text-align: center;
+		font-size: 9px;
+		width: 145px;
+		margin: 0 15px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.info_conseil_spray4 {
+		font-size: 15px;
+		text-align: left;
+		margin: 0 15px;
+		width: 145px;
+		vertical-align: middle;
+		display: inline-block
+	}
+
+.info_text3 {
+	font-size: 15px;
+	text-align: justify;
+	margin-bottom: 40px
+}
+
+	.info_text3_img {
+		padding-right: 10px;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+	.info_text3_text {
+		width: 700px;
+		display: inline-block;
+	}
+	
+
+.educ_diag_info_go {
+	font-size: 29px;
+	font-weight: bold;
+	color: #8F147C;
+	text-align: center;
+	text-decoration: none;
+}
+
+.educ_diag_info_go:hover {
+	border : underline;
+}
+
+
+/*QUESTIONNAIRE HISTOIRE DE LA MALADIE*/
+
+.educ_diag_sampletitle {
+	font-size: 18px;
+	font-weight: bold;
+	color: #8F127D;
+}
+
+.educ_diag_logoimg {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 100px;
+	margin-right: 5px;
+}
+
+.educ_diag_question {
+	display: inline-block;
+}
+
+.educ_diag_answer {
+	margin-left: 150px;
+	display: block;
+}
+
+.educ_diag_objimg {
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+.educ_diag_objectivetitle {
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	color: #8F127D;
+	width: 640px;
+	padding-bottom: 10px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #8F127D;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #8F127D;
+	border-radius: 0px 0px 10px 0px;
+}
+
+.educ_diag_othertext {
+	font-size: 11px;
+	font-style: italic;
+	margin-left: 130px;
+}
+
+.educ_diag_othertext2 {
+	margin-left: 130px;
+}
+
+.educ_diag_othertext3 {
+	font-size: 11px;
+	font-style: italic;
+	margin-left: 10px;
+}
+
+.educ_diag_othertext4 {
+	margin-left: 130px;
+	font-size: 12px;
+	color: #8F127D;
+}
+
+.educ_diag_otherimg {
+	margin-top: 50px;
+	margin-right: 15px;
+}
+
+	.educ_diag_otherimg_list {
+	text-align: center;
+	font-size: 9px;
+	margin-top: 10px;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	}
+
+.educ_diag_answerobj {
+	font-size: 12px;
+	padding-top: 10px;
+	padding-left: 150px;
+	display: inline-block;
+}
+
+.educ_diag_answerimg {
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	font-size: 9px;
+	padding-left: 180px;
+}
+
+
+
+.educ_diag_q10 {
+	display: inline-block;
+}
+
+.educ_diag_q10_img {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 0px;
+	margin-right: 5px;
+}
+
+.educ_diag_logoimg_q10 {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 100px;
+	margin-right: 5px;
+}
+
+.educ_diag_question_q10 {
+	display: inline-block;
+}
+
+.educ_diag_q10_imgright {
+	display: inline-block;
+	float: right;
+}

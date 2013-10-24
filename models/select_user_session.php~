@@ -1,0 +1,30 @@
+<?php
+
+try {
+	$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
+
+
+	$request = $db -> prepare (
+		'SELECT id_user, user_surname, language_code, language_name
+		FROM table_user as U
+			INNER JOIN table_language as L
+			ON U.id_language = L.id_language
+		WHERE user_login = :user_login and user_password = :user_password'
+		);
+
+	$request -> execute (array (
+		'user_login' => $_POST['user_login'],
+		'user_password' => $_POST['user_password']
+	));
+
+	$request -> setFetchMode(PDO::FETCH_ASSOC);
+
+	$user = $request -> fetch();
+
+	$request -> closeCursor();
+}
+catch (Exception $e) {
+	die ('Erreur : '.$e->getMessage());
+}
+
+?>

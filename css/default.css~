@@ -1,0 +1,357 @@
+
+﻿body {
+	width: 1024px;
+	margin: auto;
+	padding:0;
+	font-family: Arial;
+}
+
+/*********************************************************************
+Teacher
+
+Copyright 2013 by the contributors
+
+This file is part of Teacher.
+
+Teacher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Teacher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Teacher.  If not, see <http://www.gnu.org/licenses/>
+*********************************************************************/
+
+
+/*
+a {
+	color: #00FF00;
+	text-decoration: underline;
+}*/
+
+header {
+	background-color: rgb(254,254,254);
+	background-image: url('../images/header_doctor.png');
+/*	background-image: url('../images/header_default.jpg');*/
+	background-repeat: no-repeat;
+/*	background-color: silver;*/
+	height: 200px;
+	margin: 0;
+	padding: 0;
+}
+
+
+	.header_left {
+		width: 100px;
+		display: inline-block;
+	}
+
+	.header_right {
+		width: 919px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+		.header_top {
+			height: 20px;
+			text-align: right;
+			padding-right: 10px;
+			padding-top: 5px;
+			font-size: 0.8em;
+			color: rgb(254,254,254);
+		}
+		
+			.header_top a {
+				padding: 2px;
+				margin-left: 30px;
+				text-decoration: none;
+				color: rgb(254,254,254);
+				border: 1px solid rgb(254,254,254);
+			}
+
+		.header_middle {
+			height: 120px;
+			padding-top: 10px;
+			text-align: center;
+			color: rgb(254,254,254);
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+
+	.menu_top {
+		height: 50px;
+		padding-left: 50px;
+	}
+
+	.items_menu_top {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+	}
+
+	.item_menu_top_active,
+	.item_menu_top_inactive {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 10px;
+	}
+
+	.item_menu_top_active a,
+	.item_menu_top_inactive a {
+		border-radius: 5px;
+		padding: 5px;
+		text-decoration: none;
+	}
+	
+	.item_menu_top_active a {
+		color: #FFFFFF;
+		background-color: #49BFDD;
+	}
+
+	.item_menu_top_inactive a {
+		color: #49BFDD;
+	}
+	
+	.submenu_top {
+		display: none;
+		max-width: 140px;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		border-radius: 10px;
+		font-size: 0.8em;
+		list-style-type: none;
+		background-color: #49BFDD;
+	}
+	
+	.items_menu_top li:hover > .submenu_top {
+		display: block;
+	}
+	
+	.submenu_top li {
+		padding: 5px;
+		border-top: 3px solid #FFFFFF;
+	}
+	
+	.submenu_top a {
+		padding: 0;
+		color: #FFFFFF;
+	}
+
+
+
+.middle_page {
+	margin: 0px;
+	margin-top: -19px;
+	padding: 0px;
+}
+
+	.menu_left {
+		/*background-image: url(../images/teacher_logo.jpg);*/
+		background-image: none;
+		background-repeat: no-repeat;
+		display: inline-block;
+		padding: 0;
+		margin: 0px;
+		min-height: 450px;
+		width: 140px;
+		color: rgb(254,254,254);
+	}
+		.menu_left p {
+			padding: 0px;	
+		}
+		
+		.menu_left a {
+			margin-bottom: 10px;
+			color: rgb(254,254,254);
+		}
+		
+		.menu_left a:hover {
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		.menu_left_title {
+			padding: 3px;
+			margin-bottom: 10px;
+			border-right: 2px solid rgb(254,254,254);
+			border-bottom: 2px solid rgb(254,254,254);
+			border-left: 2px solid #49BFDD;
+			border-top: 2px solid #49BFDD; /*;*/
+			border-radius: 10px 0px 10px 0px;
+			font-size: 1.1em;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		.menu_left_title:hover {
+			border: 2px solid rgb(254,254,254);
+			border-radius: 10px 0px 10px 0px;
+		}
+		
+		.menu_left_title a {
+			text-decoration: none;
+		}
+		
+		.menu_left_title a:hover {
+			margin-bottom: 0px;
+			font-weight: none;
+			text-decoration: none;
+		}
+
+		.menu_left_subtitle {
+			margin-top: 30px;
+			padding-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		.menu_left_close {
+			text-align: center;
+			font-size: 0.7em;
+		}
+
+		.menu_left ul li {
+	/*		color: rgb(254,254,254);*/
+		}
+		
+		.list_no_point {
+			list-style-image:none;
+			list-style-type:none;
+		}
+
+	section {
+		display: inline-block;
+		vertical-align: top;
+		word-wrap: break-word;
+		margin: 0px;
+		width: 850px; /*824px;*/
+		padding-left: 19px;
+		padding-top : 0px;
+		padding-right: 0px;
+
+	}
+
+
+		.content_top {
+			margin: 10px;
+		}
+			
+			.message_error {
+				padding: 5px;
+				background-color: rgb(250,250,200);
+				font-size: 1.2em;
+				font-weight: bold;
+				color: rgb(255,0,0);
+			}
+			
+				.message_error em {
+					font-style: italic;
+				}
+
+			.message_info {
+				padding: 5px;
+				background-color: rgb(250,250,200);
+				color: rgb(0,150,50);
+			}
+			
+			.message_warning {
+				padding: 5px;
+				background-color: rgb(250,250,200);
+				font-size: 1.2em;
+				font-weight: bold;
+				color: rgb(255,150,0);
+			}
+		
+		.content {
+	/*		height: 550px;
+			overflow: auto;*/
+		}
+
+			section  h1 {
+				margin-top: 20px;
+				margin-bottom: 40px;
+				text-align: center;
+				color: #FFFFFF;
+				background-color: #49BFDD;
+			}
+
+			section h2 {
+				color: #49BFDD;
+				text-decoration: none;
+			}
+
+			section h2 a {
+				color: #49BFDD;
+				text-decoration: underline;
+			}
+
+
+footer {
+	background-image: url(../images/footer.jpg);
+	background-repeat: repeat-x;
+	margin: 0;
+	padding-top:50px;
+	font-size: x-small;
+	text-align: center;
+}
+
+	.links_footer {
+		display: inline-block;
+		width: 300px;
+	}
+
+
+
+/*quels styles généraux*/
+
+.link_last {
+	display: inline-block;
+	width: 400px;
+}
+
+.link_next {
+	display: inline-block;
+	width: 400px;
+	text-align: right;
+}
+
+ul.list_choice li {
+	height: 2em;
+	list-style-type: square;
+	font-weight: bold;
+	color: rgb(64,191,221);	
+}
+
+ul.list_choice li a {
+	color: rgb(64,191,221);	
+}
+
+ul.list_choice li a:hover {
+	color: rgb(64,191,221);
+	background-color: rgba(64,191,221,0.2); /*rouge : rgba(192,0,0, 0.3)*/
+	border: 1px solid rgb(64,191,221);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.nav_target {
+	display: inline-block;
+	height: 40px;
+}
+
+.nav_target > a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 50px;
+	padding-left: 50px;
+	background-color: silver;
+	border: 1px solid black;
+	color: #FFFFFF;
+	text-decoration: none;
+}

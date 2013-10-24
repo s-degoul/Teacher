@@ -1,0 +1,28 @@
+<?php
+
+try {
+	if (!isset ($db))	
+		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
+
+	$code_lang_format = str_replace('-', '_', $_SESSION['lang']);
+
+	$request = $db -> query (
+		'SELECT id_language, language_code, language_name
+		FROM table_language'
+		);
+
+	$list_language = array();
+
+	$request -> setFetchMode(PDO::FETCH_ASSOC);
+
+	while ($one_lang = $request -> fetch()) {
+		$list_language[] = $one_lang;
+	}
+
+	$request -> closeCursor();
+}
+catch (Exception $e) {
+	die ('Erreur : '.$e->getMessage());
+}
+	
+?>

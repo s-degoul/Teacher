@@ -1,0 +1,16 @@
+#AuthUserFile /home/s-degoul/Site_Internet/test/Teacher/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName "Accès restreint"
+#AuthType Basic
+#<Limit GET POST>
+#require valid-user
+#</limit>
+#Order deny,allow
+#Deny from all
+
+Options -Indexes
+
+<Files functions.php>
+Deny from all
+</Files>
+

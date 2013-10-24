@@ -1,0 +1,144 @@
+<?php
+	$title_view = 'Mon profil';
+	$style[] = 'user_profile';
+?>
+
+<form action='' method="post">
+<div class="user_form">
+	<div class="user_main_1">
+			<h3>Accessibilité</h3>
+			<ul class="list_no_point">
+				<li>Identifiant : <?php echo $user['user_login']; ?></li> 
+				
+				<!-- identifiant login non modifiable-->
+			
+			</ul>
+	</div>
+	
+	<div class="user_main_1">
+		<h3>Identification</h3>
+		<ul class="list_no_point">
+			<li><label for="user_title">Titre : </label>
+				<select name='user_title' id="user_title">
+<?php
+	$list_title = array (
+			'' => '',
+			'M.' => 'M.',
+			'Mme.' => 'Mme.',
+			'Dr.' => 'Dr.',
+			'Pr.' => 'Pr.'
+			);
+	foreach ($list_title as $value_title => $name_title) {
+		if ($value_title == $user['title'])		
+			$selected = 'selected';
+		else
+			$selected = '';
+
+		echo '					<option value=\''.$value_title.'\' '.$selected.'>'.$name_title.'</option>'."\n";
+	}
+?>
+				</select>
+			</li>
+			<li><label for="user_surname">Nom : </label>
+				<input type="text" name='user_surname' id="user_surname" value="<?php echo $_SESSION['user_surname']; ?>"/>
+			</li>
+			<li><label for="user_name">Prénom : </label>
+				<input type="text" name='user_firstname' id="user_name" value="<?php echo $user['user_firstname']; ?>"/>
+			</li>
+		</ul>
+	</div>
+	<div class="user_main_1">
+		<h3>Contacts</h3>
+		<ul class="list_no_point">
+			<li><label for="user_phone">Téléphone : </label>
+				<input type="text" name='user_phone' id="user_phone" value="<?php echo $user['user_phone']; ?>"/>
+			</li>
+			<li><label for="user_mail">E-mail : </label>
+				<input size=30 type="text" name='user_mail' id="user_mail" value="<?php echo $user['user_mail']; ?>"/>
+			</li>
+			<li><label for="user_street">Rue (et numéro) : </label>
+					<input size=30 type="text" name='user_street' id="user_street" value="<?php echo $user['user_street']; ?>"/>
+			</li>
+			<li><label for="user_postal_code">Code postal : </label>
+					<input size=30 type="text" name='user_postal_code' id="user_postal_code" value="<?php echo $user['user_postal_code']; ?>"/>
+			</li>
+			<li><label for="user_city">Ville : </label>
+				<input size=40 type='text' name='user_city' id='user_city' value="<?php echo $user['user_city']; ?>" />
+			</li>
+
+			<li><label for="id_country">Pays : </label>
+				<select name='id_country' id="id_country">
+
+
+<?php
+	foreach ($list_country as $key => $feature_country) {
+		if ($feature_country['id_country'] == $user['id_country'])		
+			$selected = 'selected';
+		else
+			$selected = '';
+
+		echo '					<option value=\''.$feature_country['id_country'].'\' '.$selected.'>'
+							.$feature_country['country_name'].'</option>'."\n";
+	}
+?>
+
+				</select>
+			</li>
+
+
+			<li><label for="id_language">Langue : </label>
+				<select name='id_language' id="id_language">
+
+
+<?php
+	foreach ($list_language as $key => $feature_lang) {
+		if ($feature_lang['id_language'] == $user['id_language'])		
+			$selected = 'selected';
+		else
+			$selected = '';
+
+		echo '					<option value=\''.$feature_lang['id_language'].'\' '.$selected.'>'
+							.$feature_lang['language_name'].'</option>'."\n";
+	}
+?>
+
+				</select>
+			</li>
+		</ul>
+	</div>
+	<div class="user_main_1">
+		<h3>Activités</h3>
+		<ul class="list_no_point">
+			<li><label for="id_speciality">Spécialité médicale : </label>
+				<select name='id_speciality' id="id_speciality">
+
+
+<?php
+	foreach ($list_speciality as $key => $feature_spe) {
+		if ($feature_spe['id_speciality'] == $user['id_speciality'])		
+			$selected = 'selected';
+		else
+			$selected = '';
+
+		echo '					<option value=\''.$feature_spe['id_speciality'].'\' '.$selected.'>'
+							.$feature_spe['speciality_name'].'</option>'."\n";
+	}
+?>
+
+				</select>
+			</li>
+
+			<li><label for="user_practice">Mode d'exercice : </label>
+				<input size=25 type="text" name='user_practice' id="user_practice" value="<?php echo $user['user_practice']; ?>"/>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="button">
+	<input type="submit" name='valid_modif_profile' value='Valider' />
+</div>
+
+
+</form>
+

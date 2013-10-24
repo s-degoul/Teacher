@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Teacher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-30 18:56+0100\n"
+"PO-Revision-Date: 2013-07-30 18:58+0100\n"
+"Last-Translator: Degoul Samuel <samuel.degoul@hotmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/s-degoul/Site_Internet/test/Teacher\n"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/footer.php:4
+msgid "Copyright Robberecht - Tous droits r&eacute;serv&eacute;s, surtout les miens"
+msgstr "Copyright Robberecht - all rights reserved"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/footer.php:5
+msgid "Me contacter !"
+msgstr "Contact me !"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:25
+msgid "Bonjour, Docteur "
+msgstr "Helle, Doctor "
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:41
+msgid "Accueil"
+msgstr "Start"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:42
+msgid "Mon profil"
+msgstr "My profile"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:43
+msgid "Mes patients"
+msgstr "My patients"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:44
+msgid "Objectifs th&eacute;rapeutiques"
+msgstr "Therapeutic objectives"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:45
+msgid "D&eacute;connexion"
+msgstr "Disconnection"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/header.php:49
+msgid "Connexion"
+msgstr "Connection"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/menu_left.php:13
+msgid "Cycle apprentissage"
+msgstr "Educationnal cycle"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/lib/gettext/examples/pigs_dropin.php:77
+msgid ""
+"This is how the story goes.\n"
+"\n"
+msgstr ""
+

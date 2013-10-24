@@ -1,0 +1,29 @@
+<?php
+
+try {
+	if (!isset ($db))	
+		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
+
+	$request = $db -> prepare (
+			'INSERT INTO table_patient (id_user, patient_surname, patient_firstname, patient_date_birth,
+				patient_sex)
+			VALUES (:id_user, :patient_surname, :patient_firstname, :patient_date_birth,
+				:patient_sex)';
+		);
+
+	$request -> execute (array (
+					'id_user' => $_SESSION['id_user'],
+					'patient_surname' => $_POST['patient_surname'],
+					'patient_firstname' => $_POST['patient_firstname'],
+					'patient_date_birth' => $_POST['patient_date_birth'],
+					'patient_sex' => $_POST['patient_sex']
+				)
+			);
+
+	$request -> closeCursor();
+}
+catch (Exception $e) {
+	die ('Erreur : '.$e->getMessage());
+}
+	
+?>

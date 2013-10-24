@@ -1,0 +1,4 @@
+header {
+	background-image: url('../images/menu_left_bg.jpg');
+	height: 200px;
+}

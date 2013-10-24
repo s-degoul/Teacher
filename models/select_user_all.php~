@@ -1,0 +1,36 @@
+<?php
+
+try {
+	if (!isset ($db))
+		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
+
+//	$code_lang_format = str_replace('-', '_', $_SESSION['lang']);
+	$code_lang_format = $_SESSION['lang']);
+
+	$request = $db -> prepare (
+		'SELECT user_login, user_firstname, user_title, user_validation_Essential,
+			user_street, user_postal_code, user_city, user_phone, user_mail,
+			user_practice, country_name, U.id_country,
+			speciality_name_'.$code_lang_format.' as speciality_name,
+			U.id_speciality, id_language
+		FROM table_user as U
+			INNER JOIN table_country as C ON U.id_country = C.id_country
+			INNER JOIN table_speciality as S ON U.id_speciality = S.id_speciality
+		WHERE id_user = :id_user'
+		);
+
+	$request -> execute (array (
+		'id_user' => $_SESSION['id_user']
+	));
+
+	$request -> setFetchMode(PDO::FETCH_ASSOC);
+
+	$user = $request -> fetch();
+
+	$request -> closeCursor();
+}
+catch (Exception $e) {
+	die ('Erreur : '.$e->getMessage());
+}
+
+?>

@@ -1,0 +1,158 @@
+  
+
+/*********************************************************************
+Teacher
+
+Copyright 2013 by the contributors
+
+This file is part of Teacher.
+
+Teacher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Teacher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Teacher.  If not, see <http://www.gnu.org/licenses/>
+*********************************************************************/
+
+
+
+.synopsis {
+	width: 830px;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(73,191,221,0.3);
+}
+
+.synopsis h1 {
+	margin: 0;
+	margin-bottom: 30px;
+	color: rgb(254,254,254);
+	background-color: rgb(73,191,221);
+}
+
+.synopsis_user_stage {
+	width: 400px;
+	margin: auto;
+	padding: 10px;
+	background-color: rgb(254,254,254);
+	color: rgb(0,0,0);
+}
+
+.synopsis_row_angle {
+	display: inline-block;
+	max-height: 0px;
+	position: relative;
+	top: -95px;
+	left: 220px;
+}
+
+.synopsis_img_row_angle {
+	position: absolute;
+}
+
+.synopsis_user_row {
+	margin: 0;
+	padding: 0;
+}
+
+.synopsis_patient {
+	height: 740px;
+	margin: 0;
+	padding: 0;
+}
+
+	.synopsis_patient_note {
+		margin: 0;
+		margin-bottom: 10px;
+		/*text-align: justify;*/
+		padding: 0;
+		font-size: 0.8em;
+	}
+
+	.synopsis_patient_show {
+		display: inline-block;
+		width: 580px;
+		height: 95%;
+		margin: 5px;
+		padding: 5px;
+		background-color: rgba(8,227,0,0.5);
+	}
+
+	.synopsis_patient_other {
+		display: inline-block;
+		vertical-align: top;
+		height: 95%;
+		margin: 5px;
+		padding: 5px;
+		background-color: rgba(8,227,0,0.5);
+	}
+
+	.synopsis_patient_title {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+	.synopsis_patient_stage {
+		width: 300px;
+		margin: auto;
+		margin-bottom: 5px;
+		border-radius: 5px;
+		background-color: rgb(254,254,254);
+	}
+
+	.synopsis_patient_row {
+		margin-top: 5px;
+	}
+
+	.synopsis_patient_cycle_stage_top {
+		display: inline-block;
+		vertical-align: top;
+		width: 150px;
+		margin-left: 20px;
+		margin-right: 20px;
+		border-radius: 5px;
+		background-color: rgb(254,254,254);
+	}
+
+	.synopsis_patient_cycle_stage_bottom {
+		display: inline-block;
+		width: 150px;
+		margin-left: 20px;
+		margin-right: 20px;
+		border-radius: 5px;
+		background-color: rgb(254,254,254);
+	}
+
+	.synopsis_patient_cycle_stage_left {
+		display: inline-block;
+		vertical-align: middle;
+		width: 150px;
+		margin-right: 170x;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		background-color: rgb(254,254,254);
+	}
+
+	.synopsis_patient_cycle_stage_right {
+		display: inline-block;
+		vertical-align: top;
+		width: 150px;
+		margin-left: 170px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		background-color: rgb(254,254,254);
+	}
+
+	.synopsis_patient_cycle_row {
+		display: inline-block;
+	}

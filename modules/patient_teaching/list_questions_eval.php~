@@ -1,0 +1,144 @@
+<?php
+
+$list_questions = array (
+					1 => array (
+							'instruction' => _("Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés,
+												demandez lui de désigner les signes qu’il ressent en cas de crise d’asthme et les signes avant la crise."),
+							'validation_conditions' => _("L’objectif 1 est validé s’il choisit au moins 2 images correspondant à ses signes propres de crise,
+															qui ont été identifiés au moment du Diagnostic Educatif ou de la séance sur l’objectif 1"),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'valid' => 2
+													)
+							),
+					2 => array (
+							'instruction' => _("Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés,
+												demandez lui de désigner les signes qu’il ressent en cas de crise grave et ce qu’il doit faire en ce cas"),
+							'question_answer' => array (
+												_("Difficulté à parler, gêne respiratoire importante, traitement bronchodilatateur inefficace, DEP restant en-dessous de la valeur-alerte grave"),
+												_("Prévenir l’entourage qu’il faut consulter immédiatement un médecin ou appeler le service médical d’urgence")
+												),
+							'validation_conditions' => _("L’objectif 2 validé s’il dit 1 des 4 signes énoncés ci-dessus
+														et qu’il prévient immédiatement quelqu’un quand il les ressent"),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'valid' => 2
+													)
+							),
+					'3_a' => array (
+							'title' => '';
+							'real_life_situation' => _("tu es à la maison et tu te rends compte que tu commences une crise d’asthme. Que fais-tu ?
+														A chaque étape de la réponse on peut solliciter l’enfant en lui disant :
+														« Et si ça ne passe pas,  que dois-tu faire ?»"),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'valid' => 2
+													)
+							),
+					'3_b' => array (
+							'title' => _("Le plan d'action personnalisé");
+							'question_answer' => array (
+													_("As-tu un document qui s’appelle « Plan d’Action Personnalisé » et qui explique ce qu’il faut faire en cas de gêne respiratoire
+													ou de crise d’asthme débutante? Où se trouve-t-il ?") => 0
+													),
+							'validation_conditions' => _("L’objectif 3b « plan d’action » est validé si l’enfant sait où il se trouve"),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'valid' => 2
+													)
+							),
+					4 => array (
+							'instruction' => _("Montrez la planche « comprendre son corps »"),
+							'answers' => array (
+												_("Demandez à l’enfant s’il a une idée de l’endroit du corps qui est malade quand on fait de l’asthme")
+													=> _("« bronches », et si répond uniquement « poumons » lui faire préciser
+														« Sais-tu quel endroit exactement dans les poumons ? »"),
+												_("Comment est la bronche en cas de crise ?")
+													=> _("« resserrée » ( spasmée)"),
+												_("Comment est ta bronche en dehors des crises?")
+													=> _("« Gonflée » (enflammée)")
+											),
+							'validation_conditions' => _("- validé si répond aux 3 questions (maladie des bronches / bronche serrée en cas de crise / bronche inflammatoire en dehors des crises)<br/>
+											- partiellement validé si 1 ou 2 réponses exactes<br/>
+											- non validé si ne sait pas que l’asthme est une maladie des bronches"),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							),
+					5 => array (
+							'instruction' => _(""),
+							'answers' => array (
+												'no_q' => _("")
+											),
+							'validation_conditions' => _(""),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							),
+					6 => array (
+							'instruction' => _(""),
+							'answers' => array (
+												'no_q' => _("")
+											),
+							'validation_conditions' => _(""),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							),
+					7 => array (
+							'instruction' => _(""),
+							'answers' => array (
+												'no_q' => _("")
+											),
+							'validation_conditions' => _(""),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							),
+					8 => array (
+							'instruction' => _(""),
+							'answers' => array (
+												'no_q' => _("")
+											),
+							'validation_conditions' => _(""),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							),
+					9 => array (
+							'instruction' => _(""),
+							'answers' => array (
+												'no_q' => _("")
+											),
+							'validation_conditions' => _(""),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							),
+					10 => array (
+							'instruction' => _(""),
+							'answers' => array (
+												'no_q' => _("")
+											),
+							'validation_conditions' => _(""),
+							'validation_items' => array (
+													'non_valid' => 0,
+													'partially_valid' => 'NA',
+													'valid' => 2
+													)
+							)
+				)
+
+?>

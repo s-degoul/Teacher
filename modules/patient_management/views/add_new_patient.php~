@@ -1,0 +1,19 @@
+<?php
+$title_view = 'Enregistrer un nouveau patient';
+
+?>
+
+<h1>Inscrire un nouveau patient</h1>
+<form method='post' action=''>
+	<p><label for='patient_surname'>Nom : </label><input type='text' name='patient_surname' id='patient_surname' value='' /></p>
+	<p><label for='patient_firstname'>Prénom : </label><input type='text' name='patient_firstname' id='patient_firstname' value='' /></p>
+	<p><label for='patient_date_birth'>Age : </label><input type='text' name='patient_date_birth' id='patient_date_birth' value='' /></p>
+	<p><label for='patient_sex'>Sexe : </label>
+		<select name='patient_sex' id='patient_sex'>
+			<option value=''>&nbsp;</option>
+			<option value='m'>masculin</option>
+			<option value='f'>féminin</option>
+		</select>
+	</p>
+	<p><input type=submit name='valid_add_patient' value='valider'/></p>
+</form>

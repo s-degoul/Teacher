@@ -1,0 +1,149 @@
+﻿body {
+	width: 1024px;
+	margin: auto;
+	font-family: Arial;
+}
+
+header {
+	background-image: url('../images/header_doctor.gif');
+	height: 200px;
+}
+
+	#header_top {
+    height: 40px;
+    color: #FFFFFF;
+    text-align: right;
+    padding-right: 10px;
+}
+
+    #header_middle {
+		height: 100px;
+		color: white;
+	}
+
+	#header_logo_left {
+		width: 150px;
+		display: inline-block;
+        text-align:center;
+   	}
+
+	#header_title {
+    display: inline-block;
+    width: 650px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+	#menu_top {
+		height: 50px;
+        padding-left: 50px;
+	}
+
+	#item_menu_top {
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+.menu_left {
+	background-image: url(../images/menu_left_bg.jpg);
+	background-repeat: no-repeat;
+    display: inline-block;
+    padding-top: 130px;
+    padding-left: 5px;
+    height: 450px;
+	width: 160px;
+	color: white
+}
+
+	.list_no_point {
+		list-style-image:none;
+		list-style-type:none;
+	}
+
+
+/* nuveau CSS*/
+
+section {
+	display: inline-block;
+	vertical-align: top;
+	word-wrap: break-word;
+	height: 700px;
+	width: 845px;
+	padding-left: 0px;
+	padding-top : 20px;
+	overflow: auto;
+}
+	
+	.user_form {
+	display: inline-block;
+	width: 500px;
+	}
+	
+	.button {
+	font-size: large;
+	padding-left: 190px;
+	margin-left: .5em;
+	}
+
+	.user_main_left {
+	display: inline-block;
+	width: 350px;
+	}
+	
+		.user_main_1 {
+			background-color: #D9E9F7;
+			margin-right: 15px;
+			margin-bottom: 15px;
+			border-style: solid;
+			border-width: 2px;
+			border-color: grey;
+			border-radius: 10px;
+			padding: 5px;	
+		}
+		
+		.user_main_1 > h3 {
+			text-align: center;
+			font-weight: bold;
+			font-size: normal;
+			padding: 1px;
+			margin: auto;
+		}
+
+	.user_main_right {
+		display:inline-block;
+		vertical-align: top;
+		width: 300px;
+	}
+	
+	.user_main_bottom {
+		display:block;
+	}
+	
+	.item_user {
+		display:inline-block;
+		text-align: center;
+		background-color: silver;
+		margin: 10px;
+		border-radius: 5px;
+		padding: 8px;
+	}
+	.item_user > a {
+		color: black;
+		font-weight: bold;
+		text-decoration: none;		
+	}
+
+
+
+
+
+
+
+footer {
+	background-image: url(../images/footer.jpg);
+	background-repeat: no-repeat;
+	padding-top:50px;
+	font-size: x-small;
+	text-align: center;
+}

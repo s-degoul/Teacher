@@ -1,0 +1,3322 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Teacher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-29 07:32+0100\n"
+"PO-Revision-Date: 2013-08-29 07:47+0100\n"
+"Last-Translator: Degoul Samuel <samuel.degoul@hotmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: /home/s-degoul/Site_Internet/test/Teacher\n"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/index.php:15
+msgid "TEACHER"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/index.php:60
+msgid "Erreur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/index.php:64
+msgid "Avertissement"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/index.php:68
+msgid "Information"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/functions.php:21
+#: /home/s-degoul/Site_Internet/test/Teacher/functions.php:28
+msgid "&agrave"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/functions.php:22
+#: /home/s-degoul/Site_Internet/test/Teacher/functions.php:29
+msgid "h"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/functions.php:22
+msgid "min"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/functions.php:22
+msgid "s"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/footer.php:7
+msgid "Contacter l'administrateur du site"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/footer.php:8
+msgid "Licence"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/header.php:29
+msgid "Bonjour"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/header.php:30
+msgid "se déconnecter"
+msgstr "disconnect"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:7
+msgid "Fermer ce dossier patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:13
+#, php-format
+msgid "%d an"
+msgid_plural "%d ans"
+msgstr[0] ""
+msgstr[1] ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:14
+#, php-format
+msgid "%d mois"
+msgid_plural "%d mois"
+msgstr[0] ""
+msgstr[1] ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:16
+msgid "Cycle d'apprentissage"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:17
+msgid "Objectifs restant à travailler actuellement"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:22
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:24
+msgid "objectif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/menu_left.php:30
+msgid "L'évaluation finale peut être réalisée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:4
+msgid "Accueil"
+msgstr "Welcome"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:5
+msgid "Pourquoi ce site ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:6
+msgid "Mon profil"
+msgstr "My profile"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:9
+msgid "Teacher pas à pas"
+msgstr "Teacher step by step"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:13
+msgid "J'évalue mes compétences pour dispenser l'ETP en fin de programme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:18
+msgid "Je rafraîchis mes connaissances"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:23
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:60
+msgid "Le programme éducatif personnalisé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:30
+msgid "Mes patients"
+msgstr "My patients"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:34
+msgid "Ajouter un patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:39
+msgid "Voir la liste de tous mes patients"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:50
+msgid "J'évalue mes compétences pour dispenser l'ETP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/template/links_menu_top.php:55
+msgid "L'essentiel à savoir avant de commencer"
+msgstr "The essential to know before start"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/lib/gettext/examples/pigs_dropin.php:77
+msgid ""
+"This is how the story goes.\n"
+"\n"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:4
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:8
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_patient_list.php:4
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_patient_list.php:8
+msgid "Vous devez d'abord"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:4
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_patient_list.php:4
+msgid "réaliser une première auto-évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:5
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:9
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_patient_list.php:5
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_patient_list.php:9
+msgid "avant de pouvoir inclure un / des patient(s)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:8
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_patient_list.php:8
+msgid "lire la formation théorique initiale &quot;l&apos;Essentiel&quot;"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:17
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:14
+msgid "Veuillez renseigner nom"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:17
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:14
+msgid "et"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:17
+msgid "prénom"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:20
+msgid "Le sexe sélectionné n'est pas correct"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:24
+msgid "Le format de la date de naissance n'est pas correct"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/add_new_patient.php:32
+msgid "La date de naissance n'est pas correcte"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:4
+msgid "aucun patient sélectionné"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:14
+msgid "pr&eacute;nom"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:17
+msgid "Le sexe s&eacute;lectionn&eacute; n&apos; pas correct"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:22
+msgid "Les param&egrave;tres physiologiques doivent &ecirc;tre des nombres"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:26
+msgid "Le format de la date de naissance n&apos;est pas correct"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/modify_profile.php:34
+msgid "La date de naissance n&apos;est pas correcte"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/show_profile.php:4
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/delete_patient.php:3
+msgid "Aucun patient sélectionné"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/delete_patient.php:9
+msgid "Vous avez fait une erreur de mot de passe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/delete_patient.php:21
+msgid "Êtes vous sur/sûre de vouloir supprimer le patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/add_new_patient.php:8
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_patient_list.php:13
+msgid "Nom"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/add_new_patient.php:10
+msgid "Prénom"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/add_new_patient.php:12
+msgid "Date de naissance (format JJ/MM/AAAA)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/add_new_patient.php:14
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_patient_list.php:16
+msgid "Sexe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:50
+msgid "Modifier ces données patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:53
+msgid "Supprimer ce patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:59
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:53
+msgid "Diagnostic éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:65
+msgid "Réalisé le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:67
+#, fuzzy
+msgid "Le consulter"
+msgstr "Contact me !"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:69
+msgid "Voir la synthèse"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:72
+msgid "Le diagnostic éducatif a été débuté le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:75
+msgid "le réaliser maintenant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:81
+msgid "Le réaliser maintenant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:89
+msgid "Programme éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:109
+msgid "Cycle initial"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:111
+msgid "Renforcement éducatif n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:114
+msgid "Période"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:116
+msgid "date de début"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:117
+msgid "date de fin"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:120
+msgid "Objectifs à travailler"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:127
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:135
+msgid "Objectif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:127
+msgid "fait"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:132
+msgid "date prévue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:134
+msgid "pas de date prévue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:135
+msgid "non réalisé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:147
+msgid "Modifier cette planification"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:152
+msgid "Evaluation finale"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:156
+msgid "réalisée le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:158
+msgid "consulter l'évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:160
+msgid "consulter la synthèse"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:163
+msgid "non réalisée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:164
+msgid "Comme tous les objectifs prévus ont été travaillés, vous pouvez"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:165
+msgid "la réaliser maintenant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:168
+msgid "L'évaluation finale ne pourra être faite qu'après avoir travaillé tous les objectifs éducatifs prévus"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:187
+msgid "Autres"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_profile.php:190
+msgid "Gestion des évaluations de la technique d'utilisation des dispositifs d'inhalation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_patient_list.php:14
+msgid "Pr&eacute;nom"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/show_patient_list.php:15
+msgid "Age"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/delete_patient.php:2
+msgid "Suppression de dossier patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/delete_patient.php:5
+msgid "La suppression de ce patient entraînera la perte de tout son dossier en ligne"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/delete_patient.php:5
+msgid "sans aucune possibilité de retour en arrière !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/delete_patient.php:7
+msgid "Si vous voulez vraiment faire celà, veuillez saisir votre mot de passe :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_management/views/delete_patient.php:11
+msgid "je confirme la suppression de ce patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:2
+msgid "Ce que Teacher peut vous offrir"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:5
+msgid "Vous pouvez à tous moments cliquer sur &quot;Accueil&quot; en haut à gauche pour revenir sur cette page."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:8
+msgid "Bienvenue sur Teacher."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:9
+msgid ""
+"Ce site est destiné à vous initier à l'éducation thérapeutique du patient\n"
+"\t\t\t\tpar sa pratique au quotidien auprès des enfants asthmatiques et de leur famille."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:11
+msgid "Étape après étape, il vous guidera dans votre démarche pédagogique."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:37
+msgid "Vue synoptique des étapes proposées"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:38
+msgid "Testez vos compétences à l'éducation thérapeutique (E.T.) du patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:40
+#, fuzzy
+msgid "Prenez connaissance de &quot;l'essentiel à savoir avant de commencer&quot;"
+msgstr "The essential to know before start"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:42
+msgid "Vous pouvez inclure un/des patient(s)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:48
+msgid "Patient x"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:49
+msgid ""
+"À partir de ce stade, TEACHER se décline à <strong>2voix</strong> (celle de l’enfant et celle du médecin).\n"
+"\t\t\t\t\t\t\tJusqu’à la fin du programme, chaque élément de chaque étape de la démarche pédagogique est dédoublé :\n"
+"\t\t\t\t\t\t\tà un support destiné à l’enfant (et/ou à ses parents) correspond le conducteur proposant au pédiatre une méthode pour repérer les besoins,\n"
+"\t\t\t\t\t\t\tévaluer les connaissances de l’enfant, ou lui transmettre un message"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:55
+msgid "Synthèse = contrat éducatif personnalisé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:59
+msgid "Séances d'apprentissage, parmi 10 objectifs éducatifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:63
+msgid "Éventuel renforcement éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:64
+msgid "Évaluation en fin de cycle de l'enfant et de ses parents"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:68
+msgid "Synthèse de l'évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:72
+msgid "Fin du programme éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:74
+msgid "Lettre de liaison avec les autres soignants"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:77
+msgid "Patient y"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:80
+msgid "Patient z"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:84
+msgid "Évaluez vos compétences à l'E.T. en fin de programme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/start_user.php:86
+msgid "Rafraîchissez vos connaissances"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/introduction.php:6
+msgid "Mot du Dr Robberecht"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/introduction.php:12
+msgid "Mot du Pr Gagneyre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:21
+msgid "Initier le soignant à l'éducation thérapeutique des enfants asthmatiques en Europe"
+msgstr "Initiate doctor in therapeutic education for asthmatic children in Europe"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:26
+msgid "Un <span class='start_subtitle_green'>site</span> conçu pour la pratique en <span class='start_subtitle_green'>pédiatrie ambulatoire</span>"
+msgstr "A <span class='start_subtitle_green'>website</span> conceived for <span class='start_subtitle_green'>pediatric outpatient treatment</span>"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:31
+msgid "Qui etes-vous ?"
+msgstr "Who are you ?"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:34
+msgid "Je suis un médecin inscrit à Teacher"
+msgstr "I'm a doctor registered in Teacher"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:35
+msgid "nécessite une authentification"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:39
+msgid "Je suis un patient, ou un visiteur intéressé"
+msgstr "I'm just a patient"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/start/views/start.php:40
+msgid "accès libre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_eval.php:8
+msgid "Vous avez achevé votre évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_eval.php:9
+msgid "Veuillez lire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_eval.php:12
+msgid "Votre évaluation a bien été enregistrée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_eval.php:12
+msgid "Voici vos résultats"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_eval.php:15
+msgid "Les réponses justes sont en vert ; les réponses que vous avez données sont celles cochées. Votre résultat se trouve tout en bas"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_eval.php:33
+msgid "Aucune &eacute;valuation s&eacute;lectionn&eacute;e"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/create_eval.php:101
+msgid "question"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/create_eval.php:101
+msgid "vous n'avez pas coché le bon nombre d'items"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_essential.php:7
+msgid "avant de pouvoir accéder à la formation théorique initiale"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_essential.php:28
+msgid ""
+"Vous avez achevé votre formation théorique à l'Éducation Thérapeutique Personnalisée.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tVous pouvez maintenant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_essential.php:30
+msgid "inscrire votre premier enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/show_essential.php:30
+msgid "pour démarrer son programme d'ETP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:22
+msgid "PROPOSITION D'ÉDUCATION THÉRAPEUTIQUE"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:39
+msgid "DIAGNOSTIC ÉDUCATIF"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:40
+msgid "Repérer les besoins"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:55
+msgid "ÉVALUATION"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:56
+msgid "Les acquis du patient et de ses parents"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:65
+msgid "PROGRAMME ÉDUCATIF PERSONNALISÉ"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:66
+msgid "Lister les compétences à acquérir par le patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:81
+msgid "SÉANCES ÉDUCATIVES"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/essential_how.php:82
+msgid "L'apprentissage"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/user_eval.php:3
+msgid "J&apos;&eacute;value mes comp&eacute;tences en &eacute;ducation th&eacute;rapeutique du patient (ETP)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/user_eval.php:52
+msgid "cliquez sur les"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/user_eval.php:52
+msgid "bonnes réponses"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/user_eval.php:116
+msgid "Page suivante"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_teaching/views/user_eval.php:125
+msgid "Résultat global"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/change_password.php:14
+msgid "vous avez entré le même mot de passe que l'ancien !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/change_password.php:23
+msgid "Votre mot de passe a été modifié"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/change_password.php:27
+msgid "le nouveau mot de passe ne doit pas contenir de guillemet ni espace"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/change_password.php:29
+msgid "le nouveau mot de passe doit au moins contenir 8 caractères"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/change_password.php:31
+msgid "le nouveau mot de passe doit contenir chiffre, lettre minuscule <em>et</em> lettre majuscule"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/change_password.php:35
+msgid "Erreur de mot de passe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:43
+msgid "Veuillez renseigner un num&eacute;ro de t&eacute;l&eacute;phone"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:44
+msgid "une adresse mail"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:47
+msgid "Le num&eacute;ro de t&eacute;l&eacute;phone ne semble pas conforme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:51
+msgid "L'adresse mail ne semble pas conforme (il ne faut pas de majuscule)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:53
+msgid "L'adresse mail ne semble pas conforme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:57
+msgid "Le language s&eacute;lectionn&eacute; n&apos; pas valide"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:60
+msgid "Le pays s&eacute;lectionn&eacute; n&apos; pas valide"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/modify_profile.php:63
+msgid "Le mode d'exercice sélectionné n'est pas valide"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/list_practice.php:5
+msgid "ambulatoire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/list_practice.php:6
+msgid "communautaire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/list_practice.php:7
+msgid "hospitalier"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/connection.php:31
+msgid "login ou mot de passe incorrect"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:17
+msgid "nouveau mot de passe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:19
+msgid "Vous recevez ce mail parce que vous avez dit avoir oublié votre mot de passe pour accéder au site TEACHER."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:20
+msgid "Votre nouveau mot de passe est :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:22
+msgid "Merci de le changer dès votre première re-connexion !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:23
+msgid ""
+"Si vous n'êtes pas à l'origine de ce mail, prière de vous connecter de tout urgence à TEACHER avec ce nouveau mot de passe et de le modifier,\n"
+"\t\t\t\t\t\t\tet de contacter l'administrateur du site"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:29
+msgid "un mail a été envoyé (à l'adresse mail de votre profil) avec un nouveau mot de passe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/password_forgotten.php:32
+msgid "aucun utilisateur trouvé dans la base de données"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:2
+msgid "Changer le mot de passe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:7
+msgid "Entrez votre mot de passe actuel"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:12
+msgid "longueur d&apos;au moins 8 caract&egrave;res"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:13
+msgid "contient au moins 1 chiffre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:14
+msgid "contient au moins 1 lettre minuscule et 1 lettre majuscule"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:17
+msgid "Entrez votre nouveau mot de passe : "
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:21
+msgid "Entrez le une deuxi&egrave;me fois : "
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/change_password.php:25
+msgid "valider"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/modify_profile.php:121
+msgid "Spécialité médicale"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/modify_profile.php:139
+msgid "Sur-spécialité"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/modify_profile.php:162
+msgid "Cochez si vous êtes-vous éducateur thérapeute à l'origine"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/modify_profile.php:167
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:59
+msgid "Mode d'exercice"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:17
+msgid "Pour ma correspondance"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:36
+msgid "Spécialité"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:38
+msgid "Sur-spécialité(s)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:52
+msgid "Je suis éducateur thérapeute"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:54
+msgid "Je ne suis pas éducateur thérapeute"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:78
+msgid "Ma progression dans le programme Teacher"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:84
+msgid "Aucune auto-évaluation réalisée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:85
+msgid "Faire la première maintenant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:90
+msgid "évaluation n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:94
+msgid "en faire une autre maintenant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/show_profile.php:101
+#, fuzzy
+msgid "<em>&quot;l'Essentiel à savoir avant de commencer&quot;</em> consulté"
+msgstr "The essential to know before start"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/connection.php:5
+msgid "Veuillez renseigner vos identifiants pour vous connecter à Teacher"
+msgstr "Please enter you login and password in order to log in Teacher"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/connection.php:8
+msgid "Identifiant"
+msgstr "Login"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/connection.php:12
+msgid "Mot de passe"
+msgstr "Password"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/connection.php:20
+msgid "Mot de passe oublié ?"
+msgstr "You've forgotten your password ?"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/password_forgotten.php:2
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/password_forgotten.php:8
+msgid "Mot de passe oublié"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/password_forgotten.php:5
+msgid "Revenir à la page d'accueil"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/password_forgotten.php:14
+msgid "Votre login"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/password_forgotten.php:18
+msgid "Adresse email"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/user_management/views/password_forgotten.php:22
+msgid "Valider"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/legal_notices/show_licence.php:7
+msgid "la licence n'est pas traduite dans votre langue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/legal_notices/show_licence.php:11
+msgid "licence introuvable"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/legal_notices/views/show_licence.php:6
+msgid "Dernière mise à jour le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_educ_diag.php:7
+msgid "Le diagnostic &eacute;ducatif a d&eacute;j&agrave &eacute;t&eacute; r&eacute;alis&eacute;"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_educ_diag.php:65
+msgid "Veuillez préciser si l'objectif est acquis, non acquis ou partiellement acquis)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_educ_diag.php:67
+msgid "Veuillez préciser si l'objectif est acquis ou non acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:5
+msgid "aérosol doseur avec chambre d'inhalation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:7
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:19
+msgid "Enlève le capuchon"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:8
+msgid "Secoue le produit"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:9
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:56
+msgid "Souffle a fond"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:10
+msgid "Mets le spray en bouche en serrant les lèvres autour"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:11
+msgid "Appuie sur le spray et inspire fort"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:12
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:36
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:47
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:59
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:71
+msgid "Retiens ta respiration 5 secondes"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:13
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:37
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:60
+msgid "Souffle et remets le capuchon"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:17
+msgid "aérosol doseur sans chambre d'inhalation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:20
+msgid "Secoue le produit et place-le à l’extrémité de la chambre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:21
+msgid "Serre les lèvres autour de l’embout à l’autre extrémité"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:22
+msgid "Bouche ton nez avec tes doigts"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:23
+msgid "Envoie une bouffée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:24
+msgid "Respire 6 à 7 fois"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:25
+msgid "Si ton médecin te l’a prescrit, refais une 2<sup>ème</sup> bouffée et respire 6 à 7 fois"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:29
+msgid "Autohaler"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:31
+msgid "Tiens l’autohaler la partie renflée vers le bas et enlève le capuchon (petite encoche derrière)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:32
+msgid "Secoue l’autohaler"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:33
+msgid "Soulève le levier : l’autohaler est armé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:34
+msgid "Souffle à fond"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:35
+msgid "Mets ta bouche autour de l’embout et aspire à fond : tu entends un clic"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:41
+msgid "Diskus"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:43
+msgid "Mets ton pouce dans l’encoche et pousse le couvercle le plus loin possible"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:44
+msgid "Pousse le levier vers l’extérieur tu entendras le déclic"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:45
+msgid "Souffle à fond en dehors du diskus"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:46
+msgid "Inspire fortement par l’embout buccal"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:48
+msgid "Souffle et referme le couvercle (clic)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:52
+msgid "Novolizer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:54
+msgid "Enlève le capuchon, le voyant est rouge"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:55
+msgid "Appuie sur le bouton : le voyant passe au vert"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:57
+msgid "Mets le novolizer dans ta bouche en serrant les lèvres autour"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:58
+msgid "Inspire fort : tu entendras un clic et tu sentiras un goût sucré"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:64
+msgid "Turbuhaler"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:66
+msgid "Dévisse le capuchon"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:67
+msgid "Tiens le turbuhaler bien droit la molette en bas"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:68
+msgid "Tourne la molette à fond à droite, puis à gauche pour entendre le clic"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:69
+msgid "Souffle en dehors du turbuhaler"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_devices.php:70
+msgid "Mets l’embout entre les dents, bouche fermée et inspire fort"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_eval.php:7
+msgid "Ceci est évaluation vide pour démonstration"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_eval.php:14
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_eval.php:17
+msgid "Aucune évaluation sélectionnée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_eval.php:26
+msgid "Évaluation de fin de programme réalisée le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_eval.php:28
+msgid "consulter la synthèse associée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/delete_device_eval.php:4
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:38
+msgid "aucun dossier patient ouvert"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/delete_device_eval.php:6
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:28
+msgid "aucun appareil d'inhalation sélectionné"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/delete_device_eval.php:9
+msgid "aucune évaluation sélectionnée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/delete_device_eval.php:16
+msgid "Êtes-vous sur de vouloir supprimer cette évaluation ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_eval.php:5
+msgid "Il y a plusieurs cycles du programme éducatif inachevés pour ce patient. Veuillez contacter l'administrateur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_eval.php:8
+msgid "Aucun programme éducatif n'a pas été commencé pour ce patient. Vous ne pouvez donc réaliser d'évaluation finale"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_eval.php:39
+msgid "Veuillez préciser si l'objectif est validé, non validé ou partiellement validé)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_eval.php:41
+msgid "Veuillez préciser si l'objectif est validé ou non validé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:11
+msgid "Aucun diagnostic &eacute;ducatif r&eacute;alis&eacute;"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:16
+msgid "Le diagnostic éducatif concerné n'est pas terminé !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:40
+msgid "Vous ne pouvez accéder à cette synthèse tant que l'évaluation finale n'a pas été réalisée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:49
+msgid "Aucun type d'évaluation précisé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:180
+msgid "Il y a plusieurs cycles du programme éducatif avec la même date de début pour ce patient. Veuillez contacter l'administrateur du site"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:214
+msgid "Vous devez sélectionner l'objectif n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:218
+msgid "Etes-vous sur de ne pas prévoir de travailler l'objectif n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:230
+msgid "Etes-vous sur de ne pas prévoir de date pour l'objectif n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:245
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:61
+msgid "Le format de la date n'est pas correct"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_summ_eval.php:253
+msgid "La date entrée n'est pas correcte pour l'objectif n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:8
+msgid "Sais-tu depuis combien de temps tu es asthmatique ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:13
+msgid "Comment et par qui l&apos;as tu appris ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:18
+msgid "Y a-t-il dans ta famille quelqu&apos;un qui est asthmatique ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:23
+msgid "Est-ce que tu peux me d&eacute;crire ta derni&egrave;re crise d&apos;asthme ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:28
+msgid "Quels sont tes signes d&apos;asthme ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:33
+msgid "Est-ce qu&apos;il y a des signes qui sont toujours les m&ecirc;mes au début de ta crise ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:38
+msgid "A ton avis, quels sont les signes d&apos;une crise d’asthme grave ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:43
+msgid "Comment r&eacute;agis-tu quand tu fais une crise d&apos;asthme :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:44
+msgid ""
+"Est-ce que tu pr&eacute;viens quelqu&apos;un ?</br>\n"
+"\t\t\t\t\t\t\t\t\t\tEst-ce que tu prends des m&eacute;dicaments ? lesquels ?</br>\n"
+"\t\t\t\t\t\t\t\t\t\tEst-ce que tu essaies de te calmer ?</br>\n"
+"\t\t\t\t\t\t\t\t\t\tEst-ce que tu fais autre chose ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:52
+msgid "Est ce que tu as une fiche qui explique ce que tu dois faire en cas de crise ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:53
+msgid ""
+"les m&eacute;dicaments que tu dois prendre et les personnes que tu dois pr&eacute;venir ?</br>\n"
+"\t\t\t\t\t\t\t\t\t\t\tSi oui, o&ugrave; est cette fiche : à l&apos;&eacute;cole ? à la maison ? ailleurs ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:59
+msgid "As-tu une id&eacute;e de ce qui se passe dans ton corps quand tu fais une crise d&apos;asthme ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:64
+msgid "Peux-tu nommer les m&eacute;dicaments que tu prends pour ton asthme ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:65
+msgid "(bronchodilatateurs, anti inflammatoires, d&eacute;sensibilisation)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:70
+msgid "Sais-tu à quoi ils servent ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:75
+msgid "A quel moment les prends-tu ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:79
+msgid "Cliquez sur le dispositif utilis&eacute; par l&apos;enfant pour afficher la grille de validation du geste."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:84
+msgid "Est-ce que c&apos;est difficile pour toi de prendre tes m&eacute;dicaments ?</br>Pourquoi ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:89
+msgid "Est-ce que tu voudrais changer de dispositif ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:94
+msgid "As-tu tes m&eacute;dicaments de secours pr&egrave;s de toi ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:95
+msgid "&agrave; la maison, &agrave; l&apos;&eacutecole, quand je vais au sport, quand je sors..."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:99
+msgid "As-tu un appareil pour mesurer ton souffle ? (débitmètre de pointe)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:103
+msgid "Montre-moi comment tu t&apos;en sers"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:108
+msgid "Est-ce que tu connais la valeur normale de ton DEP ? (en L/min)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:113
+msgid ""
+"Et la valeur en-dessous de laquelle tu dois prendre ton m&eacute;dicament de secours \n"
+"\t\t\t\t\t\t\t\t\t\tet/ou pr&eacute;venir un adulte ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:118
+msgid "Qu'est-ce qui déclenche tes crises ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:122
+msgid "Parlons maintenant de l'endroit où tu vis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:126
+msgid "Es-tu g&ecirc;n&eacute;(e) quand tu fais du sport ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:131
+msgid "Pour quels sports ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:136
+msgid "Que fais-tu pour &eacute;viter les g&ecirc;nes respiratoires ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:141
+msgid ""
+"A l'école : as-tu d&eacute;j&agrave; &eacute;t&eacute; g&ecirc;n&eacute;(e)\n"
+"\t\t\t\t\t\t\t\t\t\t\tpour repirer ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:147
+msgid "Est-ce que tu sais qui tu dois prévenir quand tu es gêné(e) ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:148
+msgid ""
+"(Demander à l'adulte accompagnant si un protocole d'accueil\n"
+"\t\t\t\t\t\t\t\t\t\tindividualisé -PAI- a été établi)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:154
+msgid ""
+"Est-ce que tu penses à faire des choses spéciales pour empêcher une crise quand :\n"
+"\t\t\t\t\t\t\t\t\t\ttu as un rhume ? tu es invité chez un copain ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:159
+msgid "Niveau de contrôle subjectif : selon toi, est-ce que ton asthme est bien contrôlé ou non contrôlé ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:160
+msgid ""
+"ton asthme est bien contrôlé s’il te permet d’avoir une bonne qualité de vie, par exemple faire les activités \n"
+"\t\t\t\t\t\t\t\t\t\t\tque tu aimes, bien dormir la nuit, faire du sport, ne pas manquer la classe <br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\tsur une échelle de 1 à 27, à quel niveau te placerais-tu, en sachant que 20 est la limite \n"
+"\t\t\t\t\t\t\t\t\t\t\tentre l’asthme contrôlé et l’asthme non contrôlé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:167
+msgid "Niveau de contrôle objectif : le Childhood Asthma Control Test (cACT)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions.php:168
+msgid "Test de contrôle de l'asthme réservé aux enfants de 4 à 11 ans"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:5
+msgid ""
+"Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdemandez lui de désigner les signes qu’il ressent en cas de crise d’asthme et les signes avant la crise."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:7
+msgid ""
+"L’objectif 1 est validé s’il choisit au moins 2 images correspondant à ses signes propres de crise,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tqui ont été identifiés au moment du Diagnostic Educatif ou de la séance sur l’objectif 1"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:15
+msgid ""
+"Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tdemandez lui de désigner les signes qu’il ressent en cas de crise grave et ce qu’il doit faire en ce cas"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:18
+msgid "Difficulté à parler, gêne respiratoire importante, traitement bronchodilatateur inefficace, DEP restant en-dessous de la valeur-alerte grave"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:19
+msgid "Prévenir l’entourage qu’il faut consulter immédiatement un médecin ou appeler le service médical d’urgence"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:21
+msgid ""
+"L’objectif 2 validé s’il dit 1 des 4 signes énoncés ci-dessus\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tet qu’il prévient immédiatement quelqu’un quand il les ressent"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:30
+msgid ""
+"tu es à la maison et tu te rends compte que tu commences une crise d’asthme. Que fais-tu ?\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tA chaque étape de la réponse on peut solliciter l’enfant en lui disant :\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t« Et si ça ne passe pas,  que dois-tu faire ?»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:39
+msgid "Le plan d'action personnalisé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:41
+msgid ""
+"As-tu un document qui s’appelle « Plan d’Action Personnalisé » et qui explique ce qu’il faut faire en cas de gêne respiratoire\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tou de crise d’asthme débutante? Où se trouve-t-il ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:44
+msgid "L’objectif 3b « plan d’action » est validé si l’enfant sait où il se trouve"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:51
+msgid "Comprendre son corps et s’expliquer les mécanismes de l’asthme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:52
+msgid "Montrez la planche « comprendre son corps »"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:54
+msgid "Demandez à l’enfant s’il a une idée de l’endroit du corps qui est malade quand on fait de l’asthme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:55
+msgid ""
+"« bronches », et si répond uniquement « poumons » lui faire préciser\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t« Sais-tu quel endroit exactement dans les poumons ? »"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:57
+msgid "Comment est la bronche en cas de crise ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:58
+msgid "« resserrée » ( spasmée)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:59
+msgid "Comment est ta bronche en dehors des crises?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:60
+msgid "« Gonflée » (enflammée)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:62
+msgid ""
+"- validé si répond aux 3 questions (maladie des bronches / bronche serrée en cas de crise / bronche inflammatoire en dehors des crises)<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- partiellement validé si 1 ou 2 réponses exactes<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si ne sait pas que l’asthme est une maladie des bronches"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:72
+msgid "Faire la différence entre son traitement de fond et traitement de crise (Comprendre l’intérêt de prendre son traitement de fond)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:73
+msgid ""
+"Montrez à l’enfant pèle-mêle de tous les médicaments inhalés. Vérifiez que son bronchodilatateur et son traitement de fond figurent parmi eux.\n"
+"\t\t\t\t\t\t\t\t\t\t\tDemandez à l’enfant de montrer le médicament en cas de gêne respiratoire et celui qu’il prend tous les jours.\n"
+"\t\t\t\t\t\t\t\t\t\t\tPrends-tu un autre traitement ? Quand ? Pourquoi ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:76
+msgid ""
+"- validé s’il reconnait son broncho dilatateur d’action rapide ET a bien reconnu son traitement de fond,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tsait qu’il doit le prendre tous les jours et qu’il sert à réparer l’inflammation des bronches<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- partiellement validé si connait son traitement de crise et ne connaît pas le traitement de fond ou  son action<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si ne reconnait pas son traitement de crise"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:87
+msgid ""
+"Présentez le dispositif d’inhalation factice ou vide qui correspond à celui utilisé habituellement par l’enfant.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tDemandez-lui de mimer la façon dont il prend son médicament inhalé et comparez-la à la grille d’évaluation du dispositif correspondant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:89
+msgid "validé si l’enfant est capable d’inhaler son médicament en respectant toutes les étapes de la grille"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:96
+msgid ""
+"Présentez à l’enfant son débitmètre de pointe et demandez-lui de mesurer son souffle.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tComparez sa technique avec la grille d’évaluation ci-dessous"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:98
+msgid ""
+"- validé si l’enfant reproduit toutes les étapes<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- partiellement validé si 1 erreur (sauf «je me mets debout»)<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si 2 erreurs ou plus"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:107
+msgid "Q bonus : quand dois-tu mesurer ton DEP ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:109
+msgid ""
+"au moins une fois par mois et en cas de gêne respiratoire, de pic de pollution ou brouillard,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tet parfois avant le sport"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:114
+msgid ""
+"Quel est ton chiffre de DEP normal, habituel, celui en dehors des crises ?<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tQuel est ton chiffre d’alerte, c’est-à-dire celui en dessous duquel tu ne dois pas descendre ?<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tQue fais tu quand la mesure de ton souffle est en dessous de ton chiffre d’alerte ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:117
+msgid ""
+"- validé si l’enfant: connaît son chiffre habituel  et son chiffre d’alerte et s’il sait que,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tquand il a un DEP inférieur à son chiffre d’alerte , il doit le signaler à son entourage\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tet/ou prendre son traitement de secours matin midi et soir<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Partiellement validé si connaît son chiffre habituel  et son chiffre d’alerte, mais ne sait pas ce qu’il doit faire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:128
+msgid "Utiliser l’image de « la maison des allergies »"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:129
+msgid "Montre-moi sur l’image ce qui déclenche tes gênes respiratoires ou tes crises"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:130
+msgid ""
+"validé si l’enfant retrouve les facteurs déclenchant ses crises d’asthme,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tqui ont été identifiés lors du diagnostic éducatif ou de la séance sur l’objectif 8"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:139
+msgid "Aménager un environnement favorable à sa santé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:140
+msgid ""
+"Demandez à l’enfant : « A ton avis, que faut-il faire pour éviter ou limiter les allergènes\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tou les irritants  qui déclenchent tes gênes respiratoires ou tes crises ? »"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:142
+msgid ""
+"validé :<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Si l’enfant allergique  aux acariens  sait qu’il faut éviter la poussière et aérer la chambre<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Si l’enfant est allergique aux animaux sait qu’il doit éviter les contacts avec eux<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Si l’enfant allergique aux pollens connaît la période l’année où il risque de faire des crises quand il va jouer dehors<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Si l’enfant est sujet aux infections ORL, sait qu’il doit se nettoyer les yeux et le nez au serum physiologique\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpuis se moucher et se laver les mains régulièrement<br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Si l’enfant est gêné par les irritants (peinture, tabac) il doit s’éloigner des fumeurs et des irritants<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Si l’enfant est gêné à l’effort ou lors d’activités physiques, voir objectif 9"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:157
+msgid "(à n’aborder que si l’enfant a un bronchospasme induit par l’exercice)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:158
+msgid ""
+"un cross va être bientôt organisé à l’école. Ton professeur a décidé de commencer les entraînements.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tTu sais que lorsque tu cours tu es gêné (e) pour respirer. \n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tQue peux-tu faire pour éviter que cela n’arrive pendant le cross ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:161
+msgid ""
+"s’échauffer progressivement, si mon pédiatre ou médecin me l’a conseillé,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tprendre 2 bouffées de BDAR avant le sport, pas de sport quand je ressens des signes de gêne respiratoire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:164
+msgid ""
+"- Validé si l’enfant sait qu’il doit s’échauffer progressivement et prendre son bronchodilatateur avant le sport<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- Partiellement validé si énonce un des 2 items"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:173
+msgid ""
+"Zoé a 11 ans, elle est asthmatique et allergique aux acariens et aux poils de chat.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tElle part en voyage de classe pendant une semaine dans un gîte en Savoie et est toute contente."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:177
+msgid "Que doivent faire les parents de Zoé avant le voyage ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:179
+msgid "Signaler au professeur que Zoé est asthmatique et allergique ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:180
+msgid "Ne rien dire au professeur : Il pourrait refuser sa participation au voyage"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:184
+msgid "Que doit mettre Zoé dans sa valise ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:186
+#, fuzzy
+msgid "Ses vêtements"
+msgstr "My patients"
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:187
+msgid "Sa console de jeu"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:188
+msgid ""
+"Son traitement de crise (médicament de secours),\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tchambre d’inhalation et plan d’action en cas de crise"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:190
+msgid ""
+"Pas de traitement pour l’asthme, elle va bien et n’a pas fait de crise depuis plusieurs mois,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tet en plus, elle va à la montagne"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:194
+msgid ""
+"En Savoie, les accompagnateurs de Zoé ont organisé des jeux d’extérieur, Zoé s’amuse bien, court,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmais elle prend froid et commence à avoir le nez qui coule"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:197
+msgid "Que doit faire Zoé ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:199
+msgid "Rien de spécial : ce n’est qu’un petit rhume"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:200
+msgid "Prendre un pull pour les jeux de plein air demain"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:201
+msgid "Se nettoyer le nez au sérum physiologique plusieurs fois par jour"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:202
+msgid "Surveiller son souffle par le DEP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:205
+msgid ""
+"Deux jours plus tard, le rhume est toujours là et elle commence à tousser\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(la même petite toux que quand elle fait une crise d’asthme)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:208
+msgid "Que lui conseilles-tu ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:209
+msgid "(une seule réponse)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:211
+msgid "Se calmer, avec le repos, la toux va passer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:212
+msgid "Le signaler aux accompagnateurs pour qu’ils la surveillent cette nuit"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:213
+msgid "Téléphoner à ses parents pour dire qu’elle tousse"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:214
+msgid ""
+"Dire aux accompagnateurs qu’elle tousse comme quand elle va faire une crise d’asthme\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tet/ou demander son traitement de secours Ventoline ou autre bronchodilatateur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:216
+msgid "Manger un petit bonbon au miel"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:219
+msgid ""
+"La nuit elle se réveille car elle tousse et n’arrive pas à dormir. Elle n’ose pas sortir de sa chambre\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tet pleure car elle a peur de faire une crise d’asthme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:222
+msgid "Et toi que ferais-tu à sa place ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:224
+msgid ""
+"Comme Zoé je resterais dans ma chambre\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcar les accompagnateurs ne veulent pas que l’on se lève la nuit"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:226
+msgid "Je m’assoie dans le lit, je me calme et respire doucement"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:227
+msgid ""
+"Je me lève et vais réveiller l’accompagnant, je dis que je tousse,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til me donne un sirop contre la toux"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:229
+msgid "Je me lève et prends mon médicament de secours"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:232
+msgid ""
+"Zoé va beaucoup mieux le lendemain et participe à la visite d’une ferme savoyarde :\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsur place il y a plusieurs chats"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:235
+msgid "Que doit faire Zoé qui adore les chats ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:237
+msgid "Les caresser et se laver les mains après"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:238
+msgid "Les prendre dans ses bras et leur faire des câlins"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:239
+msgid "Eviter de s’en approcher"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:242
+msgid ""
+"Zoé a bien aimé les chats mais le soir elle est de plus en plus essoufflée, elle tousse et n’arrive pas bien à respirer.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tElle se décide à aller réveiller l’accompagnateur et reçoit 2 bouffées de son médicament de secours ou Ventoline.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t¼ d’heure plus tard cela ne va pas mieux."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:246
+msgid "A ton avis, que faut-il faire ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:247
+msgid "(Cette question se propose aux enfants de PLUS DE 10 ANS)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:249
+msgid ""
+"Rien : la Ventoline met du temps à agir,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til faut attendre 2h pour qu’elle soit efficace"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:251
+msgid "Se calmer, respirer assis calmement"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:252
+msgid ""
+"Reprendre 2 bouffées de médicament de secours\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tavec la chambre d’inhalation jusqu’à 3 fois en une heure"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:254
+msgid ""
+"Si après les prises répétées de médicament de secours la gène respiratoire ne passe pas,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til faut prendre des comprimés ou gouttes de cortisone et appeler les secours (SAMU=15)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:259
+msgid "bonnes réponses 1a 2a et c ( b est toléré)  3b,c et d 4d 5b et d 6c (a toléré) 7c et d ( et b en complément)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:271
+msgid ""
+"J’avertis mes parents ou un adulte et je dis que je fais une crise d’asthme et/ou\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tque j’ai besoin de mon médicament de secours (nommer le médicament) je me calme et je m’assieds,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tje respire par le nez et souffle par la bouche"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:275
+msgid ""
+"- Validé si l’enfant dit qu’il prévient un adulte car il fait une crise d’asthme et/ou\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tqu’il a besoin de son traitement de secours.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tS’il répond d’emblée « je prends mon traitement, ma ventoline » faite lui préciser comment en pratique\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til accède à son traitement (pour s’assurer qu’il prévient)<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si n’avertit pas"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:283
+msgid ""
+"Je me calme et je m’assieds, je respire par le nez et souffle par la bouche.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- si ma gêne respiratoire ne passe pas je prends immédiatement 2 bouffées de mon traitement de secours\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(bronchodilatateur d’action immédiate)<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- si ça ne va pas mieux.je peux renouveler la prise 10 mn après, je peux prendre jusqu’à 3 fois en 1 h\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2 bouffées de mon médicament de secours si ma gène respiratoire ne se passe pas.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- si ma gêne respiratoire ne passe pas j’avertis un adulte et je dis que je fais une crise d'asthme qui ne\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpasse pas malgré la prise répétée de mon médicament de secours (nommer le médicament)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:291
+msgid ""
+"- validé si l’enfant prend son médicament de secours.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si ne prend pas son broncho dilatateur d’action rapide ou n’avertit pas son entourage\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tque les traitements sont inefficaces."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:298
+msgid ""
+"<strong>Enfant < 10 ans</strong> : J’avertis mes parents ou un adulte et je dis que je fais une crise d’asthme et/ou\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tque j’ai besoin de mon médicament de secours (nommer le médicament) je me calme et je m’assieds,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tje respire par le nez et souffle par la bouche<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Enfant > 10 ans</strong> : Je me calme et je m’assieds, je respire par le nez et souffle par la bouche.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t- si ma gêne respiratoire ne passe pas je prends immédiatement 2 bouffées de mon traitement de secours\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(bronchodilatateur d’action immédiate)<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t- si ça ne va pas mieux.je peux renouveler la prise 10 mn après, je peux prendre jusqu’à 3 fois en 1 h\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2 bouffées de mon médicament de secours si ma gène respiratoire ne se passe pas.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t- si ma gêne respiratoire ne passe pas j’avertis un adulte et je dis que je fais une crise d'asthme qui ne\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpasse pas malgré la prise répétée de mon médicament de secours (nommer le médicament)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/list_questions_eval.php:309
+msgid ""
+"<strong>Enfant < 10 ans</strong> : - Validé si l’enfant dit qu’il prévient un adulte car il fait une crise d’asthme et/ou\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tqu’il a besoin de son traitement de secours.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tS’il répond d’emblée « je prends mon traitement, ma ventoline » faite lui préciser comment en pratique\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til accède à son traitement (pour s’assurer qu’il prévient)<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si n’avertit pas\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Enfant > 10 ans</strong> : - validé si l’enfant prend son médicament de secours.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t- non validé si ne prend pas son broncho dilatateur d’action rapide ou n’avertit pas son entourage\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tque les traitements sont inefficaces."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:12
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:16
+msgid "Aucun objectif sélectionné"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:29
+msgid "Objectifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:57
+msgid "Données enregistrées"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:68
+msgid "Cet objectif éducatif est validé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:75
+msgid "Cet objectif éducatif est déjà validé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_target.php:82
+msgid "impossible d'accéder à la page correspondant à cet objectif éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:7
+msgid "revenir à l'objectif éducatif n°5"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:11
+msgid "revenir aux évaluations de l'utilisation des dispositifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:15
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:19
+msgid "revenir au diagnostic éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:56
+msgid "L'évaluation que vous voulez enregistrer est vide"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:68
+msgid "La date entrée n'est pas correcte"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:70
+msgid "La date entrée n'est pas correcte (postérieure à aujourd'hui)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/create_device_eval.php:75
+msgid "Les données ont été enregistrées"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/group_questions.php:5
+msgid "Histoire de la maladie"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/group_questions.php:129
+msgid "Evaluation subjective et objective du niveau de contrôle de l'asthme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/group_questions.php:130
+msgid ""
+"permet de déceler l'état d'esprit de la famille par rapport à l'asthme :\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tinquiétude excessive versus banalisation des symptômes"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/show_educ_diag.php:7
+msgid "Ceci est une démonstration en lecture seule"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval_info.php:2
+msgid "Évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_video_peakflow.php:2
+msgid "Vidéo : utilisation du DEP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_video_peakflow.php:5
+msgid "revenir à l'objectif éducatif n°6"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:7
+msgid "La pratique régulière des sports est bénéfique chez les asthmatiques car elle :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:9
+msgid "améliore le travail du muscle cardiaque"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:10
+msgid "diminue l’essoufflement à l’effort en améliorant le travail sur les muscles utiles à la ventilation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:12
+msgid "Elle augmente donc l’aptitude physique, le développement du thorax ; et augmente l’estime de soi du jeune asthmatique"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:13
+msgid "Sont particulièrement recommandés : la natation, la danse et la marche ."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:15
+msgid "Il existe 2 types d’asthme d’effort :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:17
+msgid ""
+"<strong>le bronchospasme induit par l’exercice (BIE)</strong><br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tIl survient à l’arrêt de l’exercice, il est la traduction clinique d’un bronchospasme<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tPendant l’effort les voies aériennes se refroidissent et se déshydratent, de façon d’autant plus importante \n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tque l’environnement est sec et froid et l’intensité de l’exercice élevé, générant un débit ventilatoire important.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tÀ l’arrêt de l’effort, le réchauffement et la réhydratation brutaux des voies aériennes, provoque la libération\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tde médiateurs, entraînant à la fois la contraction du muscle bronchique et un œdème local."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:23
+msgid ""
+"<strong>La dyspnée d’effort</strong><br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tElle témoigne de l’hyperventilation d’effort caractéristique d’un débit ventilatoire trop élevé pour l’intensité\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tde l’effort requis (hyperventilation) et d’un déconditionnement physique secondaire au manque d’activité physique,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tfréquent chez l’asthmatique."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:34
+msgid "Le pédiatre/médecin, demande de répondre au jeu-test Vrai/Faux et commente les réponses"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:36
+msgid "Conseils :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:38
+msgid "Insistez sur les précautions à prendre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:39
+msgid "Encouragez l’enfant à raconter s’il ressent des gênes respiratoires lorsqu’il pratique certains sports"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:40
+msgid "Calculez ses points, discutez avec lui des sports qu’il pratique ou qu’il voudrait pratiquer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:47
+msgid "Les asthmatiques peuvent faire du sport"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:48
+msgid "Le sport est bénéfique pour les asthmatiques"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:49
+msgid "L’enfant est capable de citer les précautions qui doivent entourer sa pratique du sport :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:51
+msgid "bronchodilateur d’action rapide sur le lieu de l’activité sportive,"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:52
+msgid "échauffement progressif,"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:53
+msgid "inhalation d’un bronchodilatateur avant l’effort si nécessaire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:64
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:71
+msgid "Méthode d’apprentissage :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:65
+msgid "jeu test Vrai/Faux"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:67
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:75
+msgid "Durée de la séance :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:70
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:78
+msgid "Imprimer :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_9_user.php:71
+msgid "«je suis asthmatique, et je suis sportif(ve) !» et la remettre à l’enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:7
+msgid "L’évaluation de la sévérité d’une crise se base sur 3 critères principaux :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:9
+msgid ""
+"L’intensité de la gêne respiratoire, évaluée par la persistance des symptômes au repos,\n"
+"\t\t\tet l’impossibilité de prononcer une phrase sans reprendre son souffle"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:11
+msgid "L’inefficacité des bronchodilatateurs d’action immédiate"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:12
+#, php-format
+msgid "La valeur du débit de pointe inférieure à 60% de la valeur normale"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:15
+msgid "D’autres signes peuvent s’y associer :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:17
+msgid "tirage sus-sternal ou/et intercostal, balancement thoraco-abdominal, battement des ailes du nez"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:18
+msgid "agitation ou somnolence, sueur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:21
+msgid "pâleur, coloration bleutée des lèvres"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:22
+msgid "anomalies de la fréquence cardiaque ou respiratoire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:29
+msgid "Présentez les images de la fiche Objectif 2 Enfant."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:30
+msgid "Deux cas se présentent :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:34
+msgid ""
+"<strong>Il a déjà présenté une crise grave (recours aux urgences et/ou hospitalisation) :</strong>\n"
+"\t\t\t\tAidez l’enfant à identifier SES signes : demandez-lui ce qu’il a ressenti de particulier,\n"
+"\t\t\t\ten quoi sa crise était différente de d’habitude ?<br/>\n"
+"\t\t\t\tEn vous aidant de la première partie du document sur la crise d’asthme grave, rajustez et validez ce que dit l’enfant.<br/>\n"
+"\t\t\t\tDemandez aux parents s’ils veulent rajouter d’autres signes qu’ils avaient constatés\n"
+"\t\t\t\tet faites-les figurer sur le document."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:46
+msgid ""
+"<strong>Il n’a jamais eu de crise grave : </strong>\n"
+"\t\t\t\tprenez connaissance ensemble des signes listés\n"
+"\t\t\t\tdans la première partie et demandez à l’enfant et aux parents ce qu’ils en pensent."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:52
+msgid ""
+"Une crise grave, c’est : difficulté à respirer même au repos,\n"
+"\t\t\t\t\tdifficulté à parler, inefficacité des traitements de secours, DEP &lsaquo; 60%"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:56
+msgid "Le pédiatre regarde la 2<sup>ème</sup> partie du document avec l’enfant et sa famille et le commente"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:60
+msgid ""
+"C’est une <strong>URGENCE</strong> ! Il faut immédiatement prévenir ton entourage\n"
+"\t\t\t\t\tque tu as tout de suite besoin de traitement et qu’il faut avoir un avis médical"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:72
+msgid "réflexion en lien avec le vécu de l'enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:73
+msgid "Cette séance sera d’autant plus profitable qu’il a déjà présenté une crise d’asthme grave."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:79
+msgid "Objectif 2 enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:80
+msgid "« je sais reconnaître les signes d’une crise grave : c’est une URGENCE ! »"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:82
+msgid "Matériel nécessaire :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_2_user.php:83
+msgid "prévoir un crayon :)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_form_validation.php:3
+msgid "valider cet objectif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:8
+msgid ""
+"Quand le DEP est au dessus de la valeur alerte, et que l’enfant est asymptomatique, tout va bien, l’asthme est contrôlé\n"
+"\t\t\t\t\t\t\t<span class = 'text_green'><strong>(zone verte)</strong></span>"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:10
+msgid ""
+"Quand l’enfant a des signes de gêne respiratoire ou début de crise et que les valeurs du DEP sont entre les 2 valeurs « alerte »\n"
+"\t\t\t\t\t\t\t<span class = 'text_orange'><strong>(zone orange)</strong></span>\n"
+"\t\t\t\t\t\t\tl’asthme est déstabilisé : il faut renforcer le traitement par la prise de bronchodilatateur d’action immédiate = médicament de secours"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:13
+msgid ""
+"Quand l’enfant a des signes de crise d’asthme grave ou la crise d’asthme débutante ne cède pas après prise de bronchodilateur d’action immédiate,\n"
+"\t\t\t\t\t\t\tet/ou que le DEP est en dessous de la valeur alerte grave <span class = 'text_red'><strong>(zone rouge)</strong></span>, c’est une crise d’asthme grave :\n"
+"\t\t\t\t\t\t\tle traitement nécessite la prise répétée de bronchodilatateur d’action immédiate, peut-être de cortisone, et une consultation médicale."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:22
+msgid "Demandez à l’enfant s’il se souvient de la valeur de son débit de pointe quand tout va bien ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:23
+msgid "Et de ses valeurs alerte et alerte grave ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:24
+msgid "L’enfant les note sur la feuille"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:26
+msgid ""
+"Rappelez-lui que <strong>la valeur alerte est un seuil en dessous duquel les bronches sont rétrécies</strong>\n"
+"\t\t\t\t\t\t\t(début d’une crise d’asthme, d’une gêne respiratoire)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:29
+msgid "Prenez connaissance et complétez avec l’enfant le contenu des trois encadrés :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:31
+msgid "<span class = 'text_green'><strong>Le vert «mon asthme va bien»</strong></span>"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:32
+msgid "<span class = 'text_orange'><strong>Le orange « j’ai une gêne pour respirer ou je commence une crise légère »</strong></span>"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:33
+msgid "<span class = 'text_red'><strong>Le rouge « j’ai une crise d’asthme grave »</strong></span>"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:39
+msgid "L’enfant connaît au moins sa valeur habituelle de DEP et sa valeur alerte"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:40
+msgid "L’enfant sait qu’en cas de crise d’asthme débutante, il faut :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:42
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:47
+msgid "prévenir un adulte,"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:43
+msgid "prendre 2 bouffées de médicament de secours, et surveiller ses symptômes et son DEP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:45
+msgid "L’enfant sait qu’en cas de crise d’asthme sévère, de DEP en dessous de la valeur alerte grave, il faut :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:48
+msgid "prendre le médicament de secours plusieurs fois,"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:49
+msgid "prendre des comprimés ou gouttes de cortisone,"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:50
+msgid "et demander un avis médical"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:59
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:51
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:58
+msgid "Méthode d’apprentissage"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:60
+msgid "analyse de situation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:62
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:54
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:61
+msgid "Durée de la séance"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:63
+msgid "15 min"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:65
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:57
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:64
+msgid "Imprimer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:66
+msgid "Objectif 7 enfant : « Je sais adapter mon traitement selon les résultats de mon débit de pointe. » (recto/verso)»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:68
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:60
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:68
+msgid "Matériel nécessaire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_7_user.php:69
+msgid "Prévoir que les parents aient le PAP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_educ_program.php:8
+msgid "Le diagnostic éducatif personnalisé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_educ_program.php:12
+msgid "les séances d'apprentissage"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_educ_program.php:16
+msgid "L'évaluation finale du patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:11
+msgid ""
+"Le pédiatre/médecin montre la maison des allergies à l’enfant et lui demande de repérer les bulles qui correspondent\n"
+"\t\t\t\t\t\t\t\t\tà ses facteurs déclenchants."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:13
+msgid "L’enfant réfléchit et propose des images"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:14
+msgid "Le pédiatre réajuste et complète en fonction des allergies et/ou irritants connus de l’enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:21
+msgid "Le pédiatre/médecin prend une bulle sélectionnée par l’enfant :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:22
+msgid ""
+"Pour chaque bulle, on demande à l’enfant ce qu’il faut faire pour éviter ou limiter les allergies ou les irritations\n"
+"\t\t\t\t\t\t\t\t\tque provoque le facteur dessiné."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:24
+msgid "En cliquant sur la bulle, la fiche de conseils correspondants s’imprime."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:25
+msgid "Le pédiatre la découvre avec l’enfant et la lui remet."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:29
+msgid ""
+"L’enfant sait qu’en cas de gêne respiratoire il doit réclamer ou prendre son médicaments de secours \n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(bronchodilatateur d’action immédiate) qui desserre les bronches. Sa couleur est bleue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:33
+msgid "Demandez à l’enfant s’il connaît un médicament pour «réparer» les bronches qui se prend tous les jours"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:38
+msgid "L’enfant connaît ses allergènes et/ou irritants qui lui provoquent des crises ou gênes respiratoires."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:39
+msgid "L’enfant connaît les moyens de les éviter."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:52
+msgid "réflexion en lien avec les connaissances et le vécu de l’enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:58
+msgid "les moyens d’éviction des allergènes ou irritants correspondant à l’enfant."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_8_user.php:61
+msgid "Affichez sur l’écran la maison des allergies"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:2
+msgid "Liste des évaluations des techniques de prise de médicaments inhalés"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:42
+msgid "supprimer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:57
+msgid "acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:59
+msgid "non acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:73
+msgid "Ajouter d'autres évaluations pour ce dispositif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:82
+msgid "Ajouter des évaluations pour un des dispositifs :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:84
+msgid "-- choisir le dispositif --"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_device_eval.php:91
+msgid "On y va !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:3
+msgid "Évaluation du patient"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:52
+msgid "Mise en situation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:60
+msgid "Question"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:62
+msgid "Réponse attendue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:87
+msgid "Non validé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:90
+msgid "Partiellement validé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/eval.php:93
+msgid "Validé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:7
+msgid "Les systèmes d'inhalation les plus utilisés sont"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:8
+msgid "Aérosols doseurs (Spray)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:11
+msgid "avec chambre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:13
+msgid "sans chambre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:15
+msgid "Inhalateurs de poudre sèche"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:25
+msgid ""
+"En cas d’utilisation de corticoïdes inhalés, il faut se rincer la bouche quel que soit le dispositif utilisé\n"
+"\t\t\t\t\t(risque moindre de candidose buccale avec le système spray+chambre d’inhalation)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:32
+msgid ""
+"Partez des remarques du diagnostic éducatif : est-ce que le dispositif actuel que l’enfant utilise lui convient\n"
+"\t\t\t\t\t\t\tou veut-il en découvrir d’autres ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:35
+msgid "Montrez la vidéo correspondant au dispositif d’inhalation choisi"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:36
+msgid "Présentez un dispositif inhalé factice ou vide"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:37
+msgid ""
+"Demandez à l’enfant de mimer en expliquant comment il prend son médicament inhalé\n"
+"\t\t\t\t\t\t\t\t(les parents peuvent éventuellement aider)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:39
+msgid ""
+"Réajustez ce qu’a mimé et expliqué l’enfant en se servant de la grille d’évaluation du système d’inhalation correspondant,\n"
+"\t\t\t\t\t\t\t\tet en cochant ce qui est acquis et non acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:41
+msgid "Faites refaire le geste à l’enfant jusqu’à ce qu’il l’ait acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:42
+msgid "Imprimez et donnez à l’enfant la grille d’évaluation du système d’inhalation qu’il utilise"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:44
+msgid ""
+"NB : la fiche d’évaluation  «Spray utilisé avec chambre» doit être abordée systématiquement avec les parents\n"
+"\t\t\t\t\t\t\tsi ce n’est pas le système habituellement utilisé par l’enfant. Ce système est le plus efficace en cas de crise sévère.\n"
+"\t\t\t\t\t\t\tRemettez-leur la fiche en leur recommandant de la garder avec les médicaments de secours"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:50
+msgid ""
+"l’enfant est capable d’ inhaler son médicament en respectant toutes les étapes\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tselon la grille d’évaluation."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:59
+msgid "acquisition de geste"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:62
+msgid "10 min"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:65
+msgid "Fiche d’évaluation du système d’inhalation utilisé par l’enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:66
+msgid "(pour y accéder, cliquez sur l’image du dispositif choisi)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:69
+msgid "Dispositif de démonstration du système d’inhalation utilisé par l’enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:70
+msgid "Possibilité de visionner un clip de démonstration de chaque technique d’inhalation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_5_user.php:71
+msgid "(Temps par clip: une minute. Pour y accéder cliquez sur la caméra située à côté du dispositif choisi)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/delete_device_eval.php:7
+msgid "<strong>Oui</strong>, supprimer cette évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/delete_device_eval.php:11
+msgid "<strong>Non</strong>, revenir aux évaluations de l'utilisation des dispositifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:3
+msgid "Synthèse du diagnostic éducatif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:4
+msgid "SYNTHESE AVANT EDUCATION"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:4
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:8
+msgid "les 10 objectifs éducatifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:7
+msgid "Synthèse de l'évaluation finale"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:8
+msgid "SYNTHESE APRES EDUCATION"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:22
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:380
+msgid "Non acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:23
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:383
+msgid "Partiellement acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:24
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:386
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:30
+msgid "Acquis"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:96
+msgid "Objectifs éducatifs à valider obligatoirement"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:98
+msgid "Autres objectifs éducatifs à valider"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:100
+msgid "Autres objectifs éducatifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:104
+msgid "Objectifs éducatifs à travailler et valider obligatoirement"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:106
+msgid "Il est conseillé de travailler ces objectifs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:108
+msgid "Vous pouvez aussi travailler d'autres objectifs si vous avez envie"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:114
+msgid "Objectif éducatif n°"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:117
+msgid "prévu le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:119
+msgid "réalisé le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/show_summ_eval.php:142
+msgid "date prévue (format JJ/MM/AAAA)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:7
+msgid ""
+"les mises en situation permettent à travers un personnage fictif, de tester les connaissances et les compétences d’adaptation de l’enfant\n"
+"\t\t\t\t\t\t\tvis-à-vis de sa maladie."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:15
+msgid "Selon le(les) besoin(s) repéré(s) chez l’enfant, choisissez la fiche adaptée."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:18
+msgid "Présentez-la lui et amorcez le dialogue en racontant l’histoire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:19
+msgid "Laissez-lui le temps de réfléchir et faites-lui faire le lien avec son quotidien"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:20
+msgid "Vérifiez en fin de séance que l’enfant s’est approprié les messages clés."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:27
+msgid "Asthme et infections :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:28
+msgid ""
+"l’ enfant sait adapter son traitement en cas d’infection (désobstruction nasale, renforcement du traitement anti-inflammatoire\n"
+"\t\t\t\t\t\t\t\tet surveiller le DEP)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:31
+msgid "Voyages et sorties"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:32
+msgid "L’enfant connaît :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:34
+msgid "les facteurs spécifiques et non spécifiques déclenchant ses crises"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:35
+msgid "est capable de mettre en œuvre les mesures d’éviction"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:36
+msgid "sait informer son entourage"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:39
+msgid "Crise d’asthme à l’école :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:40
+msgid "l’enfant sait reconnaître ses signes de crise, sait qu’il doit prévenir un adulte et réclamer son médicament de secours de couleur bleue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:51
+msgid "Mises en situation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_10_user.php:57
+msgid "«Mathis est enrhumé »<br/>«Arsène est invité par un ami»<br/>«Julie fait une crise d’asthme à l’école»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:110
+msgid "aérosol doseurs avec chambre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:115
+msgid "aérosel doseur sans chambre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:145
+msgid "allergènes"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:146
+msgid "Acariens"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:146
+msgid "Animaux"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:146
+msgid "Moisissures"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:147
+msgid "Pollens"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:147
+msgid "Aliments"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:150
+msgid "irritants"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:151
+msgid "Tabac"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:151
+msgid "Pollution"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:151
+msgid "Brouillard"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:152
+msgid "Humidités"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:152
+msgid "Vent"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:152
+msgid "Odeurs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:152
+msgid "Désodorisants"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:155
+msgid "activités"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:156
+msgid "Efforts"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:156
+msgid "Sports"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:156
+msgid "Sorties"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:159
+msgid "autres"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:160
+msgid "Infections"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:160
+msgid "Stress"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:187
+msgid "Est-ce que tu as une chambre pour toi tout seul ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:191
+msgid "Est ce que tu dors dans un lit superposé ? si oui, en haut ou en bas ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:195
+msgid "Sais-tu en quoi est fait ton matelas ? ton oreiller ? ton traversin ? "
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:196
+msgid "synthétique"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:196
+msgid "laine"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:196
+msgid "plumes"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:200
+msgid "As-tu une housse anti-acariens ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:204
+msgid "Est ce qu’il y a des peluches ? combien ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:208
+msgid "Qu’est ce qui recouvre le sol ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:209
+msgid "du balatum ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:209
+msgid "un tapis ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:210
+msgid "de la moquette ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:210
+msgid "du parquet ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:214
+msgid "Est-ce que tu vis dans une maison ou dans un appartement ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:218
+msgid "Est-ce que tu sais comment ton appartement/ ta maison est chauffé (e) ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:219
+msgid "chauffage central"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:219
+msgid "convecteur électrique"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:223
+msgid "As-tu un chauffage d’appoint ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:224
+msgid "chauffage au bois"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:224
+msgid "au charbon"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:225
+msgid "au pétrole"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:225
+msgid "au fuel"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:229
+msgid "Y a-t-il des travaux actuellement ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:233
+msgid "Est-ce qu’il y a"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:234
+msgid "des bougies parfumées"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:234
+msgid "des désodorisants"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:235
+msgid "de l'encens"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:239
+msgid "As-tu un jardin ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:243
+msgid "Est-ce que quelqu’un fume à la maison ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:318
+msgid "score de contrôle subjectif enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:320
+msgid "Posez la même question aux parents"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:328
+msgid "score de contrôle subjectif parent(s)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:338
+msgid ""
+"Faites remplir ( ou lire à haute voix) ce questionnaire par l’enfant pour les 4 premières questions\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tet par sa famille pour les 3 suivantes"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:347
+msgid "score de contrôle objectif"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag.php:415
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:49
+msgid "page suivante"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:10
+msgid "Présentez à l’enfant les images de la planche couleur «comprendre son corps et s’expliquez les mécanismes de l’asthme»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:11
+msgid "Demandez à l’enfant s’il sait quelle partie du corps est atteinte quand on fait de l’asthme ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:14
+msgid "L’enfant sait que l’asthme est une maladie des bronches"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:16
+msgid ""
+"Demandez s’il sait ce qui se passe quand on fait une crise d’asthme ?\n"
+"\t\t\t\t\t\t\t\tDemandez ensuite à l’enfant comment est la bronche quand la crise est passée. Est-elle redevenue normale ? reste-elle « abîmée » ?"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:20
+msgid ""
+"L’enfant connaît les notions de spasme de la bronche lors des crises d’asthme ou gêne respiratoire\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tet d’inflammation résiduelle des bronches en dehors des crise"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:29
+msgid "Poser les questions sans fiche"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:30
+msgid ""
+"Demandez à l’enfant s’il connaît un médicament pour « ouvrir, desserrer, dilater » les bronches\n"
+"\t\t\t\t\t\t\t\t\tlorsqu’elles sont serrées en cas de crise d’asthme ou de gêne respiratoire."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:43
+msgid ""
+"L’enfant sait que le médicament anti-inflammatoire sert à réparer les bronches.<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tIl se prend tous les jours. L’anti-histaminique agit sur les allergies oculaires, nasales et/ou cutanées,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmais ne répare pas les bronches"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:48
+msgid ""
+"Réajustez et validez ce que dit l’enfant en reprenant les images «comprendre son corps et s’expliquer les mécanismes de l’asthme»\n"
+"\t\t\t\t\t\t\t\t\t2 en complétant le texte à trous avec lui."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:50
+msgid ""
+"Donnez à l’enfant la fiche qu’il a remplie pour qu’il se constitue un dossier. Il la retravaillera à la maison\n"
+"\t\t\t\t\t\t\t\tafin de consolider les acquis."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:61
+msgid "reconnaissance par image /entretien et réflexion"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:67
+msgid "les 2 fiches «Je sais faire la différence entre traitement de crise et traitement de fond»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_4_user.php:70
+msgid "des crayons de couleur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:2
+msgid "Évaluation des techniques de prise de médicaments inhalés"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:24
+msgid "Date"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:31
+msgid "oui"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:32
+msgid "non"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:66
+msgid "enregistrer et quitter"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/create_device_eval.php:67
+msgid "ajouter une autre évaluation"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:17
+msgid "Equipe, autre que le pédiatre, soignant l'enfant en raison de son asthme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:22
+msgid "médecin généraliste"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:23
+msgid "allergologue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:24
+msgid "pneumologue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:25
+msgid "kinésithérapeute"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/educ_diag_team.php:26
+msgid "service hospitalier de soins d'urgence"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:7
+msgid "Présentez la feuille PAPE à l’enfant, inscrivez son nom-prénom et la date et découvrez-la ensemble"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:12
+msgid "Mon asthme va bien !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:14
+msgid "Si l’enfant prend un traitement anti-inflammatoire, demandez-lui de le dessiner ou de le noter"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:15
+msgid "Demandez-lui quel est son médicament de secours (faites lui remarquer qu’il est de couleur bleue) et dessinez le ou notez le"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:16
+msgid "Demandez à l’enfant s’il connaît ses signes annonciateurs de crise"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:17
+msgid ""
+"Si l’enfant prend des anti-histaminiques tous les jours, expliquez-lui que ce sont des médicaments efficaces sur les allergies des yeux,\n"
+"\t\t\t\t\t\t\t\t\t\tdu nez et de la peau, mais qu’ils n’ont aucune action sur les bronches"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:23
+msgid ""
+"L’enfant sait que :<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLe anti-inflammatoire se prend tous les jours :<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til s’appelle : .....................................................<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEn cas de crise d’asthme ou gêne respiratoire, il doit prendre le médicament de secours,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\til s’appelle .................................... et qui est de couleur bleue"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:36
+msgid "Gestion de la crise d'asthme"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:38
+msgid "Demandez à l’enfant s’il se souvient de SES signes de crise d’asthme (objectif de sécurité 1)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:39
+msgid ""
+"Demandez-lui ce qu’il doit faire quand il ressent ses signes de crise.\n"
+"\t\t\t\t\t\t\t\t\t\t(L’aider si besoin : prévenir quelqu’un ? que lui dire ? quel médicament prendre ? de quelle couleur ?)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:41
+msgid "Laissez-lui le temps de réfléchir, l’aidez à formuler les réponses"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:42
+msgid "Puis commentez avec lui la première ligne d’images"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:43
+msgid "Demandez-lui ce qu’il ressent quand il a reçu deux bouffées de médicament de secours"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:44
+msgid "esuis prenez connaissance avec lui de la 2ème ligne d’images"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:49
+msgid "En cas de crise d’asthme, l’enfant doit"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:51
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:78
+msgid "prévenir un adulte"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:52
+msgid "respirer calmement par le nez et souffler par la bouche"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:53
+msgid "demander (ou prendre) son médicament de secours"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:63
+msgid "Je fait une crise d'asthme grave"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:64
+msgid "Demandez lui ce qu'on doit faire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:66
+msgid "si des signes de crise d’asthme grave apparaissent (et pour lui, quels sont-ils ? objectif de sécurité 2)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:67
+msgid "ou si malgré la prise de médicament de secours, la gêne respiratoire ne passe pas"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:69
+msgid "La gestion d’une crise d’asthme grave a déjà été vue avec l’enfant dans l’objectif de sécurité 2 : demandez-lui ce dont il se souvient)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:70
+msgid "Donnez à l’enfant son PAPE complété"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:71
+msgid ""
+"Remplissez avec les parents le PAPP et remettez-le leur\n"
+"\t\t\t\t\t\t\t\t\t(Les chiffres de DEP seront complétés ultérieurement si objectifs 6 et 7 ont été travaillés)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:76
+msgid "En cas d’inefficacité du médicament de secours (ou si signes de gravité), c’est une crise grave !<br/>Il faut :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:79
+msgid "répéter la prise de médicaments de secours (3 fois 2 bouffées en moins d’une heure)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:80
+msgid "rendre des comprimés ou gouttes de cortisone"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:81
+msgid "demander un avis médical"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:92
+msgid "voir la fiche «objectifs 10» «Julie fait une crise d’asthme à l’école»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:102
+msgid "Mises en situation<br/>Questions-réponses avec support à remplir"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:105
+msgid "20 min"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:108
+msgid "plan d’action personnalisé enfant (PAPE)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:109
+msgid "Plan d’action personnalisé parents (PAPP)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_3_user.php:112
+msgid "Des crayons de couleur ou feutres"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:7
+msgid ""
+"Le débitmètre de pointe permet de mesurer le débit instantané maximal au cours d’une manœuvre d’expiration forcée, réalisée à partir de la position d’inspiration complète.\n"
+"\t\t\t\t\t\tIl reflète le calibre des voies aériennes centrales et, à un moindre degré, périphériques. Il permet l’auto-surveillance par le patient\n"
+"\t\t\t\t\t\tde sa fonction respiratoire afin d’adapter son traitement. Il est exprimé en litres par minute.\n"
+"\t\t\t\t\t\tLes valeurs théoriques moyennes chez l’enfant sont fonction de la taille."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:16
+msgid "<strong>Le pédiatre</strong> présente à l’enfant un débitmètre de pointe et lui explique son utilité : mesurer le souffle."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:17
+msgid "possibilité de montrer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:18
+msgid "la vidéo d’Achille : «je mesure mon souffle»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:19
+msgid "Il lui fait faire 3 mesures selon les consignes du tableau"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:29
+msgid "Grille d'évaluation du geste du débit de pointe"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:37
+msgid "Je me mets debout"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:38
+msgid "Je prends le débitmètre"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:39
+msgid "Je mets le curseur en bas de l’échelle graduée"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:40
+msgid "Je gonfle au maximum ma poitrine, bouche ouverte"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:41
+msgid "J’introduis l’embout dans ma bouche"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:42
+msgid "Je serre mes lèvres autour de l’embout et je souffle le  plus fort possible"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:43
+msgid "Je regarde où est le curseur et je retiens la valeur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:44
+msgid "Je remets le curseur au bas de l’échelle"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:45
+msgid "Je répète la mesure 3 fois de suite"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:46
+msgid "Je note la meilleure des 3 valeurs"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:65
+msgid "enregistrer"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:70
+msgid "<strong>L’enfant :</strong> fait 3 mesures de DEP, et note sur la feuille sa meilleure valeur (on obtient le DEP réel)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:71
+msgid ""
+"(Pour savoir si la valeur obtenue est réellement la valeur du patient, il faut la comparer aux\n"
+"\t\t\t\t\t\t\t<a href = '#'>valeurs théoriques des\n"
+"\t\t\t\t\t\t\tabaques définies en fonction de la taille et l’âge de l’enfant</a>)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:74
+#, php-format
+msgid ""
+"<strong>Le pédiatre</strong> explique qu’en cas de crise d’asthme, les bronches se resserrent et l’air a du mal à passer :\n"
+"\t\t\t\t\t\tles valeurs du débit de pointe sont donc plus basses. Il calcule alors la <span class = 'text_orange'><strong>valeur alerte</strong></span>\n"
+"\t\t\t\t\t\tde l’enfant. Le soignant la calcule\n"
+"\t\t\t\t\t\t<span class = 'text_orange'>(la valeur alerte est 80% de la valeur du DEP normal : ex DEP = 200, valeur alerte = 160 ( 200X80/100))</span>"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:78
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:82
+msgid "<strong>L’enfant</strong> la note sur sa feuille"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:79
+#, php-format
+msgid ""
+"<strong>Le pédiatre :</strong> explique qu’il y a aussi une <span class = 'text_red'><strong>valeur alerte grave</strong></span>\n"
+"\t\t\t\t\t\t\tqui correspond à une crise grave : il la calcule\n"
+"\t\t\t\t\t\t\t<span class = 'text_red'>(la valeur alerte grave est de 60% de la valeur du DEP normal : ex DEP = 200, valeur alerte = 120 ( 200X60/100))</span>"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:83
+msgid "<strong>Le pédiatre</strong> explique à l’enfant à quels moments mesurer son souffle avec le DEP :"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:85
+msgid "en cas de gêne respiratoire ou crise d’asthme pour savoir si on est en dessous des valeurs alertes et adapter son traitement si nécessaire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:86
+msgid "mais aussi quand tout va bien pour connaître le DEP réel"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:87
+msgid "en cas de pollution ou brouillard ou avant le sport pour certains, pour vérifier l’absence de spasme bronchique"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:88
+msgid "au moins deux fois par an chez le pédiatre car avec la croissance et l’âge, les valeurs du DEP se modifient."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:91
+msgid "<strong>L’enfant</strong> emporte la grille à la maison. Il la remplira, puis il la rapportera à la prochaine consultation."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:97
+msgid "L’enfant sait que le débitmètre de pointe sert à mesurer le souffle"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:98
+msgid "L’enfant connaît sa valeur de DEP réelle (quand tout va bien)"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:99
+msgid "il a compris qu’en cas de gêne respiratoire ou crise d’asthme, la valeur du DEP baisse plus ou moins fortement selon l’importance de la crise"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:100
+msgid "il connaît sa valeur d’alerte : au-dessus tout va bien en dessous : il doit le signaler à un adulte pour adapter son traitement si nécessaire"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:110
+msgid "apprentissage du geste technique"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:116
+msgid "la fiche «Je sais mesurer mon souffle»"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:119
+msgid "un débitmètre de pointe, idéalement celui de l’enfant"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/patient_teaching/views/target_6_user.php:120
+msgid "Video d’Achille sur la mesure du DEP"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/contact_admin.php:9
+msgid "votre message n'a pas été envoyé puisqu'il est vide !"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/contact_admin.php:29
+msgid "votre message a été envoyé"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/views/contact_admin.php:2
+msgid "Contacter l'administrateur"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/views/contact_admin.php:6
+msgid "Vous pouvez envoyer un message à l'administrateur du site Teacher. Une réponse vous sera donnée à l'adresse mail précisée dans votre profil."
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/views/contact_admin.php:10
+msgid "Sujet"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/views/contact_admin.php:16
+msgid "Votre message"
+msgstr ""
+
+#: /home/s-degoul/Site_Internet/test/Teacher/modules/contact/views/contact_admin.php:20
+msgid "Envoyer"
+msgstr ""
+
+#~ msgid "Bonjour, Docteur "
+#~ msgstr "Hello, Doctor"

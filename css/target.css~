@@ -1,0 +1,132 @@
+
+.content_target {
+	display: inline-block;
+	width: 584px;
+	margin: 0px;
+	padding: 10px;
+}
+
+.advice_target {
+	margin: 0px;
+	padding-left: 25px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: inline-block;
+	vertical-align: top;
+	width: 160px;
+	word-wrap: break-word;
+	background-color: rgb(57,138,23);
+	color: #FFFFFF;
+}
+
+.advice_target > p {
+	margin: 0px;
+}
+
+.title_advice_target {
+	padding-top: 10px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.content_target > strong {
+	font-weight: bold;
+}
+
+.pict_good_to_know {
+	float: left;
+	height: 80px;
+	width: 72px;
+	background-color: #FFFFFF;
+	background-image: url('../images/good_to_know.gif');
+}
+
+.good_to_know {
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-bottom: 60px;
+	padding-bottom: 5px;
+	padding-left: 60px;
+	border-bottom: 1px solid rgb(57,138,23);
+	border-left: 1px solid rgb(57,138,23);
+	border-radius: 0px 0px 0px 10px;
+	background-repeat: no-repeat;
+	color: rgb(57,138,23);
+	
+}
+
+.good_to_know_2a {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 140px;
+	vertical-align: top;
+	text-indent: -15px;
+	color: rgb(0,0,0);
+}
+
+.good_to_know_2b {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 190px;
+	vertical-align: top;
+	text-indent: -15px;
+	color: rgb(0,0,0);
+}
+
+.pict_how_to_guide {
+	float: left;
+	height: 115px;
+	width: 72px;
+	background-color: #FFFFFF;
+	background-image: url('../images/how_to_guide.gif');
+}
+
+.how_to_guide {
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-bottom: 60px;
+	padding-bottom: 5px;
+	padding-left: 60px;
+	text-indent: -30px;
+	border-bottom: 1px solid rgb(143,20,124);
+	border-left: 1px solid rgb(143,20,124);
+	border-radius: 0px 0px 0px 5px;
+	background-repeat: no-repeat;
+	color: rgb(143,20,124);
+	
+}
+
+.key_message {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.content_key_message {
+	display: inline-block;
+	vertical-align: middle;
+	width: 390px;
+	padding: 5px;
+	margin-left: 20px;
+	border-radius: 10px;
+	background-color: rgb(15,144,122);
+	color: #FFFFFF;
+	text-indent: 0px;
+}
+
+.pict_key_message {
+	display: inline-block;
+	vertical-align: middle;
+	height: 50px;
+	width: 50px;
+	background-color: #FFFFFF;
+	background-image: url('../images/key_message.gif');
+}
+
+.nb_key_message {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+

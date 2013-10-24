@@ -1,0 +1,28 @@
+<?php
+
+try {
+	if (!isset ($db))	
+		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
+
+	$code_lang_format = str_replace('-', '_', $_SESSION['lang']);
+
+	$request = $db -> query (
+		'SELECT id_speciality, speciality_name_'.$code_lang_format .' as speciality_name
+		FROM table_speciality'
+		);
+
+	$list_speciality = array();
+
+	$request -> setFetchMode(PDO::FETCH_ASSOC);
+
+	while ($one_spe = $request -> fetch()) {
+		$list_speciality[] = $one_spe;
+	}
+
+	$request -> closeCursor();
+}
+catch (Exception $e) {
+	die ('Erreur : '.$e->getMessage());
+}
+	
+?>

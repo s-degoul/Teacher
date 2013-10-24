@@ -1,0 +1,37 @@
+<?php
+
+try {
+	$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
+
+	$request = $db -> prepare (
+		'UPDATE table_user
+		SET user_surname = :user_surname, user_firstname = :user_firstname,
+			id_country = :id_country, user_street = :user_street, user_postal_code = :user_postal_code, user_city = :user_city,
+			user_phone = :user_phone, user_mail = :user_mail, user_title = :user_title, user_practice = :user_practice,
+			id_language = :id_language, id_speciality = :id_speciality
+		WHERE id_user = :id_user'
+		);
+
+	$request -> execute (array (
+		'user_surname' => $_POST['user_surname'],
+		'user_firstname' => $_POST['user_firstname'],
+		'id_country' => $_POST['id_country'],
+		'user_street' => $_POST['user_street'],
+		'user_postal_code' => $_POST['user_postal_code'],
+		'user_city' => $_POST['user_city'],
+		'user_phone' => $_POST['user_phone'],
+		'user_mail' => $_POST['user_mail'],
+		'user_title' => $_POST['user_title'],
+		'user_practice' => $_POST['user_practice'],
+		'id_language' => $_POST['id_language'],
+		'id_speciality' => $_POST['id_speciality'],
+		'id_user' => $_SESSION['id_user']
+	));
+
+	$request -> closeCursor();
+}
+catch (Exception $e) {
+	die ('Erreur : '.$e->getMessage());
+}
+
+?>

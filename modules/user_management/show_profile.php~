@@ -1,0 +1,7 @@
+<?php
+	require (MODELPATH.'select_user_all.php');
+
+//	print_r ($user);
+
+	require (VIEW_RELATIVE_PATH.'show_profile.php');
+?>
