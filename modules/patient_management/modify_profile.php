@@ -34,21 +34,29 @@ else {
 	if (isset ($_POST['valid_modif_profile'])) {
 		$patient = checkVarPost ();
 
-
-		if ( empty ($patient['patient_surname']) or empty ($patient['patient_firstname']))
-			$messages['error'][] = _('Veuillez renseigner nom').' <em>'._('et').'</em> '._('pr&eacute;nom');
+		if (empty ($patient['patient_surname']) or empty ($patient['patient_firstname'])) {
+			$messages['error'][] = _("Veuillez renseigner nom <em> </em> prénom");
+		}
+		elseif (($patient['patient_surname'] != $_SESSION['patient']['patient_surname'] or $patient['patient_firstname'] != $_SESSION['patient']['patient_firstname'])
+				and empty ($_SESSION['patient']['warning']['modify_profile'])) {
+			$messages['warning'][] = _("Êtes vous sûr de vouloir changer le nom ou prénom de ce patient ?");
+			$_SESSION['patient']['warning']['modify_profile']['name'] = 1;
+		}
+		elseif (!empty ($_SESSION['patient']['warning']['modify_profile'])) {
+			unset ($_SESSION['patient']['warning']['modify_profile']['name']);
+		}
 
 		if ($patient['patient_sex'] != 0 and $patient['patient_sex'] != 1)
-			$messages['error'][] = _('Le sexe s&eacute;lectionn&eacute; n&apos; pas correct');
+			$messages['error'][] = _("Le sexe sélectionné n'est pas correcte");
 
 		if (($patient['patient_height'] != '' and !is_numeric ($patient['patient_height']))
 			or ($patient['patient_weight'] != '' and !is_numeric ($patient['patient_weight']))
 			or ($patient['patient_peakflow'] != '' and !is_numeric ($patient['patient_peakflow'])))
-			$messages['error'][] = _('Les param&egrave;tres physiologiques doivent &ecirc;tre des nombres');
+			$messages['error'][] = _("Les paramètres physiologiques (poids, taille, DEP) doivent être des nombres");
 		
 		$date_birth_parts = explode ('/', $patient['patient_date_birth']);
 		if ( !isset ($date_birth_parts[1]) or !isset ($date_birth_parts[2])) {
-			$messages['error'][] = _('Le format de la date de naissance n&apos;est pas correct');
+			$messages['error'][] = _("Le format de la date de naissance n'est pas correct");
 			$patient['patient_date_birth'] = '00-00-00';	
 		}
 		else {
@@ -56,16 +64,25 @@ else {
 			
 			if (checkdate ($date_birth_parts[1], $date_birth_parts[0], $date_birth_parts[2]) == false
 				or calculateAge ($patient['patient_date_birth']) < 0)
-				$messages['error'][] = _('La date de naissance n&apos;est pas correcte');
+				$messages['error'][] = _("La date de naissance n'est pas correcte");
+			elseif (calculateAge($patient['patient_date_birth'], 'month') != $_SESSION['patient']['patient_age']
+				and empty ($_SESSION['patient']['warning']['modify_profile']['age'])) {
+				$messages['warning'][] = _("Êtes vous sûr de vouloir changer la date de naissance de ce patient ?");
+				$_SESSION['patient']['warning']['modify_profile']['age'] = 1;
+			}
+			elseif (!empty ($_SESSION['patient']['warning']['modify_profile']['age'])) {
+				unset ($_SESSION['patient']['warning']['modify_profile']['age']);
+			}
 		}			
 
 		/*
 	Vérification des données :
-	si modification nom, prénom ou date de naissance, demander confirmation  ++++
 	*/
 
-		if (empty ($messages['error'])) {
+		if (empty ($messages['error']) and empty ($messages['warning'])) {
 			require (MODEL_PATH.'update_patient_all.php');
+			
+			$_SESSION['messages']['info'] = _("Les modifications ont été enregistrées");
 			header ('location:.?module=patient_management&action=show_profile');
 		}
 	}

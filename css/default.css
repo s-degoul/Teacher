@@ -241,31 +241,52 @@ header {
 			margin: 10px;
 		}
 			
-			.message_error {
+			.message_error_title {
 				padding: 5px;
 				background-color: rgb(250,250,200);
 				font-size: 1.2em;
 				font-weight: bold;
 				color: rgb(255,0,0);
+				list-style-type: disc;
+				list-style-position: inside;
 			}
 			
 				.message_error em {
 					font-style: italic;
 				}
+				
+				.message_error {
+					font-size: 0.8em;
+					font-weight: none;
+				}
 
-			.message_info {
+			.message_info_title {
 				padding: 5px;
 				background-color: rgb(250,250,200);
 				color: rgb(0,150,50);
+				list-style-type: disc;
+				list-style-position: inside;
 			}
+
+				.message_info {
+					font-size: 0.8em;
+					font-weight: none;
+				}
 			
-			.message_warning {
+			.message_warning_title {
 				padding: 5px;
 				background-color: rgb(250,250,200);
 				font-size: 1.2em;
 				font-weight: bold;
 				color: rgb(255,150,0);
+				list-style-type: disc;
+				list-style-position: inside;
 			}
+			
+				.message_warning {
+					font-size: 0.8em;
+					font-weight: none;
+				}
 		
 		.content {
 	/*		height: 550px;
@@ -295,14 +316,24 @@ footer {
 	background-image: url(../images/footer.jpg);
 	background-repeat: repeat-x;
 	margin: 0;
-	padding-top:50px;
-	font-size: x-small;
+	padding-top:20px;
+	font-size: 0.7em;
 	text-align: center;
 }
 
 	.links_footer {
 		display: inline-block;
-		width: 300px;
+		vertical-align: top;
+		width: 350px;
+		padding-right: 100px;
+		text-align: justify;
+	}
+	
+	.logo_footer {
+		display: inline-block;
+		vertical-align: top;
+		width: 100px;
+		padding: 0;
 	}
 
 
@@ -353,4 +384,47 @@ ul.list_choice li a:hover {
 	border: 1px solid black;
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+.button_validation {
+	padding: 5px;
+	font-size: 1em;
+	font-weight: bold;
+	border: solid 3px rgba(150,150,150,0);
+	border-radius: 10px;
+	background-color: rgba(42,149,42,0.7);
+	text-decoration: none;
+	color: rgb(0,0,0);
+}
+
+.button_validation:hover {
+	border: ridge 3px rgb(150,150,150);
+	background-color: rgb(42,149,42);
+}
+
+.button_validation_inactive {
+	padding: 5px;
+	font-size: 1em;
+	font-weight: none;
+	border: ridge 3px rgba(150,150,150,0);
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	color: rgba(0,0,0,0.5);
+}
+
+.button_validation_critical {
+	padding: 5px;
+	font-size: 1em;
+	font-weight: bold;
+	border: solid 3px rgba(150,150,150,0);
+	border-radius: 10px;
+	background-color: rgba(255,0,0,0.7);
+	text-decoration: none;
+	color: rgb(0,0,0);
+}
+
+.button_validation_critical:hover {
+	border: ridge 3px rgb(150,150,150);
+	background-color: rgb(255,0,0);
 }

@@ -27,12 +27,11 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 try {
 	if (!isset ($db))
-		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+		$db = DBConnect();
 	
 	$request = $db -> prepare (
-		'SELECT patient_surname, patient_firstname, patient_date_birth, patient_sex,
-			patient_height, patient_weight, patient_peakflow
+		'SELECT patient_surname, patient_firstname, patient_date_birth, patient_date_inclusion,
+		patient_sex, patient_height, patient_weight, patient_peakflow
 		FROM table_patient
 		WHERE id_patient = :id_patient'
 		);

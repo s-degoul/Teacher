@@ -27,13 +27,12 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 try {
 	if (!isset ($db))	
-		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+		$db = DBConnect();
 	
 	$request = $db -> prepare (
 			'INSERT INTO table_patient (id_user, patient_surname, patient_firstname, patient_date_birth,
-				patient_sex)
-			VALUES (:id_user, :patient_surname, :patient_firstname, :patient_date_birth,
+				patient_date_inclusion, patient_sex)
+			VALUES (:id_user, :patient_surname, :patient_firstname, :patient_date_birth, :patient_date_inclusion,
 				:patient_sex)'
 		);
 
@@ -42,6 +41,7 @@ try {
 					'patient_surname' => $patient['patient_surname'],
 					'patient_firstname' => $patient['patient_firstname'],
 					'patient_date_birth' => $patient['patient_date_birth'],
+					'patient_date_inclusion' => date('Y-m-d'),
 					'patient_sex' => $patient['patient_sex']
 				)
 			);

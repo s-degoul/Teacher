@@ -1,9 +1,6 @@
   
 <?php
 
-// THIS FILE AS TO BE RE-NAMED AS "security.php"
-// AND SUITABLE INFORMATIONS HAVE TO BE GIVEN
-
 /*********************************************************************
 Teacher
 
@@ -28,6 +25,10 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 
 <?php
+/*************************************************
+ * THIS FILE AS TO BE RE-NAMED AS "security.php"
+ * AND SUITABLE INFORMATIONS HAVE TO BE GIVEN
+ *************************************************/
 
 //parameters for database
 define ('HOST_DB', 'xxxx');

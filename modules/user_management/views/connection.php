@@ -40,7 +40,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 			<input type='password' name='user_password' id='user_password' value='' size=20 maxlenght=30 />
 		</p>
 		<p>
-			<input type='submit' name='user_connection' value='Connexion' />
+			<input class = 'button_validation' type='submit' name='user_connection' value='Connexion' />
 		</p>
 	</form>
 	

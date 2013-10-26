@@ -37,9 +37,9 @@ $style[] = 'summ_eval';
 
 
 if ($view_action == 'write') {
-	if (isset ($_GET['modify_target_cycle']))
+/*	if (isset ($_GET['modify_target_cycle']))
 		$param_get = '&type_eval='.$_GET['type_eval'].'&modify_target_cycle=1';
-	else
+	else*/
 		$param_get = '&type_eval='.$_GET['type_eval'];
 	
 	echo '	<form method=\'post\' action=\'.?module=patient_teaching&action=show_summ_eval'.$param_get.'\'>'."\n";
@@ -130,12 +130,12 @@ foreach ($list_question_obj as $id_target => $features_question_obj) {
 			}
 			elseif (isset ($list_cycle_target[$id_target]['cycle_target_date']) and $list_cycle_target[$id_target]['cycle_target_done'] == 1)
 				$line .= _("fait le").' '.$target_date
-						.'<input type = \'hidden\' name = \'confirm_target_'.$id_target.'\' value = 1'
-						.'<input type=\'hidden\' name=\'date_target_'.$id_target.'\' value=\''.$target_date.'\' />';
+						.'				<input type = \'hidden\' name = \'confirm_target_'.$id_target.'\' value = 1'
+						.'				<input type=\'hidden\' name=\'date_target_'.$id_target.'\' value=\''.$target_date.'\' />'."\n";
 			
 			else
 				$line .= '				<input type = checkbox name=\'confirm_target_'.$id_target.'\' id=\'confirm_target_'.$id_target.'\' value=1 '.$checked.'/>'
-						.'				<input type=\'text\' name=\'date_target_'.$id_target.'\' id=\'date_target_'.$id_target.'\' value=\''.$target_date.'\' />';
+						.'				<input type=\'text\' name=\'date_target_'.$id_target.'\' id=\'date_target_'.$id_target.'\' value=\''.$target_date.'\' />'."\n";
 
 			$line .= '			</td>';
 		}
@@ -153,12 +153,25 @@ foreach ($list_question_obj as $id_target => $features_question_obj) {
 	</tbody>
 </table>
 
+<p>
 <?php
 
 if ($view_action == 'write') {
-	echo '	<input type=\'submit\' name=\'valid_targets_to_work\' value=\''._("Valider cette planification").'\'/>';
-	echo '	<input type=\'submit\' name=\'valid_programme\' value=\''._("Achever ce programme éducatif").'\'/>';
+	echo '	<input class = \'button_validation\' type=\'submit\' name=\'valid_targets_to_work\' value=\''._("Valider cette planification").'\'
+				title = "'._("Enregistrer la planification des objectifs à travailler").'"/>';
+	
+	if ($one_compulsory_obj_non_valid == 1 or $one_obj_done == 1) {
+		if ($one_compulsory_obj_non_valid == 1)
+			$comment = _("Vous ne pouvez pas achever le programme éducatif tant qu'il reste des objectifs de sécurité non validés");
+		else
+			$comment = _("Vous ne pouvez pas achever le programme éducatif car des objectifs ont déjà été travaillé au cours de ce cycle");
+		echo '	<span class = \'button_validation_inactive\' title = "'.$comment.'">'._("Achever ce programme éducatif").'</span>';
+	}
+	else {
+		echo '	<input class = \'button_validation\' type=\'submit\' name=\'valid_programme\' value=\''._("Achever ce programme éducatif").'\'
+					title = "'._("Vous pouvez achever ce programme éducatif si vous jugez que la validation des objectifs est satisfaisante").'"/>';
+	}
 }
 ?>
-
+</p>
 </form>

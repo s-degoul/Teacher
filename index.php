@@ -53,6 +53,9 @@ if (isset ($_SESSION['id_user']) and isset($_SESSION['visitor'])) {
 // to include file with general configuration
 require ('configuration/config.php');
 
+// to include file which contains password for acces to database
+require (SECURITY_FILE);
+
 // some functions sometimes used
 require ('functions.php');
 
@@ -76,8 +79,8 @@ $messages = array();
 $module = $action = 'start';
 
 if (isset ($_SESSION['id_user']) or isset ($_SESSION['visitor'])) {
-	if (isset ($_GET['module']) and is_dir (MODULE_PATH.$_GET['module'])
-		and isset ($_GET['action']) and is_file (MODULE_PATH.$_GET['module'].'/'.$_GET['action'].'.php')) {
+	if (isset ($_GET['module']) and preg_match ('#'.realpath(__DIR__).'#' , realpath (MODULE_PATH.$_GET['module']))
+		and isset ($_GET['action']) and preg_match ('#'.realpath(__DIR__).'#' , realpath (MODULE_PATH.$_GET['module'].'/'.$_GET['action'].'.php'))) {
 		$module = $_GET['module'];
 		$action = $_GET['action'];
 	}

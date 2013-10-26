@@ -30,10 +30,10 @@ try {
 		$db = DBConnect();
 
 	$request = $db -> prepare (
-		'SELECT id_user, user_surname, user_title, language_code, language_name, user_validation_Essential, user_eval_to_do
+		'SELECT id_user, user_surname, user_title, language_code, language_name, user_validation_Essential, user_eval_to_do, country_timezone
 		FROM table_user as U
-			INNER JOIN table_language as L
-			ON U.id_language = L.id_language
+			INNER JOIN table_language as L ON U.id_language = L.id_language
+			INNER JOIN table_country as C ON U.id_country = C.id_country
 		WHERE user_login = :user_login and user_password = :user_password'
 		);
 
@@ -44,7 +44,11 @@ try {
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);
 
-	$user = $request -> fetch();
+	$nb_response = 0;
+	while ($one_user = $request -> fetch()) {
+		$user = $one_user;
+		$nb_response ++;
+	}
 
 	$request -> closeCursor();
 }

@@ -34,24 +34,26 @@ if (isset ($_POST['valid_password'])) {
 		
 		require (MODEL_PATH.'select_user_password.php');
 		
-		if (md5 ($password_old) == $user_password and $password_new_1 == $password_new_2) {
+		if (crypt ($password_old, SALT) == $user_password and $password_new_1 == $password_new_2) {
+			$wrong_character = preg_match('#[ <>\'"&]#', $password_new_1);
+			
 			if ($password_old == $password_new_1) {
 				$messages['error'][] = _("vous avez entré le même mot de passe que l'ancien !");
 			}
 			elseif (strlen ($password_new_1) >= 8
 				and preg_match ('#[0-9]#', $password_new_1) and preg_match ('#[A-Z]#', $password_new_1) and preg_match('#[a-z]#', $password_new_1)
-				and ! preg_match('#[ \'"]#', $password_new_1)) {
+				and ! $wrong_character) {
 
-//				$password_new = md5 ($password_new_1);
 				$password_new = crypt ($password_new_1, SALT);
 				$id_user = $_SESSION['id_user'];
 				require (MODEL_PATH.'update_user_password.php');
-				//$messages['info'][] = _('Votre mot de passe a été modifié');
+
+				$_SESSION['messages']['info'] = _("Votre nouveau mot de passe a été enregistré");
 				header ('location:.?module=user_management&action=show_profile');
 			}
 			else {
-				if (preg_match('#[ \'"]#', $password_new_1))
-					$messages['error'][] = _("le nouveau mot de passe ne doit pas contenir de guillemet ni espace");
+				if ($wrong_character)
+					$messages['error'][] = _("le nouveau mot de passe ne doit pas contenir de guillemet ni espace ni signes supérieur ou inférieur ni le &quot;et&quot; commercial (&)");
 				elseif (strlen ($password_new_1) < 8)
 					$messages['error'][] = _("le nouveau mot de passe doit au moins contenir 8 caractères");
 				else

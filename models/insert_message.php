@@ -27,8 +27,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 try {
 	if (!isset ($db))	
-		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+		$db = DBConnect();
 	
 	$request = $db -> prepare (
 			'INSERT INTO table_message (id_user, message_date, message_subject, message_content)

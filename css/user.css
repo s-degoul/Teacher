@@ -28,7 +28,8 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	padding-left: 5px;
 	padding-right: 5px;
 	background-image: none;
-	background-color: rgb(143,20,124);
+	background-color: rgb(212,20,90);
+/*	background-color: rgb(143,20,124);*/
 	background-image: url(../images/logo_doctor.png);
 	background-repeat: no-repeat;
 }

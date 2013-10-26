@@ -27,8 +27,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 try {
 	if (!isset ($db))	
-		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+		$db = DBConnect();
 	
 	$field_list = 'id_cycle_educ, parent_eval_date, ';
 	$value_list = ':id_cycle_educ, :parent_eval_date, ';

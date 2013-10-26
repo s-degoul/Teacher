@@ -37,6 +37,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		<li><?php echo _('longueur d&apos;au moins 8 caract&egrave;res');?></li>
 		<li><?php echo _('contient au moins 1 chiffre');?></li>
 		<li><?php echo _('contient au moins 1 lettre minuscule et 1 lettre majuscule');?></li>
+		<li><?php echo _('caractères interdits : guillemets, >, <, &');?></li>
 	</ul>
 	<p>
 		<label for = 'user_password_new_1'><?php echo _('Entrez votre nouveau mot de passe : '); ?></label>

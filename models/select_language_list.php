@@ -27,8 +27,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 try {
 	if (!isset ($db))	
-		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+		$db = DBConnect();
 	
 	$request = $db -> query (
 		'SELECT id_language, language_code, language_name

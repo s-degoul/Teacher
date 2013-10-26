@@ -27,8 +27,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 try {
 	if (!isset ($db))
-		$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+		$db = DBConnect();
 	
 	$request = $db -> prepare (
 		'SELECT educ_diag_obj1, educ_diag_obj2, educ_diag_obj3_a, educ_diag_obj3_b, educ_diag_obj4_a, educ_diag_obj4_b, educ_diag_obj5,

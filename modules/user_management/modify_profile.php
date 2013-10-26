@@ -91,13 +91,17 @@ if (isset ($_POST['valid_modif_profile'])) {
 		require (MODEL_PATH.'update_user_all.php');
 		require (MODEL_PATH.'update_user_speciality.php');
 		
-		$_SESSION ['user_surname'] = $user['user_surname'];
-		$_SESSION ['user_title'] = $user['user_title'];
+		$_SESSION['user_surname'] = $user['user_surname'];
+		$_SESSION['user_title'] = $user['user_title'];
 	
 		$id_language = $user['id_language'];
-		$_SESSION ['lang'] = $list_language[$id_language]['language_code'];
-		$_SESSION ['lang_name'] = $list_language[$id_language]['language_name'];
+		$_SESSION['lang'] = $list_language[$id_language]['language_code'];
+		$_SESSION['lang_name'] = $list_language[$id_language]['language_name'];
+		
+		$id_country = $user['id_country'];
+		$_SESSION['timezone'] = $list_country[$id_country]['country_timezone'];
 
+		$_SESSION['messages']['info'] = _("Les modifications ont été enregistrées");
 		header('location:.?module=user_management&action=show_profile');
 	}
 }

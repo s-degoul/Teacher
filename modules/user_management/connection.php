@@ -38,7 +38,7 @@ else {
 			
 			include (MODEL_PATH.'select_user_session.php');
 
-			if (!empty ($user)) {
+			if (!empty ($user) and $nb_response == 1) {
 				$_SESSION = array (
 					'id_user' => $user['id_user'],
 					'user_surname' => $user['user_surname'],
@@ -46,7 +46,8 @@ else {
 					'lang_name' => $user['language_name'],
 					'user_title' => $user['user_title'],
 					'user_validation_essential' => $user['user_validation_Essential'],
-					'user_eval_to_do' => $user['user_eval_to_do']
+					'user_eval_to_do' => $user['user_eval_to_do'],
+					'timezone' => $user['country_timezone']
 					);
 					
 				$date_min = '2013-01-01 00:00:00';
@@ -59,6 +60,9 @@ else {
 
 				if (isset ($_SESSION['visitor']))
 					unset ($_SESSION['visitor']);
+				
+				require (MODEL_PATH.'select_patient_list.php');
+				$_SESSION['nb_patients'] = count ($list_patient);
 				
 				header ('location:.?from=connection');
 			}

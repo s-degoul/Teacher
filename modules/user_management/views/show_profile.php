@@ -117,6 +117,10 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 								.("faite le").' '.showDate($date_eval).'</li>'."\n";
 				$nb_eval ++;
 		}
+?>
+		<li><a href = '.?module=user_teaching&action=show_summ_all_eval'><?php echo _("Voir le résultat de toutes les évaluations"); ?></a></li>
+<?php
+		
 		if ($_SESSION['user_eval_to_do'] == 1)
 			echo '			<a href=\'.?module=user_teaching&action=create_eval\'>'._("en faire une autre maintenant").'</a>'."\n";
 	}
@@ -142,11 +146,11 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 </div>
 <div class="user_main_bottom">
-	<div class="item_user">
-		<a href=".?module=user_management&action=modify_profile"><?php echo _("Modifier"); ?></a>
-	</div>
-	<div class="item_user">
-		<a href='.?module=user_management&action=change_password'><?php echo _("Changer le mot de passe"); ?></a>
-	</div>
+<!--	<div class="item_user">-->
+		<a class = 'button_validation' href=".?module=user_management&action=modify_profile"><?php echo _("Modifier"); ?></a>
+<!--	</div>
+	<div class="item_user">-->
+		<a class = 'button_validation' href='.?module=user_management&action=change_password'><?php echo _("Changer le mot de passe"); ?></a>
+<!--	</div>-->
 </div>
 

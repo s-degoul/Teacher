@@ -102,7 +102,7 @@ function calculateAge ($date_SQL, $precision = 'year')  {
 	
 	if ($today['month'] <= $month) {
 		if ($today['month'] == $month) {
-			if ($today['day'] < $day) {
+			if ($today['day'] <= $day) {
 				$age_year --;
 				$age_month = 11;
 			}

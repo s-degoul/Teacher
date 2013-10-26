@@ -27,6 +27,13 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 //mb_internal_encoding('UTF-8');
 
 //file tree
+
+// TO BE ADAPTED
+// depends on location of the website on the server
+//define ('ROOT_PATH','/home/s-degoul/Site_Internet/test/Teacher/');
+define ('WEB_ADRESS','http://samuel-degoul.org/Teacher/');
+
+// depends only of local file's organization
 define ('STYLE_PATH','css/');
 define ('MODULE_PATH','modules/');
 define ('MODEL_PATH', 'models/');
@@ -37,7 +44,7 @@ define ('IMAGE_PATH', 'images/');
 
 // where is the file which contains informations for connexion to database ?
 // better if in a parent folder of website root folder
-define ('SECURITY_FILE','configuration/security');
+define ('SECURITY_FILE','configuration/security.php');
 
 
 ?>

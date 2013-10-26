@@ -104,20 +104,32 @@ if (isset ($_SESSION['id_user'])) {
 	}
 	
 	else {
-		echo '<p><a href=\'.?module=user_management&action=show_profile\'>'._("Accéder à mon profil").'</a></p>'."\n";
-		echo '<p>'._("Que m'est-il possible de faire à ce stade ?").'</p>'."\n";
-		
-		require (TEMPLATE_PATH.'links_menu_top.php');
-		foreach ($links_menu_top[3]['submenu'] as $id_submenu => $features_submenu) {
-			echo '<p class = \'link_menu_left\'>'."\n";
-			
-			if ($features_submenu['active'] == 1)
-				echo '<a href=\'.?module='.$features_submenu['module'].'&action='.$features_submenu['action'].'\'>'.$features_submenu['title'].'</a>'."\n";
+		echo '<p>'._("Résumé").'</p>'."\n";
+?>
+		<p>
+<?php
+		echo _("nombre de patient(s) : ").'<a href=\'.?module=patient_management&action=show_patient_list\' title = \''._("accéder à la liste de mes patients").'\'>'
+											.$_SESSION['nb_patients'].'</a>'."\n";
+?>
+		</p>
+		<p>
+<?php
+		if ($_SESSION['user_validation_essential'] == 0) {
+			if ($_SESSION['user_first_eval'] == 0)
+				echo '<a href=\'.?module=user_teaching&action=create_eval\'>'._("Faire la première auto-évaluation").'</a>'."\n";
 			else
-				echo $features_submenu['title'];
-			
-			echo '</p>'."\n";
+				echo '<a href=\'.?module=user_teaching&action=show_essential\'>'._("Lire la formation initiale").'</a>'."\n";
 		}
+		elseif ($_SESSION['user_eval_to_do'] == 1) {
+			echo '<a href=\'.?module=user_teaching&action=create_eval\'>'._("Refaire une auto-évaluation").'</a>'."\n";
+		}
+		else {
+			echo '<a href=\'.?module=user_teaching&action=show_essential\' title = "'._("Rafraîchir mes connaissances sur l'éducation thérapeutique").'">'
+					._("Rafraîchir mes connaissances").'</a>'."\n";
+		}
+?>
+		</p>
+<?php
 		
 		$style[] = 'user';
 	}
@@ -157,31 +169,45 @@ elseif (isset ($_SESSION['visitor'])) {
  * - "warning" : ask for user's confirmation
  * - "info" : just an information
  *************************************************/
-foreach ($messages as $type_message => $list_message) {
-	switch ($type_message) {
-		case 'error' :
-			$css_message = 'message_error';
-			$introduction = _("Erreur (vous devez apporter des modifications pour continuer)");
-			break;
-		case 'warning' :
-			$css_message = 'message_warning';
-			$introduction = _("Avertissement
-						(re-cliquez sur le bouton de validation en bas de page pour confirmer)");
-			break;
-		case 'info' : default :
-			$css_message = 'message_info';
-			$introduction = _("Information");
-			break;
-	}
+ if (!empty ($messages)) {
+	foreach ($messages as $type_message => $list_message) {
+		switch ($type_message) {
+			case 'error' :
+				$css_message = 'message_error';
+				$css_message_title = 'message_error_title';
+				$introduction = _("Erreur (vous devez apporter des modifications pour continuer)");
+				break;
+			case 'warning' :
+				$css_message = 'message_warning';
+				$css_message_title = 'message_warning_title';
+				$introduction = _("Avertissement
+							(re-cliquez sur le bouton de validation en bas de page pour confirmer)");
+				break;
+			case 'info' : default :
+				$css_message = 'message_info';
+				$css_message_title = 'message_info_title';
+				$introduction = _("Information");
+				break;
+		}
 
-	$content_top .= '<ul class=\''.$css_message.'\'>'.$introduction.' :'."\n";
-	
-	foreach ($list_message as $key_message => $message) {
+		$content_top .= '<ul class=\''.$css_message_title.'\'>'.$introduction.' :'."\n";
+		
+		foreach ($list_message as $key_message => $message) {
+			$content_top .= '<li class = '.$css_message.'>'.$message.'</li>';
+		}
 
-		$content_top .= '<li>'.$message.'</li>';
+		$content_top .= '</ul>'."\n";
 	}
-	
-	$content_top .= '</ul>'."\n";
+}
+elseif (isset ($_SESSION['messages']['info'])) {
+	if (!isset ($_SESSION['messages']['counter'])) {
+		$_SESSION['messages']['counter'] = 1;
+		$content_top .= '<ul class=\'message_info_title\'>'._("Information").' :'."\n"
+						.'<li class=\'message_info\'>'.$_SESSION['messages']['info'].'</li>'."\n"
+						.'</ul>'."\n";
+	}
+	else
+		$_SESSION['messages'] = array();
 }
 
 // $content_top can contain other information, such as page specific links ...

@@ -48,6 +48,7 @@ $style[] = 'patient_teaching';
 				<li><?php echo _("Âge").' : '.sprintf (ngettext('%d an','%d ans',$_SESSION['patient']['patient_age']['year']),$_SESSION['patient']['patient_age']['year'])
 								.' '.sprintf (ngettext('%d mois','%d mois',$_SESSION['patient']['patient_age']['month']),$_SESSION['patient']['patient_age']['month']); ?></li>
 				<li><?php echo _("Date de naissance").' : '.showDate ($patient['patient_date_birth']); ?></li>
+				<li><?php echo _("Date d'inclusion dans Teacher").' : '.showDate ($patient['patient_date_inclusion']); ?></li>
 			</ul>
 		</div>
 		<div class='patient_profile_side'>
@@ -72,11 +73,11 @@ $style[] = 'patient_teaching';
 		</div>
 	</div>
     <p>
-    <?php echo '<a href=\'.?module=patient_management&action=modify_profile&id_patient='.$_SESSION['patient']['id_patient'].'\'>'
-        ._("Modifier ces données patient").'</a>'."\n"; ?>
-    </p>
-    <p>
-    <?php echo '<a href=\'.?module=patient_management&action=delete_patient\'>'._("Supprimer ce patient").'</a>'."\n"; ?>
+<?php
+	echo '<a class = \'button_validation\' href=\'.?module=patient_management&action=modify_profile&id_patient='.$_SESSION['patient']['id_patient'].'\'>'
+        ._("Modifier ces données patient").'</a>'."\n";
+    echo '<a class = \'button_validation_critical\' href=\'.?module=patient_management&action=delete_patient\'>'._("Supprimer ce patient").'</a>'."\n";
+?>
     </p>
 </div>
 
@@ -91,7 +92,7 @@ $style[] = 'patient_teaching';
 			echo'			<li>'._("Réalisé le").'  '.showDate ($educ_diag['educ_diag_date']).'</li>';
 			echo'			<li><a href=\'.?module=patient_teaching&action=show_educ_diag\'>'
 							._("Le consulter").'</a></li>';
-			echo'			<li><a href=\'.?module=patient_teaching&action=show_summ_eval&type_eval=educ_diag&show_target_cycle=1\'>'
+			echo'			<li><a href=\'.?module=patient_teaching&action=show_summ_eval&type_eval=educ_diag\'>'
 						._("Voir la synthèse").'</a></li>';
 		}
 		else {

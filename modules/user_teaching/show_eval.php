@@ -43,7 +43,7 @@ if (isset ($_GET['id_user_eval'])) {
 
 	require ('list_questions.php');
 
-    require (MODEL_PATH.'select_answers_user_eval.php');
+    require (MODEL_PATH.'select_user_eval_answers.php');
     
     require (MODEL_PATH.'select_user_eval.php');
     

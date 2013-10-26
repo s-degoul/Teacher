@@ -71,7 +71,7 @@ if (empty ($messages['error'])) {
 	$content_top .= $menu_list_target.'</div>';
 
 
-	if (isset ($_SESSION['user'])) {
+	if (isset ($_SESSION['id_user'])) {
 		$css_user = $css_patient = 'nav_target';
 		if ($type_reader == 'patient')
 			$css_patient = 'nav_target_selected';

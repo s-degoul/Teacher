@@ -50,7 +50,6 @@ if (isset ($_GET['type_eval'])) {
 
 	elseif ($_GET['type_eval'] == 'cycle_educ_eval'){
 		if (!isset ($_GET['id_eval'])) {
-//			$messages['info'][] = _("Il s'agit de la synthèse de la dernière évaluation en date");
 			require (MODEL_PATH.'select_last_cycle_educ_achieved.php');
 		}
 		else {
@@ -142,7 +141,7 @@ if (empty ($messages['error'])) {
 
 
 
-	// to select next educational cycle (which doesn't exist yet in case we are in synthesis of educational diagnosis)
+	// to select next educational cycle (which perhaps doesn't exist yet)
 	
 	// next eductional cycle is defined by a date posterior to this evaluation of concern
 	if ($_GET['type_eval'] == 'educ_diag')
@@ -163,22 +162,15 @@ if (empty ($messages['error'])) {
 		$id_cycle_educ = $id_next_cycle_educ;
 		require (MODEL_PATH.'select_list_cycle_target.php'); // return $list_cycle_target
 		
-		// have final evaluation of this cycle already made ?
+		// have final evaluation of this cycle already made or sheduled (in six months) ?
 		require (MODEL_PATH.'select_cycle_educ_eval_date.php');
 		// if so, we could only read the list of scheduled objectives
-		if ($cycle_educ_eval_date != '' and ! preg_match ('#[a-zA-Z]{3,}#', showDate ($cycle_educ_eval_date))) {
+		if ($cycle_educ_eval_date != '') {// and ! preg_match ('#[a-zA-Z]{3,}#', showDate ($cycle_educ_eval_date))) {
 			$view_action = 'read';
 		}
-		// if not, possibility of modifications depends on if objectives have ever been scheduled or not ...
+		// if not, modifications are still possible
 		else {
-			if (empty ($list_cycle_target)) //and !empty ($targets_to_work['compulsory']))
-				$view_action = 'write';
-			elseif (isset ($_SESSION['id_patient']['warning']['summ_eval']))
-				$view_action = 'write';
-			elseif (isset ($_GET['modify_target_cycle']))
-				$view_action = 'write';
-			else
-				$view_action = 'read';
+			$view_action = 'write';
 		}
 
 	}
@@ -188,11 +180,24 @@ if (empty ($messages['error'])) {
 
 
 		
-/*	
+/*
 echo '<pre>';
-print_r ($list_question_obj);
+print_r ($list_cycle_target);
 echo '</pre>';
 /**/
+	$one_compulsory_obj_non_valid = 0;
+	$one_obj_non_valid = 0;
+	$one_obj_done = 0;
+
+	foreach ($list_question_obj as $id_target => $features_question_obj) {
+		if ($features_question_obj['to_work'] == 1 and (!isset ($list_cycle_target[$id_target]['cycle_target_done']) or $list_cycle_target[$id_target]['cycle_target_done'] == 0))
+			$one_compulsory_obj_non_valid = 1;
+		elseif ($features_question_obj['to_work'] == 0.5 and (!isset ($list_cycle_target[$id_target]['cycle_target_done']) or $list_cycle_target[$id_target]['cycle_target_done'] == 0))
+			$one_obj_non_valid = 1;
+		elseif (isset ($list_cycle_target[$id_target]['cycle_target_done']) and $list_cycle_target[$id_target]['cycle_target_done'] == 1)
+			$one_obj_done = 1;
+	}
+
 
 	// management of data sent, corresponding to registration of educational objectives in the programme
 	if (isset ($_POST['valid_targets_to_work'])) {
@@ -202,10 +207,10 @@ echo '</pre>';
 		foreach ($list_question_obj as $id_target => $features_question_obj) {
 			
 			// if this objective hasn't been yet validated (if so, it can't been changed)
-			if (isset ($list_cycle_target[$id_target]['cycle_target_done'])
-					and $list_cycle_target[$id_target]['cycle_target_done'] == 0) {
+			if (! isset ($list_cycle_target[$id_target]['cycle_target_done'])
+					or $list_cycle_target[$id_target]['cycle_target_done'] == 0) {
 
-				// check of possible error
+				// check of possible errors
 				// check of date given
 				if (!empty ($targets_cycle['date_target_'.$id_target])) {
 					$targets_cycle['confirm_target_'.$id_target] = 1;
@@ -236,12 +241,12 @@ echo '</pre>';
 						$messages['error'][$id_target] = _("Vous devez sélectionner l'objectif n°").' '.$id_target.' '._("car c'est un objectif obligatoire");
 					}
 					elseif ($features_question_obj['to_work'] == 0.5) {
-						if (!isset ($_SESSION['id_patient']['warning']['summ_eval'][$id_target])) {
+						if (!isset ($_SESSION['patient']['warning']['summ_eval'][$id_target])) {
 							$messages['warning'][$id_target] = _("Etes-vous sur de ne pas prévoir de travailler l'objectif n°").' '.$id_target.' ? ('._("conseillé parce que non validé").')';
-							$_SESSION['id_patient']['warning']['summ_eval'][$id_target] = 1;
+							$_SESSION['patient']['warning']['summ_eval'][$id_target] = 1;
 						}
 						else {
-							unset ($_SESSION['id_patient']['warning']['summ_eval'][$id_target]);
+							unset ($_SESSION['patient']['warning']['summ_eval'][$id_target]);
 						}
 					}
 				}
@@ -249,12 +254,12 @@ echo '</pre>';
 	/*				// if no date have been given whereas objective is compulsory or advised (-> warning)
 				elseif (empty ($targets_cycle['date_target_'.$nb_target_to_work])) {
 					if ($targets_importance == 'compulsory' or $targets_importance == 'advised') {
-						if (!isset ($_SESSION['id_patient']['warning'][$nb_target_to_work])) {
+						if (!isset ($_SESSION['patient']['warning'][$nb_target_to_work])) {
 							$messages['warning'][$nb_target_to_work] = _("Etes-vous sur de ne pas prévoir de date pour l'objectif n°").' '.$nb_target_to_work.' ?';
-							$_SESSION['id_patient']['warning'][$nb_target_to_work] = 1;
+							$_SESSION['patient']['warning'][$nb_target_to_work] = 1;
 						}
 						else {
-							$_SESSION['id_patient']['warning'][$nb_target_to_work] = 2;
+							$_SESSION['patient']['warning'][$nb_target_to_work] = 2;
 						}
 					}
 					$target_date = '';
@@ -277,34 +282,30 @@ echo '</pre>';
 					else
 						require (MODEL_PATH.'update_cycle_target.php');
 
-					$messages['info'][] = _("La planification a été enregistrée");
-//					if (isset ($_SESSION['id_patient']['warning']['summ_eval'][$id_target]))	
-//						unset ($_SESSION['id_patient']['warning']['summ_eval'][$id_target]);
+					$messages['info'][] = _("Objectif").' '.$id_target.' : '._("La planification a été enregistrée");
 				}	
 			}
 		}	
 
+		if (empty ($messages['error']) and empty ($messages['warning'])) {
+			$_SESSION['messages']['info'] = _("Les modifications ont été enregistrées");
+			header ('location:.?module=patient_management&action=show_profile');
+		}
 	}
 	
 	elseif (isset ($_POST['valid_programme'])) {
-		
-		$one_compulsory_obj_non_valid = 0;
-		$one_obj_non_valid = 0;
-
-		foreach ($list_question_obj as $id_target => $features_question_obj) {
-			if ($features_question_obj['to_work'] == 1)
-				$one_compulsory_obj_non_valid = 1;
-			elseif ($features_question_obj['to_work'] == 0.5)
-				$one_obj_non_valid = 1;
-		}		
-		
+	
 		if ($one_compulsory_obj_non_valid == 1) {
 			$messages['error'][] = _("Vous ne pouvez pas achever le programme éducatif tant qu'il reste
 									au moins un objectif de sécurité non validé");
 		}
-		elseif ($one_obj_non_valid == 1 and !isset($_SESSION['id_patient']['warning']['programme_finished'])) {
+		elseif ($one_obj_done == 1) {
+			$messages['error'][] = _("Vous ne pouvez pas achever le programme éducatif puisqu'un objectif a déjà été travaillé dans ce cycle.
+									Il faut d'abord réaliser l'évaluation finale");
+		}
+		elseif ($one_obj_non_valid == 1 and !isset($_SESSION['patient']['warning']['programme_finished'])) {
 			$messages['warning'][] = _("Êtes-vous sûr d'achever ce programme éducatif alors que certains objectifs ne sont pas validés ?");
-			$_SESSION['id_patient']['warning']['programme_finished'] = 1;
+			$_SESSION['patient']['warning']['programme_finished'] = 1;
 		}
 		else {
 			require (MODEL_PATH.'select_last_cycle_educ_achieved.php');
@@ -321,7 +322,7 @@ echo '</pre>';
 			$future_eval_date_y = date('Y');
 			$future_eval_date_m = date('m') + NB_MONTHS_LATER;
 			
-			if (date('m') > 12 - NB_MONTHS_LATER) {
+			if ($future_eval_date_m > 12) {
 				$future_eval_date_y += 1;
 				$future_eval_date_m -= 12;
 			}
@@ -330,9 +331,10 @@ echo '</pre>';
 			require (MODEL_PATH.'update_cycle_educ_eval_date.php');
 			require (MODEL_PATH.'delete_cycle_target.php');
 			
-			if (isset ($_SESSION['id_patient']['warning']['programme_finished']))
-				unset ($_SESSION['id_patient']['warning']['programme_finished']);
-				
+			if (isset ($_SESSION['patient']['warning']['programme_finished']))
+				unset ($_SESSION['patient']['warning']['programme_finished']);
+			
+			$_SESSION['messages']['info'] = _("Les modifications ont été enregistrées");
 			header ('location:.?module=patient_management&action=show_profile');
 		}
 	}

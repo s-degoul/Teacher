@@ -5,12 +5,19 @@
 #<Limit GET POST>
 #require valid-user
 #</limit>
-#Order deny,allow
-#Deny from all
-
-Options -Indexes
-
-<Files functions.php>
+Order allow,deny
 Deny from all
+
+#Options -Indexes
+
+#<Files functions.php>
+#Deny from all
+#</Files>
+
+<Files index.php>
+Allow from all
 </Files>
 
+<Files .>
+Allow from all
+</Files>

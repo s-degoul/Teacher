@@ -24,8 +24,10 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 
 <?php
-
-date_default_timezone_set ("Europe/Paris");
+if (!isset ($_SESSION['timezone']))
+	date_default_timezone_set ("Europe/Paris");
+else
+	date_default_timezone_set ($_SESSION['timezone']);
 
 // define constants
 define('PROJECT_DIR', realpath('.'));

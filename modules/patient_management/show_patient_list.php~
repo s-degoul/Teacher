@@ -1,5 +1,0 @@
-<?php
-
-require (MODEL_PATH.'select_patient_list.php');
-
-?>

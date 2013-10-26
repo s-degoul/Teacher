@@ -30,7 +30,7 @@ $style[] = 'patient_list';
 
 <h1>Mes patients</h1>
 
-<a href='.?module=patient_management&action=add_new_patient'>Ajouter un nouveau patient</a>
+<a class = 'button_validation' href='.?module=patient_management&action=add_new_patient'>Ajouter un nouveau patient</a>
 
 <table class='patient_list'>
 	<thead>

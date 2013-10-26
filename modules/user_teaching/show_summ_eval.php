@@ -29,7 +29,7 @@ if (isset ($_GET['id_user_eval'])) {
 	require ('list_questions.php');
 	require ('group_questions_bis.php');
 
-    require (MODEL_PATH.'select_answers_user_eval.php');
+    require (MODEL_PATH.'select_user_eval_answers.php');
     
     $id_user_eval = $_GET['id_user_eval'];
     require (MODEL_PATH.'select_user_eval.php');
@@ -40,7 +40,8 @@ if (isset ($_GET['id_user_eval'])) {
 	require (VIEW_RELATIVE_PATH.'show_summ_eval.php');
 }
 else {
-	$messages['error'][] = _("Aucune évaluation précisée");
+	$_SESSION['messages']['info'] = _("Aucune évaluation précisée. Voici donc toute la liste.");
+	header ('location:.?module=user_teaching&action=show_summ_all_eval');
 }
 
 ?>

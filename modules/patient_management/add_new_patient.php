@@ -55,9 +55,17 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 				if (checkdate ($date_birth_parts[1], $date_birth_parts[0], $date_birth_parts[2]) == false
 					or calculateAge ($patient['patient_date_birth']) < 0)
 					$messages['error'][] = _("La date de naissance n'est pas correcte");
+				elseif ((calculateAge ($patient['patient_date_birth']) < 6 or calculateAge ($patient['patient_date_birth']) > 12)
+					and !isset ($_SESSION['warning']['add_patient'])) {
+					$messages['warning'][] = _("Êtes-vous sûr d'inscrire un patient avec un âge inférieur à 6 ans ou supérieur à 12 ans ?");
+					$_SESSION['warning']['add_patient'] = 1;
+				}
 			}
 			
-			if (empty ($messages['error'])) {
+			if (empty ($messages['error']) and empty ($messages['warning'])) {
+				if (isset ($_SESSION['warning']['add_patient']))
+					unset ($_SESSION['warning']['add_patient']);
+				
 				require (MODEL_PATH.'insert_patient.php');
 				header('location:.?module=patient_management&action=show_profile&id_patient='.$id_patient);
 			}

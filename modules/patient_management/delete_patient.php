@@ -30,15 +30,17 @@ else {
 	if (isset ($_POST['confirm_delete_patient'])) {
 		require (MODEL_PATH.'select_user_password.php');
 		
-		if (md5($_POST['user_password']) !== $user_password) {
+		if (crypt($_POST['user_password'],SALT) !== $user_password) {
 			$messages['error'][] = _("Vous avez fait une erreur de mot de passe");
 			require (VIEW_RELATIVE_PATH.'delete_patient.php');
 		}
 		else {
 			require (MODEL_PATH.'delete_patient.php');
 			
-//			$_SESSION['info'] = _("Le patient").' '.$_SESSION['patient']['patient_surname'].' '.$_SESSION['patient']['patient_firstname'].' '._("a été supprimé de Teacher");
+			$name_deleted_patient = $_SESSION['patient']['patient_surname'].' '.$_SESSION['patient']['patient_firstname'];
 			unset ($_SESSION['patient']);
+			
+			$_SESSION['messages']['info'] = _("Ce patient a été supprimé de la base : ").$name_deleted_patient;
 			header ('location:.?module=patient_management&action=show_patient_list');
 		}
 	}
