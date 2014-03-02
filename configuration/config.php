@@ -41,6 +41,9 @@ define ('MODEL_PATH', 'models/');
 define ('TEMPLATE_PATH', 'template/');
 define ('CONFIG_PATH', 'configuration/');
 define ('IMAGE_PATH', 'images/');
+define ('LIB_PATH', 'lib/');
+define ('SECURED_PDF_PATH', 'secured_pdf/');
+define ('STATIC_PDF_PATH', 'static_pdf/');
 
 // where is the file which contains informations for connexion to database ?
 // better if in a parent folder of website root folder

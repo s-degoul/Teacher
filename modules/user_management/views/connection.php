@@ -33,15 +33,15 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	<form method='post' action='.?module=user_management&action=connection'>
 		<p>
 			<label for='user_login'><?php echo _("Identifiant"); ?> : </label>
-			<input type='text' name='user_login' id='user_login' value='' size=20 maxlenght=30 />
+			<input type='text' name='user_login' id='user_login' value='' size=20 maxlenght=30 tabindex='1'/>
 		</p>
 		<p>
 			<label for='user_password'><?php echo _("Mot de passe"); ?> : </label>
-			<input type='password' name='user_password' id='user_password' value='' size=20 maxlenght=30 />
+			<input type='password' name='user_password' id='user_password' value='' size=20 maxlenght=30 tabindex='2'/>
 		</p>
 		<p>
-			<input class = 'button_validation' type='submit' name='user_connection' value='Connexion' />
+			<input class = 'button_validation' type='submit' name='user_connection' value='Connexion' tabindex='3'/>
 		</p>
 	</form>
 	
-	<p><a href='.?module=user_management&action=password_forgotten'><?php echo _("Mot de passe oublié ?"); ?></a></p>
+	<p><a href='.?module=user_management&action=password_forgotten' tabindex='4'><?php echo _("Mot de passe oublié ?"); ?></a></p>

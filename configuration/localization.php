@@ -34,7 +34,7 @@ define('PROJECT_DIR', realpath('.'));
 define('LOCALE_DIR', PROJECT_DIR .'/locale');
 define('DEFAULT_LOCALE', 'fr_FR');
 
-require_once('lib/gettext/gettext.inc');
+require_once(LIB_PATH.'gettext/gettext.inc');
 
 $supported_locales = array('en_US', 'fr_FR');
 $encoding = 'UTF-8';

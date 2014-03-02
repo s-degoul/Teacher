@@ -42,7 +42,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 			</p>
 			<p class = 'links_footer'>
 				Teacher
-				(<a xmlns:cc="http://creativecommons.org/ns#" href="http://samuel-degoul.org/Teacher" property="cc:attributionName" rel="cc:attributionURL"><?php echo WEB_ADRESS; ?></a>)
+				(<a xmlns:cc="http://creativecommons.org/ns#" href="http://www.samuel-degoul.org/Teacher/" property="cc:attributionName" rel="cc:attributionURL"><?php echo WEB_ADRESS; ?></a>)
 <?php
 	echo _("est mis à disposition selon les termes d'une licence Creative Commons Attribution")
 ?>			

@@ -24,7 +24,7 @@ body {
 	width: 1024px;
 	margin: auto;
 	padding:0;
-	font-family: Arial;
+	font-family: arial;
 }
 
 /*
@@ -35,10 +35,8 @@ a {
 
 header {
 	background-color: rgb(254,254,254);
-	background-image: url('../images/header_doctor.png');
-/*	background-image: url('../images/header_default.jpg');*/
+	background-image: url('../images/header_default.png');
 	background-repeat: no-repeat;
-/*	background-color: silver;*/
 	height: 200px;
 	margin: 0;
 	padding: 0;
@@ -61,6 +59,7 @@ header {
 			text-align: right;
 			padding-right: 10px;
 			padding-top: 5px;
+			padding-bottom: 0;
 			font-size: 0.8em;
 			color: rgb(254,254,254);
 		}
@@ -70,21 +69,27 @@ header {
 				margin-left: 30px;
 				text-decoration: none;
 				color: rgb(254,254,254);
+				background-color: rgba(254,254,254,0.5);
 				border: 1px solid rgb(254,254,254);
+			}
+			
+			.header_top a:hover {
+				font-style: italic;
 			}
 
 		.header_middle {
-			height: 120px;
+			height: 85px;
 			padding-top: 10px;
-			text-align: center;
+			text-align: left;
 			color: rgb(254,254,254);
-			font-size: 30px;
+			font-size: 1.7em;
 			font-weight: bold;
 		}
 
 
 	.menu_top {
 		height: 50px;
+		padding-top: 20px;
 		padding-left: 50px;
 	}
 
@@ -152,8 +157,6 @@ header {
 }
 
 	.menu_left {
-		/*background-image: url(../images/teacher_logo.jpg);*/
-		background-image: none;
 		background-repeat: no-repeat;
 		display: inline-block;
 		padding: 0;
@@ -163,18 +166,19 @@ header {
 		color: rgb(254,254,254);
 	}
 		.menu_left p {
-			padding: 0px;	
+			padding: 0px;
+			margin: 0px;	
 		}
 		
-		.menu_left a {
+/*		.menu_left a {
 			margin-bottom: 10px;
 			color: rgb(254,254,254);
 		}
-		
-		.menu_left a:hover {
+*/		
+/*		.menu_left a:hover {
 			margin-bottom: 10px;
 			font-weight: bold;
-		}
+		}*/
 
 		.menu_left_title {
 			padding: 3px;
@@ -195,18 +199,17 @@ header {
 		}
 		
 		.menu_left_title a {
+			color: rgb(254,254,254);
 			text-decoration: none;
 		}
 		
 		.menu_left_title a:hover {
-			margin-bottom: 0px;
-			font-weight: none;
 			text-decoration: none;
 		}
 
 		.menu_left_subtitle {
-			margin-top: 30px;
-			padding-bottom: 10px;
+			margin-top: 10px;
+			padding-bottom: 5px;
 			font-weight: bold;
 		}
 		
@@ -219,11 +222,51 @@ header {
 	/*		color: rgb(254,254,254);*/
 		}
 		
-		.list_no_point {
-			list-style-image:none;
-			list-style-type:none;
+		.menu_left_list {
+			margin: 0;
+			list-style-type :none;
+			list-style-position: outside;
+			
+		}
+		
+		.menu_left_list li {
+			margin: 0;
+			line-height: 1.15;
+		}
+		
+		
+		
+		
+		.menu_left_part {
+			margin-top: 5px;
+			padding: 3px;
+			background-color: rgba(254,254,254,0.3);
+		}
+		
+		.menu_left_active {
+			margin: 0;
+			padding: 3px;
+			/*background-color: rgba(254,254,254,0.3);*/
+		}
+		
+		.menu_left_active a {
+			color: rgb(254,254,254);
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		.menu_left_inactive {
+			margin: 0;
+			padding: 3px;
+			/*background-color: rgba(254,254,254,0.3);*/
+			color: rgb(150,150,150);
 		}
 
+		.menu_left_inactive a {
+			color: rgb(120,120,120);
+			text-decoration: none;
+		}
+		
 	section {
 		display: inline-block;
 		vertical-align: top;
@@ -235,7 +278,6 @@ header {
 		padding-right: 0px;
 
 	}
-
 
 		.content_top {
 			margin: 10px;
@@ -304,6 +346,7 @@ header {
 			section h2 {
 				color: #49BFDD;
 				text-decoration: none;
+				font-size: 1em;
 			}
 
 			section h2 a {
@@ -338,7 +381,12 @@ footer {
 
 
 
-/*quels styles généraux*/
+/* generic styles */
+
+.list_no_point {
+	list-style-image:none;
+	list-style-type:none;
+}
 
 .link_last {
 	display: inline-block;

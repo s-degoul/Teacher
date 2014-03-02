@@ -124,6 +124,8 @@ ksort ($list_cycle_educ);
 
 foreach ($list_cycle_educ as $cycle_start_date => $feature_cycle) {
 
+	$id_cycle_educ = $feature_cycle['id_cycle_educ'];
+
 	$nb_cycle ++;
 	if (!empty ($list_cycle_educ[$cycle_start_date]['targets']))
 		ksort ($list_cycle_educ[$cycle_start_date]['targets']);
@@ -192,10 +194,10 @@ foreach ($list_cycle_educ as $cycle_start_date => $feature_cycle) {
 <?php
 		if (!empty ($feature_cycle['cycle_educ_eval_date'])) {
 			echo '				<li>'._("réalisée le").' '.showDate ($feature_cycle['cycle_educ_eval_date']).'</li>'."\n";
-			echo '				<li><a href=\'.?module=patient_teaching&action=show_eval&id_eval='.$feature_cycle['id_cycle_educ'].'\'>'
+			echo '				<li><a href=\'.?module=patient_teaching&action=show_eval&id_eval='.$id_cycle_educ.'\'>'
 									._("consulter l'évaluation").'</a></li>'."\n";
 			echo '				<li><a href=\'.?module=patient_teaching&action=show_summ_eval&type_eval=cycle_educ_eval&show_target_cycle=1
-									&id_eval='.$feature_cycle['id_cycle_educ'].'\'>'._("consulter la synthèse").'</a></li>'."\n";
+									&id_eval='.$id_cycle_educ.'\'>'._("consulter la synthèse").'</a></li>'."\n";
 		}
 		elseif ($_SESSION['patient']['eval_to_do'] == 1){
 			echo '				<li>'._("non réalisée").'</li>'."\n";
@@ -210,6 +212,17 @@ foreach ($list_cycle_educ as $cycle_start_date => $feature_cycle) {
 <?php
 		if ($feature_cycle['cycle_educ_end_programme'] == 1)
 			echo '		<p>'._("Fin provisoire du programme éducatif").'</p>'."\n";
+		
+		
+		if (isset ($list_summary_letter[$id_cycle_educ])) {
+			echo '		<p>'._("Courrier(s) de liaison créé(s)").'</p>'."\n";
+			echo '			<ul>'."\n";
+			foreach ($list_summary_letter[$id_cycle_educ] as $one_summary_letter) {
+				echo '<li><a href = \'.?module=patient_management&action=get_summary_letter_pdf&file='.$one_summary_letter['summary_letter_name'].'\'>'
+					._("courrier du").' '.showDate ($one_summary_letter['summary_letter_date'], 'day').'</a></li>';
+			}
+			echo '			</ul>'."\n";
+		}
 ?>
 	</div>
 <?php
@@ -218,11 +231,18 @@ foreach ($list_cycle_educ as $cycle_start_date => $feature_cycle) {
 			echo '	</div>'."\n".'	<div>';
 		}
 		
-		$last_cycle_educ = $feature_cycle['id_cycle_educ'];
+		$last_cycle_educ = $id_cycle_educ;
 	}
 }
 ?>
 	</div>
+<?php
+if ($nb_cycle > 1) {
+?>
+	<a href = '.?module=patient_management&action=create_summary_letter'><?php echo _("Créer un courrier de liaison"); ?></a>
+<?php
+}
+?>
 </div>
 
 

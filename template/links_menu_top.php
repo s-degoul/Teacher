@@ -30,7 +30,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
  * each item is associated with an array containing
  * informations for link's target ("module" and
  * "action") and link's title ("title").
- * Possibility of submenu with same model.
+ * Possibility of submenu with the same model.
  *************************************************/
 
 if (isset ($_SESSION['id_user'])) {

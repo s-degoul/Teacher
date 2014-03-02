@@ -85,6 +85,8 @@ else {
 		}
 	}
 
+	require (MODEL_PATH.'select_list_summary_letter.php');
+
 	require (VIEW_RELATIVE_PATH.'show_profile.php');
 }
 ?>

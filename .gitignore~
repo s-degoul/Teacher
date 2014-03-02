@@ -1,0 +1,18 @@
+# file containing real informations for connection to database
+configuration/security.php
+
+# temporary files
+.~
+
+# old versions of files
+*.old
+
+# configuration file of git himself
+.gitignore
+
+# configuration file for rsync
+synchronisation_exclude
+
+# parent folder
+../
+

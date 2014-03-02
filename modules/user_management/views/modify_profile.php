@@ -110,6 +110,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 ?>
 
 				</select>
+				<?php echo _("NB : les heures enregistrées avec les formulaires seront celles correspondant au pays indiqué ici"); ?>
 			</li>
 
 

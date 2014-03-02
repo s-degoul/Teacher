@@ -49,7 +49,7 @@ if (isset ($_GET['from']) and $_GET['from'] == 'connection')
 	
 	<div class = 'synopsis_patient'>
 		<div class = 'synopsis_patient_show'>
-			<p class = 'synopsis_patient_title'><?php echo _("Patient x"); ?></p>
+			<p class = 'synopsis_patient_title'><?php echo _("LEPETIT Quinquin"); ?></p>
 			<p class = 'synopsis_patient_note'><?php echo _("À partir de ce stade, TEACHER se décline à <strong>2 voix</strong> (celle de l’enfant et celle du médecin).
 							Jusqu’à la fin du programme, chaque élément de chaque étape de la démarche pédagogique est dédoublé :
 							à un support destiné à l’enfant (et/ou à ses parents) correspond le conducteur proposant au pédiatre une méthode pour repérer les besoins,

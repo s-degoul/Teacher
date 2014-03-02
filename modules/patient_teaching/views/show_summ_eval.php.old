@@ -1,0 +1,157 @@
+<?php
+if ($_GET['type_eval'] == 'educ_diag') {
+	$title_view = _("Synthèse du diagnostic éducatif");
+	$title_content = _("SYNTHESE AVANT EDUCATION").' : '._("les 10 objectifs éducatifs");
+}
+else {
+	$title_view = _("Synthèse de l'évaluation finale");
+	$title_content = _("SYNTHESE APRES EDUCATION").' : '._("les 10 objectifs éducatifs");
+}
+	
+$style[] = 'summ_eval';
+?>
+
+<table class='table_synthesis'>
+	<thead>
+		<tr>
+			<td class='synthesis_title' colspan = 5><?php echo $title_content; ?></td>
+		</tr>
+		<tr>
+			<td class='synthesis_item'></td>
+			<td class='synthesis_item'></td>
+			<td class='synthesis_title_1'><?php echo _('Non acquis'); ?></td>
+			<td class='synthesis_title_2'><?php echo _('Partiellement acquis'); ?></td>
+			<td class='synthesis_title_3'><?php echo _('Acquis'); ?></td>
+		</tr>
+	</thead>
+	<tbody>
+<?php
+
+foreach ($list_question_obj as $id_target => $features_question) {
+	
+	$line = '';
+	$beginning_line = '';
+	$nb_line = 0;
+	$nb_points = 0;
+
+	$css_item = 'synthesis_item';
+	if ($features_question['target_security'] == 1)
+		$css_item = 'synthesis_security_item';
+
+	
+	foreach ($features_question['value_question'] as $nb_subquestion => $value_question) {
+		$line .= $beginning_line;
+		
+		if (is_string ($nb_subquestion)) {
+			$line .= '			<td class = \''.$css_item.'\'>'.$id_target.'&nbsp;'.$nb_subquestion.'</td>'."\n";
+			$id_group_questions = $id_target.'_'.$nb_subquestion;
+		}
+		else {
+			$line .= '			<td class = \''.$css_item.'\'></td>'."\n";
+			$id_group_questions = $id_target;
+		}
+
+		foreach ($list_group_questions[$id_group_questions]['items_validation'] as $title_item => $value_item) {
+
+			$title_cell = '';
+			if ($value_question == $value_item) {
+				$nb_points += $value_item;
+				$title_cell = $value_item;
+				$css_cell = 'synthesis_checked_cell';
+			}
+			elseif ($value_item === 'NA')
+				$css_cell = 'synthesis_inactive_cell';
+			else
+				$css_cell = 'synthesis_cell';
+				
+			$line .= '			<td class = \''.$css_cell.'\'>'.$title_cell.'</td>'."\n";
+		}
+		
+		$line .= '		</tr>'."\n";
+		$beginning_line = '		<tr>'."\n";
+		$nb_line ++;
+	}
+
+	echo '		<tr>'."\n"
+		.'			<td rowspan='.$nb_line.' class = \''.$css_item.'\'>'.$id_target.'/ '.$features_question['target_name'].'</td>'."\n"
+		.$line;
+}
+?>	
+	</tbody>
+</table>
+<?php
+if ($view_action == 'write') {
+	if (isset ($_GET['modify_target_cycle']))
+		$param_get = '&type_eval='.$_GET['type_eval'].'&modify_target_cycle=1';
+	else
+		$param_get = '&type_eval='.$_GET['type_eval'];
+	
+	echo '	<form method=\'post\' action=\'.?module=patient_teaching&action=show_summ_eval'.$param_get.'\'>'."\n";
+}
+
+
+foreach ($targets_to_work as $targets_importance => $list_targets_to_work) {
+	if ($view_action == 'read') {
+		if ($targets_importance == 'compulsory')
+				$instruction = '<p>'._("Objectifs éducatifs à valider obligatoirement").' :</p>';
+		elseif ($targets_importance == 'advised')
+				$instruction = '<p>'._("Autres objectifs éducatifs à valider").' :</p>';
+		else
+				$instruction = '<p>'._("Autres objectifs éducatifs").' :</p>';
+	}
+	else {
+		if ($targets_importance == 'compulsory')
+				$instruction = '<p>'._("Objectifs éducatifs à travailler et valider obligatoirement").' :</p>';
+		elseif ($targets_importance == 'advised')
+				$instruction = '<p>'._("Il est conseillé de travailler ces objectifs").' :</p>';
+		else
+				$instruction = '<p>'._("Vous pouvez aussi travailler d'autres objectifs si vous avez envie").' :</p>';
+	}
+			
+	foreach ($list_targets_to_work as $key => $nb_target_to_work) {
+		if ($view_action == 'read') {
+			if (array_key_exists ($nb_target_to_work, $list_cycle_target)) {
+				echo $instruction.'<p>'._("Objectif éducatif n°").' '.$nb_target_to_work.' : '."\n";
+				
+				if ($list_cycle_target[$nb_target_to_work]['cycle_target_date'] != '')
+					echo _("prévu le").' '.showDate($list_cycle_target[$nb_target_to_work]['cycle_target_date'], 'day').'</p>'."\n";
+				elseif ($list_cycle_target[$nb_target_to_work]['cycle_target_done'] == 1)
+					echo _("réalisé le").' '.showDate($list_cycle_target[$nb_target_to_work]['cycle_target_date']).'</p>'."\n";
+				else
+					echo _("pas de date prévue").'</p>'."\n";
+					
+				$instruction = '';
+			}
+		}
+		else {
+			if (isset ($targets_cycle['date_target_'.$nb_target_to_work]))
+				$target_date = $targets_cycle['date_target_'.$nb_target_to_work];
+			elseif (isset ($list_cycle_target[$nb_target_to_work]['cycle_target_date']))
+				$target_date = showDate ($list_cycle_target[$nb_target_to_work]['cycle_target_date'], 'day');
+			else
+				$target_date = '';
+				
+			if (isset ($targets_cycle['confirm_target_'.$nb_target_to_work]) or isset ($list_cycle_target[$nb_target_to_work]))
+				$checked = 'checked';
+			else
+				$checked = '';
+		
+			echo $instruction.'<p>
+						<input type = checkbox name=\'confirm_target_'.$nb_target_to_work.'\' id=\'confirm_target_'.$nb_target_to_work.'\' value=1 '.$checked.'/>
+						<label for=\'confirm_target_'.$nb_target_to_work.'\'>'._("objectif").' '.$nb_target_to_work.'</label>.
+						<label for=\'\'>'._("date prévue (format JJ/MM/AAAA)").' :</label>
+						<input type=\'text\' name=\'date_target_'.$nb_target_to_work.'\' id=\'date_target_'.$nb_target_to_work.'\' value=\''.$target_date.'\' />
+						</p>';
+			$instruction = '';
+		}
+	}
+}
+
+
+if ($view_action == 'write') {
+	echo '	<input type=\'submit\' name=\'valid_targets_to_work\' value=\''._("Valider cette planification").'\'/>';
+	echo '	<input type=\'submit\' name=\'valid_programme\' value=\''._("Achever ce programme éducatif").'\'/>';
+}
+?>
+
+</form>

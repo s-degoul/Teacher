@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,38 +19,126 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+
+/*************************************************
+ * left menu
+ *************************************************/
 ?>
 
-
-﻿	<div class='middle_page'>
-		<nav class="menu_left">
+<div class='middle_page'>
+	<nav class="menu_left">
 
 <?php
+if (isset ($_GET['close_patient']) and $_GET['close_patient'] == 1) {
+	unset ($_SESSION['patient']);
+}
+
+require (TEMPLATE_PATH.'links_menu_left.php');	
+
+//menu for logged-in visitor
 if (isset ($_SESSION['id_user'])) {
+
+	$menu_parts = array(
+						0 => array (
+								'title_short' => _("Médecin"),
+								'title_long' => _("Mon espace"),
+								'main_page' => '.?module=user_management&action=show_profile&close_patient=1',
+								'links' => $links_user
+								),
+						1 => array (
+								'title_short' => _("Patients"),
+								'title_long' => _("Voir la liste des patients"),
+								'main_page' => '.?module=patient_management&action=show_patient_list',
+								'links' => $links_patient
+								)
+						);
 	if (isset ($_SESSION['patient'])) {
+		$menu_parts[1]['title_long'] .= _("\n(ferme le dossier actuel)");
+	}
+	
+	foreach ($menu_parts as $one_menu_part) {
 ?>
-			<p class = 'menu_left_close'><a href='.?module=patient_management&action=close_patient'><?php echo _("Fermer ce dossier patient"); ?></a></p>
+		<p class = 'menu_left_title' title = '<?php echo $one_menu_part['title_long'] ?>'>
+			<a href = '<?php echo $one_menu_part['main_page'] ?>'><?php echo $one_menu_part['title_short']; ?></a>
+		</p>
+<?php	
+		foreach ($one_menu_part['links'] as $n => $features):
 
-			<p class = 'menu_left_title' title = "<?php echo _("Afficher le profil du patient"); ?>"><a href='.?module=patient_management&action=show_profile'>
-			<?php echo strtoupper($_SESSION['patient']['patient_surname']).' '
-					.$_SESSION['patient']['patient_firstname']; ?></a></p>
-
-			<p><?php echo sprintf (ngettext('%d an','%d ans',$_SESSION['patient']['patient_age']['year']),$_SESSION['patient']['patient_age']['year'])
-								.' '.sprintf (ngettext('%d mois','%d mois',$_SESSION['patient']['patient_age']['month']),$_SESSION['patient']['patient_age']['month']); ?></p>
-
-			<p class = 'menu_left_subtitle'><?php echo _("Parcours dans Teacher"); ?></p>
+			if ($features['module'] == $module and $action == $features['action']) {
+				$css_link_menu_top = '';
+			}
+			else {
+				$css_link_menu_top = '';
+			}
+?>			
+		<p class = '<?php echo $css_link_menu_top; ?>' title = "<?php echo $features['title_long']; ?>">
+			<a href = '.?module=<?php echo $features['module']; ?>&action=<?php echo $features['action']; ?>'><?php echo $features['title_short']; ?></a>
+		</p>
+<?php		
+			if (isset ($features['submenu']) and !empty ($features['submenu'])):
+				foreach ($features['submenu'] as $i => $features_submenu) :
+					if ($features_submenu['active'] == 1) {
+						$css_link_submenu = "";
+					}
+					else {
+						$css_link_submenu = "";
+					}
+?>
+				<p class = '<?php echo $css_link_submenu; ?>' title = "<?php echo $features_submenu['title_long']; ?>">
+					<a href='.?module=<?php echo $features_submenu['module']; ?>&action=<?php echo $features_submenu['action']; ?>'>
+						<?php echo $features_submenu['title_short']; ?>
+					</a>
+				</p>
 <?php
+				endforeach;
+			endif;
+		endforeach;
+	}		
+/*
+?>
+		<p class = 'menu_left_close'><a href='.?module=patient_management&action=close_patient'><?php echo _("Fermer ce dossier patient"); ?></a></p>
+
+		<p class = 'menu_left_title' title = "<?php echo _("Afficher le profil du patient"); ?>"><a href='.?module=patient_management&action=show_profile'>
+		<?php echo strtoupper($_SESSION['patient']['patient_surname']).' '
+				.$_SESSION['patient']['patient_firstname']; ?></a></p>
+
+		<p><?php echo sprintf (ngettext('%d an','%d ans',$_SESSION['patient']['patient_age']['year']),$_SESSION['patient']['patient_age']['year'])
+							.' '.sprintf (ngettext('%d mois','%d mois',$_SESSION['patient']['patient_age']['month']),$_SESSION['patient']['patient_age']['month']); ?></p>
+
+		<hr />
+		<p class = 'menu_left_subtitle'><?php echo _("Parcours dans Teacher"); ?></p>
+
+
+		<div class = 'menu_left_part'>
+<?php
+		// link toward educational diagnosis
 		if ($_SESSION['patient']['educ_diag_done'] == 0) {
 ?>
-			<p><a href='.?module=patient_teaching&action=create_educ_diag'><?php echo _("Faire le diagnostic éducatif"); ?></a></p>
+			<p class = 'menu_left_active'>
+				<a href='.?module=patient_teaching&action=create_educ_diag'><?php echo _("Diagnostic éducatif"); ?></a>
+			</p>
 <?php
 		}
 		else  {
 ?>
-			<p><a href='.?module=patient_teaching&action=show_educ_diag'><?php echo _("Voir le diagnostic éducatif"); ?></a></p>
+			<p class = 'menu_left_inactive'>
+				<img src = '<?php echo IMAGE_PATH.'done.png'; ?>' alt = 'OK' />
+				<a href='.?module=patient_teaching&action=show_educ_diag'><?php echo _("Diagnostic éducatif"); ?></a>
+			</p>
+			<ul class = 'menu_left_list'>
+				<li class = 'menu_left_inactive'>
+					<img src = '<?php echo IMAGE_PATH.'done.png'; ?>' alt = 'OK' />
+					<a href='.?module=patient_teaching&action=show_summ_eval&type_eval=educ_diag'><?php echo _("Contrat éducatif"); ?></a>
+				</li>
+			</ul>
 <?php
 		}
-
+?>
+		</div>
+		<div class = 'menu_left_part'>
+<?php
+		// links toward educational objectives to work on or achieved
 		if ($_SESSION['patient']['nb_cycle_educ'] == 1) {
 ?>
 			<p><?php echo _("Cycle initial"); ?></p>
@@ -60,80 +147,139 @@ if (isset ($_SESSION['id_user'])) {
 		elseif ($_SESSION['patient']['nb_cycle_educ'] > 1) {
 			if (isset ($_SESSION['patient']['end_programme']) and $_SESSION['patient']['end_programme'] == 1) {
 ?>
-			<p title = "<?php echo _("Programme éducatif terminé, réévaluation nécessaire à 6 mois"); ?>"><?php echo _("Programme éducatif terminé"); ?></p>
+			<p title = "<?php echo _("Programme éducatif terminé, réévaluation nécessaire à 6 mois"); ?>">
+				<?php echo _("Programme éducatif terminé"); ?>
+			</p>
 <?php
 			}
 			else {
 ?>
-			<p><?php echo _("Renforcement éducatif n° ").($_SESSION['patient']['nb_cycle_educ'] -1); ?></p>
+			<p>
+				<?php echo _("Renforcement éducatif n° ").($_SESSION['patient']['nb_cycle_educ'] -1); ?>
+			</p>
 <?php
 			}
 		}
 
+
 		if (!empty ($_SESSION['patient']['targets'])) {
-?>
-			<p title = "<?php echo _("Objectifs éducatifs prévus dans le cycle/renforcement éducatif en cours"); ?>"><?php echo _("Objectifs éducatifs"); ?></p>
-			<ul>
+
+			<ul class = 'menu_left_list'>
 <?php
+
 			foreach ($_SESSION['patient']['targets'] as $nb_target => $features_target) {
-				if ($features_target['target_done'] == 1)
-					echo '				<li title = "'._("fait").'">'._("objectif").' '.$nb_target.'</li>'."\n";
-				else
-					echo '				<li><a href=\'.?module=patient_teaching&action=show_target&id_target='.$nb_target.'\'>'._("objectif").' '.$nb_target.'</a></li>'."\n";
+				if ($features_target['target_done'] == 1) {
+?>
+				<li class = 'menu_left_inactive' title = '<?php echo _("fait"); ?>'>
+					<img src = '<?php echo IMAGE_PATH.'done.png'; ?>' alt = 'OK' />
+					<a href='.?module=patient_teaching&action=show_target&id_target=<?php echo $nb_target; ?>'> <?php echo _("objectif").' '.$nb_target; ?></a>
+				</li>
+<?php
+				} 
+				else {
+?>
+				<li  class = 'menu_left_active'>
+					<a href='.?module=patient_teaching&action=show_target&id_target=<?php echo $nb_target; ?>'> <?php echo _("objectif").' '.$nb_target; ?></a>
+				</li>
+<?php
+				}
 			}
-		}
-		elseif (empty ($_SESSION['patient']['end_programme'])) {
-			echo '			<p>'._("Aucun objectif éducatif prévu").'</p>'."\n";
-		}
 ?>
 			</ul>
 <?php
-		if (isset ($_SESSION['patient']['eval_to_do']) and $_SESSION['patient']['eval_to_do'] == 1) {
-			if (isset ($_SESSION['patient']['end_programme']) and $_SESSION['patient']['end_programme'] == 1)
-				echo '				<p><a href=\'.?module=patient_teaching&action=create_eval\'>'._("L'évaluation de contrôle peut être réalisée").'</a></p>'."\n";
-			else
-				echo '				<p><a href=\'.?module=patient_teaching&action=create_eval\'>'._("L'évaluation finale peut être réalisée").'</a></p>'."\n";
 		}
-		else {
-			echo '				<p title = "'._("L'évaluation finale pourra être réalisée après la validation des objectifs prévus").'">'._("Évaluation finale").'</p>'."\n";
+		elseif (empty ($_SESSION['patient']['end_programme'])) {
+?>
+			<p>
+				<?php echo _("Aucun objectif éducatif prévu"); ?>
+			</p>
+<?php
 		}
 ?>
 			
+			
+
 <?php
+		// link toward final evaluation
+		if (isset ($_SESSION['patient']['eval_to_do']) and $_SESSION['patient']['eval_to_do'] == 1) {
+			if (isset ($_SESSION['patient']['end_programme']) and $_SESSION['patient']['end_programme'] == 1) {
+?>
+			<p class = 'menu_left_active'>
+				<a href=\'.?module=patient_teaching&action=create_eval\'>
+					<?php echo _("L'évaluation de contrôle peut être réalisée"); ?>
+				</a>
+			</p>
+<?php
+			}
+			else {
+?>
+			<p class = 'menu_left_active'>
+				<a href=\'.?module=patient_teaching&action=create_eval\'>
+					<?php echo _("Évaluation finale"); ?>
+				</a>
+			</p>
+<?php
+			}
+		}
+		else {
+?>
+			<p  class = 'menu_left_inactive' title = "<?php echo _("L'évaluation finale pourra être réalisée après la validation des objectifs prévus"); ?>">
+				<?php echo _("Évaluation finale"); ?>
+			</p>
+<?php
+		}
+?>
+		</div>
+<?php
+*/
+
+	// if patient record is open
+	if (isset ($_SESSION['patient'])) {
 		$style[] = 'patient';
 	}
 	
+
+	
+	// if no patient record open
 	else {
-		echo '<p>'._("Résumé").'</p>'."\n";
+/*
 ?>
-		<p>
-<?php
-		echo _("nombre de patient(s) : ").'<a href=\'.?module=patient_management&action=show_patient_list\' title = \''._("accéder à la liste de mes patients").'\'>'
-											.$_SESSION['nb_patients'].'</a>'."\n";
-?>
+		<p class = 'menu_left_title'>
+			<?php echo _("Médecin"); ?>
 		</p>
-		<p>
+<?php	
+		foreach ($links_user as $n => $features):
+
+			if ($features['active'] == 1) {
+?>			
+			<p class = 'menu_left_active' title = "<?php echo $features['title_long']; ?>">
+				<a href = '.?module=<?php echo $features['module']; ?>&action=<?php echo $features['action']; ?>'>
+					<?php echo $features['title_short']; ?>
+				</a>
+			</p>
+
 <?php
-		if ($_SESSION['user_validation_essential'] == 0) {
-			if ($_SESSION['user_first_eval'] == 0)
-				echo '<a href=\'.?module=user_teaching&action=create_eval\'>'._("Faire la première auto-évaluation").'</a>'."\n";
-			else
-				echo '<a href=\'.?module=user_teaching&action=show_essential\'>'._("Lire la formation initiale").'</a>'."\n";
-		}
-		elseif ($_SESSION['user_eval_to_do'] == 1) {
-			echo '<a href=\'.?module=user_teaching&action=create_eval\'>'._("Refaire une auto-évaluation").'</a>'."\n";
-		}
-		else {
-			echo '<a href=\'.?module=user_teaching&action=show_essential\' title = "'._("Rafraîchir mes connaissances sur l'éducation thérapeutique").'">'
-					._("Rafraîchir mes connaissances").'</a>'."\n";
-		}
+			}
+			else {
 ?>
+			<p class = 'menu_left_inactive' title = "<?php echo $features['title_long']; ?>">
+				<?php echo $features['title_short']; ?>
+			</p>
+<?php
+			}
+		endforeach;
+?>
+		<p class = 'menu_left_title'>
+			<?php echo _("Patient"); ?>
 		</p>
 <?php
-		
+*/
 		$style[] = 'user';
 	}
 }
+
+
+// menu for free visitor
 elseif (isset ($_SESSION['visitor'])) {
 ?>
 		<p><?php echo _("Actions possibles"); ?> :</p>
@@ -149,7 +295,10 @@ elseif (isset ($_SESSION['visitor'])) {
 
 ?>
 
-		</nav>
+	</nav>
+
+
+
 
 
 <?php

@@ -25,9 +25,20 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 <?php
 
-$style[] = 'target';
+function CheckPDFExists ($filename) {
+	if (file_exists (STATIC_PDF_PATH.$filename.'_'.$_SESSION['lang'].'.pdf'))
+		return STATIC_PDF_PATH.$filename.'_'.$_SESSION['lang'].'.pdf';
+	elseif (file_exists (STATIC_PDF_PATH.$filename.'_'.DEFAULT_LOCALE.'.pdf'))
+		return STATIC_PDF_PATH.$filename.'_'.DEFAULT_LOCALE.'.pdf';
+	else
+		return 0;
+}
+
+
 
 require (MODEL_PATH.'select_target_list.php');
+
+$style[] = 'target';
 
 if (isset ($_GET['id_target'])) {
 	if ((int) $_GET['id_target'] >= 1 and (int) $_GET['id_target'] <= 10) {
@@ -44,9 +55,15 @@ else {
 if (empty ($messages['error'])) {
 
 	$type_reader = 'patient';
-	if (isset ($_GET['type']) and $_GET['type'] != 'patient') {
+	
+	// note that there's no patient sheet for objective number 5
+	if ((isset ($_GET['type']) and $_GET['type'] != 'patient') or $id_target == 5) {
 		$type_reader = 'user';
 		$style[] = 'user_help';
+		$style[] = 'target_user';
+	}
+	else {
+		$style[] = 'target_patient';
 	}
 
 	$title_view = $list_target[$id_target]['target_name'];
@@ -79,9 +96,10 @@ if (empty ($messages['error'])) {
 			$css_user = 'nav_target_selected';
 
 		$content_top .= '<div class=\''.$css_user.'\'><a href=\'.?module=patient_teaching&action=show_target&id_target='
-						.$id_target.'&type=user'.$from_page.'\'>Conducteur médecin</a></div>'
-						.'<div class=\''.$css_patient.'\'><a href=\'.?module=patient_teaching&action=show_target&id_target='
-						.$id_target.'&type=patient'.$from_page.'\'>Fiche enfant</a></div>';
+						.$id_target.'&type=user'.$from_page.'\'>Conducteur médecin</a></div>';
+		if ($id_target != 5)
+			$content_top .= '<div class=\''.$css_patient.'\'><a href=\'.?module=patient_teaching&action=show_target&id_target='
+							.$id_target.'&type=patient'.$from_page.'\'>Fiche enfant</a></div>';
 	}
 
 	if (isset ($_POST['valid_target'])){
