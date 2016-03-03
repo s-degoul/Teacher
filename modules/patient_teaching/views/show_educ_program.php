@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,23 +19,50 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 $title_view = _("Le programme éducatif personnalisé");
-$style [] = 'user_teaching';
 ?>
 
+<h2><?php echo _("Aperçu des étapes du programme éducatif"); ?></h2>
+
 <p>
-	<a href='.?module=patient_teaching&action=show_educ_diag&demo=1'><?php echo _("Le diagnostic éducatif personnalisé"); ?></a>
+	<?php echo _("Les liens ci-dessous vous permettent d'avoir un aperçu des documents concernant chaque étape du programme éducatif. Cet aperçu est à but démonstratif et concerne donc un enfant virtuel."); ?>
 </p>
 
 <p>
-	<a href='.?module=patient_teaching&action=show_target_list'><?php echo _("les séances d'apprentissage"); ?></a>
+	<ul>
+		<li>
+			<?php echo _("le questionnaire lié au diagnostic éducatif de l'enfant"); ?> :
+			<div class = 'link_container'>
+				<a href='.?module=patient_teaching&action=show_educ_diag&demo=1&from=show_educ_program' class = 'link'>
+					<?php echo _("Diagnostic éducatif personnalisé"); ?>
+				</a>
+			</div>
+		</li>
+		<li>
+			<?php echo _("les dix objectifs pédagogiques et les supports aux séances d'apprentissage"); ?> :
+			<div class = 'link_container'>
+				<a href='.?module=patient_teaching&action=show_target_list&demo=1&from=show_educ_program' class = 'link'>
+					<?php echo _("Séances d'apprentissage"); ?>
+				</a>
+			</div>
+		</li>
+		<li>
+			<?php echo _("le questionnaire servant à évaluer l'enfant en fin de programme"); ?> :
+			<div class = 'link_container'>
+				<a href='.?module=patient_teaching&action=show_eval&demo=1&from=show_educ_program' class = 'link'>
+					<?php echo _("Évaluation finale du patient"); ?>
+				</a>
+			</div>
+		</li>
+	</ul>
 </p>
 
-<p>
-	<a href='.?module=patient_teaching&action=show_eval&demo=1'><?php echo _("L'évaluation finale du patient"); ?></a>
+
+
+<h2><?php echo _("Mes patients"); ?></h2>
+
+<p><?php echo _("Il est maintenant temps de travailler avec un enfant réel."); ?></p>
+<p class = 'link_container'>
+	<a href='.?module=patient_management&action=show_patient_list&from=show_educ_program' class = 'link'><?php echo _("Mes patients"); ?></a>
 </p>

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,31 +19,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 $list_questions = array (
 					1 => array (
-							'instruction' => _("Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés,
-												demandez lui de désigner les signes qu’il ressent en cas de crise d’asthme et les signes avant la crise."),
-							'validation_conditions' => _("L’objectif 1 est validé s’il choisit au moins 2 images correspondant à ses signes propres de crise,
-															qui ont été identifiés au moment du Diagnostic Educatif ou de la séance sur l’objectif 1"),
+							'instruction' => _("Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés").' (<a href=\''.CheckPDFExists('t1_all_asthma_signs').'\' target=\'blank\'>'._("télécharger").'</a>). '._("Demandez lui de désigner les signes qu’il ressent en cas de crise d’asthme et les signes avant la crise."),
+							'validation_conditions' => _("L’objectif 1 est validé s’il choisit au moins 2 images correspondant à ses signes propres de crise, qui ont été identifiés au moment du Diagnostic Educatif ou de la séance sur l’objectif 1"),
 							'validation_items' => array (
 													'non_valid' => 0,
 													'valid' => 2
 													)
 							),
 					2 => array (
-							'instruction' => _("Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés,
-												demandez lui de désigner les signes qu’il ressent en cas de crise grave et ce qu’il doit faire en ce cas"),
+							'instruction' => _("Montrez à l’enfant la planche avec les illustrations des signes de crise mêlés, demandez lui de désigner les signes qu’il ressent en cas de crise grave et ce qu’il doit faire en ce cas"),
 							'question_answer' => array (
-												_("Difficulté à parler, gêne respiratoire importante, traitement bronchodilatateur inefficace, DEP restant en-dessous de la valeur-alerte grave"),
+												_("Difficulté à parler, gêne respiratoire importante, traitement bronchodilatateur inefficace, DEP < 60 % de la valeur normale (zone rouge"),
 												_("Prévenir l’entourage qu’il faut consulter immédiatement un médecin ou appeler le service médical d’urgence")
 												),
-							'validation_conditions' => _("L’objectif 2 validé s’il dit 1 des 4 signes énoncés ci-dessus
-														et qu’il prévient immédiatement quelqu’un quand il les ressent"),
+							'validation_conditions' => _("L’objectif 2 validé s’il dit 1 des 4 signes énoncés ci-dessus et qu’il prévient immédiatement quelqu’un quand il les ressent"),
 							'validation_items' => array (
 													'non_valid' => 0,
 													'valid' => 2
@@ -52,9 +43,7 @@ $list_questions = array (
 							),
 					'3_a' => array (
 							'title' => '',
-							'real_life_situation' => _("tu es à la maison et tu te rends compte que tu commences une crise d’asthme. Que fais-tu ?
-														A chaque étape de la réponse on peut solliciter l’enfant en lui disant :
-														« Et si ça ne passe pas,  que dois-tu faire ?»"),
+							'real_life_situation' => _("tu es à la maison et tu te rends compte que tu commences une crise d’asthme. Que fais-tu ? A chaque étape de la réponse on peut solliciter l’enfant en lui disant : « Et si ça ne passe pas,  que dois-tu faire ?»"),
 							'validation_items' => array (
 													'non_valid' => 0,
 													'valid' => 2
@@ -74,7 +63,7 @@ $list_questions = array (
 							),
 					'4_a' => array (
 							'title' => _("Comprendre son corps et s’expliquer les mécanismes de l’asthme"),
-							'instruction' => _("Montrez la planche « comprendre son corps »"),
+							'instruction' => _("Montrez la planche &laquo; comprendre son corps &raquo;").' (<a href=\''.CheckPDFExists('t4_asthma_physiopathology').'\' target=\'blank\'>'._("télécharger").'</a>). ',//.' ( <a href=\'.?module=patient_teaching&action=show_target&id_target=4&from='.$_GET['action'].'\'>'._("objectif 4").'</a> )',
 							'question_answer' => array (
 												_("Demandez à l’enfant s’il a une idée de l’endroit du corps qui est malade quand on fait de l’asthme")
 													=> _("« bronches », et si répond uniquement « poumons » lui faire préciser
@@ -95,7 +84,7 @@ $list_questions = array (
 							),
 					'4_b' => array (
 							'title' => _("Faire la différence entre son traitement de fond et traitement de crise (Comprendre l’intérêt de prendre son traitement de fond)"),
-							'instruction' => _("Montrez à l’enfant pèle-mêle de tous les médicaments inhalés. Vérifiez que son bronchodilatateur et son traitement de fond figurent parmi eux.
+							'instruction' => _("Montrez à l’enfant pèle-mêle tous les médicaments inhalés. Vérifiez que son bronchodilatateur et son traitement de fond figurent parmi eux.
 											Demandez à l’enfant de montrer le médicament en cas de gêne respiratoire et celui qu’il prend tous les jours.
 											Prends-tu un autre traitement ? Quand ? Pourquoi ?"),
 							'validation_conditions' => _("- validé s’il reconnait son broncho dilatateur d’action rapide ET a bien reconnu son traitement de fond,
@@ -110,7 +99,7 @@ $list_questions = array (
 							),
 					5 => array (
 							'instruction' => _("Présentez le dispositif d’inhalation factice ou vide qui correspond à celui utilisé habituellement par l’enfant.
-												Demandez-lui de mimer la façon dont il prend son médicament inhalé et comparez-la à la grille d’évaluation du dispositif correspondant"),
+												Demandez-lui de mimer la façon dont il prend son médicament inhalé et comparez-la à la grille d’évaluation du dispositif correspondant").' ( <a href=\'.?module=patient_teaching&action=show_target&id_target=5&from='.$_GET['action'].'&from_page_eval=5&from_id_cycle_educ='.$id_cycle_educ.'\'>'._("voir les grilles des dispositifs d'inhalation").'</a> )',
 							'validation_conditions' => _("validé si l’enfant est capable d’inhaler son médicament en respectant toutes les étapes de la grille"),
 							'validation_items' => array (
 													'non_valid' => 0,
@@ -119,7 +108,7 @@ $list_questions = array (
 							),
 					6 => array (
 							'instruction' => _("Présentez à l’enfant son débitmètre de pointe et demandez-lui de mesurer son souffle.
-												Comparez sa technique avec la grille d’évaluation ci-dessous"),
+												Comparez sa technique avec la grille d’évaluation").' ( <a href=\'.?module=patient_teaching&action=create_peakflow_use&from='.$_GET['action'].'&from_page_eval=6\'>'._("voir ici").'</a> )',
 							'validation_conditions' => _("- validé si l’enfant reproduit toutes les étapes<br/>
 															- partiellement validé si 1 erreur (sauf «je me mets debout»)<br/>
 															- non validé si 2 erreurs ou plus"),
@@ -142,7 +131,8 @@ $list_questions = array (
 							'validation_conditions' => _("- validé si l’enfant: connaît son chiffre habituel  et son chiffre d’alerte et s’il sait que,
 															quand il a un DEP inférieur à son chiffre d’alerte , il doit le signaler à son entourage
 															et/ou prendre son traitement de secours matin midi et soir<br/>
-															- Partiellement validé si connaît son chiffre habituel  et son chiffre d’alerte, mais ne sait pas ce qu’il doit faire"),
+															- Partiellement validé si connaît son chiffre habituel  et son chiffre d’alerte, mais ne sait pas ce qu’il doit faire<br/>
+															- Non validé dans les autres cas"),
 							'validation_items' => array (
 													'non_valid' => 0,
 													'partially_valid' => 0.5,
@@ -150,7 +140,7 @@ $list_questions = array (
 													)
 							),
 					'8_a' => array (
-							'title' => _("Utiliser l’image de « la maison des allergies »"),
+							'title' => _("Utiliser l’image de").' &laquo; <a href = \'.?module=patient_teaching&action=show_target&id_target=8&type=patient&from='.$_GET['action'].'&from_page_eval=8&from_id_cycle_educ='.$id_cycle_educ.'\'>'._("la maison des allergies").'</a> &raquo;',
 							'instruction' => _("Montre-moi sur l’image ce qui déclenche tes gênes respiratoires ou tes crises"),
 							'validation_conditions' => _("validé si l’enfant retrouve les facteurs déclenchant ses crises d’asthme,
 														qui ont été identifiés lors du diagnostic éducatif ou de la séance sur l’objectif 8"),
@@ -167,9 +157,8 @@ $list_questions = array (
 							'validation_conditions' => _("validé :<br/>
 															- Si l’enfant allergique  aux acariens  sait qu’il faut éviter la poussière et aérer la chambre<br/>
 															- Si l’enfant est allergique aux animaux sait qu’il doit éviter les contacts avec eux<br/>
-															- Si l’enfant allergique aux pollens connaît la période l’année où il risque de faire des crises quand il va jouer dehors<br/>
-															- Si l’enfant est sujet aux infections ORL, sait qu’il doit se nettoyer les yeux et le nez au serum physiologique
-																puis se moucher et se laver les mains régulièrement<br>
+															- Si l’enfant allergique aux pollens connaît la période de l’année où il risque de faire des crises quand il va jouer dehors<br/>
+															- Si l’enfant est sujet aux infections ORL, sait qu’il doit se nettoyer le nez au serum physiologique puis se moucher et se laver les mains régulièrement<br>
 															- Si l’enfant est gêné par les irritants (peinture, tabac) il doit s’éloigner des fumeurs et des irritants<br/>
 															- Si l’enfant est gêné à l’effort ou lors d’activités physiques, voir objectif 9"),
 							'validation_items' => array (
@@ -180,11 +169,9 @@ $list_questions = array (
 							),
 					9 => array (
 							'title_extension' => _("(à n’aborder que si l’enfant a un bronchospasme induit par l’exercice)"),
-							'real_life_situation' => _("un cross va être bientôt organisé à l’école. Ton professeur a décidé de commencer les entraînements.
-														Tu sais que lorsque tu cours tu es gêné (e) pour respirer. 
-														Que peux-tu faire pour éviter que cela n’arrive pendant le cross ?"),
-							'question_answer' => array (_("s’échauffer progressivement, si mon pédiatre ou médecin me l’a conseillé,
-															prendre 2 bouffées de BDAR avant le sport, pas de sport quand je ressens des signes de gêne respiratoire")
+							'real_life_situation' => _("Un cross va être bientôt organisé à l’école. Ton professeur a décidé de commencer les entraînements. Tu sais que, lorsque tu cours, tu es gêné(e) pour respirer. Que peux-tu faire pour éviter que cela n’arrive pendant le cross ?"),
+							'question_answer' => array (_("s’échauffer progressivement ; si mon médecin me l’a conseillé,
+															prendre 2 bouffées de bronchodilatateur d’action immédiate ou rapide avant le sport ; pas de sport quand je ressens des signes de gêne respiratoire")
 													),
 							'validation_conditions' => _("- Validé si l’enfant sait qu’il doit s’échauffer progressivement et prendre son bronchodilatateur avant le sport<br/>
 															- Partiellement validé si énonce un des 2 items"),
@@ -251,7 +238,7 @@ $list_questions = array (
 																				'b' => _("Je m’assoie dans le lit, je me calme et respire doucement"),
 																				'c' => _("Je me lève et vais réveiller l’accompagnant, je dis que je tousse,
 																							il me donne un sirop contre la toux"),
-																				'd' => _("Je me lève et prends mon médicament de secours")
+																				'd' => _("Je me lève et demande mon médicament de secours")
 																			)
 																),
 														'sentence_4' => _("Zoé va beaucoup mieux le lendemain et participe à la visite d’une ferme savoyarde :
@@ -287,7 +274,10 @@ $list_questions = array (
 													'partially_valid' => 0.5,
 													'valid' => 1
 													)
-							)
+							),
+					'asthmacontrol' => array ()
+							//~ 'instruction' => _("Niveau de contrôle subjectif enfant").'<br/><img src = \''.IMAGE_PATH.'scale_control_asthma.jpg\' alt = '._("échelle de contrôle de l'asthme").' width = 400px /><br/><br/>'._("Niveau de contrôle subjectif parent").'<br/><img src = \''.IMAGE_PATH.'scale_control_asthma.jpg\' alt = '._("échelle de contrôle de l'asthme").' width = 400px /><br/><br/>'._("CACT").' <a href = \'.?module=patient_teaching&action=show_cACT&from='.$_GET['action'].'\'>'._("cliquez ici").'</a>'
+							//~ )
 				);
 				
 if (isset ($_SESSION['patient']['patient_age'])) {
@@ -308,7 +298,7 @@ if (isset ($_SESSION['patient']['patient_age'])) {
 														_("Je me calme et je m’assieds, je respire par le nez et souffle par la bouche.<br/>
 															- si ma gêne respiratoire ne passe pas je prends immédiatement 2 bouffées de mon traitement de secours
 																(bronchodilatateur d’action immédiate)<br/>
-															- si ça ne va pas mieux.je peux renouveler la prise 10 mn après, je peux prendre jusqu’à 3 fois en 1 h
+															- si ça ne va pas mieux, je peux renouveler la prise 10 mn après, je peux prendre jusqu’à 3 fois en 1 h
 																2 bouffées de mon médicament de secours si ma gène respiratoire ne se passe pas.<br/>
 															- si ma gêne respiratoire ne passe pas j’avertis un adulte et je dis que je fais une crise d'asthme qui ne
 																passe pas malgré la prise répétée de mon médicament de secours (nommer le médicament)")
@@ -320,7 +310,7 @@ if (isset ($_SESSION['patient']['patient_age'])) {
 }
 else {
 	$list_questions['3_a']['question_answer'] = array (
-													_("<strong>Enfant < 10 ans</strong> : J’avertis mes parents ou un adulte et je dis que je fais une crise d’asthme et/ou
+													_("<br/><strong>Enfant < 10 ans</strong> : J’avertis mes parents ou un adulte et je dis que je fais une crise d’asthme et/ou
 															que j’ai besoin de mon médicament de secours (nommer le médicament) je me calme et je m’assieds,
 															je respire par le nez et souffle par la bouche<br/>
 														<strong>Enfant > 10 ans</strong> : Je me calme et je m’assieds, je respire par le nez et souffle par la bouche.<br/>
@@ -331,12 +321,14 @@ else {
 														- si ma gêne respiratoire ne passe pas j’avertis un adulte et je dis que je fais une crise d'asthme qui ne
 															passe pas malgré la prise répétée de mon médicament de secours (nommer le médicament)")
 													);
-	$list_questions['3_a']['validation_conditions']	= _("<strong>Enfant < 10 ans</strong> : - Validé si l’enfant dit qu’il prévient un adulte car il fait une crise d’asthme et/ou
+	$list_questions['3_a']['validation_conditions']	= _("<strong>Enfant < 10 ans</strong> :<br />
+															- validé si l’enfant dit qu’il prévient un adulte car il fait une crise d’asthme et/ou
 																qu’il a besoin de son traitement de secours.<br/>
 																S’il répond d’emblée « je prends mon traitement, ma ventoline » faite lui préciser comment en pratique
 																il accède à son traitement (pour s’assurer qu’il prévient)<br/>
-																- non validé si n’avertit pas
-															<strong>Enfant > 10 ans</strong> : - validé si l’enfant prend son médicament de secours.<br/>
+															- non validé si n’avertit pas
+															<br /><strong>Enfant > 10 ans</strong> :<br />
+															- validé si l’enfant prend son médicament de secours.<br/>
 															- non validé si ne prend pas son broncho dilatateur d’action rapide ou n’avertit pas son entourage
 																que les traitements sont inefficaces.");
 }

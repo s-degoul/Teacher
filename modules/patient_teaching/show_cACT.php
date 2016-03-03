@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,13 +19,33 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
+//~ if (isset ($_GET['from'])) {
+	//~ if ($_GET['from'] == 'show_educ_diag')
+		//~ $content_top .= '<p><a href = \'?module=patient_teaching&action=show_educ_diag&page_educ_diag=asthmacontrol\' class = \'link\'>'._("Revenir au diagnostic éducatif").'</a></p>';
+	//~ if ($_GET['from'] == 'show_eval')
+		//~ $content_top .= '<p><a href = \'?module=patient_teaching&action=show_eval&id_cycle_educ='.$_GET['id_cycle_educ'].'&page_eval=asthmacontrol\' class = \'link\'>'._("Revenir à l'évaluation").'</a></p>';
+//~ }
 
-if (isset ($_GET['from'])) {
-	$content_top .= '<p><a href = \'?module=patient_teaching&action='.$_GET['from'].'&page_educ_diag=asthmacontrol\'>'._("Revenir au diagnostic éducatif").'</a></p>';
+if (isset ($_POST['valid_cact'])) {
+	$cact_score = 0;
+	
+	$cact_responses = checkVarPOST();
+
+	foreach ($cact_responses as $item => $score) {
+		if(is_numeric($score) and $item != 'valid_cact' and $item != 'from') {
+			$cact_score += $score;
+		}
+	}
+	
+	if(isset($_POST['from'])) {
+		if ($_POST['from'] == 'create_educ_diag')
+			header('location:.?module=patient_teaching&action=create_educ_diag&page_educ_diag=asthmacontrol&cact_score='.$cact_score);
+		elseif ($_POST['from'] == 'create_eval')
+			header('location:.?module=patient_teaching&action=create_eval&page_eval=asthmacontrol&cact_score='.$cact_score);
+		exit;
+	}
 }
 
 require (VIEW_RELATIVE_PATH.'cACT.php');

@@ -1,4 +1,3 @@
-
 <?php
 /*********************************************************************
 Teacher
@@ -20,12 +19,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 if (isset ($_SESSION['patient'])) {
+	$id_patient = $_SESSION['patient']['id_patient'];
 	require (MODEL_PATH.'select_last_cycle_educ_achieved.php'); // return $id_cycle_educ
 	if (empty ($id_cycle_educ))
 		$messages['error'][] = _("Vous ne pouvez faire de courrier tant que votre patient n'a pas eu au moins une évaluation autre que le diagnostic éducatif");
@@ -38,19 +35,22 @@ if (empty ($messages['error'])) {
 	require (MODEL_PATH.'select_cycle_educ_summ.php'); // return $cycle_educ
 	$list_answers = $cycle_educ;
 	$cycle_educ_eval_date = $list_answers['cycle_educ_eval_date'];
-	unset ($list_answers['cycle_educ_start_date']);
-	unset ($list_answers['cycle_educ_eval_date']);
 	
-	if (preg_match ('#[a-zA-Z]{3,}#', showDate ($cycle_educ_eval_date))) {
+	if (preg_match ('#[a-zA-Zûé]{3,}#', showDate ($cycle_educ_eval_date))) {
 		require (MODEL_PATH.'select_last_cycle_educ_really_achieved.php');
 		require (MODEL_PATH.'select_cycle_educ_summ.php');
 		$list_answers = $cycle_educ;
 		$cycle_educ_eval_date = $list_answers['cycle_educ_eval_date'];
-		unset ($list_answers['cycle_educ_start_date']);
-		unset ($list_answers['cycle_educ_eval_date']);
 	}
+	
+	unset ($list_answers['cycle_educ_start_date']);
+	unset ($list_answers['cycle_educ_eval_date']);
+	unset ($list_answers['cycle_educ_eval_subj_patient']);
+	unset ($list_answers['cycle_educ_eval_subj_parent']);
+	unset ($list_answers['cycle_educ_eval_cact']);
 
-	require ('modules/patient_teaching/group_questions.php');
+
+	require ('modules/patient_teaching/group_questions_educ_diag.php');
 
 	// to make list of educational objectives
 	require (MODEL_PATH.'select_target_list.php'); //return $list_target
@@ -89,11 +89,15 @@ if (empty ($messages['error'])) {
 	}
 
 	if (isset ($_GET['output']) and $_GET['output'] == 'pdf') {
+		$letter = checkVarPost();
+		$letter['letter_title'] = substr($letter['letter_title'], 0, 250);
 		require (VIEW_RELATIVE_PATH.'create_summary_letter_pdf.php');
 	}
 	else {
 		$id_patient = $_SESSION['patient']['id_patient'];
 		require (MODEL_PATH.'select_patient_all.php'); // return $patient
+		
+		$id_user = $_SESSION['id_user'];
 		require (MODEL_PATH.'select_user_all.php'); // return $user
 		
 		require (VIEW_RELATIVE_PATH.'create_summary_letter.php');

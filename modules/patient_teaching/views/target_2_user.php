@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -22,8 +21,6 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
 
-
-
 <div class='content_target'>
 	
 	<div class='pict_good_to_know'>
@@ -31,20 +28,41 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	<div class='good_to_know'>
 		<p><?php echo _("L’évaluation de la sévérité d’une crise se base sur 3 critères principaux :"); ?></p>
 		<div>
-			<div class='good_to_know_3_cols'>1 <?php echo _("L’intensité de la gêne respiratoire, évaluée par la persistance des symptômes au repos,
-			et l’impossibilité de prononcer une phrase sans reprendre son souffle"); ?></div>
-			<div class='good_to_know_3_cols'>2 <?php echo _("L’inefficacité des bronchodilatateurs d’action immédiate"); ?></div>
-			<div class='good_to_know_3_cols'>3 <?php echo _("La valeur du débit de pointe inférieure à 60% de la valeur normale"); ?></div>
+			<p class='good_to_know_3_cols'>
+				<span class='nb_good_to_know'>1.</span>
+				<?php echo _("L’intensité de la gêne respiratoire, évaluée par la persistance des symptômes au repos,
+			et l’impossibilité de prononcer une phrase sans reprendre son souffle"); ?>
+			</p>
+			<p class='good_to_know_3_cols'>
+				<span class='nb_good_to_know'>2.</span>
+				<?php echo _("L’inefficacité des bronchodilatateurs d’action immédiate"); ?>
+			</p>
+			<p class='good_to_know_3_cols'>
+				<span class='nb_good_to_know'>3.</span>
+				<?php echo _("La valeur du débit de pointe inférieure à 60% de la valeur normale (zone rouge)"); ?>
+			</p>
 		</div>
 		
 		<p><?php echo _("D’autres signes peuvent s’y associer :"); ?></p>
 		<div>
-			<div class='good_to_know_2_cols'>1 <?php echo _("tirage sus-sternal ou/et intercostal, balancement thoraco-abdominal, battement des ailes du nez"); ?></div>
-			<div class='good_to_know_2_cols'>3 <?php echo _("agitation ou somnolence, sueur"); ?></div>
+			<p class='good_to_know_2_cols'>
+				<span class='nb_good_to_know'>1.</span>
+				<?php echo _("tirage sus-sternal ou/et intercostal, balancement thoraco-abdominal, battement des ailes du nez"); ?>
+			</p>
+			<p class='good_to_know_2_cols'>
+				<span class='nb_good_to_know'>2.</span>
+				<?php echo _("agitation ou somnolence, sueur"); ?>
+			</p>
 		</div>
 		<div>
-			<div class='good_to_know_2_cols'>2 <?php echo _("pâleur, coloration bleutée des lèvres"); ?></div>
-			<div class='good_to_know_2_cols'>4 <?php echo _("anomalies de la fréquence cardiaque ou respiratoire"); ?></div>
+			<p class='good_to_know_2_cols'>
+				<span class='nb_good_to_know'>3.</span>
+				<?php echo _("pâleur, coloration bleutée des lèvres"); ?>
+			</p>
+			<p class='good_to_know_2_cols'>
+				<span class='nb_good_to_know'>4.</span>
+				<?php echo _("anomalies de la fréquence cardiaque ou respiratoire"); ?>
+			</p>
 		</div>
 	</div>
 
@@ -56,21 +74,18 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		<div>
 			<div class = 'nb_how_to_guide'>1.</div>
 			<div class = 'chapter_how_to_guide'>
-				<p><?php echo _("<strong>Il a déjà présenté une crise grave (recours aux urgences et/ou hospitalisation) :</strong>
-				Aidez l’enfant à identifier SES signes : demandez-lui ce qu’il a ressenti de particulier,
-				en quoi sa crise était différente de d’habitude ?<br/>
+				<p><?php echo _("<strong>Il a déjà présenté une crise grave (recours aux urgences et/ou hospitalisation) :</strong> Aidez l’enfant à identifier SES signes : demandez-lui ce qu’il a ressenti de particulier, en quoi sa crise était différente de d’habitude ?<br/>
 				En vous aidant de la première partie du document sur la crise d’asthme grave, rajustez et validez ce que dit l’enfant.<br/>
-				Demandez aux parents s’ils veulent rajouter d’autres signes qu’ils avaient constatés
-				et faites-les figurer sur le document."); ?></p>
+				Demandez aux parents s’ils veulent rajouter d’autres signes qu’ils avaient constatés et faites-les figurer sur le document."); ?></p>
 			</div>	
 		</div>
 
 		<div>
 			<div class = 'nb_how_to_guide'>2.</div>
 			<div class = 'chapter_how_to_guide'>
-				<p><?php echo _("<strong>Il n’a jamais eu de crise grave : </strong>
-				prenez connaissance ensemble des signes listés
-				dans la première partie et demandez à l’enfant et aux parents ce qu’ils en pensent."); ?></p>
+				<p>
+					<?php echo _("<strong>Il n’a jamais eu de crise grave : </strong> prenez connaissance ensemble des signes listés dans la première partie et demandez à l’enfant et aux parents ce qu’ils en pensent."); ?>
+				</p>
 
 				<div class='key_message'>
 					<div class='pict_key_message'></div>
@@ -78,7 +93,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 					difficulté à parler, inefficacité des traitements de secours, DEP &lsaquo; 60%"); ?></div>
 				</div>
 
-				<p><?php echo _("Le pédiatre regarde la 2<sup>ème</sup> partie du document avec l’enfant et sa famille et le commente"); ?></p>
+				<p><?php echo _("Le médecin regarde la 2<sup>ème</sup> partie du document avec l’enfant et sa famille et le commente"); ?></p>
 
 				<div class='key_message'>
 					<div class='pict_key_message'></div>
@@ -91,20 +106,18 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage :"); ?></p>
-	<p><?php echo _("réflexion en lien avec le vécu de l'enfant"); ?></p>
-	<p><?php echo _("Cette séance sera d’autant plus profitable qu’il a déjà présenté une crise d’asthme grave."); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance :"); ?></p>
-	<p>10 min</p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer :"); ?></p>
-	<p><?php echo _("Objectif 2 enfant"); ?></p>
-	<p><?php echo _("« je sais reconnaître les signes d’une crise grave : c’est une URGENCE ! »"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Matériel nécessaire :"); ?></p>
-	<p><?php echo _("prévoir un crayon :)"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (_("réflexion en lien avec le vécu de l'enfant")),
+				'duration' => '10 min',
+				'print' => array (
+								_("Objectif 2 enfant"),
+								't2_recognize_asthme_attack' => array (
+											'title' => _("je sais reconnaître les signes d’une crise grave : c’est une URGENCE !"),
+											'before_title' => '',
+											'after_title' => ''
+											)
+								),
+				'material' => array (_("prévoir un crayon :)"))
+				));
+?>

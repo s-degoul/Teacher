@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 //mb_internal_encoding('UTF-8');
 
 //file tree
@@ -31,7 +27,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 // TO BE ADAPTED
 // depends on location of the website on the server
 //define ('ROOT_PATH','/home/s-degoul/Site_Internet/test/Teacher/');
-define ('WEB_ADRESS','http://samuel-degoul.org/Teacher/');
+define ('WEB_ADRESS', 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']);
 
 // depends only of local file's organization
 define ('STYLE_PATH','css/');
@@ -44,6 +40,8 @@ define ('IMAGE_PATH', 'images/');
 define ('LIB_PATH', 'lib/');
 define ('SECURED_PDF_PATH', 'secured_pdf/');
 define ('STATIC_PDF_PATH', 'static_pdf/');
+define ('STATISTICS_PATH', 'modules/administration/');
+define ('STATISTICS_GRAPHIC_PATH', 'modules/administration/statistics/graphics/');
 
 // where is the file which contains informations for connexion to database ?
 // better if in a parent folder of website root folder

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -40,7 +36,7 @@ try {
 		);
 
 	$request -> execute (array (
-		'id_patient' => $id_patient // or $_SESSION ...
+		'id_patient' => $id_patient
 	));
 
 	$list_cycle_educ = array();
@@ -54,7 +50,7 @@ try {
 		$list_cycle_educ[$cycle_educ_start_date]['cycle_educ_eval_date'] = $one_cycle_educ['cycle_educ_eval_date'];
 		$list_cycle_educ[$cycle_educ_start_date]['cycle_educ_end_programme'] = $one_cycle_educ['cycle_educ_end_programme'];
 		
-		if (!empty ($one_cycle_educ['id_target']))
+		if (!empty ($id_target))
 			$list_cycle_educ[$cycle_educ_start_date]['targets'][$id_target]
 			= array (
 				'target_name' => $one_cycle_educ['target_name'],

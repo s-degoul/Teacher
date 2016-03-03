@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -24,6 +23,16 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 
 			</div>
+			
+<?php
+if(!empty($content_bottom)) {
+?>
+			<div class = 'content_bottom'>
+				<?php echo $content_bottom; ?>
+			</div>
+<?php
+}
+?>
 		</section>
 	</div>
 	
@@ -41,15 +50,15 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 				</a>
 			</p>
 			<p class = 'links_footer'>
-				Teacher
-				(<a xmlns:cc="http://creativecommons.org/ns#" href="http://www.samuel-degoul.org/Teacher/" property="cc:attributionName" rel="cc:attributionURL"><?php echo WEB_ADRESS; ?></a>)
-<?php
-	echo _("est mis à disposition selon les termes d'une licence Creative Commons Attribution")
-?>			
-<!--				<a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr'> -->
-				(<a rel='license' href='.?module=legal_notices&action=show_licence'><?php echo _("Voir les détails"); ?></a>)
+<!--			<?php echo _("Le contenu de Teacher (textes, images, vidéos)"); ?>
+				(<a xmlns:cc="http://creativecommons.org/ns#" href='https://<?php echo WEB_ADRESS; ?>' property="cc:attributionName" rel="cc:attributionURL"><?php echo WEB_ADRESS; ?></a>)
+				<?php echo _("est mis à disposition selon les termes d'une licence Creative Commons Attribution"); ?>			
+				<a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr'> -->
+				<a rel='license' href='.?module=legal_notices&action=show_licence'><?php echo _("Licence"); ?></a>
 				<!--					 - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0 non transposé -->
 			</p>
+			
+			
 			<p class = 'links_footer'>
 				<a href = '.?module=contact&action=contact_admin'>
 					<?php echo _("Contacter l'administrateur du site"); ?>

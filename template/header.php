@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,9 +19,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+header('Content-Type: text/html; charset=utf-8');
+
 ?>
-
-
 <!DOCTYPE html>
 <html>
 	
@@ -46,7 +46,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 <?php
 
 foreach ($style as $file_style) {
-	echo'		<link rel =\'stylesheet\' type=\'text/css\' href= \''.STYLE_PATH.$file_style.'.css\' />'."\n";
+	echo'		<link rel =\'stylesheet\' type=\'text/css\' href= \''.STYLE_PATH.$file_style.'.php\' />'."\n";
 }
 ?>
 
@@ -62,20 +62,23 @@ foreach ($style as $file_style) {
 
 	<header>
 		
-		<div>
+		<div class = 'header_title'>
 			<div class = 'header_left'>
 <?php
-if (! ($module == 'start' and $action == 'start')) {
+if ($module == 'start' and $action == 'start')
+	$teacher_logo_width = 150;
+else
+	$teacher_logo_width = 70;
 ?>
 				<a href = '.'>
-					<img src = 'images/teacher_logo.png' alt = '<?php echo _("logo de Teacher"); ?>' title = '<?php echo _("Accueil"); ?>' width = 100px/>
+					<img src = 'images/teacher_logo.png' alt = '<?php echo _("logo de Teacher"); ?>' title = '<?php echo _("Accueil"); ?>' width = <?php echo $teacher_logo_width; ?>px/>
 				</a>
-<?php
-}
-?>
+
 			</div>
 			
 			<div class = 'header_right'>
+
+
 
 
 <?php
@@ -85,8 +88,8 @@ if (! ($module == 'start' and $action == 'start')) {
  * page (disconnection)
  *************************************************/
  ?>
+<!--
 				<div class='header_top'>
-
 <?php
 	if (isset ($_SESSION['user_surname'])) {
 		echo _("Bonjour").' '.$_SESSION['user_title'].' '.$_SESSION['user_surname'];
@@ -107,8 +110,12 @@ if (! ($module == 'start' and $action == 'start')) {
 	elseif (isset ($header_top)) {
 		echo $header_top;
 	}
-?> 
+?>
+
 				</div>
+-->
+
+
 
 
 <?php
@@ -117,7 +124,12 @@ if (! ($module == 'start' and $action == 'start')) {
  *************************************************/
  ?>
 				<div class = 'header_middle'>
-					<?php echo $title_view; ?>
+					<span class='header_high_letters'>T</span>raining to
+					<span class='header_high_letters'>E</span>ducate
+					<span class='header_high_letters'>A</span>sthmatic 
+					<span class='header_high_letters'>C</span>hildren in 
+					<span class='header_high_letters'>E</span>u<span class='header_high_letters'>R</span>ope
+					<!--<?php echo $title_view; ?>-->
 				</div>
 			</div>
 		</div>
@@ -131,30 +143,56 @@ if (! ($module == 'start' and $action == 'start')) {
  * Only active items are links,
  * others (inactive) are juste static text
  *************************************************/
-
-if (isset ($_SESSION['id_user']) or isset ($_SESSION['visitor'])):
 ?>
-		<nav class='menu_top'>
-			<ul class = 'items_menu_top'>
+		<div class = 'header_menu'>
+			<nav class='menu_top'>
+
+
+<?php
+if ((isset ($_SESSION['id_user']) or isset ($_SESSION['visitor'])) and !isset ($_SESSION['patient'])){
+?>
+		
+				<ul class = 'items_menu_top'>
 <?php
 	require (TEMPLATE_PATH.'links_menu_top.php');
 
 	foreach ($links_menu_top as $n => $features):
 
-		if ($features['module'] == $module and $action == $features['action']) {
+		$css_link_menu_top = 'item_menu_top_inactive';
+		
+		if ($features['module'] == $module and $features['action'] == $action) {
 /*			if (($action == 'start_user' and $features['action'] == 'introduction')
 				or ($action == 'introduction' and $features['action'] == 'start_user'))
 				$css_link_menu_top = 'item_menu_top_inactive';
 			else*/
 			$css_link_menu_top = 'item_menu_top_active';
 		}
-		else {
-			$css_link_menu_top = 'item_menu_top_inactive';
+		elseif (isset ($features['submenu'])) {
+			foreach ($features['submenu'] as $i => $features_submenu) {
+				if ($features_submenu['module'] == $module and $features_submenu['action'] == $action) {
+					$css_link_menu_top = 'item_menu_top_active';
+				}
+			}
 		}
 ?>			
-				<li class = '<?php echo $css_link_menu_top; ?>'>
-					<a href = '.?module=<?php echo $features['module']; ?>&action=<?php echo $features['action']; ?>'><?php echo $features['title']; ?></a>
-<?php		
+					<li class = '<?php echo $css_link_menu_top; ?>'>
+<?php
+		if ($features['module'] != '') {
+?>
+						<a href = '.?module=<?php echo $features['module']; ?>&action=<?php echo $features['action']; ?>'>
+							<?php echo $features['title']; ?>
+						</a>
+<?php
+		}
+		else {
+?>
+						<span>
+							<?php echo $features['title']; ?>
+							<img src='<?php echo IMAGE_PATH.'down.png'; ?>' alt='down' width=10 height=10 />
+						</span>
+<?php
+		}
+		
 		if (isset ($features['submenu'])):
 ?>
 					<ul class = 'submenu_top'>
@@ -182,15 +220,47 @@ if (isset ($_SESSION['id_user']) or isset ($_SESSION['visitor'])):
 <?php
 		endif;
 ?>
-				</li>
+					</li>
 <?php
 	endforeach;
 ?>
-			</ul>
-		</nav>
+				</ul>
 <?php
-endif;
+}
 ?>
+			</nav>
+			<div class = 'menu_decoration'>
+				<div class = 'header_session'>
+<?php
+	if (isset ($_SESSION['user_surname'])) {
+?>
+					<p class = 'header_session_notice'>
+<?php
+		echo _("Session").' : '.$_SESSION['user_title'].' '.$_SESSION['user_surname'];
+?>
+					</p>
+					<p class = 'header_session_action'>
+						<a href='.?module=user_management&action=disconnection'>
+							<?php echo _("se déconnecter"); ?>
+						</a>
+					</p>
+<?php
+	}
+	elseif (isset ($_SESSION['visitor'])) {
+?>
+					<p class = 'header_session_notice'>&nbsp;</p>
+					<p class = 'header_session_action'>
+						<a href='.?module=user_management&action=disconnection'>
+							<?php echo _("retourner à l'accueil"); ?>
+						</a>
+					</p>
+<?php
+	}
+?>				
+				</div>
+			</div>
+		</div>
+
 	</header>
 
 

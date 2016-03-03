@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,23 +19,20 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
 		$db = DBConnect();
 	
 	$request = $db -> prepare (
-		'SELECT id_user_eval, user_eval_date
+		'SELECT id_user_eval, user_eval_date, user_eval_achieved
 		FROM table_user_eval
-		WHERE id_user = :id_user'
+		WHERE id_user = :id_user ORDER BY user_eval_date ASC'
 		);
 
 	$request -> execute (array (
-		'id_user' => $_SESSION['id_user']
+		'id_user' => $id_user
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);
@@ -45,7 +41,10 @@ try {
 
 	while ($one_user_eval = $request -> fetch()) {
 		$id_user_eval = $one_user_eval['id_user_eval'];
-		$user_eval_list[$id_user_eval] = $one_user_eval['user_eval_date'];
+		$user_eval_list[$id_user_eval] = array(
+											'date' => $one_user_eval['user_eval_date'],
+											'achieved' => $one_user_eval['user_eval_achieved']
+											);
 	}
 
 	$request -> closeCursor();

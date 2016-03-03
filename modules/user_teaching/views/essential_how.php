@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,14 +19,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+$content_bottom = lastpage_essential ('why') . nextpage_essential ('1');
+$content_top .= $content_bottom;
 ?>
 
-
-<?php
-$content_top = lastpage_essential ('why') . nextpage_essential ('1');
-?>
-
-<h1><?php echo _("Le programme éducatif TEACHER : mode d'emploi"); ?></h1>
+<h2><?php echo _("Le programme éducatif TEACHER : mode d'emploi"); ?></h2>
 
 <p><?php echo _("L'objectif de Teacher est d'initier le soignant à l'ETP, par sa pratique auprès des enfants asthmatiques âgés de 6 à 12 ans
 et de leur parents."); ?></p>
@@ -37,10 +34,11 @@ et de leur parents."); ?></p>
 	<li><?php echo _("<strong>la finalité du programme éducatif</strong>, c‘est à dire que l’enfant devienne plus autonome
 		dans la gestion de sa maladie au quotidien,"); ?></li>
 	<li><?php echo _("<strong>son déroulement :</strong> pour que le programme ait une utilité, il faudra le poursuivre jusqu’au bout.
-		L’enfant, ses parents et le pédiatre/médecin s’engagent donc l’un vis-à-vis des autres à réaliser le programme dans sa totalité."); ?></li>
+		L’enfant, ses parents et le médecin s’engagent donc l’un vis-à-vis des autres à réaliser le programme dans sa totalité."); ?></li>
+</ul>
+<p><?php echo _("Chacun reste toutefois libre d’adhérer ou non. Si l’enfant et/ou sa famille ne se sentent pas concernés, renouvelez cette proposition d’éducation thérapeutique ultérieurement."); ?></p>
 
-<p><?php echo _("Chacun reste toutefois libre d’adhérer ou non. Si l’enfant et/ou sa famille ne se sentent pas concernés, renouvelez cette
-proposition d’éducation thérapeutique ultérieurement."); ?></p>
+<p><?php echo _("Tout au long du programme, le médecin privilégiera l’écoute de l’enfant et de sa famille, afin de répondre à leurs préoccupations et de tenir compte de leur état émotionnel, de leurs craintes et de leurs attentes."); ?></p>
 
 <p><?php echo _("Le déroulement du programme d’éducation thérapeutique est basé sur quatre grandes étapes"); ?> :</p>
 
@@ -51,9 +49,6 @@ proposition d’éducation thérapeutique ultérieurement."); ?></p>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-		
-		</tr>
 		<tr>
 			<td colspan = 2 class = 'row_bottom'><img src = 'images/row_bottom.jpg'></td>
 		</tr>

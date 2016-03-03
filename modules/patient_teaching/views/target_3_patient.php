@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,9 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-<?php
 $subtype = 'PAPE';
 $css_PAPE = 'active';
 $css_PAPP = 'inactive';
@@ -53,12 +50,13 @@ if ($subtype == 'PAPE') {
 <div class = 't3_chapter_green'>
 	<h2><span><?php echo _("Mon asthme va bien"); ?></span></h2>
 	<p>
-		<?php echo _("Mon pédiatre / médecin m'a dit de prendre tous les jours"); ?>
+		<?php echo _("Mon médecin m'a dit de prendre tous les jours"); ?>
 		<?php echo ("le matin"); ?>
 		<img src  = '<?php echo IMAGE_PATH.'target/3/sun.jpg'; ?>' alt = '<?php echo _("soleil"); ?>' />
 		<?php echo ("et/ou le soir"); ?>
 		<img src  = '<?php echo IMAGE_PATH.'target/3/moon.jpg'; ?>' alt = '<?php echo _("lune"); ?>' />
-		<?php echo ("un médicament anti-inflammatoire (= traitement de fond) que j'écris ou dessine :"); ?>
+		<?php echo ("un médicament anti-inflammatoire (= traitement de fond) que j'écris ou dessine"); ?>
+		: ..........................
 	</p>
 	<p>
 		<?php echo _("J'ai mon médicament de secours (médicament de couleur bleue = bronchodilatateur d'action rapide) près de moi en cas de crise ; c'est"); ?>
@@ -99,7 +97,7 @@ if ($subtype == 'PAPE') {
 	<div class = 't3_2_images'>
 		<img src='<?php echo IMAGE_PATH.'target/3/support.jpg'; ?>' alt='<?php echo _("soutenir"); ?>' />
 		<p><?php echo _("Je reste encore gêné pour respirer"); ?></p>
-		<p><?php echo _("je prends 2 bouffées de mon médicament de secours 2 minutes plus tard"); ?></p>
+		<p><?php echo _("je prends 2 bouffées de mon médicament de secours 15 minutes plus tard"); ?></p>
 	</div>
 	
 	<p class = 't3_important'><?php echo _("Si malgré la prise de mon médicament de secours la gêne respiratoire ne se calme pas, je suis les consignes de la crise grave"); ?></p>
@@ -117,10 +115,10 @@ if ($subtype == 'PAPE') {
 	</div>
 	<div class = 't3_3_images'>
 		<img src='<?php echo IMAGE_PATH.'target/3/tablet.jpg'; ?>' alt='<?php echo _("comprimé de cortisone"); ?>' />
-		<p><?php echo _("augmenter mon traitement en prenant de la cortisone par comprimé ou sirop à la dose prescrite par mon pédiatre / médecin"); ?></p>
+		<p><?php echo _("augmenter mon traitement en prenant de la cortisone par comprimé ou sirop à la dose prescrite par mon médecin"); ?></p>
 	</div>
 	<div>
-		<p><?php echo _("et appeler mon médecin Dr"); ?> .................</p>
+<!--		<p><?php echo _("et appeler mon médecin Dr"); ?> .................</p>-->
 		<p>
 			<?php echo _("et si ça ne passe pas en 1 heure appeler le SAMU"); ?>
 			<img src='<?php echo IMAGE_PATH.'target/2/phone_emergency.jpg'; ?>' alt='<?php echo _("numéro urgent : 15 ou 112"); ?>' height = 40/>
@@ -129,12 +127,12 @@ if ($subtype == 'PAPE') {
 	<div class = 't3_important'>
 		<p><?php echo _("En cas de crise grave, l'appel du médecin sera toujours nécessaire"); ?></p>
 		<ul>
-			<li><?php echo _("soit dans l'heure qui suit (pédiatre / médecin d'urgence ou si indisponible le SAMU) en cas de persistance de la gêne respiratoire"); ?></li>
+			<li><?php echo _("soit dans l'heure qui suit (pédiatre, médecin de garde ou si indisponible le SAMU) en cas de persistance de la gêne respiratoire"); ?></li>
 			<li><?php echo _("soit dans les 24 heures pour adapter le traitement si la gêne respiratoire s'est améliorée.
 							En attendant, il faut continuer à prendre 2 bouffées de médicament de secours toutes les 4 à 6 heures jusqu'à la consultation"); ?></li>
 		</ul>
 	</div>
-
+</div>
 <?php
 }
 
@@ -145,7 +143,7 @@ else {
 
 <div class = 't3_chapter_green'>
 	<h2><span><?php echo _("Son asthme va bien"); ?></span></h2>
-	<p><?php echo _("Tous les jours, si le pédiatre / médecin l'a prescrit, mon enfant prend"); ?> ................................... </p>
+	<p><?php echo _("Tous les jours, si le médecin l'a prescrit, mon enfant prend"); ?> ................................... </p>
 	<p><?php echo _("Avant le sport, mon enfant prend"); ?> ................................... </p>
 	<p><?php echo _("Son débit de pointe est stable et est au dessus de"); ?> ................................... </p>
 
@@ -161,7 +159,7 @@ else {
 	<p class = 't3_strong'><?php echo _("Si mon enfant a ressenti 2 ou plusieurs de ces symptômes dans la semaine écoulée"); ?></p>
 	
 	<table class = 't3_table'>
-		<body>
+		<tbody>
 			<tr>
 				<td><?php echo _("Toux sèche, sifflement, douleur dans la poitrine (signes d’asthme) plus de 2 par semaine"); ?></td>
 				<td><?php echo _("oui"); ?></td>
@@ -187,15 +185,15 @@ else {
 				<td><?php echo _("oui"); ?></td>
 				<td><?php echo _("non"); ?></td>
 			</tr>
-		</body>
+		</tbody>
 	</table>
 	
 	<p class = 't3_important'><?php echo _("Il renforce son traitement en prenant 2 bouffées de son médicament de secours (bleu) matin midi et soir
-											(+/- 2 bouffées la nuit) pendant 3 jours. Si ses symptômes persistent au-delà de 3 jours, je contacte mon pédiatre/médecin"); ?></p>
+											(+/- 2 bouffées la nuit) pendant 3 jours. Si ses symptômes persistent au-delà de 3 jours, je contacte mon médecin"); ?></p>
 	<ul>
 		<li><?php echo _("En cas de gêne respiratoire importante (essoufflement au repos, difficulté à parler)"); ?> ,</li>
-		<li><?php echo _("Et/ou si la gêne ne se calme pas après avoir pris 2 bouffées de médicament de secours (bleu), ou réapparaît moins de 24 heures après la prise"); ?> ,</li>
-		<li><?php echo _("Et/ou si le débit de pointe est inférieur à ou ne remonte pas après avoir pris des médicaments de secours"); ?></li>
+		<li><?php echo _("Et/ou si la gêne ne se calme pas après avoir pris 2 bouffées de médicament de secours (bleu), ou réapparaît moins de 4 heures après la prise"); ?> ,</li>
+		<li><?php echo _("Et/ou si le débit de pointe est inférieur à ............................. ou ne remonte pas après avoir pris des médicaments de secours"); ?></li>
 	</ul>
 	<p class = 't3_important'><?php echo _("Il doit prendre le médicament de secours : 2 bouffées toutes les 15 mn jusqu’à 3 fois en 1 heure, puis un corticoïde oral
 									(ex : Prednisolone, Bétaméthasone) à la dose de"); ?> .............................</p>
@@ -204,12 +202,11 @@ else {
 	<ul>
 		<li><?php echo _("soit sa gêne respiratoire (et/ou le DEP) s’améliore(nt)"); ?> :</li>
 	</ul>
-	<p class = 't3_important'><?php echo _("il continue le médicament de secours 2 bouffées toutes les 4 à 6 heures par jour et le corticoïde oral le matin
-												et je contacte le pédiatre/médecin pour qu’il (elle) soit examiné(e) dans les 24 heures"); ?> ;</p>
+	<p class = 't3_important'><?php echo _("Il continue le médicament de secours 2 bouffées toutes les 4 à 6 heures par jour et le corticoïde oral le matin et je contacte le médecin pour qu’il (elle) soit examiné(e) dans les 24 heures"); ?> ;</p>
 	<ul>
 		<li><?php echo _("soit sa gêne respiratoire ne s’améliore pas"); ?> :</li>
 	</ul>
-	<p class = 't3_important'><?php echo _("il faut demander en urgence un avis médical (pédiatre/médecin, SAMU(=15), urgences hospitalières) et en attendant il faut continuer
+	<p class = 't3_important'><?php echo _("Il faut demander en urgence un avis médical (pédiatre, médecin de garde, SAMU(=15), urgences hospitalières) et en attendant il faut continuer
 												le médicament de secours 2 bouffées toutes les 15 mn"); ?>.</p>
 
 	<p class = 't3_strong'><?php echo _("Numéro de téléphone à joindre en urgence :"); ?> ...........................</p>

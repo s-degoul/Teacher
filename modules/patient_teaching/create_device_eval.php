@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,37 +19,32 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
-
-	if (isset ($_GET['from'])) {
-		$from_page = $_GET['from'];
-		if ($from_page == 'target_5') {
-			$from_page_link = '.?module=patient_teaching&action=show_target&id_target=5&type=user';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir à l'objectif éducatif n°5").'</a></p>';
-		}
-		elseif ($from_page == 'show_device_eval') {
-			$from_page_link = '.?module=patient_teaching&action=show_device_eval';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir aux évaluations de l'utilisation des dispositifs").'</a></p>';
-		}
-		elseif ($from_page == 'create_educ_diag') {
-			$from_page_link = '.?module=patient_teaching&action=create_educ_diag&page_educ_diag=5';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir au diagnostic éducatif").'</a></p>';
-		}
-		elseif ($from_page == 'show_educ_diag') {
-			$from_page_link = '.?module=patient_teaching&action=show_educ_diag';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir au diagnostic éducatif").'</a></p>';
-		}
+if (isset ($_GET['from'])) {
+	$from_page = $_GET['from'];
+	if ($from_page == 'target_5') {
+		$from_page_link = '.?module=patient_teaching&action=show_target&id_target=5&type=user';
 	}
-	else {
-		$from_page = '';
+	elseif ($from_page == 'show_device_eval') {
+		$from_page_link = '.?module=patient_teaching&action=show_device_eval';
 	}
+	elseif ($from_page == 'create_educ_diag') {
+		$from_page_link = '.?module=patient_teaching&action=create_educ_diag&page_educ_diag=5';
+	}
+	elseif ($from_page == 'show_educ_diag') {
+		$from_page_link = '.?module=patient_teaching&action=show_educ_diag';
+	}
+}
+else {
+	$from_page = '';
+}
 
 
 if (! isset ($_REQUEST['device']) or empty($_REQUEST['device'])) {
-	$messages['error'][] = _("aucun appareil d'inhalation sélectionné");
+	$_SESSION['messages']['error'] = _("aucun appareil d'inhalation sélectionné");
+	header ('location:.?module=patient_teaching&action=show_device_eval');
+	exit;
 }
 else {
 	
@@ -91,7 +85,7 @@ else {
 			
 			if (checkdate ($device_eval_date_parts[1], $device_eval_date_parts[0], $device_eval_date_parts[2]) == false)
 				$messages['error'][] = _("La date entrée n'est pas correcte");
-			elseif (calculateAge ($device_eval_date) < 0)
+			elseif (calculateAge ($device_eval_date)['year'] < 0)
 				$messages['error'][] = _("La date entrée n'est pas correcte (postérieure à aujourd'hui)");
 		}
 		

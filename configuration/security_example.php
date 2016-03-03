@@ -1,4 +1,3 @@
-  
 <?php
 
 /*********************************************************************
@@ -21,10 +20,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 /*************************************************
  * THIS FILE AS TO BE RE-NAMED AS "security.php"
  * AND SUITABLE INFORMATIONS HAVE TO BE GIVEN

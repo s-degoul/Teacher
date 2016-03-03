@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,16 +19,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+
+$content_bottom .= lastpage_essential ('how') . nextpage_essential ('2');
+$content_top .= $content_bottom;
 ?>
 
+<h2><?php echo _("1<sup>ère</sup> ETAPE : le diagnostic éducatif ou bilan éducatif partagé"); ?></h2>
 
-<?php
-$content_top = lastpage_essential ('how') . nextpage_essential ('2');
-?>
-
-<h1><?php echo _("1<sup>ère</sup> ETAPE : le diagnostic éducatif ou bilan éducatif partagé"); ?></h1>
-
-<a href='?module=patient_teaching&action=show_educ_diag&demo=1&from=essential'><?php echo _("En voir un aperçu"); ?></a>
+<a href='?module=patient_teaching&action=show_educ_diag&demo=1&from=essential&from_page_essential=1'><?php echo _("En voir un aperçu"); ?></a>
 
 <p><?php echo _("C’est un entretien semi-directif qui se réalise en environ 30 minutes."); ?></p>
 

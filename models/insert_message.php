@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))	
@@ -35,7 +31,7 @@ try {
 		);
 
 	$request -> execute (array (
-					'id_user' => $_SESSION['id_user'],
+					'id_user' => $id_user,
 					'message_date' => date ('Y-m-d H:i:s'),
 					'message_subject' => $message['message_subject'],
 					'message_content' => $message['message_content']

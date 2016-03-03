@@ -33,29 +33,21 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		<div>
 			<div class = 'nb_how_to_guide'>1.</div>
 			<div class = 'chapter_how_to_guide'>
-				<h2><?php echo _("Le pédiatre/médecin montre la maison des allergies à l’enfant et lui demande de repérer les bulles qui correspondent
+				<h2><?php echo _("Le médecin montre la maison des allergies à l’enfant et lui demande de repérer les bulles qui correspondent
 									à ses facteurs déclenchants."); ?></h2>
 				<p><?php echo _("L’enfant réfléchit et propose des images"); ?></p>
-				<p><?php echo _("Le pédiatre réajuste et complète en fonction des allergies et/ou irritants connus de l’enfant"); ?></p>
+				<p><?php echo _("Le médecin réajuste et complète en fonction des allergies et/ou irritants connus de l’enfant"); ?></p>
 			</div>	
 		</div>
 
 		<div>
 			<div class = 'nb_how_to_guide'>2.</div>
 			<div class = 'chapter_how_to_guide'>
-				<h2><?php echo _("Le pédiatre/médecin prend une bulle sélectionnée par l’enfant :"); ?></h2>
+				<h2><?php echo _("Le médecin prend une bulle sélectionnée par l’enfant :"); ?></h2>
 				<p><?php echo _("Pour chaque bulle, on demande à l’enfant ce qu’il faut faire pour éviter ou limiter les allergies ou les irritations
 									que provoque le facteur dessiné."); ?></p>
 				<p><?php echo _("En cliquant sur la bulle, la fiche de conseils correspondants s’imprime."); ?></p>
-				<p><?php echo _("Le pédiatre la découvre avec l’enfant et la lui remet."); ?></p>
-
-				<div class='key_message'>
-					<div class='pict_key_message'></div>
-					<div class='content_key_message'><?php echo _("L’enfant sait qu’en cas de gêne respiratoire il doit réclamer ou prendre son médicaments de secours 
-																(bronchodilatateur d’action immédiate) qui desserre les bronches. Sa couleur est bleue"); ?></div>
-				</div>
-
-				<p><?php echo _("Demandez à l’enfant s’il connaît un médicament pour «réparer» les bronches qui se prend tous les jours"); ?></p>
+				<p><?php echo _("Le médecin la découvre avec l’enfant et la lui remet."); ?></p>
 
 				<div class='key_message'>
 					<div class='pict_key_message'></div>
@@ -71,18 +63,20 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage").' :'; ?></p>
-	<p><?php echo _("réflexion en lien avec les connaissances et le vécu de l’enfant"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance").' :'; ?></p>
-	<p>20 min</p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer").' :'; ?></p>
-	<p><?php echo _("les moyens d’éviction des allergènes ou irritants correspondant à l’enfant."); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Matériel nécessaire").' :'; ?></p>
-	<p><?php echo _("Affichez sur l’écran la maison des allergies"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (_("réflexion en lien avec les connaissances et le vécu de l’enfant")),
+				'duration' => '20 min',
+				'print' => array (
+								_("les moyens d’éviction des allergènes ou irritants correspondant à l’enfant (accessible à partir de chaque fiche de &laquo;&nbsp;la maison des allergies&nbsp;&raquo;)")
+								),
+				'material' => array (
+								array (
+									'link' => '.?module=patient_teaching&action=show_target&id_target=8&type=patient',
+									'title' => _("la maison des allergies"),
+									'before_title' => _("Affichez sur l’écran"),
+									'after_title' => ''
+									)
+								)
+				));
+?>

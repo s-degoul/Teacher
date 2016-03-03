@@ -24,7 +24,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 
 <div class = 't2_chapter_red'>
-	<h2><span><?php echo _("Que ressens-t-on en cas de crise d'asthme grave ? Attention si :"); ?></span></h2>
+	<h2><span><?php echo _("Que ressent-on en cas de crise d'asthme grave ? Attention si :"); ?></span></h2>
 	<div class = 't2_4_images'>
 		<img src='<?php echo IMAGE_PATH.'target/2/breathless.jpg'; ?>' alt='<?php echo _("très essoufflé"); ?>' />
 		<p><?php echo _("Je suis très essoufflé"); ?></p>
@@ -59,15 +59,17 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	<div>
 		<div class = 't2_2_divs'><img src='<?php echo IMAGE_PATH.'target/2/aerosol_girl.jpg'; ?>' alt='<?php echo _("prendre de la cortisone"); ?>' /></div>
 		<p class = 't2_2_divs'>
-			<?php echo _("augmenter ton traitement en prenant de la cortisone"); ?> =
-			<img src='<?php echo IMAGE_PATH.'target/2/tablet.jpg'; ?>' alt='<?php echo _("comprimé"); ?>' height = 25/>
-			<?php echo _("béthaméthasone / prednisolone"); ?>
 		</p>
 	</div>
+	<p>
+		<?php echo _("augmenter ton traitement en prenant de la cortisone"); ?> =
+		<img src='<?php echo IMAGE_PATH.'target/2/tablet.jpg'; ?>' alt='<?php echo _("comprimé"); ?>' height = 25/>
+		<?php echo _("bétaméthasone / prednisolone"); ?>
+	</p>
 	<div>
 		<div class = 't2_2_divs'><img src='<?php echo IMAGE_PATH.'target/2/ambulance.jpg'; ?>' alt='<?php echo _("alerter les secours"); ?>' /></div>
 		<p class = 't2_2_divs'>
-			<?php echo _("alerter immédiatement ton pédiatre/médecin le Dr").' ....................<br/>'. _("ou le SAMU"); ?>
+			<?php echo _("alerter immédiatement ton médecin le Dr").' ....................<br/>'. _("ou le SAMU"); ?>
 			<img src='<?php echo IMAGE_PATH.'target/2/phone_emergency.jpg'; ?>' alt='<?php echo _("numéro urgent : 15 ou 112"); ?>' />
 		</p>
 	</div>

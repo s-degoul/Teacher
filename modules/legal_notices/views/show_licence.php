@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,15 +19,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 $title_view = _("Licence");
 
-if ($date_update != '')
-	echo '	<p>'._("Dernière mise à jour le").' '.showDate($date_update).'</p>';
-
-echo '	<p>'.$content_licence.'</p>'."\n";
+if ($date_update != '') {
 ?>
+<p class = 'licence_date'><?php echo _("Dernière mise à jour le").' '.showDate($date_update); ?></p>
+<?php
+}
+?>
+
+<div class = 'licence_content'>
+	<?php echo $content_licence; ?>
+</div>

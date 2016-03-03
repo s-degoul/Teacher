@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,16 +19,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+
+$content_bottom = lastpage_essential ('1') . nextpage_essential ('3');
+$content_top .= $content_bottom;
 ?>
 
+<h2><?php echo _("2<sup>ème</sup> ETAPE : le programme éducatif personnalisé."); ?></h2>
 
-<?php
-$content_top = lastpage_essential ('1') . nextpage_essential ('3');
-?>
-
-<h1><?php echo _("2<sup>ème</sup> ETAPE : le programme éducatif personnalisé."); ?></h1>
-
-<p><?php echo _("Au terme du diagnostic éducatif, le pédiatre/médecin, l’enfant et sa famille font une synthèse et se concertent sur les
+<p><?php echo _("Au terme du diagnostic éducatif, le médecin, l’enfant et sa famille font une synthèse et se concertent sur les
 points forts du patient vis-à-vis de sa maladie chronique (ex « bonne compréhension de la maladie », « motivation à se
 soigner ») et les points à améliorer (ex « gestion d’une crise d’asthme »)."); ?></p>
 

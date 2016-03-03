@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -32,14 +28,14 @@ try {
 	$request = $db -> prepare (
 		'SELECT user_login, user_surname, user_firstname, user_title, user_validation_Essential,
 			user_street, user_postal_code, user_city, user_phone, user_mail,
-			user_practice, C.country_name, U.id_country, U.id_language, user_therap_educ
+			user_practice, C.country_name, U.id_country, U.id_language, user_therap_educ, user_rights
 		FROM table_user as U
 			INNER JOIN table_country as C ON U.id_country = C.id_country
 		WHERE U.id_user = :id_user'
 		);
 
 	$request -> execute (array (
-		'id_user' => $_SESSION['id_user']
+		'id_user' => $id_user
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);

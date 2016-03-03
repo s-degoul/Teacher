@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,20 +19,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
-/*
-if ($_SESSION['user_first_eval'] == 0) {
-		$messages['error'][] = _("Vous devez d'abord").' <a href=\'.?module=user_teaching&action=create_eval\'>'._("réaliser une première auto-évaluation")
-							.'</a> '._("avant de pouvoir inclure un / des patient(s)")."\n";
-}
-elseif ($_SESSION['user_validation_essential'] == 0) {
-		$messages['error'][] = _("Vous devez d'abord").' <a href=\'.?module=user_teaching&action=show_essential\'>'._("lire la formation théorique initiale &quot;l&apos;Essentiel&quot;")
-							.'</a> '._("avant de pouvoir inclure un / des patient(s)")."\n";
-}
-else {*/
+if (isset ($_GET['demo']))
+	$messages['info'][] = _("Ceci est une version de démonstration");
 
 		
 require (MODEL_PATH.'select_target_list.php');

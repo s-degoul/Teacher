@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -32,14 +27,14 @@ try {
 	$request = $db -> prepare (
 		'SELECT cycle_educ_start_date, cycle_educ_eval_date,
 		cycle_educ_eval_obj1, cycle_educ_eval_obj2, cycle_educ_eval_obj3_a, cycle_educ_eval_obj3_b, cycle_educ_eval_obj4_a, cycle_educ_eval_obj4_b, 
-		cycle_educ_eval_obj5, cycle_educ_eval_obj6, cycle_educ_eval_obj7, cycle_educ_eval_obj8_a, cycle_educ_eval_obj8_b, cycle_educ_eval_obj9, cycle_educ_eval_obj10
+		cycle_educ_eval_obj5, cycle_educ_eval_obj6, cycle_educ_eval_obj7, cycle_educ_eval_obj8_a, cycle_educ_eval_obj8_b, cycle_educ_eval_obj9, cycle_educ_eval_obj10, cycle_educ_eval_subj_patient, cycle_educ_eval_subj_parent, cycle_educ_eval_cact
 		FROM table_cycle_educ
 		WHERE id_cycle_educ = :id_cycle_educ and id_patient = :id_patient' // double vérification : utilité ???
 		);
 
 	$request -> execute (array (
 		'id_cycle_educ' => $id_cycle_educ,
-		'id_patient' => $_SESSION['patient']['id_patient']
+		'id_patient' => $id_patient
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);

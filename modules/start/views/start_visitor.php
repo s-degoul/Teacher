@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 $title_view = _("Ce que Teacher peut vous offrir");
 $style[] = 'start_user';
 
@@ -31,11 +27,21 @@ if (isset ($_GET['from']) and $_GET['from'] == 'connection')
 	$messages['info'][] = _("Vous pouvez à tous moments cliquer sur &quot;Accueil&quot; en haut à gauche pour revenir sur cette page.");
 ?>
 
-<p><?php echo _("Bienvenue sur Teacher."); ?><p>
+<h2><?php echo _("Bienvenue sur Teacher."); ?></h2>
 
-<p><?php echo _("Vous pouvez"); ?> :</p>
+<p>
+	<?php echo ("<em>Teacher</em> est un outil d'initiation à l'Éducation Thérapeutique du Patient (ETP) destiné aux pédiatres et médecins généralistes. Il repose sur un programme d’apprentissage individuel, conçu pour être intégré dans le temps de la consultation ambulatoire."); ?>
+</p>
+
+<p><?php echo _("Vous pouvez avoir un aperçu des quelques fonctionnalités du site"); ?> :</p>
 <ul>
-	<li><a href = '.?module=patient_teaching&action=show_target_list'><?php echo _("Voir les objectifs pédagogiques"); ?></a></li>
-	<li><a href = '.?module=patient_teaching&action=show_eval'><?php echo _("Voir un formulaire d'évaluation pour l'enfant"); ?></a></li>
+	<li><a href = '.?module=patient_teaching&action=show_target_list'><?php echo _("objectifs pédagogiques"); ?></a></li>
+	<li><a href = '.?module=patient_teaching&action=show_eval'><?php echo _("formulaire d'évaluation de l'enfant"); ?></a></li>
+<!--
 	<li><a href = '.?module=patient_teaching&action=create_parent_eval'><?php echo _("Voir un formulaire d'évaluation pour les parents"); ?></a></li>
+-->
 </ul>
+
+<p>
+	<?php echo _("Si vous désirez intégrer le projet, vous pouvez contacter l'administrateur du site via le lien en bas de page."); ?>
+</p>

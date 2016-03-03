@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,20 +19,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 if (isset ($_GET['from'])) {
 	$from_page = $_GET['from'];
 	if ($from_page == 'target_5') {
 		$from_page_link = '.?module=patient_teaching&action=show_target&id_target=5&type=user';
-		$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir à l'objectif éducatif n°5").'</a></p>';
 	}
 	elseif ($from_page == 'show_device_eval') {
 		$from_page_link = '.?module=patient_teaching&action=show_device_eval';
-		$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir aux évaluations de l'utilisation des dispositifs").'</a></p>';
 	}
 /*
 	elseif ($from_page == 'create_device_eval') {
@@ -58,9 +52,26 @@ else {
 	
 	$device = $_REQUEST['device'];
 
-	$video_file = 'device_'.$device.'_'.$_SESSION['lang'].'.ogg';
-	
-	if (file_exists ('videos/'.$video_file)) {
+
+	$lang = $_SESSION['lang'];
+	$no_video = 0;
+	do {
+		$video_name = 'videos/device_'.$device.'_'.$lang;
+		$video_ogg = $video_name.'.ogg';
+		$video_mp4 = $video_name.'.mp4';
+		
+		if (!file_exists($video_ogg) and !file_exists($video_mp4))
+		{
+			if ($lang == DEFAULT_LOCALE) {
+				$no_video = 1;
+				break;
+			}
+			else
+				$lang = DEFAULT_LOCALE;
+		}
+	} while ($no_video == 1);
+
+	if ($no_video == 0) {
 		require (VIEW_RELATIVE_PATH.'show_video_devices.php');
 	}
 	else {

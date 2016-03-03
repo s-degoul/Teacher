@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,30 +19,36 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+$title_view = _("Mot de passe oublié");
+$style[] = 'start_general';
+
+$header_top = '<a href = \'.?module=user_management&action=connection\'>'._("Revenir à la page de connexion").'</a>';
 ?>
 
+<div class = 'connection'>
+	<p><?php echo ("Veuillez saisir ci-dessous votre login et l'adresse courriel indiquée dans votre profil et validez"); ?></p> 
 
-<?php
-	$title_view = _("Mot de passe oublié");
-	$style[] = 'user_profile';
-	
-	$header_top = '<a href=.>'._("retourner à la page d'accueil").'</a>';
-	$content_top .= '<a href = \'.?module=user_management&action=connection\'>'._("Revenir à la page de connexion").'</a>';
-?>
-
-<h1><?php echo _("Mot de passe oublié"); ?></h1> 
-
-<p><?php echo ("Veuillez saisir ci-dessous votre login et l'adresse courriel indiquée dans votre profil et validez"); ?></p> 
-
-<form method = 'post' action = '.?module=user_management&action=password_forgotten'>
-	<p>
-		<label for='user_login'><?php echo _("Votre login"); ?> : </label> 
-		<input size='50' name='user_login' type='text' id='user_login'><br/>
-	</p>
-	<p>
-		<label for='user_mail'><?php echo _("Adresse email"); ?> : </label> 
-		<input size='50' name='user_mail' type='text' id='user_mail'>
-	</p>
-	
-	<input type='submit' name='valid_password_forgotten' value='<?php echo _("Valider"); ?>'> 
-</form> 
+	<form method = 'post' action = '.?module=user_management&action=password_forgotten'>
+		<div>
+			<p class = 'connection_title'>
+				<label for='user_login'><?php echo _("Votre login"); ?> : </label>
+			</p>
+			<p class = 'connection_field'>
+				<input size='30' name='user_login' type='text' id='user_login' /><br/>
+			</p>
+		</div>
+		<div>
+			<p class = 'connection_title'>
+				<label for='user_mail'><?php echo _("Adresse email"); ?> : </label>
+			</p>
+			<p class = 'connection_field'>
+				<input size='30' name='user_mail' type='text' id='user_mail' />
+			</p>
+		</div>
+		
+		<p>
+			<input type='submit' name='valid_password_forgotten' value='<?php echo _("Valider"); ?>' class = 'button_validation' />
+		</p>
+	</form> 
+</div>

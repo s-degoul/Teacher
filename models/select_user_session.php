@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,17 +19,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 
 try {
 	if (!isset ($db))
 		$db = DBConnect();
 
 	$request = $db -> prepare (
-		'SELECT id_user, user_surname, user_title, language_code, language_name, user_validation_Essential, user_eval_to_do, country_timezone
+		'SELECT id_user, user_surname, user_title, language_code, language_name, user_validation_Essential, user_eval_to_do, user_end_teacher, user_rights, country_timezone
 		FROM table_user as U
 			INNER JOIN table_language as L ON U.id_language = L.id_language
 			INNER JOIN table_country as C ON U.id_country = C.id_country

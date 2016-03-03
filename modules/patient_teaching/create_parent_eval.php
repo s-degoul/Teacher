@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,26 +19,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 if (!isset ($_SESSION['patient'])) {
 	$messages['error'][] = _("Aucun patient sélectionné");
 }
 else {
-	require (MODEL_PATH.'select_cycle_educ_exist.php');
-	if ($nb_response > 1) {
-		$messages['error'][] = _("Il y a plusieurs cycles du programme éducatif inachevés pour ce patient. Veuillez contacter l'administrateur");
+	$id_patient = $_SESSION['patient']['id_patient'];
+	
+	require (MODEL_PATH.'select_last_cycle_educ_achieved.php');
+	
+	if (preg_match ('#[a-zA-Z]{3,}#', showDate ($cycle_educ_eval_date))) {
+			$messages['error'][] = _("Il faut d'abord réaliser l'évaluation de l'enfant avant celle des parents");
 	}
-	elseif ($nb_response < 1) {
-		require (MODEL_PATH.'select_last_cycle_educ_achieved.php');
-		require (MODEL_PATH.'select_cycle_educ_eval_date.php');
-		
-		if (! preg_match ('#[a-zA-Z]{3,}#', showDate ($cycle_educ_eval_date)))
-			$messages['error'][] = _("Aucun nouveau cycle éducatif n'a pas été commencé pour ce patient. Vous ne pouvez donc réaliser cette évaluation");
-	}
+	
+	require (MODEL_PATH.'select_parent_eval_exist.php');
+		if ($nb_parent_eval > 0)
+			$messages['error'][] = _("Il y a déjà une évaluation des parents pour ce cycle éducatif.");
 }
 
 if (empty ($messages['error'])) {
@@ -50,41 +46,48 @@ if (empty ($messages['error'])) {
 		
 		$list_answers = array(
 							'id_cycle_educ' => $id_cycle_educ,
-							'parent_eval_date' => date('Y-m-d h:i:s')
+							'parent_eval_date' => date('Y-m-d H:i:s')
 							);
 		
 		foreach ($list_questions_parent_eval as $type_question => $list_questions) {
 			
 			foreach ($list_questions as $nb_question => $features_question) {
 				if ($type_question == 'knowledge') {
-					$id_question_form_answer = 'q'.$nb_question.'_answer';
-					$id_question_table_answer = 'parent_eval_'.$id_question_form_answer;
-					if (isset ($parent_eval[$id_question_form_answer]))
-						$list_answers[$id_question_table_answer] = $parent_eval[$id_question_form_answer];
+					$id_question_answer = 'parent_eval_q'.$nb_question.'_answer';
+					//$id_question_table_answer = 'parent_eval_'.$id_question_form_answer;
+					if (isset ($parent_eval[$id_question_answer]))
+						$list_answers[$id_question_answer] = $parent_eval[$id_question_answer];
 					else
-						$list_answers[$id_question_table_answer] = NULL;
+						$list_answers[$id_question_answer] = NULL;
 
-					$id_question_form_belief = 'q'.$nb_question.'_belief';
-					$id_question_table_belief = 'parent_eval_'.$id_question_form_belief;
-					if (isset ($parent_eval[$id_question_form_belief]))
-						$list_answers[$id_question_table_belief] = $parent_eval[$id_question_form_belief];
+					$id_question_belief = 'parent_eval_q'.$nb_question.'_belief';
+					//$id_question_table_belief = 'parent_eval_'.$id_question_form_belief;
+					if (isset ($parent_eval[$id_question_belief]))
+						$list_answers[$id_question_belief] = $parent_eval[$id_question_belief];
 					else
-						$list_answers[$id_question_table_belief] = NULL;					
+						$list_answers[$id_question_belief] = NULL;					
 				}
 				elseif ($type_question == 'skill') {
-					$id_question_form = 'q'.$nb_question;
-					$id_question_table = 'parent_eval_'.$id_question_form;
-					if (isset ($parent_eval[$id_question_form]))
-						$list_answers[$id_question_table] = $parent_eval[$id_question_form];
+					$id_question = 'parent_eval_q'.$nb_question;
+					//$id_question_table = 'parent_eval_'.$id_question_form;
+					if (isset ($parent_eval[$id_question]))
+						$list_answers[$id_question] = $parent_eval[$id_question];
 					else
-						$list_answers[$id_question_table] = NULL;	
+						$list_answers[$id_question] = NULL;	
 				}
 			}
 		}
 		
 		require (MODEL_PATH.'insert_parent_eval.php');
+		
+		foreach ($_SESSION['patient']['cycles_educ'] as $cycle_educ_start_date => $features) {
+			if ($features['id_cycle_educ'] == $id_cycle_educ)
+				$_SESSION['patient']['cycles_educ'][$cycle_educ_start_date]['id_parent_eval'] = $id_parent_eval;
+		}
+		
+		header('location:.?module=patient_teaching&action=show_summ_eval&type_eval=cycle_educ_eval');
+		exit;
 	}
-
 
 	require (VIEW_RELATIVE_PATH.'parent_eval.php');
 }

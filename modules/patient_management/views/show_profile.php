@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,16 +19,29 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
-$title_view = 'Ce patient';
+$title_view = _("Programme éducatif de").' '.$patient['patient_firstname'].' '.strtoupper($patient['patient_surname']);
 $style[] = 'patient_profile';
-$style[] = 'patient_teaching';
 ?>
 
-<h1><?php echo strtoupper($patient['patient_surname']).' '.$patient['patient_firstname']; ?></h1>
+
+
+<?php 
+ if (!empty($educ_diag) and $educ_diag['educ_diag_achieved'] == 1) {
+?>
+<br/><br/>
+<center>
+	<div>
+		<a href='.?module=patient_teaching&action=show_summ_all_eval' class='link_action'>
+			<?php echo _("Voir la synthèse de toutes les évaluations"); ?>
+		</a>
+	</div>
+</center>
+<?php
+}
+?>
+
+
 
 <div class='patient_profile'>
 	<h3><?php echo _("Données patient"); ?></h3>
@@ -37,17 +49,12 @@ $style[] = 'patient_teaching';
 		<div class='patient_profile_side'>
 			<h3><?php echo _("Identité"); ?></h3>
 			<ul>
-<?php
-	$sex_title = '';
-	if ($patient['patient_sex'] == '0')
-		$sex_title = 'garçon';
-	elseif ($patient['patient_sex'] == '1')
-		$sex_title = 'fille';
-?>
-				<li><?php echo _("Sexe").' : '.$sex_title; ?></li>
-				<li><?php echo _("Âge").' : '.sprintf (ngettext('%d an','%d ans',$_SESSION['patient']['patient_age']['year']),$_SESSION['patient']['patient_age']['year'])
-								.' '.sprintf (ngettext('%d mois','%d mois',$_SESSION['patient']['patient_age']['month']),$_SESSION['patient']['patient_age']['month']); ?></li>
+				<li><?php echo _("Sexe").' : '; echo $patient['patient_sex']==1?_("garçon"):_("fille"); ?></li>
+				<li><?php echo _("Âge").' : '.sprintf (ngettext('%d an','%d ans',$patient_age['year']),$patient_age['year']);
+					if($patient_age['month'] != 0) echo ' '.sprintf (ngettext('%d mois','%d mois',$patient_age['month']),$patient_age['month']); ?></li>
 				<li><?php echo _("Date de naissance").' : '.showDate ($patient['patient_date_birth']); ?></li>
+			</ul>
+			<ul>
 				<li><?php echo _("Date d'inclusion dans Teacher").' : '.showDate ($patient['patient_date_inclusion']); ?></li>
 			</ul>
 		</div>
@@ -59,185 +66,274 @@ $style[] = 'patient_teaching';
 				<li><?php echo _("Débit expiratoire de pointe (DEP)"); ?> :
 <?php 
 		if ($patient['patient_peakflow'] != 0) {
-			echo $patient['patient_peakflow'].'L/min</li>'."\n";
 			$peakflow_80 = 0.8 * $patient['patient_peakflow'];
 			$peakflow_60 = 0.6 * $patient['patient_peakflow'];
-			echo '				<li>DEP 80% : '.$peakflow_80.' L/min</li>'."\n";
-			echo '				<li>DEP 60% : '.$peakflow_60.' L/min</li>'."\n";
+
+			echo $patient['patient_peakflow'].' '._("L/min");
+?>
+					<ul>
+						<li><?php echo _("DEP 80%").' : '.$peakflow_80.' '._("L/min"); ?></li>
+						<li><?php echo _("DEP 60%").' : '.$peakflow_60.' '._("L/min"); ?></li>
+					</ul>
+<?php
 		}
-		else {
-			echo '				</li>'."\n";
-		}
-?>							
+?>				</li>			
 			</ul>
 		</div>
 	</div>
     <p>
-<?php
-	echo '<a class = \'button_validation\' href=\'.?module=patient_management&action=modify_profile&id_patient='.$_SESSION['patient']['id_patient'].'\'>'
-        ._("Modifier ces données patient").'</a>'."\n";
-    echo '<a class = \'button_validation_critical\' href=\'.?module=patient_management&action=delete_patient\'>'._("Supprimer ce patient").'</a>'."\n";
-?>
+		<a class = 'link_action' href='.?module=patient_management&action=modify_profile&id_patient=<?php echo $_SESSION['patient']['id_patient']; ?>'>
+		<img src='<?php echo IMAGE_PATH.'edit.png'; ?>' alt="edit" width=20 />
+			<?php echo _("Modifier ces données patient"); ?>
+		</a>
+		<a class = 'link_action_critical' href='.?module=patient_management&action=delete_patient'>
+			<img src='<?php echo IMAGE_PATH.'delete.png'; ?>' alt="delete" width=20 />
+			<?php echo _("Supprimer ce patient"); ?>
+		</a>
+
     </p>
 </div>
 
 
-<div class='patient_profile'>
-	<h3><?php echo _("Diagnostic éducatif"); ?></h3>
-	<div class='patient_profile_side'>
-		<ul>
-<?php
-	if (!empty ($educ_diag)) {
-		if ($educ_diag['educ_diag_achieved'] == 1) {
-			echo'			<li>'._("Réalisé le").'  '.showDate ($educ_diag['educ_diag_date']).'</li>';
-			echo'			<li><a href=\'.?module=patient_teaching&action=show_educ_diag\'>'
-							._("Le consulter").'</a></li>';
-			echo'			<li><a href=\'.?module=patient_teaching&action=show_summ_eval&type_eval=educ_diag\'>'
-						._("Voir la synthèse").'</a></li>';
-		}
-		else {
-			echo '			<li>'._("Le diagnostic éducatif a été débuté le").' '
-							.showDate ($educ_diag['educ_diag_date']).' '.("mais n'est pas terminé").'.</li>';
-			echo'			<li><a href=\'.?module=patient_teaching&action=create_educ_diag\'>'
-							._("le réaliser maintenant").'</a></li>';
-		}
-	}
-	else {
-		echo '			<li>Non réalisé</li>';
-		echo'			<li><a href=\'.?module=patient_teaching&action=create_educ_diag\'>'
-						._("Le réaliser maintenant").'</a></li>';
-	}
-?>
-		</ul>
-	</div>
-</div>
 
 <div class='patient_profile'>
 	<h3><?php echo _("Programme éducatif"); ?></h3>
 
-	<div>
+	<ul>
+		<li><?php echo _("Date de début"); ?> : <?php echo !empty($educ_diag)?showDate ($educ_diag['educ_diag_date']):_("non débuté"); ?></li>
+<?php
+$first_cycle_educ = reset ($_SESSION['patient']['cycles_educ']);
+$date_end_first_cycle = '';
+if(!empty($first_cycle_educ['cycle_educ_eval_date']))
+	$date_end_first_cycle = $first_cycle_educ['cycle_educ_eval_date']
+?>
+		<li><?php echo _("Date de fin"); ?> : <?php echo $date_end_first_cycle == ''?showDate ($date_end_first_cycle):''; ?></li>
+	</ul>
+	
+
+	<div class='patient_profile_part'>
+		<h4><?php echo _("Diagnostic éducatif"); ?></h4>
+			
+		<ul>
+<?php
+	if (!empty ($educ_diag)) {
+		if ($educ_diag['educ_diag_achieved'] == 1) {
+?>
+			<li><?php echo _("Réalisé"); ?></li>
+			<li><a href='.?module=patient_teaching&action=show_educ_diag'><?php echo _("Le consulter"); ?></a></li>
+			<li><a href='.?module=patient_teaching&action=show_summ_eval&type_eval=educ_diag'><?php echo _("Voir la synthèse = contrat éducatif"); ?></a></li>
+<?php
+		}
+		else {
+?>
+			<li><?php echo _("Le diagnostic éducatif a été débuté le").' '
+							.showDate ($educ_diag['educ_diag_date']).' '.("mais n'est pas terminé"); ?></li>
+			<li><a href='.?module=patient_teaching&action=create_educ_diag'><?php echo _("le réaliser maintenant"); ?></a></li>
+<?php
+		}
+	}
+	else {
+?>
+		<li><?php echo _("Non réalisé"); ?></li>
+		<li><a href='.?module=patient_teaching&action=create_educ_diag'><?php echo _("Le réaliser maintenant"); ?></a></li>
+<?php
+	}
+?>
+		</ul>
+	</div>
+
+
 <?php
 
-$nb_cycle = 0;
-
-ksort ($list_cycle_educ);
+$num_cycle = 0;
+$nb_cycle_educ = count($list_cycle_educ);
 
 foreach ($list_cycle_educ as $cycle_start_date => $feature_cycle) {
 
 	$id_cycle_educ = $feature_cycle['id_cycle_educ'];
 
-	$nb_cycle ++;
-	if (!empty ($list_cycle_educ[$cycle_start_date]['targets']))
-		ksort ($list_cycle_educ[$cycle_start_date]['targets']);
-
-	if (preg_match ('#[a-zA-Z]{3,}#', showDate ($feature_cycle['cycle_educ_eval_date']))) {
+	$num_cycle ++;
+	
+	if ($num_cycle == 2) {
 ?>
-	<div class = 'patient_profile_wide'>
-		<p><?php echo _("Programme éducatif terminé"); ?></p>
-		<p><?php echo _("Date de réévaluation prévue (approximativement)").' : '
-							.showDate ($feature_cycle['cycle_educ_eval_date'])
-							.' <a href=\'.?module=patient_teaching&action=create_eval\'>'._("la réaliser maintenant"); ?></a></p>
-	</div>
+</div>
+<div class='patient_profile'>
+	<h3><?php echo _("Après le programme éducatif..."); ?></h3>
 <?php
 	}
-	else {
+	
+	$id_anchor_cycle = '';
+	if ($num_cycle == count($list_cycle_educ))
+		$id_anchor_cycle = 'current_cycle';
+	elseif ($num_cycle == 1)
+		$id_anchor_cycle = 'first_cycle';
 ?>
-	<div class='patient_profile_side'>
-		<h3>
+	<div class = 'patient_profile_part' id = '<?php echo $id_anchor_cycle; ?>'>
 <?php
-		if ($nb_cycle == 1)
-			echo _("Cycle initial");
-		else
-			echo _("Renforcement éducatif n°").' '.($nb_cycle-1);
-?>
-		</h3>
-		<p><?php echo _("Période"); ?></p>
-			<ul>
-				<li><?php echo _('date de début'); ?> : <?php echo showDate ($cycle_start_date) ?></li>
-				<li><?php echo _('date de fin'); ?> : <?php echo showDate ($feature_cycle['cycle_educ_eval_date']) ?></li>
-			</ul>
+
 			
-		<p><?php echo _("Objectifs à travailler"); ?></p>
+	if (empty ($feature_cycle['targets'])) {
+		if (! ($num_cycle == $nb_cycle_educ and $_SESSION['patient']['synthesis_to_do'] == 1)) {
+?>
+		<h4><?php echo _("Évaluation du maintien des compétences"); ?></h4>
+<?php
+		}
+	}
+	
+		
+	else {
+		ksort ($feature_cycle['targets']);
+		
+?>
+		<h4>
+<?php
+		if ($num_cycle == 1)
+			echo _("Séances éducatives et évaluation");
+		else
+			echo _("Renforcement éducatif n°").' '.($num_cycle-1);
+?>
+		</h4>
+
+		<p><?php echo _("Objectifs éducatifs à travailler"); ?></p>
 
 		<ul>
 <?php
-		if (!empty ($feature_cycle['targets'])) {
-			foreach ($feature_cycle['targets'] as $num_target => $feature_target) {
-				if ($feature_target['cycle_target_done'] == 1) {
-					echo'				<li>'._('Objectif').' '.$num_target.' : '._('fait').' ( '
-											.showDate ($feature_target['cycle_target_date']).' )</li>'."\n";
-					}
-				else {
-					if ($feature_target['cycle_target_date'] != '')
-						$planned_date = '('._("date prévue").' : '.showDate($feature_target['cycle_target_date'], 'day').')';
-					else
-						$planned_date = '('._("pas de date prévue").')';
-					echo'				<li>'._("Objectif").' '.$num_target.' : '._("non réalisé").' '.$planned_date.'</li>'."\n";
-				}	
-			}
+
+		foreach ($feature_cycle['targets'] as $num_target => $feature_target) {
+			if ($feature_target['cycle_target_done'] == 1) {
+?>
+			<li>
+				<?php echo _("Objectif").' '.$num_target.' : '._('fait').' ( '
+							.showDate ($feature_target['cycle_target_date']).' )'; ?>
+			</li>
+<?php
+				}
+			else {
+				if ($feature_target['cycle_target_date'] != '')
+					$planned_date = '('._("date prévue").' : '.showDate($feature_target['cycle_target_date'], 'day').')';
+				else
+					$planned_date = '('._("pas de date prévue").')';
+?>
+			<li>
+				<?php echo _("Objectif").' '.$num_target.' : '._("non réalisé").' '.$planned_date; ?>
+			</li>
+<?php
+			}	
 		}
+
 		
 		if (empty ($feature_cycle['cycle_educ_eval_date'])) {
-			if ($nb_cycle == 1)
+			if ($num_cycle == 1)
 				$param_get = 'type_eval=educ_diag&modify_target_cycle=1';
 			else
-				$param_get = 'type_eval=cycle_educ_eval&id_eval='.$last_cycle_educ.'&modify_target_cycle=1';
-				
-			echo '		<a href=\'.?module=patient_teaching&action=show_summ_eval&'.$param_get.'\'>'
-								._("Modifier cette planification").'</a>';
+				$param_get = 'type_eval=cycle_educ_eval&id_cycle_educ='.$last_cycle_educ.'&modify_target_cycle=1';
+?>				
+			<a href='.?module=patient_teaching&action=show_summ_eval&<?php echo $param_get; ?>'>
+				<?php echo _("Modifier cette planification"); ?>
+			</a>
+<?php
 		}
 ?>
 
 		</ul>
-		<p><?php echo _("Evaluation finale"); ?></p>
-			<ul>
+		<p>
+			<?php echo _("Evaluation finale"); ?>
+		</p>
 <?php
-		if (!empty ($feature_cycle['cycle_educ_eval_date'])) {
-			echo '				<li>'._("réalisée le").' '.showDate ($feature_cycle['cycle_educ_eval_date']).'</li>'."\n";
-			echo '				<li><a href=\'.?module=patient_teaching&action=show_eval&id_eval='.$id_cycle_educ.'\'>'
-									._("consulter l'évaluation").'</a></li>'."\n";
-			echo '				<li><a href=\'.?module=patient_teaching&action=show_summ_eval&type_eval=cycle_educ_eval&show_target_cycle=1
-									&id_eval='.$id_cycle_educ.'\'>'._("consulter la synthèse").'</a></li>'."\n";
-		}
-		elseif ($_SESSION['patient']['eval_to_do'] == 1){
-			echo '				<li>'._("non réalisée").'</li>'."\n";
-			echo '				<li>'._("Comme tous les objectifs prévus ont été travaillés, vous pouvez")
-								.' <a href=\'.?module=patient_teaching&action=create_eval\'>'._("la réaliser maintenant").'</a></li>'."\n";
+	}
+	
+	
+
+?>
+		<ul>
+<?php
+	if (!empty ($feature_cycle['cycle_educ_eval_date'])
+		and !preg_match ('#[a-zA-Zéû]{3,}#', showDate ($feature_cycle['cycle_educ_eval_date']))) {
+		if ($num_cycle == 1) {
+?>
+			<li><?php echo _("réalisée"); ?></li>
+<?php
 		}
 		else {
-			echo '				<li>'._("L'évaluation finale ne pourra être faite qu'après avoir travaillé tous les objectifs éducatifs prévus").'</li>'."\n";
+?>
+			<li><?php echo _("réalisée le ").showDate ($feature_cycle['cycle_educ_eval_date']); ?></li>
+<?php			
 		}
 ?>
-			</ul>
+			<li><a href='.?module=patient_teaching&action=show_eval&id_cycle_educ=<?php echo $id_cycle_educ; ?>'>
+					<?php echo _("consulter l'évaluation"); ?></a></li>
+			<li><a href='.?module=patient_teaching&action=show_summ_eval&type_eval=cycle_educ_eval&show_target_cycle=1
+									&id_cycle_educ=<?php echo $id_cycle_educ; ?>'><?php echo _("consulter la synthèse"); ?></a></li>
 <?php
-		if ($feature_cycle['cycle_educ_end_programme'] == 1)
-			echo '		<p>'._("Fin provisoire du programme éducatif").'</p>'."\n";
-		
-		
-		if (isset ($list_summary_letter[$id_cycle_educ])) {
-			echo '		<p>'._("Courrier(s) de liaison créé(s)").'</p>'."\n";
-			echo '			<ul>'."\n";
-			foreach ($list_summary_letter[$id_cycle_educ] as $one_summary_letter) {
-				echo '<li><a href = \'.?module=patient_management&action=get_summary_letter_pdf&file='.$one_summary_letter['summary_letter_name'].'\'>'
-					._("courrier du").' '.showDate ($one_summary_letter['summary_letter_date'], 'day').'</a></li>';
-			}
-			echo '			</ul>'."\n";
-		}
-?>
-	</div>
-<?php
-
-		if ($nb_cycle % 2 == 0 or $feature_cycle['cycle_educ_end_programme'] == 1) {
-			echo '	</div>'."\n".'	<div>';
-		}
-		
-		$last_cycle_educ = $id_cycle_educ;
 	}
-}
+	elseif ($_SESSION['patient']['eval_to_do'] == 1){
+		if (preg_match ('#[a-zA-Zéû]{3,}#', showDate ($feature_cycle['cycle_educ_eval_date']))) {
+?>
+			<li><?php echo _("Prévue en").' '.showDate ($feature_cycle['cycle_educ_eval_date']); ?></li>
+			<li><a href='.?module=patient_teaching&action=create_eval'><?php echo _("la réaliser maintenant"); ?></a></li>
+<?php
+		}
+		else {
+?>
+			<li><?php echo _("non réalisée"); ?></li>
+			<li><?php echo _("comme tous les objectifs ont été validés, vous pouvez"); ?> <a href='.?module=patient_teaching&action=create_eval'><?php echo _("la réaliser maintenant"); ?></a></li>
+<?php
+		}
+	}
+	else {
+		if ($_SESSION['patient']['synthesis_to_do'] != 1) {
+?>
+			<li><?php echo _("L'évaluation finale ne pourra être faite qu'après avoir travaillé tous les objectifs éducatifs prévus"); ?></li>
+<?php
+		}
+		else {
+?>
+			<li><?php echo _("La suite dépendra de la conclusion de la synthèse de la dernière évaluation"); ?></li>
+<?php
+		}
+	
+	}
+?>
+		</ul>
+<?php
+	
+		
+	if (isset ($list_summary_letter[$id_cycle_educ])) {
+?>
+		<p><?php echo _("Courrier(s) de liaison créé(s)"); ?></p>
+		<ul>
+<?php
+		foreach ($list_summary_letter[$id_cycle_educ] as $id_summary_letter => $one_summary_letter) {
+?>
+			<li>
+				<a href = '.?module=patient_management&action=get_summary_letter_pdf&file=<?php echo $one_summary_letter['summary_letter_name']; ?>' title='<?php echo _("télécharger ce courrier"); ?>'>
+<?php
+					if (null != $one_summary_letter['summary_letter_title']) 
+						echo $one_summary_letter['summary_letter_title'].' ('.showDate ($one_summary_letter['summary_letter_date'], 'day').')';
+					else
+						echo _("courrier du").' '.showDate ($one_summary_letter['summary_letter_date'], 'day');
+?>
+				</a>
+				&nbsp;
+				<a href='.?module=patient_management&action=delete_summary_letter&id_summary_letter=<?php echo $id_summary_letter; ?>' title='<?php echo _("supprimer ce courrier"); ?>' onclick = 'return confirm("<?php echo _("Êtes-vous sûr de vouloir supprimer ce courrier ? (irréversible)"); ?>")' ><img src='<?php echo IMAGE_PATH.'delete.png'; ?>' alt="delete" width=20 /><!--<?php echo _("supprimer"); ?>--></a>
+				<a href='.?module=patient_management&action=rename_summary_letter&id_summary_letter=<?php echo $id_summary_letter; ?>' title='<?php echo _("modifier le titre de ce courrier"); ?>' ><img src='<?php echo IMAGE_PATH.'edit.png'; ?>' alt="edit" width=20 /><!--<?php echo _("renommer"); ?>--></a>
+			</li>
+<?php
+		}
+?>
+		</ul>
+<?php
+	}
 ?>
 	</div>
 <?php
-if ($nb_cycle > 1) {
+	
+		$last_cycle_educ = $id_cycle_educ;
+}
+
+
+
+if ($num_cycle > 1) {
 ?>
 	<a href = '.?module=patient_management&action=create_summary_letter'><?php echo _("Créer un courrier de liaison"); ?></a>
 <?php
@@ -246,14 +342,15 @@ if ($nb_cycle > 1) {
 </div>
 
 
+
 <div class='patient_profile'>
-	<h3><?php echo _("Divers"); ?></h3>
+	<h3><?php echo _("Grilles d'évaluation des savoir-faire"); ?></h3>
 	
 	<p><a href = '.?module=patient_teaching&action=show_device_eval'>
-		<?php echo _("Gestion des évaluations de la technique d'utilisation des dispositifs d'inhalation"); ?>
+		<?php echo _("Technique d'utilisation des dispositifs d'inhalation"); ?>
 	</a></p>
 
 	<p><a href = '.?module=patient_teaching&action=show_peakflow_use'>
-		<?php echo _("Gestion des évaluation de la technique de mesure du débit de pointe"); ?>
+		<?php echo _("Technique de mesure du débit de pointe"); ?>
 	</a></p>
 </div>

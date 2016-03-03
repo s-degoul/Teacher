@@ -1,0 +1,8 @@
+id_user,user_surname,user_firstname,user_login,user_password,id_country,user_street,user_postal_code,user_city,user_phone,user_mail,user_title,user_practice,id_language,user_therap_educ,user_validation_Essential,user_eval_to_do,user_end_teacher,user_rights
+2,Robberecht,Marie-Noëlle,robberecht,$2y$15$OhGeIThohNAi9ceteiQu9eqo3Wm/HX9OAPZ1/pvr2BbrI5MEEtjRa,1,"une rue",59000,"Mons en Baroeul",13,moi@gmail.com,Dr.,3,1,1,1,0,2,admin
+3,Labesse,Julie,labesse,$2y$15$OhGeIThohNAi9ceteiQu9eqwfdTi4TWziNsFBAdTAVKoagPXnLNBW,1,,0,,00,qcc@qqc.com,Mme.,2,1,0,1,0,0,
+10,Degoul,Samuel,sdegoul,$2y$15$OhGeIThohNAi9ceteiQu9eqo3Wm/HX9OAPZ1/pvr2BbrI5MEEtjRa,1,"23 rue Léonard de Vinci",59700,"Marcq en Baroeul",,sdegoul@gmail.com,Dr.,0,1,0,1,1,0,admin
+11,essai,tentative,tessai,$2y$15$OhGeIThohNAi9ceteiQu9eqo3Wm/HX9OAPZ1/pvr2BbrI5MEEtjRa,1,,0,,,essai@qqc.org,,,1,,0,0,0,normal
+12,Moi,Toi,tmoi,$2y$15$OhGeIThohNAi9ceteiQu9eqo3Wm/HX9OAPZ1/pvr2BbrI5MEEtjRa,1,,0,,,moi@toi.com,,,1,,0,0,0,normal
+13,Scalbert-Dujardin,Manuëla,mdujardin,9nTgBTuSvIIbDrG,1,,0,,,fmscalbert@aliceadsl.fr,Dr.,,1,,0,0,0,normal
+14,Hello,provisoire,phello,$2y$15$OhGeIThohNAi9ceteiQu9eqo3Wm/HX9OAPZ1/pvr2BbrI5MEEtjRa,1,,0,,,moi@ah.hc,,0,1,0,0,0,0,normal

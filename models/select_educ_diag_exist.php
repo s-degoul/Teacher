@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -36,12 +32,16 @@ try {
 		);
 
 	$request -> execute (array (
-		'id_patient' => $_SESSION['patient']['id_patient']
+		'id_patient' => $id_patient
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);
-
-	$educ_diag = $request -> fetch();
+	$nb_educ_diag = 0;
+	
+	while($one_educ_diag = $request -> fetch()) {
+		$educ_diag = $one_educ_diag;
+		$nb_educ_diag ++;
+	}
 
 	$request -> closeCursor();
 }

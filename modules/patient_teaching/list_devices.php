@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,26 +19,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 $list_devices = array (
-					'aerosol' => array(
-									'title' => _("aérosol doseur avec chambre d'inhalation"),
-									'questions' => array (
-													1 => _("Enlève le capuchon"),
-													2 => _("Secoue le produit"),
-													3 => _("Souffle a fond"),
-													4 => _("Mets le spray en bouche en serrant les lèvres autour"),
-													5 => _("Appuie sur le spray et inspire fort"),
-													6 => _("Retiens ta respiration 5 secondes"),
-													7 => _("Souffle et remets le capuchon")
-													)
-									),
 					'aerosolchb' =>  array(
-										'title' => _("aérosol doseur sans chambre d'inhalation"),
+										'title' => _("aérosol doseur avec chambre d'inhalation"),
 										'questions' => array (
 													1 => _("Enlève le capuchon"),
 													2 => _("Secoue le produit et place-le à l’extrémité de la chambre"),
@@ -50,14 +34,26 @@ $list_devices = array (
 													7 => _("Si ton médecin te l’a prescrit, refais une 2<sup>ème</sup> bouffée et respire 6 à 7 fois")
 													)
 										),
-					'autohaler' =>  array(
-									'title' => _("Autohaler"),
+					'aerosol' => array(
+									'title' => _("aérosol doseur sans chambre d'inhalation"),
 									'questions' => array (
-													1 => _("Tiens l’autohaler la partie renflée vers le bas et enlève le capuchon (petite encoche derrière)"),
-													2 => _("Secoue l’autohaler"),
-													3 => _("Soulève le levier : l’autohaler est armé"),
-													4 => _("Souffle à fond"),
-													5 => _("Mets ta bouche autour de l’embout et aspire à fond : tu entends un clic"),
+													1 => _("Enlève le capuchon"),
+													2 => _("Secoue le produit"),
+													3 => _("Souffle à fond"),
+													4 => _("Mets le spray en bouche en serrant les lèvres autour"),
+													5 => _("Appuie sur le spray et inspire fort"),
+													6 => _("Retiens ta respiration 5 secondes"),
+													7 => _("Souffle et remets le capuchon")
+													)
+									),
+					'novolizer' =>  array(
+									'title' => _("Novolizer"),
+									'questions' => array (
+													1 => _("Enlève le capuchon, le voyant est rouge"),
+													2 => _("Appuie sur le bouton : le voyant passe au vert"),
+													3 => _("Souffle a fond"),
+													4 => _("Mets le novolizer dans ta bouche en serrant les lèvres autour"),
+													5 => _("Inspire fort : tu entendras un clic et tu sentiras un goût sucré"),
 													6 => _("Retiens ta respiration 5 secondes"),
 													7 => _("Souffle et remets le capuchon")
 													)
@@ -73,14 +69,14 @@ $list_devices = array (
 													6 => _("Souffle et referme le couvercle (clic)")
 													)
 									),
-					'novolizer' =>  array(
-									'title' => _("Novolizer"),
+					'autohaler' =>  array(
+									'title' => _("Autohaler"),
 									'questions' => array (
-													1 => _("Enlève le capuchon, le voyant est rouge"),
-													2 => _("Appuie sur le bouton : le voyant passe au vert"),
-													3 => _("Souffle a fond"),
-													4 => _("Mets le novolizer dans ta bouche en serrant les lèvres autour"),
-													5 => _("Inspire fort : tu entendras un clic et tu sentiras un goût sucré"),
+													1 => _("Tiens l’autohaler la partie renflée vers le bas et enlève le capuchon (petite encoche derrière)"),
+													2 => _("Secoue l’autohaler"),
+													3 => _("Soulève le levier : l’autohaler est armé"),
+													4 => _("Souffle à fond"),
+													5 => _("Mets ta bouche autour de l’embout et aspire à fond : tu entends un clic"),
 													6 => _("Retiens ta respiration 5 secondes"),
 													7 => _("Souffle et remets le capuchon")
 													)

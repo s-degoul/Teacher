@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,12 +19,31 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 $title_view = _("Vidéo : utilisation des dispositifs d'inhalation");
 
 ?>
 
-<video src= 'videos/<?php echo $video_file; ?>' controls poster='' width="800"></video>
+<video controls poster='' width = 800 >
+<?php
+
+if (file_exists ($video_mp4)) {
+?>
+	<source src = '<?php echo $video_mp4; ?>' />
+<?php
+}
+
+if (file_exists ($video_ogg)) {
+?>
+	<source src = '<?php echo $video_ogg; ?>' />
+<?php
+}
+
+?>
+</video>
+
+<p>
+	<?php echo _("Si vous rencontrez des problèmes pour visualiser les vidéos, nous vous conseillons l'utilisation du navigateur internet Firefox"); ?>
+	(<a href='https://www.mozilla.org/fr/firefox/new/'><?php echo _("télécharger"); ?></a>)
+</p>

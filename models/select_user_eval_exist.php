@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 
 try {
 	if (!isset ($db))
@@ -32,20 +29,20 @@ try {
 	$request = $db -> prepare (
 		'SELECT id_user_eval
 		FROM table_user_eval
-		WHERE id_user = :id_user and user_eval_date BETWEEN :date_min AND :date_max'
+		WHERE id_user = :id_user AND (user_eval_date BETWEEN :date_min AND :date_max OR user_eval_achieved != 1)'
 		);
 
 	$request -> execute (array (
-		'id_user' => $_SESSION['id_user'],
+		'id_user' => $id_user,
         'date_min' => $date_min,
         'date_max' => date ('Y-m-d H:i:s')
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);
 
-	$id_user_eval = '';
-	while ($user_eval = $request -> fetch()) {
-		$id_user_eval = $user_eval['id_user_eval'];
+	$id_user_eval = -1;
+	while ($one_user_eval = $request -> fetch()) {
+		$id_user_eval = $one_user_eval['id_user_eval'];
 	}
 
 	$request -> closeCursor();

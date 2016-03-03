@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,16 +19,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 	$tile_view = 'Déconnexion';
 
 	if (isset ($_SESSION['id_user']) or isset ($_SESSION['visitor'])) {
 		$_SESSION = array();
 		session_destroy();
 		header ('location:.');
+		exit;
 	}
 ?>
 

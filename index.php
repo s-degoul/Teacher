@@ -19,15 +19,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-<?php
+
 
 // !!  TO BE CHANGED ON PRODUCTION VERSION  !!
 error_reporting (E_ALL);
 //error_reporting(0);
 
-
-header('Content-Type: text/html; charset=utf-8');
 
 
 /*************************************************
@@ -66,6 +63,7 @@ $style = array ('default');
 // initialization of vars for views
 $title_view = 'TEACHER';
 $content_top = '';
+$content_bottom = '';
 $messages = array();
 
 
@@ -88,14 +86,34 @@ if (isset ($_SESSION['id_user']) or isset ($_SESSION['visitor'])) {
 		elseif (isset ($_SESSION['visitor']))
 			$action = 'start_visitor';
 	}
+	
+	// access to module "administration" granted only for user with rights = "admin".
+	if ($module == 'administration') {
+		if (isset ($_SESSION['id_user']) and $_SESSION['user_rights'] != 'admin') {
+			$module = 'start';
+			$action = 'start_user';
+		}
+		elseif (isset ($_SESSION['visitor'])) {
+			$module = 'start';
+			$action = 'start_visitor';
+		}
+	}
+	
+	if (isset ($_SESSION['id_user'])) {
+		if ($_SESSION['user_rights'] == 'change_password') {
+			$module = 'user_management';
+			if ($action != 'disconnection')
+				$action = 'change_password';
+		}
+	}
 }
 elseif (isset ($_GET['module']) and isset ($_GET['action']) and $_GET['module'] == 'user_management') {
 	$module = 'user_management';
 
-	if ($_GET['action'] == 'connection')
-		$action = 'connection';
-	elseif ($_GET['action'] == 'password_forgotten')
+	if ($_GET['action'] == 'password_forgotten')
 		$action = 'password_forgotten';
+	else
+		$action = 'connection';
 }
 
 // path to this module's views
@@ -136,20 +154,10 @@ if (isset ($_SESSION['visitor'])) {
 }
 
 
-/*************************************************
- * adding css sheet specific to the module
- * (or the action)
- *************************************************/
-require (TEMPLATE_PATH.'list_modules_actions.php');
-
-if (!empty ($list_modules_actions[$module][$action]))
-	$style[] = $list_modules_actions[$module][$action];
-elseif (is_file (STYLE_PATH.$module.'.css'))
-	$style[] = $module;
 
 
 /*************************************************
- * PAGE'S CONSTRUCTION
+ * CONSTRUCTION OF PAGE
  * note that header.php need informations defined
  * in action's specific script
  * or script for left menu
@@ -164,6 +172,19 @@ ob_start();
 $menu_left = ob_get_clean();
 
 
+/*************************************************
+ * adding css sheet specific to the module
+ * (or the action)
+ *************************************************/
+require (TEMPLATE_PATH.'list_modules_actions.php');
+
+if (is_file (STYLE_PATH.$module.'.php'))
+	$style[] = $module;
+
+
+/*************************************************
+ * displaying the output
+ *************************************************/
 require (TEMPLATE_PATH.'header.php');
 
 echo $menu_left;

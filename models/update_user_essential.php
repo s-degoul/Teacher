@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -35,8 +31,11 @@ try {
 		WHERE id_user = :id_user'
 		);
 
+	if (! isset ($user_validation_Essential))
+		$user_validation_Essential = 1;
+
 	$request -> execute (array (
-		'user_validation_Essential' => 1,
+		'user_validation_Essential' => $user_validation_Essential,
 		'id_user' => $_SESSION['id_user']
 	));
 

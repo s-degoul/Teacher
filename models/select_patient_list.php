@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))	
@@ -31,14 +27,14 @@ try {
 	
 	$request = $db -> prepare (
 		'SELECT id_patient, patient_surname, patient_firstname, 
-		patient_date_birth, patient_sex
+		patient_date_birth, patient_sex, patient_active
 		FROM table_patient
 		WHERE id_user = :id_user
 		ORDER BY patient_surname'
 		);
 
 	$request -> execute (array (
-					'id_user' => $_SESSION['id_user']
+					'id_user' => $id_user
 					)
 				);
 

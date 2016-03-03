@@ -88,16 +88,16 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
  		var count = 0;
  		var i =0;
 
-	 	for (i = 1; i <= 5; i++) {
+	 	for (i = 1; i <= 4; i++) {
 		count += document.getElementById('user_eval_q4_' + i).checked ? 1 : 0;
 		}
 
-	 	if (count >= 3) {
-	 	for (i = 1; i <= 5; i++) {
+	 	if (count >= 2) {
+	 	for (i = 1; i <= 4; i++) {
 		document.getElementById('user_eval_q4_' + i).disabled = !document.getElementById('user_eval_q4_' + i).checked;
 		}
 		} else {
-		for (i = 1; i <= 5; i++) {
+		for (i = 1; i <= 4; i++) {
 		document.getElementById('user_eval_q4_' + i).disabled = false;
 		}
 		}

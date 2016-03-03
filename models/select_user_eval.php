@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -32,11 +28,12 @@ try {
 	$request = $db -> prepare (
 		'SELECT *
 		FROM table_user_eval
-		WHERE id_user_eval = :id_user_eval'
+		WHERE id_user_eval = :id_user_eval AND id_user = :id_user'
 		);
 
 	$request -> execute (array (
-		'id_user_eval' => $id_user_eval
+		'id_user_eval' => $id_user_eval,
+		'id_user' => $id_user
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);

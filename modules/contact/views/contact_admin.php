@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,15 +19,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 $title_view = _("Contacter l'administrateur");
 
 ?>
 
-<p><?php echo _("Vous pouvez envoyer un message à l'administrateur du site Teacher. Une réponse vous sera donnée à l'adresse mail précisée dans votre profil."); ?></p>
+<p>
+	<?php echo _("Vous pouvez envoyer un message à l'administrateur du site Teacher."); ?>
+</p>
+<p>
+<?php
+if (isset ($_SESSION['id_user']))
+	echo _("Une réponse vous sera donnée à l'adresse mail précisée dans votre profil.");
+else
+	echo _("<em>Merci de renseigner votre adresse email dans votre message si vous désirez une réponse</em>.");
+?>
+</p>
 
 <form method = 'post' action = '.?module=contact&action=contact_admin'>
 	<p>
@@ -42,6 +49,6 @@ $title_view = _("Contacter l'administrateur");
 		<textarea name = 'message_content' id = 'message_content' cols = 50 rows = 10><?php isset ($message['message_content'])?$message['message_content']:'' ?></textarea>
 	</p>
 	<p>
-		<input type = 'submit' name = 'send_message' value = '<?php echo _("Envoyer"); ?>' />
+		<input type = 'submit' name = 'send_message' value = '<?php echo _("Envoyer"); ?>' class = 'button_validation' />
 	</p>
 </form>

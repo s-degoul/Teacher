@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,16 +19,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+$content_bottom = lastpage_essential ('2') . nextpage_essential ('4');
+$content_top .= $content_bottom;
 ?>
 
+<h2><?php echo _("3<sup>ème</sup> ETAPE : les séances éducatives ou l’apprentissage des objectifs fixés"); ?></h2>
 
-<?php
-$content_top = lastpage_essential ('2') . nextpage_essential ('4');
-?>
-
-<h1><?php echo _("3<sup>ème</sup> ETAPE : les séances éducatives ou l’apprentissage des objectifs fixés"); ?></h1>
-
-<a href = '?module=patient_teaching&action=show_target&id_target=1&from=essential'>
+<a href = '?module=patient_teaching&action=show_target&id_target=1&from=essential&from_page_essential=3'>
 	<?php echo _("En voir un aperçu (exemple de l'objectif éducatif n°1)"); ?>
 </a>
 

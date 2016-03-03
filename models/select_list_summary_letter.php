@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,17 +19,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
 		$db = DBConnect();
 
 	$request = $db -> prepare (
-		'SELECT S.id_cycle_educ as id_cycle_educ, summary_letter_date, summary_letter_name
+		'SELECT id_summary_letter, S.id_cycle_educ as id_cycle_educ, summary_letter_date, summary_letter_name, summary_letter_title
 		FROM table_summary_letter as S
 		INNER JOIN table_cycle_educ as C ON S.id_cycle_educ = C.id_cycle_educ
 		WHERE C.id_patient = :id_patient
@@ -38,7 +34,7 @@ try {
 		);
 
 	$request -> execute (array (
-		'id_patient' => $_SESSION['patient']['id_patient']
+		'id_patient' => $id_patient
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);
@@ -47,9 +43,11 @@ try {
 
 	while ($one_summary_letter = $request -> fetch()) {
 		$id_cycle_educ = $one_summary_letter['id_cycle_educ'];
-		$list_summary_letter[$id_cycle_educ][] = array (
+		$id_summary_letter = $one_summary_letter['id_summary_letter'];
+		$list_summary_letter[$id_cycle_educ][$id_summary_letter] = array (
 														'summary_letter_date' => $one_summary_letter['summary_letter_date'],
-														'summary_letter_name' => $one_summary_letter['summary_letter_name']
+														'summary_letter_name' => $one_summary_letter['summary_letter_name'],
+														'summary_letter_title' => $one_summary_letter['summary_letter_title']
 													);
 	}
 

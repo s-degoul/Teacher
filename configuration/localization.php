@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 if (!isset ($_SESSION['timezone']))
 	date_default_timezone_set ("Europe/Paris");
 else
@@ -44,8 +41,9 @@ if (isset ($_GET['lang'])) {
 	$_SESSION['lang'] = $_GET['lang'];
 }
 elseif (!isset ($_SESSION['lang'])) {
-	$_SESSION['lang'] = substr ($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,5);
-	$_SESSION['lang'] = str_replace ('-', '_', $_SESSION['lang']);
+	$_SESSION['lang'] = DEFAULT_LOCALE;
+//	$_SESSION['lang'] = substr ($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,5);
+//	$_SESSION['lang'] = str_replace ('-', '_', $_SESSION['lang']);
 }
 
 $locale = (isset($_SESSION['lang']))? $_SESSION['lang'].'.utf8' : DEFAULT_LOCALE;
@@ -60,6 +58,6 @@ if (function_exists('bind_textdomain_codeset'))
   bind_textdomain_codeset($domain, $encoding);
 textdomain($domain);
 
-header("Content-type: text/html; charset=$encoding");
+header('Content-type: text/html; charset='.$encoding);
 
 ?>

@@ -20,19 +20,19 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
+
+$title_view = 'Liste des objectifs pédagogiques';
+
+$style[] = 'target';
+
+$messages['info'][] = _("Les objectifs de sécurité sont en rouge.");
 ?>
 
-
-<?php
-$title_view = 'Objectifs thérapeutiques';
-?>
-
-<h1>Liste des objectifs thérapeutiques</h1>
-<table class=''>
+<table class = 'target_list_table'>
 	<thead>
 		<tr>
-			<th>Objectif</th>
-			<th>Intitulé</th>
+			<th><?php echo _("Objectif"); ?></th>
+			<th><?php echo _("Intitulé"); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -40,10 +40,24 @@ $title_view = 'Objectifs thérapeutiques';
 <?php
 
 foreach ($list_target as $id_target => $features_target) {
-echo'		<tr>'."\n";
-echo'			<td><a href=\'.?module=patient_teaching&action=show_target&type=patient&id_target='.$id_target.'\'>'.$id_target.'</a></td>'."\n";
-echo'			<td>'.$features_target['target_name'].'</td>'."\n";
-echo'		</tr>'."\n";
+	$css_cell = '';
+	if($features_target['target_security'] == 1)
+		$css_cell = 'target_list_security';
+	
+	$type = 'user';
+	if (empty ($_SESSION['id_user'])) {
+		$type = 'patient';
+	}
+?>
+		<tr>
+			<td class = '<?php echo $css_cell; ?>'>
+				<a href='.?module=patient_teaching&action=show_target&type=<?php echo $type; ?>&id_target=<?php echo $id_target; ?>' class = 'target_list_num'><?php echo $id_target ; ?></a>
+			</td>
+			<td class = '<?php echo $css_cell; ?>'>
+				<a href='.?module=patient_teaching&action=show_target&type=<?php echo $type; ?>&id_target=<?php echo $id_target; ?>' class = 'target_list_name'><?php echo $features_target['target_name']; ?></a>
+			</td>
+		</tr>
+<?php
 }
 ?>
 

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 
 try {
 	if (!isset ($db))
@@ -45,6 +42,7 @@ try {
     }
 
     $list_answers['id_cycle_educ'] = $id_cycle_educ;
+    $list_answers['id_patient'] = $id_patient;
 /*
 echo $request_prepared;
 echo '<pre>';
@@ -54,7 +52,7 @@ echo'</pre>';
 	$request = $db -> prepare (
 		'UPDATE table_cycle_educ
 		SET '.$request_prepared
-		.' WHERE id_cycle_educ = :id_cycle_educ'
+		.' WHERE id_cycle_educ = :id_cycle_educ and id_patient = :id_patient'
 		);
 
 	$request -> execute ($list_answers);

@@ -87,7 +87,7 @@ $list_questions_parent_eval = array (
 															'title' => _("Les chiffres de débit de pointe sont fixes toute la vie"),
 															'answer' => 0,
 															'explanation' => _("Les chiffres augmentent avec la croissance d’où la nécessité de réévaluer les chiffres
-																				du débit de pointe de l’enfant tous le 6-12 mois chez le pédiatre ou médecin")
+																				du débit de pointe de l’enfant tous les 6-12 mois chez le médecin")
 															),
 												12 => array (
 															'title' => _("En cas de crise, si l’enfant a des difficultés pour parler, c’est qu’il fait une crise grave"),
@@ -121,7 +121,7 @@ $list_questions_parent_eval = array (
 															'title' => _("Le sport peut déclencher une crise"),
 															'answer' => 1,
 															'explanation' => _("Et c’est pourquoi on recommande aux asthmatiques de s’échauffer progressivement et de
-																			prendre un bronchodilatateur d’action rapide avant le sport si le pédiatre ou le médecin l’a prescrit")
+																			prendre un bronchodilatateur d’action rapide avant le sport si le médecin l’a prescrit")
 															)
 												),
 									'skill' => array (
@@ -142,7 +142,7 @@ $list_questions_parent_eval = array (
 															'explanation' => _("Oui et quel que soit l’âge")
 															),
 												22 => array (
-															'title' => _("La mesure du débit de pointe (ou peak flow) se fait une fois par mois, tous les 6 mois chez le pédiatre, et en cas de gêne respiratoire"),
+															'title' => _("La mesure du débit de pointe (ou peak flow) se fait une fois par mois, tous les 6 mois chez le médecin, et en cas de gêne respiratoire"),
 															'explanation' => _("en cas de crise, c’est un bon marqueur de l’obstruction des bronches de votre enfant et en dehors des crises,
 																				il permet de connaître le chiffre habituel (de base) de votre enfant")
 															),

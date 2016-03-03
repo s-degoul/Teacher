@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,17 +19,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 $title_view = _("Liste des évaluations des techniques de prise de médicaments inhalés");
 $style[] = 'device';
-/*
-echo '<pre>';
-print_r ($list_device_eval);
-echo '</pre>';
-*/
+$style[] = 'patient_eval'; // for legende
+
+
 foreach ($list_device_eval as $id_device => $features_device_eval) {
 ?>
 	<div class = 'one_table_device'>
@@ -40,6 +34,7 @@ foreach ($list_device_eval as $id_device => $features_device_eval) {
 					<tr>
 						<th>
 							<?php echo $list_devices[$id_device]['title']; ?>
+							&nbsp;&nbsp;
 							<a href = '.?module=patient_teaching&action=show_video_devices&device=<?php echo $id_device; ?>&from=show_device_eval'>
 								<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />				
 							</a>
@@ -51,7 +46,7 @@ foreach ($list_device_eval as $id_device => $features_device_eval) {
 	foreach ($list_devices[$id_device]['questions'] as $nb_question => $title_question) {
 ?>
 				<tr>
-					<td><?php echo $title_question; ?></td>
+					<td class = 'table_device_title'><?php echo $title_question; ?></td>
 				</tr>
 <?php
 	}
@@ -78,20 +73,27 @@ foreach ($list_device_eval as $id_device => $features_device_eval) {
 				<tbody>
 <?php
 	foreach ($list_devices[$id_device]['questions'] as $nb_question => $title_question) {
-		echo '					<tr>'."\n";
-		
+?>
+					<tr>
+<?php	
 		foreach ($features_device_eval as $date_eval => $questions) {
 
 			$value = '';
-			if ($list_device_eval[$id_device][$date_eval]['device_'.$id_device.'_q'.$nb_question] == 1)
-				$value = _("acquis");
-			elseif ($list_device_eval[$id_device][$date_eval]['device_'.$id_device.'_q'.$nb_question] == 0)
-				$value = _("non acquis");
-				
-			echo '					<td class = \'table_device_value\'>'.$value.'</td>'."\n";
+			if ($questions['device_'.$id_device.'_q'.$nb_question] == 1)
+				$value = 'valid';
+			elseif (is_null ($questions['device_'.$id_device.'_q'.$nb_question]))
+				$value = 'unknown';
+			else//if ($list_device_eval[$id_device][$date_eval]['device_'.$id_device.'_q'.$nb_question] == 0)
+				$value = 'non_valid';
+?>
+						<td class = 'table_device_value'>
+							<img src='<?php echo IMAGE_PATH.'icon_'.$value; ?>' alt='<?php echo $value; ?>' />
+						</td>
+<?php
 		}
-		
-		echo '					</tr>'."\n";
+?>
+					</tr>
+<?php
 	}
 ?>
 				</tbody>
@@ -99,7 +101,7 @@ foreach ($list_device_eval as $id_device => $features_device_eval) {
 		</div>
 
 		<p>
-			<a href = '.?module=patient_teaching&action=create_device_eval&device=<?php echo $id_device; ?>&from=show_device_eval'>
+			<a href = '.?module=patient_teaching&action=create_device_eval&device=<?php echo $id_device; ?>&from=show_device_eval' class = 'link_action'>
 			<?php echo _("Ajouter d'autres évaluations pour ce dispositif"); ?></a>
 		</p>
 	</div>
@@ -118,6 +120,37 @@ foreach ($list_device_eval as $id_device => $features_device_eval) {
 	}
 ?>
 			</select>
-			<input type = 'submit' name = 'add_device_eval' value = '<?php echo _("On y va !"); ?>' />
+			<input type = 'submit' name = 'add_device_eval' value = '<?php echo _("On y va !"); ?>' class = 'button_validation' />
 		</form>
 	</div>
+
+
+<div>
+	<div class = 'legend'>
+		<p class = 'legend_title'><?php echo _("Légende"); ?> :</p>
+		<div>
+			<p class = 'legend_image'>
+				<img src = '<?php echo IMAGE_PATH; ?>icon_valid.png' alt = 'valid' width = 15px />
+			</p>
+			<p class = 'legend_text'>
+				<?php echo _("validé"); ?>
+			</p>
+		</div>
+		<div>
+			<p class = 'legend_image'>
+				<img src = '<?php echo IMAGE_PATH; ?>icon_non_valid.png' alt = 'non valid' width = 15px />
+			</p>
+			<p class = 'legend_text'>
+				<?php echo _("non validé"); ?>
+			</p>
+		</div>
+		<div>
+			<p class = 'legend_image'>
+				<img src = '<?php echo IMAGE_PATH; ?>icon_unknown.png' alt = 'unknown' width = 15px />
+			</p>
+			<p class = 'legend_text'>
+				<?php echo _("non déterminé"); ?>
+			</p>
+		</div>
+	</div>
+</div>

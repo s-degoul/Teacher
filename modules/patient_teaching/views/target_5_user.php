@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -22,25 +21,31 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
 
-
-
 <div class='content_target'>
 	
 	<div class='pict_good_to_know'>
 	</div>
 	<div class='good_to_know'>
-		<p><?php echo _("Les systèmes d'inhalation les plus utilisés sont").' :'; ?>:</p>
+		<p><?php echo _("Les systèmes d'inhalation les plus utilisés sont"); ?> :</p>
 		<p><?php echo _("Aérosols doseurs (Spray)"); ?></p>
 		<div>
 			<div class='good_to_know_2_cols'>
-				<a href = '.?module=patient_teaching&action=create_device_eval&device=aerosolchb&from=target_5'><?php echo _("avec chambre"); ?></a>
-				<a href = '.?module=patient_teaching&action=show_video_devices&device=aerosolchb&from=target_5'>
+				<a href = '.?module=patient_teaching&action=create_device_eval&device=aerosolchb&from=target_5&from_type=user'>
+					<?php echo _("avec chambre"); ?>
+					<img src = '<?php echo IMAGE_PATH; ?>aerosolchb.gif' alt = '<?php echo _("aérosol avec chambre"); ?>' />
+				</a>
+				<br/>
+				<a href = '.?module=patient_teaching&action=show_video_devices&device=aerosolchb&from=target_5&from_type=user' class = 'link_video'>
 					<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />
 				</a>
 			</div>
 			<div class='good_to_know_2_cols'>
-				<a href = '.?module=patient_teaching&action=create_device_eval&device=aerosol&from=target_5'><?php echo _("sans chambre"); ?></a>
-				<a href = '.?module=patient_teaching&action=show_video_devices&device=aerosol&from=target_5'>
+				<a href = '.?module=patient_teaching&action=create_device_eval&device=aerosol&from=target_5&from_type=user'>
+					<?php echo _("sans chambre"); ?>
+					<img src = '<?php echo IMAGE_PATH; ?>aerosol.gif' alt = '<?php echo _("aérosol sans chambre"); ?>' />
+				</a>
+				<br/>
+				<a href = '.?module=patient_teaching&action=show_video_devices&device=aerosol&from=target_5&from_type=user' class = 'link_video'>
 					<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />				
 				</a>
 			</div>
@@ -48,27 +53,43 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		<p><?php echo _("Inhalateurs de poudre sèche"); ?></p>
 		<div>
 			<div class='good_to_know_3_cols'>
-				<a href = '.?module=patient_teaching&action=create_device_eval&device=diskus&from=target_5'><?php echo _("Diskus"); ?></a>
-				<a href = '.?module=patient_teaching&action=show_video_devices&device=diskus&from=target_5'>
+				<a href = '.?module=patient_teaching&action=create_device_eval&device=diskus&from=target_5&from_type=user'>
+					<?php echo _("Diskus"); ?>
+					<img src = '<?php echo IMAGE_PATH; ?>diskus.gif' alt = '<?php echo _("Diskus"); ?>' />
+				</a>
+				<br/>
+				<a href = '.?module=patient_teaching&action=show_video_devices&device=diskus&from=target_5&from_type=user' class = 'link_video'>
 					<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />				
 				</a>
 			</div>
 			<div class='good_to_know_3_cols'>
-				<a href = '.?module=patient_teaching&action=create_device_eval&device=turbuhaler&from=target_5'><?php echo _("Turbuhaler"); ?></a>
-				<a href = '.?module=patient_teaching&action=show_video_devices&device=turbuhaler&from=target_5'>
+				<a href = '.?module=patient_teaching&action=create_device_eval&device=turbuhaler&from=target_5&from_type=user'>
+					<?php echo _("Turbuhaler"); ?>
+					<img src = '<?php echo IMAGE_PATH; ?>turbuhaler.gif' alt = '<?php echo _("Turbuhaler"); ?>' />
+				</a>
+				<br/>
+				<a href = '.?module=patient_teaching&action=show_video_devices&device=turbuhaler&from=target_5&from_type=user' class = 'link_video'>
 					<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />				
 				</a>
 			</div>
 			<div class='good_to_know_3_cols'>
-				<a href = '.?module=patient_teaching&action=create_device_eval&device=novolizer&from=target_5'><?php echo _("Novolizer"); ?></a>
-				<a href = '.?module=patient_teaching&action=show_video_devices&device=novolizer&from=target_5'>
+				<a href = '.?module=patient_teaching&action=create_device_eval&device=novolizer&from=target_5&from_type=user'>
+					<?php echo _("Novolizer"); ?>
+					<img src = '<?php echo IMAGE_PATH; ?>novolizer.gif' alt = '<?php echo _("Novolizer"); ?>' />
+				</a>
+				<br/>
+				<a href = '.?module=patient_teaching&action=show_video_devices&device=novolizer&from=target_5&from_type=user' class = 'link_video'>
 					<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />				
 				</a>
 			</div>
 		</div>
 		<p>
-			<a href = '.?module=patient_teaching&action=create_device_eval&device=autohaler&from=target_5'><?php echo _("Autohaler"); ?></a>
-			<a href = '.?module=patient_teaching&action=show_video_devices&device=autohaler&from=target_5'>
+			<a href = '.?module=patient_teaching&action=create_device_eval&device=autohaler&from=target_5&from_type=user'>
+				<?php echo _("Autohaler"); ?>
+				<img src = '<?php echo IMAGE_PATH; ?>autohaler.gif' alt = '<?php echo _("Autohaler"); ?>' />
+			</a>
+			<br/>
+			<a href = '.?module=patient_teaching&action=show_video_devices&device=autohaler&from=target_5&from_type=user' class = 'link_video'>
 					<img src = 'images/picto_video.jpg' alt = '<?php echo _("voir la vidéo"); ?>' />				
 			</a>
 		</p>
@@ -103,21 +124,17 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	</div>
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage").' :'; ?></p>
-	<p><?php echo _("acquisition de geste"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance").' :'; ?></p>
-	<p><?php echo _("10 min"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer").' :'; ?></p>
-	<p><?php echo _("Fiche d’évaluation du système d’inhalation utilisé par l’enfant"); ?></p>
-	<p><?php echo _("(pour y accéder, cliquez sur l’image du dispositif choisi)"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Matériel nécessaire").' :'; ?></p>
-	<p><?php echo _("Dispositif de démonstration du système d’inhalation utilisé par l’enfant"); ?></p>
-	<p><?php echo _("Possibilité de visionner un clip de démonstration de chaque technique d’inhalation"); ?></p>
-	<p><?php echo _("(Temps par clip: une minute. Pour y accéder cliquez sur la caméra située à côté du dispositif choisi)"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (_("acquisition de geste")),
+				'duration' => '10 min',
+				'print' => array (
+								_("Fiche d’évaluation du système d’inhalation utilisé par l’enfant (pour y accéder, cliquez sur l’image du dispositif choisi)")
+								),
+				'material' => array (
+									_("Dispositif de démonstration du système d’inhalation utilisé par l’enfant"),
+									_("Possibilité de visionner un clip de démonstration de chaque technique d’inhalation"),
+									_("(Temps par clip: une minute. Pour y accéder cliquez sur la caméra située à côté du dispositif choisi)")
+									)
+				));
+?>

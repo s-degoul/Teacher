@@ -42,7 +42,7 @@ if (! isset ($_GET['subject'])) {
       <area shape = 'circle' coords = '620,540,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=irritant' alt = '<?php echo _("irritants respiratoires"); ?>' title = '<?php echo _("irritants respiratoires"); ?>'/>
       <area shape = 'circle' coords = '485,540,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=fuel' alt = '<?php echo _("irritants respiratoires"); ?>' title = '<?php echo _("irritants respiratoires"); ?>'/>
       <area shape = 'circle' coords = '350,540,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=tobacco' alt = '<?php echo _("tabac"); ?>' title = '<?php echo _("tabac"); ?>'/>
-<!--      <area shape = 'circle' coords = '210,540,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=dust' alt = '<?php echo _("poussière"); ?>' title = '<?php echo _("poussière"); ?>'/>-->
+      <area shape = 'circle' coords = '210,540,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=dust_mite' alt = '<?php echo _("poussière"); ?>' title = '<?php echo _("poussière"); ?>'/>
       <area shape = 'circle' coords = '75,530,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=stress' alt = '<?php echo _("stress"); ?>' title = '<?php echo _("stress"); ?>'/>
       <area shape = 'circle' coords = '70,380,45' href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=infection' alt = '<?php echo _("infections"); ?>' title = '<?php echo _("infections"); ?>'/>
    </map>
@@ -52,20 +52,57 @@ if (! isset ($_GET['subject'])) {
 </p>
 
 <p>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=mould'><?php echo _("moisissures"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=dust_mite'><?php echo _("acariens"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=pets'><?php echo _("animaux"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=pollution'><?php echo _("pollution"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=pollen'><?php echo _("pollen"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=irritant'><?php echo _("irritants respiratoires"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=sport'><?php echo _("sport"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=irritant'><?php echo _("irritants respiratoires"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=fuel'><?php echo _("irritants respiratoires"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=tobacco'><?php echo _("tabac"); ?></a>
-<!--      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=dust'><?php echo _("poussière"); ?></a>-->
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=stress'><?php echo _("stress"); ?></a>
-      <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=infection'><?php echo _("infections"); ?></a>
+	<h3><?php echo _("Liens directs"); ?> :</h3>
 </p>
+<div>
+	<div class = 't8_4_links_groups'>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=mould'><?php echo _("moisissures"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=dust_mite'><?php echo _("acariens"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=pets'><?php echo _("animaux"); ?></a>
+		</p>
+	</div>
+	<div class = 't8_4_links_groups'>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=pollution'><?php echo _("pollution"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=pollen'><?php echo _("pollen"); ?></a>&nbsp;
+		</p>
+			<!--
+			  <a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=irritant'><?php echo _("irritants respiratoires"); ?></a>&nbsp;
+			-->
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=sport'><?php echo _("sport"); ?></a>&nbsp;
+		</p>
+	</div>
+	<div class = 't8_4_links_groups'>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=irritant'><?php echo _("irritants respiratoires (1)"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=fuel'><?php echo _("irritants respiratoires (2)"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=tobacco'><?php echo _("tabac"); ?></a>&nbsp;
+		</p>
+	</div>
+	<div class = 't8_4_links_groups'>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=dust_mite'><?php echo _("poussière"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=stress'><?php echo _("stress"); ?></a>&nbsp;
+		</p>
+		<p>
+			<a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient&subject=infection'><?php echo _("infections"); ?></a>
+		</p>
+	</div>
+</div>
 
 <?php
 }
@@ -74,16 +111,32 @@ if (! isset ($_GET['subject'])) {
 
 else {
 ?>
-
-<p><a href = '.?module=patient_teaching&action=show_target&id_target=8&type=patient'><?php echo _("retourner à la Maison des allergies"); ?></a></p>
+<p class='return'>
+	<a href='.?module=patient_teaching&action=show_target&id_target=8&type=patient' class='link'>
+		<img src='<?php echo IMAGE_PATH.'return_row.png'; ?>' alt="return" />
+		<?php echo _("retourner à la Maison des allergies"); ?>
+	</a>
+</p> 
 
 <?php
+	if (CheckPDFExists ('t8_'.$_GET['subject']) != 1) {
+?>
+<p class='print'>
+	<a href = '<?php echo CheckPDFExists('t8_'.$_GET['subject']); ?>'>
+		<img src='<?php echo IMAGE_PATH.'print_green.png'; ?>' alt = "<?php echo _("imprimer"); ?>" />
+		<?php echo _("Imprimer la fiche"); ?>
+	</a>
+</p>
+<?php
+}
+
 	switch ($_GET['subject']) {
 
 /**********			
  mould
 *********/
 		case 'mould' :
+			$title_view = _("Moisissures");
 ?>
 
 <h2><?php echo _("Les conseils quand j'ai une allergie aux moisissures"); ?></h2>
@@ -137,6 +190,7 @@ else {
  dust_mite
 *********/
 		case 'dust_mite' :
+			$title_view = _("Acariens - poussières");
 ?>
 <h2><?php echo _("Tu es allergique aux acariens. Que faire ?"); ?></h2>
 
@@ -182,13 +236,10 @@ else {
 	
 	<p class = 't8_explanations_title'><?php echo _("Et si tu veux en savoir plus, voici quelques informations à découvrir à la maison, avec tes parents"); ?></p>
 	<p><?php echo _("<strong>Les acariens</strong> sont des êtres vivants microscopiques (cousins de l’araignée) qui se développent dans la
-	poussière de maison en se nourrissant des squames de peau humaine. On les trouve dans la literie (mate-
-	las, sommiers tapissiers, couette, oreiller...) canapés et fauteuils en tissus, tissus d’ameublement, tapis et
-	moquettes. Les déjections d’acariens et les débris de leurs cadavres contiennent des substances allergé-
-	niques qui chez les personnes sensibilisées, se traduisent par de l’asthme (gène respiratoire, sifflement,
+	poussière de maison en se nourrissant des squames de peau humaine. On les trouve dans la literie (matelas, sommiers tapissiers, couette, oreiller...) canapés et fauteuils en tissus, tissus d’ameublement, tapis et
+	moquettes. Les déjections d’acariens et les débris de leurs cadavres contiennent des substances allergéniques qui chez les personnes sensibilisées, se traduisent par de l’asthme (gène respiratoire, sifflement,
 	toux) rhinite (nez qui coule, éternuement) allergie oculaire..."); ?></p>
-	<p><?php echo _("<strong>En cas d’allergie aux acariens</strong>, il est nécessaire de réduire l’humidité (entre 45 et 60%) par l’aération (aé-
-	rer la chambre tous les jours ainsi que le lit) et l’assèchement de l’air, ne pas dépasser une température dans
+	<p><?php echo _("<strong>En cas d’allergie aux acariens</strong>, il est nécessaire de réduire l’humidité (entre 45 et 60%) par l’aération (aérer la chambre tous les jours ainsi que le lit) et l’assèchement de l’air, ne pas dépasser une température dans
 	les pièces de 18° ( maximum 20°), éviter l’accumulation de la poussière ( éviter les peluches, rideaux,tapis,
 	moquette et privilégier le rangement de la chambre), nettoyer régulièrement la literie en lavant les draps
 	(1 fois tous les 7 à 10 jours), les couettes et oreillers tous les mois (au maximum tous les 3 mois) à au
@@ -204,6 +255,7 @@ else {
  pets
 *********/
 		case 'pets' :
+			$title_view = _("Animaux");
 ?>
 
 <h2><?php echo _("Tu es allergique aux poils d'animaux. Que faire ?"); ?></h2>
@@ -259,6 +311,7 @@ else {
  pollution
 *********/
 		case 'pollution' :
+			$title_view = _("Pollution");
 ?>
 
 <h2><?php echo _("La pollution"); ?></h2>
@@ -285,6 +338,7 @@ else {
  pollen
 *********/
 		case 'pollen' :
+			$title_view = _("Pollens");
 ?>
 
 <h2><?php echo _("Tu es allergique aux pollens. Que faire ?"); ?></h2>
@@ -300,7 +354,7 @@ else {
 	</div>
 	<div class = 't8_3_images'>
 		<img src='<?php echo IMAGE_PATH.'target/8/pollen_3.jpg'; ?>' alt='<?php echo _("médicament anti-allergique"); ?>'/>
-		<p><?php echo _("Prends ton médicament anti-allergique si ton pédiatre/médecin te l’a conseillé"); ?></p>
+		<p><?php echo _("Prends ton médicament anti-allergique si ton médecin te l’a conseillé"); ?></p>
 	</div>
 </div>
 
@@ -339,6 +393,7 @@ else {
  irritant
 *********/
 		case 'irritant' :
+			$title_view = _("Irritants respiratoires");
 ?>
 
 <h2><?php echo _("Les polluants de la maison peuvent aussi irriter les bronches et aggraver l’asthme"); ?></h2>
@@ -375,7 +430,7 @@ else {
 <div class = 't8_explanations'>
 	<p class = 't8_explanations_title'><img src = '<?php echo IMAGE_PATH.'target/8/picto_explanations.jpg'; ?>' alt = 'picto' />
 	
-	<p class = 't8_explanations_title'><?php echo _("Quelques bonnes astuces pour faire du sport dans de bonnes conditions quand on est asthmatique :"); ?></p>
+	<p class = 't8_explanations_title'><?php echo _("Comment lutter contre les irritants ?"); ?></p>
 	
 	<p><?php echo _("Nous passons en moyenne 22 heures sur 24 en espace clos ou semi-clos que cela soit dans les logements, lieux de travail, écoles, espaces de loisirs,
 	commerces, transports. L’air que l’on y respire peut contenir certains polluants sans que nous puissions toujours nous en rendre compte, et ceux-ci peuvent avoir
@@ -415,6 +470,7 @@ else {
  sport
 *********/
 		case 'sport' :
+			$title_view = _("Effort physique");
 ?>
 
 <h2><?php echo _("Quelques conseils pour faire du sport quand on est asthmatique."); ?></h2>
@@ -443,7 +499,7 @@ else {
 	</div>
 	<div class = 't8_3_images'>
 		<img src='<?php echo IMAGE_PATH.'target/8/sport_5.jpg'; ?>' alt='<?php echo _("prendre son médicament"); ?>'/>
-		<p><?php echo _("Prends 2 bouffées de ton bronchodilatateur d’action rapide (médicament bleu) avant le sport, si ton pédiatre/médecin te l’a conseillé"); ?></p>
+		<p><?php echo _("Prends 2 bouffées de ton bronchodilatateur d’action rapide (médicament bleu) avant le sport, si ton médecin te l’a conseillé"); ?></p>
 	</div>
 	<div class = 't8_3_images'>
 	</div>
@@ -459,8 +515,7 @@ else {
 		<li><?php echo _("je n’arrête pas brutalement"); ?></li>
 		<li><?php echo _("quand je fais du sport dehors par temps froid ou s’il y a du vent, je couvre mon nez et ma bouche avec un foulard,
 						et je respire par le nez pour réchauffer l’air"); ?></li>
-		<li><?php echo _("si j’ai déjà fait des crises en pratiquant mon sport, je prends une double bouffée de mon pédiatre/médicament de secours bleu
-						avant de commencer à faire des efforts."); ?></li>
+		<li><?php echo _("si j’ai déjà fait des crises en pratiquant mon sport, je prends une double bouffée de mon médicament de secours bleu avant de commencer à faire des efforts."); ?></li>
 	</ul>
 </div>
 
@@ -471,6 +526,7 @@ else {
  fuel
 *********/
 		case 'fuel' :
+			$title_view = _("Irritants respiratoires");
 ?>
 
 <h2><?php echo _("S’il y a dans l’habitation, des chauffages par combustion, il est utile de lire ce paragraphe :"); ?></h2>
@@ -518,6 +574,7 @@ else {
  tobacco
 *********/
 		case 'tobacco' :
+			$title_view = _("Tabac");
 ?>
 
 <h2><?php echo _("Le tabac est un irritant pour les bronches et aggrave l’asthme."); ?></h2>
@@ -562,6 +619,7 @@ else {
  stress
 *********/
 		case 'stress' :
+			$title_view = _("Stress");
 ?>
 
 <h2><?php echo _("L’anxiété et le stress sont des facteurs aggravant l’asthme."); ?></h2>
@@ -590,6 +648,7 @@ else {
  infection
 *********/
 		case 'infection' :
+			$title_view = _("Infection");
 ?>
 
 <h2><?php echo _("Quelques conseils pour éviter les rhumes et autres maladies..."); ?></h2>

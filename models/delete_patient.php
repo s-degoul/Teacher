@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -38,14 +34,13 @@ try {
 		);
 		
 	$request -> execute (array (
-			'id_patient' => $_SESSION['patient']['id_patient']
+			'id_patient' => $id_patient
 		));
 
 	$request -> closeCursor();
 	
 
-	$list_tables = array('cycle_educ', 'educ_diag', 'peakflow', 'peakflow_use', 'device_aerosol', 'device_aerosolchb', 'device_autohaler', 'device_diskus',
-						'device_novolizer', 'device_turbuhaler', 'patient');
+	$list_tables = array('cycle_educ', 'educ_diag', 'peakflow', 'peakflow_use', 'device_aerosol', 'device_aerosolchb', 'device_autohaler', 'device_diskus', 'device_novolizer', 'device_turbuhaler', 'patient');
 	
 	foreach ($list_tables as $name_table) {
 		$request = $db -> prepare (
@@ -55,7 +50,7 @@ try {
 			);
 		
 		$request -> execute (array (
-			'id_patient' => $_SESSION['patient']['id_patient']
+			'id_patient' => $id_patient
 			));
 		
 		$request -> closeCursor();

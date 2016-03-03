@@ -1,4 +1,3 @@
-
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 $title_view = _("Lettre de synthèse");
 $style[] = 'summ_eval';
 
@@ -32,14 +28,24 @@ $messages['info'][] = _("Ces informations sont celles correspondant à la derni�
 
 <form method = 'post' action = '.?module=patient_management&action=create_summary_letter&output=pdf'>
 	<p>
-		<label for = 'letter_sender'><?php echo _("Expéditeur : "); ?></label>
+		<label for = 'letter_title'><?php echo _("Titre du document (optionnel)"); ?> :</label>
+		<input type = 'text' name = 'letter_title' id = 'letter_title' size = 50 value = '' />
+	</p>
+	<p>
+		<?php echo _("Les cases de texte vides seront ignorées pour la génération du courrier"); ?>
+	</p>
+	
+	<hr />
+	
+	<p>
+		<label for = 'letter_sender'><?php echo _("Expéditeur"); ?> :</label>
 		<textarea name = 'letter_sender' rows = 4 cols = 50><?php	echo $user['user_title'].' '.strtoupper($user['user_surname']).' '.$user['user_firstname']."\n"
 				.$user['user_street'].', '.$user['user_postal_code'].' '.$user['user_city']."\n"
 				._("Tél").' : '.$user['user_phone']."\n"
 				._("Mail").' : '.$user['user_mail']; ?></textarea>
 	</p>
 	<p>
-		<label for = 'letter_recipient'><?php echo _("Destinataire : "); ?></label>
+		<label for = 'letter_recipient'><?php echo _("Destinataire"); ?> :</label>
 		<textarea name = 'letter_recipient' rows = 3 cols = 50><?php	echo _("Dr "); ?></textarea>
 	</p>
 	<p>
@@ -48,11 +54,12 @@ $messages['info'][] = _("Ces informations sont celles correspondant à la derni�
 	</p>
 	<p>
 		<input type = 'text' name = 'letter_polite_phrase' id = 'letter_polite_phrase' size = 50 value = '<?php echo _("Cher (Chère) collègue,"); ?>' />
+
 <?php
 if ($patient['patient_sex'] == 0)
-	$sentence_patient = _("patient");
-else
 	$sentence_patient = _("patiente");
+else
+	$sentence_patient = _("patient");
 ?>
 		<textarea name = 'letter_introduction' rows = 3 cols = 100><?php	echo _("Voici les résultats de votre jeune").' '.$sentence_patient.' '.strtoupper($_SESSION['patient']['patient_surname'])
 		.' '.$_SESSION['patient']['patient_firstname'].' '
@@ -100,7 +107,7 @@ foreach ($list_question_obj as $id_target => $features_question_obj) {
 			$id_group_questions = $id_target;
 		}
 
-		foreach ($list_group_questions[$id_group_questions]['items_validation'] as $title_item => $value_item) {
+		foreach ($list_group_questions[$id_group_questions]['validation_items'] as $title_item => $value_item) {
 
 			$title_cell = '';
 			if ($value_question == $value_item) {

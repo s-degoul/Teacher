@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,18 +19,26 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 
 if (isset ($_GET['id_user_eval'])) {
 	require ('list_questions.php');
-	require ('group_questions_bis.php');
+	require ('group_questions.php');
 
     require (MODEL_PATH.'select_user_eval_answers.php');
-    
+ 	foreach ($list_questions as $num_question => $features_question) {
+		$nb_right_answers = 0;
+		foreach ($list_answers as $right_answer) {
+			if (preg_match('#'.$num_question.'_#', $right_answer))
+				$nb_right_answers ++;
+		}
+		
+		$list_questions[$num_question]['nb_answers'] = $nb_right_answers;
+	}
+	   
     $id_user_eval = $_GET['id_user_eval'];
+    $id_user = $_SESSION['id_user'];
     require (MODEL_PATH.'select_user_eval.php');
     
     $nb_all_points = 0;
@@ -42,6 +49,7 @@ if (isset ($_GET['id_user_eval'])) {
 else {
 	$_SESSION['messages']['info'] = _("Aucune évaluation précisée. Voici donc toute la liste.");
 	header ('location:.?module=user_teaching&action=show_summ_all_eval');
+	exit;
 }
 
 ?>

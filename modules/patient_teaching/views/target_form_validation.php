@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -25,5 +24,5 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 
 <form method='post' action='.?module=patient_teaching&action=show_target&id_target=<?php echo $id_target; ?>'>
-	<input type = 'submit' name = 'valid_target' value = '<?php echo _("valider cet objectif") ?>' />
+	<input type = 'submit' name = 'valid_target' value = '<?php echo _("valider cet objectif pédagogique") ?>' class = 'button_validation' />
 </form>

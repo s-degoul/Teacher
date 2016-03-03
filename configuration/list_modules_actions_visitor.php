@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,32 +19,32 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 $list_modules_actions_visitor = array (
-									'patient_teaching' => array (
-																'show_target_list' => array(),
-																'show_target' => array (
-																						'type' => 'patient'
-																					),
-																'show_eval' => array(),
-																'create_parent_eval' => array()
-															),
-									'start' => array (
-													'start_visitor' => array()
-												),
-									'user_management' => array (
-																'connection' => array(
-																						'visitor' => 1
-																					),
-																'disconnection' => array()
-															),
-									'legal_notices' => array (
-															'show_licence' => array()
-														)
-								);
+    'patient_teaching' => array (
+        'show_target_list' => array(),
+        'show_target' => array (
+            'type' => 'patient'
+        ),
+        'show_eval' => array(),
+        'create_parent_eval' => array()
+    ),
+    'start' => array (
+        'start_visitor' => array()
+    ),
+    'user_management' => array (
+        'connection' => array(
+            'visitor' => 1
+        ),
+        'disconnection' => array()
+    ),
+    'legal_notices' => array (
+        'show_licence' => array()
+    ),
+    'contact' => array (
+        'contact_admin' => array()
+    )
+);
 
 ?>

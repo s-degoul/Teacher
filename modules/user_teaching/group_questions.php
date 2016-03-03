@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,37 +19,25 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
-	switch ($group_questions) {
-		case 1 :
-			$title_group_questions = _("Evaluation de mes connaissances en matières d'éducation
-					thérapeutique du Patient");
-			$next_group_questions = 2;
-			$first_question = 1;
-			$last_question = 3;
-			break;
-		case 2 :
-			$title_group_questions = _("Je donne brièvement le ou les objectifs de chaque étape de la démarche éducative");
-			$next_group_questions = 3;
-			$first_question = 4;
-			$last_question = 7;
-			break;
-		case 3 :
-			$title_group_questions = _("Les bonnes questions à me poser pour savoir si j'ai la « <em>pedagogic attitude</em> »");
-			$next_group_questions = 'end';
-			$first_question = 8;
-			$last_question = 10;
-			break;
-		default :
-			$title_group_questions = '';
-			$next_group_questions = 'info';
-			$first_question = 0;
-			$last_question = 0;
-			break;
-	}
-	
-
+$list_group_questions = array (
+					1 => array (
+								'title' => _("Evaluation de mes connaissances en matière d'Éducation Thérapeutique du Patient (ETP)"),
+								'title_small' => _("Connaissances générales"),
+								'first_question' => 1,
+								'last_question' => 3
+							),
+					2 => array (
+								'title' => _("Je donne brièvement le ou les objectif(s) de chaque étape de la démarche éducative"),
+								'title_small' => _("Démarche éducative"),
+								'first_question' => 4,
+								'last_question' => 7
+							),
+					3 => array (
+								'title' => _("Les bonnes questions à me poser pour savoir si j'ai la &laquo;&nbsp<em>pedagogic attitude</em>&nbsp;&raquo;"),
+								'title_small' => _("Attitude pédagogique"),
+								'first_question' => 8,
+								'last_question' => 10
+							)
+					);
 ?>

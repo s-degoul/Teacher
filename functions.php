@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 function showDate ($date_SQL, $precision = 'minute') {
 	
@@ -114,10 +110,9 @@ function calculateAge ($date_SQL, $precision = 'year')  {
 	}
 	
 	if ($precision == 'year')
-		return $age_year;
+		return array ('year' => $age_year);
 	elseif ($precision == 'month') {
-		$age = array ('year' => $age_year, 'month' => $age_month);
-		return $age;
+		return array ('year' => $age_year, 'month' => $age_month);
 	}
 }
 
@@ -153,8 +148,24 @@ function createRandomString ($length_string) {
 
 function DBConnect () {
 	$db = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB, LOGIN_DB, PASSWORD_DB);
-	$db -> exec ('SET NAMES utf8');
+	$db->exec ('SET NAMES utf8');
 			
 	return $db;
+}
+
+
+function pleaseContactAdmin () {
+	return _("Merci de contacter l'administrateur").' (<a href = \'.?module=contact&action=contact_admin\'>'._("cliquez ici").'</a>)';
+}
+
+function CheckPDFExists ($filename) {
+	if (file_exists (STATIC_PDF_PATH.$filename.'_'.$_SESSION['lang'].'.pdf'))
+		return STATIC_PDF_PATH.$filename.'_'.$_SESSION['lang'].'.pdf';
+	elseif (file_exists (STATIC_PDF_PATH.$filename.'_'.DEFAULT_LOCALE.'.pdf'))
+		return STATIC_PDF_PATH.$filename.'_'.DEFAULT_LOCALE.'.pdf';
+	elseif (file_exists (STATIC_PDF_PATH.$filename.'.pdf'))
+		return STATIC_PDF_PATH.$filename.'.pdf';
+	else
+		return 1;
 }
 ?>

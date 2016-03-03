@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -22,15 +21,12 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
 
-
-
 <div class='content_target'>
 	
 	<div class='pict_good_to_know'>
 	</div>
 	<div class='good_to_know'>
-		<p><?php echo _("les mises en situation permettent à travers un personnage fictif, de tester les connaissances et les compétences d’adaptation de l’enfant
-							vis-à-vis de sa maladie."); ?></p>
+		<p><?php echo _("les mises en situation permettent à travers un personnage fictif, de tester les connaissances et les compétences d’adaptation de l’enfant vis-à-vis de sa maladie."); ?></p>
 	</div>
 
 	<div class='pict_how_to_guide'>
@@ -50,8 +46,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 			<div class='pict_key_message'></div>
 			<div class='content_key_message'>
 				<p><?php echo _("Asthme et infections :"); ?></p>
-				<p><?php echo _("l’ enfant sait adapter son traitement en cas d’infection (désobstruction nasale, renforcement du traitement anti-inflammatoire
-								et surveiller le DEP)"); ?></p>
+				<p><?php echo _("L'enfant sait adapter son traitement en cas d’infection (désobstruction nasale et surveillance le DEP)"); ?></p>
 				
 				<p><?php echo _("Voyages et sorties"); ?></p>
 				<p><?php echo _("L’enfant connaît :"); ?></p>
@@ -70,15 +65,26 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage :"); ?></p>
-	<p><?php echo _("Mises en situation"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance :"); ?></p>
-	<p>10 min</p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer :"); ?></p>
-	<p><?php echo _("«Mathis est enrhumé »<br/>«Arsène est invité par un ami»<br/>«Julie fait une crise d’asthme à l’école»"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (_("Mises en situation")),
+				'duration' => '10 min',
+				'print' => array (
+								't10_child_Mathis' => array (
+											'title' => _("Mathis est enrhumé"),
+											'before_title' => '',
+											'after_title' => ''
+											),
+								't10_child_Arsene' => array (
+											'title' => _("Arsène est invité par un ami"),
+											'before_title' => '',
+											'after_title' => ''
+											),
+								't10_child_Julie' => array (
+											'title' => _("Julie fait une crise d’asthme à l’école"),
+											'before_title' => '',
+											'after_title' => ''
+											)
+								)
+				));
+?>

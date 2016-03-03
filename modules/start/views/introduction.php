@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,22 +19,33 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 $title_view = _("Pourquoi ce site ?");
+$style[] = 'start_user';
 
 ?>
 
-<h1><?php echo _("Mot du Dr Robberecht"); ?></h1>
+<h2><?php echo _("Mot des Drs Robberecht et Scalbert-Dujardin"); ?></h2>
 
-<p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+<p class = 'introduction_content'>
+	<?php echo _("Bienvenue dans TEACHER (Training to Educate Asthmatic CHildren in EuRope) !"); ?>
+</p>
+<p class = 'introduction_content'>
+	<?php echo _("L’objectif de ce site est de vous initier à l’Education Thérapeutique du Patient (ETP) en vous apprenant à réaliser pas à pas un programme éducatif auprès des enfants asthmatiques et leurs familles."); ?>
+</p>
+<p class = 'introduction_content'>
+	<?php echo _("Il est désormais reconnu que l’ETP doit faire partie intégrante de l’accompagnement des patients atteints de maladie chronique. En adoptant  une attitude éducative et non plus informative, le soignant aide le patient à acquérir  les compétences dont il a besoin pour mieux contrôler sa maladie et améliorer sa qualité de vie."); ?>
+</p>
+<p class = 'introduction_content'>
+	<?php echo _("Teacher est un programme d’apprentissage individuel, conçu pour être intégré dans le temps de la consultation ambulatoire."); ?>
+</p>
+<p class = 'introduction_content'>
+	<?php echo _("Au fil de ses étapes, vous évaluerez vos compétences d’éducateur thérapeute,  découvrirez les bases de l’éducation thérapeutique et apprendrez à construire un programme d’éducation personnalisé."); ?>
+</p>
+<p class = 'introduction_content'>
+	<?php echo _("Des conducteurs vous guideront pour réaliser les séances éducatives et les évaluations et vous pourrez remettre à l’enfant et sa famille des fiches pédagogiques imprimables."); ?>
+</p>
+<p class = 'introduction_content'>
+	<?php echo _("Espérant que TEACHER vous fera  entrevoir la réelle satisfaction d’accompagner vos patients asthmatiques dans leurs changements de comportement, nous vous souhaitons bonne navigation !"); ?>
 </p>
 
-<h1><?php echo _("Mot du Pr Gagneyre"); ?></h1>
-
-<p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-</p>

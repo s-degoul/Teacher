@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,32 +19,29 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
-
-//if (isset ($_SESSION['patient']['id_patient']) or isset ($_GET['demo'])) {
-//	$id_user_eval = $_GET['id_user_eval'];
-
-//	if (isset ($_GET['demo']) and !isset ($_SESSION['patient']['id_patient']))
-	if (!isset ($_SESSION['patient']['id_patient']))
+	if (!isset ($_SESSION['patient']['id_patient'])) {
 		$messages['info'][] = _('Ceci est une démonstration en lecture seule');
-/*	else
-		$messages['info'][] = _('Les réponses justes sont en vert ; les réponses que vous avez données sont celles cochées. Votre résultat se trouve tout en bas');
-*/
-	if (isset ($_GET['from'])) {
-		if ($_GET['from'] == 'essential')
-			$content_top .= '<a href = \'.?module=user_teaching&action=show_essential&page_essential=1\'>'
-							._("retourner à &quot;l'Essentiel à savoir&quot;").'</a>';
+		//~ if (isset ($_GET['from']) and $_GET['from'] == 'essential')
+			//~ $content_top .= '<a href = \'.?module=user_teaching&action=show_essential&page_essential=1\' class = \'link\'>' ._("retourner à &quot;l'Essentiel à savoir&quot;").'</a>';
 	}
+	else
+		$id_patient = $_SESSION['patient']['id_patient'];
 
-	require ('list_questions.php');
-	require ('group_questions.php');
+
+
+	require ('list_questions_educ_diag.php');
+	require ('group_questions_educ_diag.php');
 	require (MODEL_PATH.'select_target_list.php');
 	
-    if (isset ($_SESSION['patient']['id_patient']))
+    if (isset ($_SESSION['patient']['id_patient'])) {
 		require (MODEL_PATH.'select_educ_diag_all.php');
+		
+		$content_top .= '<p>'._("Diagnostic éducatif réalisé le").' '.showDate($educ_diag['educ_diag_date']).'</p>'."\n";
+		$content_top .= $content_bottom = '<p><a href=\'.?module=patient_teaching&action=show_summ_eval&type_eval=educ_diag\' class = \'link\'>'
+							._("Consulter le contrat éducatif").'</a></p>'."\n";
+	}
     
     for ($page = -1; $page <= 11 ; $page ++) {
 		if ($page == -1) {
@@ -63,9 +59,4 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 			require (VIEW_RELATIVE_PATH.'educ_diag.php');
 		}
 	}
-/*}
-else {
-	$messages['error'][] = _("Aucune évaluation sélectionnée");
-}*/
-
 ?>

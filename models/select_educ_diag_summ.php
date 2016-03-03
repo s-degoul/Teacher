@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -31,14 +26,15 @@ try {
 	
 	$request = $db -> prepare (
 		'SELECT educ_diag_obj1, educ_diag_obj2, educ_diag_obj3_a, educ_diag_obj3_b, educ_diag_obj4_a, educ_diag_obj4_b, educ_diag_obj5,
-				educ_diag_obj6, educ_diag_obj7, educ_diag_obj8_a, educ_diag_obj8_b, educ_diag_obj9, educ_diag_obj10
+				educ_diag_obj6, educ_diag_obj7, educ_diag_obj8_a, educ_diag_obj8_b, educ_diag_obj9, educ_diag_obj10, educ_diag_subj_patient,
+				educ_diag_subj_parent, educ_diag_cact
 		FROM table_educ_diag
 		WHERE id_educ_diag = :id_educ_diag and id_patient = :id_patient' // double vérification : utilité ???
 		);
 
 	$request -> execute (array (
 		'id_educ_diag' => $id_educ_diag,
-		'id_patient' => $_SESSION['patient']['id_patient']
+		'id_patient' => $id_patient			//$_SESSION['patient']['id_patient']
 	));
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);

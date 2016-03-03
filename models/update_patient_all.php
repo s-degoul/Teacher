@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -42,9 +37,9 @@ try {
 		'patient_firstname' => $patient['patient_firstname'],
         'patient_date_birth' => $patient['patient_date_birth'],
         'patient_sex' => $patient['patient_sex'],
-        'patient_height' => $patient['patient_height'],
-        'patient_weight' => $patient['patient_weight'],
-        'patient_peakflow' => $patient['patient_peakflow'],
+        'patient_height' => $patient['patient_height'] == ''?null:$patient['patient_height'],
+        'patient_weight' => $patient['patient_weight'] == ''?null:$patient['patient_weight'],
+        'patient_peakflow' => $patient['patient_peakflow'] == ''?null:$patient['patient_peakflow'],
 		'id_patient' => $id_patient
 	));
 

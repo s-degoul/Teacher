@@ -20,10 +20,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 if (empty ($_SESSION['patient'])) {
 	$messages['error'][] = _("aucun patient sélectionné");
 }

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -22,8 +21,6 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
 
-
-
 <div class='content_target'>
 	
 	<div class='pict_good_to_know'>
@@ -39,16 +36,16 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		
 		<p><?php echo _("Il existe 2 types d’asthme d’effort :"); ?></p>
 		<div>
-			<div class='good_to_know_2_cols'>1 <?php echo _("<strong>le bronchospasme induit par l’exercice (BIE)</strong><br/>
-														Il survient à l’arrêt de l’exercice, il est la traduction clinique d’un bronchospasme<br/>
-														Pendant l’effort les voies aériennes se refroidissent et se déshydratent, de façon d’autant plus importante 
-														que l’environnement est sec et froid et l’intensité de l’exercice élevé, générant un débit ventilatoire important.<br/>
-														À l’arrêt de l’effort, le réchauffement et la réhydratation brutaux des voies aériennes, provoque la libération
-														de médiateurs, entraînant à la fois la contraction du muscle bronchique et un œdème local."); ?></div>
-			<div class='good_to_know_2_cols'>2 <?php echo _("<strong>La dyspnée d’effort</strong><br/>
-															Elle témoigne de l’hyperventilation d’effort caractéristique d’un débit ventilatoire trop élevé pour l’intensité
-															de l’effort requis (hyperventilation) et d’un déconditionnement physique secondaire au manque d’activité physique,
-															fréquent chez l’asthmatique."); ?></div>
+			<p class='good_to_know_2_cols'>
+				<span class='nb_good_to_know'>1 <?php echo _("le bronchospasme induit par l’exercice (BIE)"); ?></span><br/>
+				<?php echo _("Il survient à l’arrêt de l’exercice, il est la traduction clinique d’un bronchospasme<br/>
+				Pendant l’effort les voies aériennes se refroidissent et se déshydratent, de façon d’autant plus importante que l’environnement est sec et froid et l’intensité de l’exercice élevé, générant un débit ventilatoire important.<br/>
+				À l’arrêt de l’effort, le réchauffement et la réhydratation brutaux des voies aériennes, provoque la libération	de médiateurs, entraînant à la fois la contraction du muscle bronchique et un œdème local."); ?>
+			</p>
+			<p class='good_to_know_2_cols'>
+				<span class='nb_good_to_know'>2 <?php echo _("La dyspnée d’effort"); ?></span><br/>
+				<?php echo _("Elle témoigne de l’hyperventilation d’effort caractéristique d’un débit ventilatoire trop élevé pour l’intensité de l’effort requis (hyperventilation) et d’un déconditionnement physique secondaire au manque d’activité physique, fréquent chez l’asthmatique."); ?>
+			</p>
 		</div>
 	</div>
 
@@ -56,7 +53,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	</div>
 	<div class='how_to_guide'>
 		
-		<h2><?php echo _("Le pédiatre/médecin, demande de répondre au jeu-test Vrai/Faux et commente les réponses"); ?></h2>
+		<h2><?php echo _("Le médecin, demande de répondre au jeu-test Vrai/Faux et commente les réponses"); ?></h2>
 		
 		<p><?php echo _("Conseils :"); ?></p>
 		<ul>
@@ -84,15 +81,16 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage :"); ?></p>
-	<p><?php echo _("jeu test Vrai/Faux"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance :"); ?></p>
-	<p>10 min</p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer :"); ?></p>
-	<p><?php echo _("«je suis asthmatique, et je suis sportif(ve) !» et la remettre à l’enfant"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (_("jeu test Vrai/Faux")),
+				'duration' => '10 min',
+				'print' => array (
+								't9_asthma_sport' => array (
+											'title' => _("je suis asthmatique, et je suis sportif(ve) !"),
+											'before_title' => '',
+											'after_title' => _("et la remettre à l’enfant")
+											)
+								)
+				));
+?>

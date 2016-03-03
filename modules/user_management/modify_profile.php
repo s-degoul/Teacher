@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
+$id_user = $_SESSION['id_user'];
 
 if (isset ($_POST['valid_modif_profile'])) {
 	$user = checkVarPost();
@@ -42,6 +39,10 @@ if (isset ($_POST['valid_modif_profile'])) {
 			$list_user_speciality['speciality'][$value_item] = $value_item;
 		}
 	}
+}
+elseif (isset ($_POST['cancel_modif_profile'])) {
+	header('location:.?module=user_management&action=show_profile');
+	exit;
 }
 else {
 	require (MODEL_PATH.'select_user_all.php');
@@ -62,14 +63,13 @@ require ('list_practice.php');
 if (isset ($_POST['valid_modif_profile'])) {
 	
 	if (empty ($user['user_surname']) or empty($user['user_firstname']))
-		$messages['error'][] = _('Veuillez renseigner nom').' <em>'._('et').'</em> '._('pr&eacute;nom');
+		$messages['error'][] = _("Veuillez renseigner nom  <em>et</em> prénom");
 
-	if (empty ($user['user_phone']) or empty ($user['user_mail']))
-		$messages['error'][] = _('Veuillez renseigner un num&eacute;ro de t&eacute;l&eacute;phone')
-								.' <em>'._('et').'</em> '._('une adresse mail');
+	if (empty ($user['user_mail']))
+		$messages['error'][] = _("Veuillez renseigner une adresse mail");
 
 	if (! empty ($user['user_phone']) and ! preg_match ('#[0-9]#', $user['user_phone']))			// to be improved, but becareful on differences in phone number between countries
-		$messages['error'][] = _('Le num&eacute;ro de t&eacute;l&eacute;phone ne semble pas conforme');
+		$messages['error'][] = _("Le numéro de téléphone ne semble pas conforme");
 
 	if (! empty ($user['user_mail']) and ! preg_match ('#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#', $user['user_mail'])) {
 		if (preg_match ('#[A-Z]+#', $user['user_mail']))
@@ -79,10 +79,10 @@ if (isset ($_POST['valid_modif_profile'])) {
 	}
 
 	if (! array_key_exists ($user['id_language'], $list_language))
-		$messages['error'][] = _('Le language s&eacute;lectionn&eacute; n&apos; pas valide');
+		$messages['error'][] = _("Le language sélectionné n'est pas valide");
 		
 	if (! array_key_exists ($user['id_country'], $list_country))
-		$messages['error'][] = _('Le pays s&eacute;lectionn&eacute; n&apos; pas valide');
+		$messages['error'][] = _("Le pays sélectionné n'est pas valide");
 	
 	if (! array_key_exists ($user['user_practice'], $list_practice))
 		$messages['error'][] = _("Le mode d'exercice sélectionné n'est pas valide");
@@ -103,6 +103,7 @@ if (isset ($_POST['valid_modif_profile'])) {
 
 		$_SESSION['messages']['info'] = _("Les modifications ont été enregistrées");
 		header('location:.?module=user_management&action=show_profile');
+		exit;
 	}
 }
 

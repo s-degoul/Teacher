@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 $title_view = _("Évaluation de la technique d'utilisation du débit expiratoire de pointe");
 $style[] = 'peakflow_use';
 
@@ -35,7 +31,9 @@ if (isset ($_SESSION['patient']))
 <table class = 'table_peakflow_use'>
 	<thead>
 		<tr>
-			<th><?php echo _("Grille d'évaluation (DEP)"); ?></th>
+			<td class = 'table_peakflow_use_main_title'>
+				<?php echo _("Grille d'évaluation (DEP)"); ?>
+			</td>
 <?php
 if (isset ($peakflow_use['peakflow_use_date']))
 	$value_date = $peakflow_use['peakflow_use_date'];
@@ -44,15 +42,15 @@ elseif ($from_page == 'target_6')
 else
 	$value_date = '';
 ?>
-			<th colspan = 2>
-				<label for = 'peakflow_use_date'><?php echo _("Date"); ?></label>
+			<td colspan = 2>
+				<label for = 'peakflow_use_date'>* <?php echo _("Date"); ?> <span class = 'date_detail'>(<?php echo _("format JJ/MM/AAAA"); ?>)</span></label>
 				<input type = 'text' name = 'peakflow_use_date' id = 'peakflow_use_date' value = '<?php echo $value_date; ?>' />
-			</th>
+			</td>
 		</tr>
 		<tr>
+			<th><?php echo _("Étapes"); ?></th>
 			<th><?php echo _("acquis"); ?></th>
-			<th><?php echo _("oui"); ?></th>
-			<th><?php echo _("non"); ?></th>
+			<th><?php echo _("non acquis"); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -87,11 +85,17 @@ foreach ($list_questions_peakflow as $nb_question => $title_question) {
 <?php
 if (isset ($_SESSION['patient'])) {
 ?>
-	<input type = 'submit' name = 'valid_eval_quit' value = '<?php echo _("enregistrer et quitter"); ?>' />
-	<input type = 'submit' name = 'valid_eval_add' value = '<?php echo _("ajouter une autre évaluation"); ?>' />
-	<input type = 'reset' name = 'reset_form' value = '<?php echo _("remettre à zéro"); ?>' />
+	<input type = 'submit' name = 'valid_eval_quit' value = '<?php echo _("enregistrer et quitter"); ?>' class = 'button_validation' />
+	<input type = 'submit' name = 'valid_eval_add' value = '<?php echo _("ajouter une autre évaluation"); ?>' class = 'button_validation' />
+	<input type = 'reset' name = 'reset_form' value = '<?php echo _("remettre à zéro"); ?>' class = 'button_cancel'/>
 </form>
 
+<p class = 'return'>
+	<a href='.?module=patient_teaching&action=show_peakflow_use' class = 'link'>
+		<img src='<?php echo IMAGE_PATH.'return_row.png'; ?>' alt="return" />
+		<?php echo _("revenir à la synthèse des évaluations"); ?>
+	</a>
+</p>
 <?php
 }
 ?>

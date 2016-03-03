@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 try {
 	if (!isset ($db))
@@ -31,26 +27,26 @@ try {
 	
 
 	$request = $db -> prepare (
-		'SELECT A.id_cycle_educ
-		FROM table_cycle_educ as A
-		WHERE A.id_patient = :id_patient AND A.cycle_educ_start_date = (
+		'SELECT id_cycle_educ, cycle_educ_eval_date, cycle_educ_start_date
+		FROM table_cycle_educ
+		WHERE id_patient = :id_patient AND cycle_educ_eval_date IS NOT NULL
+		ORDER BY cycle_educ_start_date'
+		);
+/*A.cycle_educ_start_date = (
 			SELECT MAX(cycle_educ_start_date)
 			FROM table_cycle_educ as B
-			WHERE B.id_patient = A.id_patient AND B.cycle_educ_eval_date IS NOT NULL
-			)'
-		);
-
+			WHERE B.id_patient = A.id_patient AND B.cycle_educ_eval_date IS NOT NULL)*/
+			
 	$request -> execute (array (
-		'id_patient' => $_SESSION['patient']['id_patient']
+		'id_patient' => $id_patient
 	));
-
-	$list_cycle_educ = array(); // ??
 
 	$request -> setFetchMode(PDO::FETCH_ASSOC);
 
-	$one_cycle_educ = $request -> fetch();
-	
-	$id_cycle_educ = $one_cycle_educ['id_cycle_educ'];
+	while ($one_cycle_educ = $request -> fetch()) {	
+		$id_cycle_educ = $one_cycle_educ['id_cycle_educ'];
+		$cycle_educ_eval_date = $one_cycle_educ['cycle_educ_eval_date'];
+	}
 
 	$request -> closeCursor();
 }

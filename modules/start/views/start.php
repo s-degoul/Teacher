@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,20 +19,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
-$title_view = '<span class=\'start_header_high_letters\'>T</span>raining to
-				<span class=\'start_header_high_letters\'>E</span>ducate
-				<span class=\'start_header_high_letters\'>A</span>sthmatic 
-				<span class=\'start_header_high_letters\'>C</span>hildren in 
-				<span class=\'start_header_high_letters\'>E</span>u<span class=\'start_header_high_letters\'>R</span>ope';
+$title_view = '';
 $style[] = 'start_general';
-?>
 
 
-<?php
 $header_top = '';
 foreach ($list_language as $id_language => $features_language) {
 	$header_top .= '<a href=\'.?lang='.$features_language['language_code'].'\' title = \''.$features_language['language_name'].'\'>
@@ -53,7 +43,7 @@ foreach ($list_language as $id_language => $features_language) {
 
 	<div class='choice_user_type'>
 		<div class='choice_user_title'>
-			<?php echo strtoupper(_("Qui etes-vous ?")); ?>
+			<?php echo _("Qui êtes-vous ?"); ?>
 		</div>
 		<p>
 			<a href='.?module=user_management&action=connection'><?php echo _("Je suis un médecin inscrit à Teacher"); ?></a>
@@ -67,9 +57,9 @@ foreach ($list_language as $id_language => $features_language) {
 	</div>
 </div>
 
-<div>
+<div class = 'start_logos'>
 	<p class = 'start_logo'><a href = 'http://ecpcp.eu/' target = '_blank'>
-		<img src = '<?php echo IMAGE_PATH; ?>logo_ECPCP.png' alt = 'ECPCP' title = 'European Confederation of Primary Care Paediatricians'/></a></p>
+		<img src = '<?php echo IMAGE_PATH; ?>logo_ECPCP.png' alt = 'ECPCP' title = 'European Confederation of Primary Care Paediatricians'/ ></a></p>
 	<p class = 'start_logo'><a href = 'http://www.afpa.org/' target = '_blank'>
 		<img src = '<?php echo IMAGE_PATH; ?>logo_AFPA.png' alt = 'AFPA' title = '<?php echo _("Association Française de Pédiatrie Ambulatoire"); ?>'/></a></p>
 	<p class = 'start_logo'><a href = 'http://www.mps-dunkerque.com/services/ecole-asthme.html' target = '_blank'>

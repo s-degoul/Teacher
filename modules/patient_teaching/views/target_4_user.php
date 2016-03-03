@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -22,8 +21,6 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
 
-
-
 <div class='content_target'>
 	
 	<div class='pict_how_to_guide'>
@@ -32,7 +29,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		<div>
 			<div class = 'nb_how_to_guide'>1.</div>
 			<div class = 'chapter_how_to_guide'>
-				<h2><?php echo _("Présentez à l’enfant les images de la planche couleur «comprendre son corps et s’expliquez les mécanismes de l’asthme»"); ?></h2>
+				<h2><?php echo _("Présentez à l’enfant les images de la planche couleur «comprendre son corps et s’expliquer les mécanismes de l’asthme»"); ?></h2>
 				<p><?php echo _("Demandez à l’enfant s’il sait quelle partie du corps est atteinte quand on fait de l’asthme ?"); ?></p>
 				<div class='key_message'>
 					<div class='pict_key_message'></div>
@@ -70,8 +67,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 															mais ne répare pas les bronches"); ?></div>
 				</div>
 				
-				<p><?php echo _("Réajustez et validez ce que dit l’enfant en reprenant les images «comprendre son corps et s’expliquer les mécanismes de l’asthme»
-									2 en complétant le texte à trous avec lui."); ?></p>
+				<p><?php echo _("Réajustez et validez ce que dit l’enfant en reprenant les images &laquo; comprendre son corps et s’expliquer les mécanismes de l’asthme &raquo; en complétant le texte à trous avec lui."); ?></p>
 				<p><?php echo _("Donnez à l’enfant la fiche qu’il a remplie pour qu’il se constitue un dossier. Il la retravaillera à la maison
 								afin de consolider les acquis."); ?></p>
 			</div>
@@ -80,18 +76,26 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage").' :'; ?></p>
-	<p><?php echo _("reconnaissance par image /entretien et réflexion"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance").' :'; ?></p>
-	<p>10 min</p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer").' :'; ?></p>
-	<p><?php echo _("les 2 fiches «Je sais faire la différence entre traitement de crise et traitement de fond»"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Matériel nécessaire").' :'; ?></p>
-	<p><?php echo _("des crayons de couleur"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (
+										_("reconnaissance par image"),
+										_("entretien et réflexion")
+										),
+				'duration' => '10 min',
+				'print' => array (
+								_("les 2 fiches"),
+								't4_asthma_physiopathology' => array (
+											'title' => _("Je sais ce qui se passe quand on fait une crise d'asthme"),
+											'before_title' => '',
+											'after_title' => ''
+											),
+								't4_difference_acute_chronic_treatment' => array (
+											'title' => _("Je sais faire la différence entre traitement de crise et traitement de fond"),
+											'before_title' => '',
+											'after_title' => ''
+											)
+								),
+				'material' => array (_("des crayons de couleur"))
+				));
+?>

@@ -23,9 +23,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 ?>
 
 
-<?php
 
-?>
 
 <p>
 	<a href='.?module=patient_teaching&action=delete_device_eval&device=<?php echo $device ?>&id=<?php echo $id_table_device ?>'>

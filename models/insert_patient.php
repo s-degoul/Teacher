@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 try {
 	if (!isset ($db))	
@@ -31,9 +26,9 @@ try {
 	
 	$request = $db -> prepare (
 			'INSERT INTO table_patient (id_user, patient_surname, patient_firstname, patient_date_birth,
-				patient_date_inclusion, patient_sex)
+				patient_date_inclusion, patient_sex, patient_height, patient_weight, patient_peakflow)
 			VALUES (:id_user, :patient_surname, :patient_firstname, :patient_date_birth, :patient_date_inclusion,
-				:patient_sex)'
+				:patient_sex, :patient_height, :patient_weight, :patient_peakflow)'
 		);
 
 	$request -> execute (array (
@@ -42,7 +37,10 @@ try {
 					'patient_firstname' => $patient['patient_firstname'],
 					'patient_date_birth' => $patient['patient_date_birth'],
 					'patient_date_inclusion' => date('Y-m-d'),
-					'patient_sex' => $patient['patient_sex']
+					'patient_sex' => $patient['patient_sex'],
+					'patient_height' => $patient['patient_height'] == ''?null:$patient['patient_height'],
+					'patient_weight' => $patient['patient_weight'] == ''?null:$patient['patient_weight'],
+					'patient_peakflow' => $patient['patient_peakflow'] == ''?null:$patient['patient_peakflow']
 				)
 			);
 

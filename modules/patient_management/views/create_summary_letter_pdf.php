@@ -1,4 +1,3 @@
-
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 require (LIB_PATH.'fpdf/fpdf.php');
 
 class PDF_table extends FPDF {
@@ -31,10 +28,10 @@ class PDF_table extends FPDF {
 	function FancyTable($header, $data)
 	{
 		// Couleurs, épaisseur du trait et police grasse
-		$this->SetFillColor(255,0,0);
-		$this->SetTextColor(255);
-		$this->SetDrawColor(128,0,0);
-		$this->SetLineWidth(.3);
+		$this->SetFillColor(255,255,255);
+		$this->SetTextColor(0);
+		$this->SetDrawColor(0);
+		$this->SetLineWidth(.5);
 		$this->SetFont('','B');
 		
 		// header
@@ -50,9 +47,7 @@ class PDF_table extends FPDF {
 			}
 		}
 		
-		// Restauration des couleurs et de la police
-		$this->SetFillColor(224,235,255);
-		$this->SetTextColor(0);
+		// Restauration de la police
 		$this->SetFont('');
 		// Données
 		$fill_color = false;
@@ -83,20 +78,29 @@ $pdf->SetFont('Arial','',12);
 
 $pdf->AddPage();
 
-$pdf->MultiCell(200,10,textFormat($_POST['letter_sender']),0,'L');
-$pdf->Ln(5);
+if ($letter['letter_sender'] != '') {
+	$pdf->MultiCell(200,10,textFormat($letter['letter_sender']),0,'L');
+	$pdf->Ln(5);
+}
 
-$pdf->MultiCell(0,10,textFormat($_POST['letter_recipient']),0,'R');
-$pdf->Ln(5);
+if ($letter['letter_recipient'] != '') {
+	$pdf->MultiCell(0,10,textFormat($letter['letter_recipient']),0,'R');
+	$pdf->Ln(5);
+}
 
-$pdf->Cell(0,50,_("le").' '.textFormat($_POST['letter_date']),0,0,'R');
-$pdf->Ln(50);
+if ($letter['letter_date'] != '') {
+	$pdf->Cell(0,50,_("le").' '.textFormat($letter['letter_date']),0,0,'R');
+	$pdf->Ln(50);
+}
 
-$pdf->Cell(0,20,textFormat($_POST['letter_polite_phrase']),0,0,'L');
-$pdf->Ln();
-
-$pdf->MultiCell(0,10,textFormat($_POST['letter_introduction']),0,'J');
-$pdf->Ln(30);
+if ($letter['letter_polite_phrase'] != '') {
+	$pdf->Cell(0,20,textFormat($letter['letter_polite_phrase']),0,0,'L');
+	$pdf->Ln();
+}
+ if ($letter['letter_introduction'] != '') {
+	$pdf->MultiCell(0,10,textFormat($letter['letter_introduction']),0,'J');
+	$pdf->Ln(30);
+}
 
 
 $pdf->Cell(0,20,textFormat(_("Objectifs travaillés pendant les séances d'éducation thérapeutique :")),0,0,'L');
@@ -137,7 +141,7 @@ foreach ($list_question_obj as $id_target => $features_question_obj) {
 			$data_table[$id_group_questions][] = '';
 		}
 
-		foreach ($list_group_questions[$id_group_questions]['items_validation'] as $title_item => $value_item) {
+		foreach ($list_group_questions[$id_group_questions]['validation_items'] as $title_item => $value_item) {
 
 			$title_cell = '';
 			if ($value_question == $value_item) {
@@ -163,19 +167,29 @@ $pdf->Ln(30);
 
 $pdf->SetFontSize(10);
 
-$pdf->MultiCell(0,10,textFormat($_POST['letter_peakflow']),0,'J');
-$pdf->Ln(30);
+if ($letter['letter_peakflow'] != '') {
+	$pdf->MultiCell(0,10,textFormat($letter['letter_peakflow']),0,'J');
+	$pdf->Ln(30);
+}
 
-$pdf->MultiCell(0,10,textFormat($_POST['letter_conclusion']),0,'J');
-$pdf->Ln(30);
+if ($letter['letter_conclusion'] != '') {
+	$pdf->MultiCell(0,10,textFormat($letter['letter_conclusion']),0,'J');
+	$pdf->Ln(30);
+}
 
-$pdf->MultiCell(0,10,textFormat($_POST['letter_treatment']),0,'J');
-$pdf->Ln(30);
+if ($letter['letter_treatment'] != '') {
+	$pdf->MultiCell(0,10,textFormat($letter['letter_treatment']),0,'J');
+	$pdf->Ln(30);
+}
 
-$pdf->MultiCell(0,10,textFormat($_POST['letter_ending']),0,'J');
-$pdf->Ln(30);
+if ($letter['letter_ending'] != '') {
+	$pdf->MultiCell(0,10,textFormat($letter['letter_ending']),0,'J');
+	$pdf->Ln(30);
+}
 
-$pdf->Cell(0,10,textFormat($_POST['letter_signatory']),0,0,'R');
+if ($letter['letter_signatory'] != '') {
+	$pdf->Cell(0,10,textFormat($letter['letter_signatory']),0,0,'R');
+}
 
 $random_chain = createRandomString (10);
 $letter_name = $_SESSION['patient']['patient_surname'].'_'.$_SESSION['patient']['patient_firstname'].'_'.date('Y-m-d').'_'.$random_chain;

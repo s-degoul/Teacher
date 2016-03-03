@@ -25,30 +25,28 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 <?php
 
-	if (isset ($_GET['from'])) {
-		$from_page = $_GET['from'];
-		if ($from_page == 'target_6') {
-			$from_page_link = '.?module=patient_teaching&action=show_target&id_target=6&type=user';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir à l'objectif éducatif n°6").'</a></p>';
-		}
-		elseif ($from_page == 'show_peakflow_use') {
-			$from_page_link = '.?module=patient_teaching&action=show_peakflow_use';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir à la liste des évaluations du DEP").'</a></p>';
-		}
+if (isset ($_GET['from'])) {
+	$from_page = $_GET['from'];
+	if ($from_page == 'target_6') {
+		$from_page_link = '.?module=patient_teaching&action=show_target&id_target=6&type=user';
+	}
+	elseif ($from_page == 'show_peakflow_use') {
+		$from_page_link = '.?module=patient_teaching&action=show_peakflow_use';
+	}
 /*
-		elseif ($from_page == 'create_educ_diag') {
-			$from_page_link = '.?module=patient_teaching&action=create_educ_diag&page_educ_diag=5';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir au diagnostic éducatif").'</a></p>';
-		}
-		elseif ($from_page == 'show_educ_diag') {
-			$from_page_link = '.?module=patient_teaching&action=show_educ_diag';
-			$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir au diagnostic éducatif").'</a></p>';
-		}
+	elseif ($from_page == 'create_educ_diag') {
+		$from_page_link = '.?module=patient_teaching&action=create_educ_diag&page_educ_diag=5';
+		$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir au diagnostic éducatif").'</a></p>';
+	}
+	elseif ($from_page == 'show_educ_diag') {
+		$from_page_link = '.?module=patient_teaching&action=show_educ_diag';
+		$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir au diagnostic éducatif").'</a></p>';
+	}
 */
-	}
-	else {
-		$from_page = '';
-	}
+}
+else {
+	$from_page = '';
+}
 
 
 if (isset ($_POST['valid_eval_quit']) or isset ($_POST['valid_eval_add'])) {
@@ -81,10 +79,10 @@ if (isset ($_POST['valid_eval_quit']) or isset ($_POST['valid_eval_add'])) {
 	}
 	else {
 		$peakflow_use_date = prepareDateSQL ($peakflow_use_date_parts[2], $peakflow_use_date_parts[1], $peakflow_use_date_parts[0]);
-		
+
 		if (checkdate ($peakflow_use_date_parts[1], $peakflow_use_date_parts[0], $peakflow_use_date_parts[2]) == false)
 			$messages['error'][] = _("La date entrée n'est pas correcte");
-		elseif (calculateAge ($peakflow_use_date) < 0)
+		elseif (calculateAge ($peakflow_use_date)['year'] < 0)
 			$messages['error'][] = _("La date entrée n'est pas correcte (postérieure à aujourd'hui)");
 	}
 	

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,17 +19,19 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
+
+if (isset ($_GET['licence']))
+	$target_licence = $_GET['licence'];
+else
+	$target_licence = 'program';
 
 
-<?php
-
-if (file_exists (VIEW_RELATIVE_PATH.'licence_'.$_SESSION['lang'])) {
-	$file_licence = fopen (VIEW_RELATIVE_PATH.'licence_'.$_SESSION['lang'], 'r');
+if (file_exists (VIEW_RELATIVE_PATH.'licence_'.$target_licence.'_'.$_SESSION['lang'])) {
+	$file_licence = fopen (VIEW_RELATIVE_PATH.'licence_'.$target_licence.'_'.$_SESSION['lang'], 'r');
 }
-elseif (file_exists (VIEW_RELATIVE_PATH.'licence_'.DEFAULT_LOCALE)) {
+elseif (file_exists (VIEW_RELATIVE_PATH.'licence_'.$target_licence.'_'.DEFAULT_LOCALE)) {
 	$messages['warning'][] = _("la licence n'est pas traduite dans votre langue");
-	$file_licence = fopen (VIEW_RELATIVE_PATH.'licence_'.DEFAULT_LOCALE, 'r');
+	$file_licence = fopen (VIEW_RELATIVE_PATH.'licence_'.$target_licence.'_'.DEFAULT_LOCALE, 'r');
 }
 else {
 	$messages['error'][] = _("licence introuvable");
@@ -53,8 +54,16 @@ if (empty ($messages['error'])) {
 	
 	fclose ($file_licence);
 	
-	require (VIEW_RELATIVE_PATH.'show_licence.php');
 	
+	$content_top .= '<p class = \'\'><a href = \'.?module=legal_notices&action=show_licence&licence=program\' class = \'link\'>'._("Programme").'</a></p></div>'
+	.'<div><p class = \'\'><a href = \'.?module=legal_notices&action=show_licence&licence=content\' class = \'link\'>'._("Contenu (texte, illustrations, ...").'</a></p>';
+	
+	if ($target_licence == 'program')
+		$messages['info'][] = _("Cette licence concerne le programme supportant Teacher (scripts PHP, HTML, SQL, CSS, Javascript) dont les sources sont disponibles sur <a href = 'https://github.com/s-degoul/Teacher'>GitHub</a>.");
+	elseif ($target_licence == 'content')
+		$messages['info'][] = _("Cette licence concerne le contenu de Teacher (textes, images, vidéos).");
+	
+	require (VIEW_RELATIVE_PATH.'show_licence.php');
 }
 
 ?>

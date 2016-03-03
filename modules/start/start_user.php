@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
+if ($_SESSION['user_validation_essential'] == 0 and $_SESSION['user_first_eval'] == 0)
+	$messages['advice'][] = _("Vous commencez votre parcours sur Teacher. La première étape est d'auto-évaluer vos compétences à l'éducation thérapeutique des patients (cliquez sur le lien &laquo; je teste mes compétences &raquo; à gauche).");
 
-<?php
+//print_r($_SESSION);
 
 require (VIEW_RELATIVE_PATH.'start_user.php');
 

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,30 +19,41 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
-
-
-<?php
 
 if (isset ($_GET['from'])) {
 	$from_page = $_GET['from'];
 	
 	if ($from_page == 'target_6') {
 		$from_page_link = '.?module=patient_teaching&action=show_target&id_target=6&type=user';
-		$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir à l'objectif éducatif n°6").'</a></p>';
 	}
 	elseif ($from_page == 'show_peakflow_use') {
 		$from_page_link = '.?module=patient_teaching&action=show_peakflow_use';
-		$content_top .= '<p><a href=\''.$from_page_link.'\'>'._("revenir à la liste des évaluations du DEP").'</a></p>';
 	}
 }
 else {
 	$from_page = '';
 }
 
-$video_file = 'peakflow_'.$_SESSION['lang'].'.ogg';
 
-if (file_exists ('videos/'.$video_file)) {
+$lang = $_SESSION['lang'];
+$no_video = 0;
+do {
+	$video_name = 'videos/peakflow_'.$lang;
+	$video_ogg = $video_name.'.ogg';
+	$video_mp4 = $video_name.'.mp4';
+	
+	if (!file_exists($video_ogg) and !file_exists($video_mp4))
+	{
+		if ($lang == DEFAULT_LOCALE) {
+			$no_video = 1;
+			break;
+		}
+		else
+			$lang = DEFAULT_LOCALE;
+	}
+} while ($no_video == 1);
+
+if ($no_video == 0) {
 	require (VIEW_RELATIVE_PATH.'show_video_peakflow.php');
 }
 else {

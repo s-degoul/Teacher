@@ -22,7 +22,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
 
-<h2><?php echo _("Qu'est-ce qui se passe dans le corps quand on fait une crise d’asthme ?"); ?></h2>
+<h2><?php echo _("Que se passe-t-il dans le corps quand on fait une crise d’asthme ?"); ?></h2>
 
 <div class = 't4_1_image'>
 	<img src='<?php echo IMAGE_PATH.'target/4/child_x-ray.jpg'; ?>' alt='chest X-ray'/>
@@ -32,7 +32,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 <div class = 't4_1_image'>
 	<div class = 't4_2_images'>
 		<h3><?php echo _("En cas de crise d’asthme :"); ?></h3>
-		<p><?php echo _("Les muscles autour de mes bronches se resserrent = bronchopasme"); ?></p>
+		<p><?php echo _("Les muscles autour de mes bronches se resserrent = bronchospasme"); ?></p>
 		<img src='<?php echo IMAGE_PATH.'target/4/tight_bronchi.jpg'; ?>' alt='tight bronchi'/>
 	</div>
 	<div class = 't4_2_images'>
@@ -77,5 +77,5 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 </div>
 
 <p><?php echo _("Mon(es) médicament(s) anti-inflammatoire(s) s’appelle(nt)"); ?> ............................................</p>
-<p><?php echo _("Si mon pédiatre/médecin le prescrit, je dois le prendre tous les jours même si je ne me sens pas gêné(e) pour respirer. Je ne l’arrête pas sans son autorisation."); ?></p>
+<p><?php echo _("Si mon médecin le prescrit, je dois le prendre tous les jours même si je ne me sens pas gêné(e) pour respirer. Je ne l’arrête pas sans son autorisation."); ?></p>
 <p><?php echo _("Il faut au moins 3 mois pour réparer les bronches."); ?></p>

@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,58 +19,69 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-﻿<?php
 $title_view = _("Diagnostic éducatif");
 $style[] = 'educ_diag';
 
-if ($_GET['action'] == 'create_educ_diag')
-	echo '<form action=\'.?module=patient_teaching&action=create_educ_diag&page_educ_diag=start\'
-		method=\'post\'>'."\n";
+
+
+if ($_GET['action'] == 'create_educ_diag') {
+?>
+<form action = '.?module=patient_teaching&action=create_educ_diag' method = 'post'>
+<?php
+}
 ?>
 	
-	<div class="educ_diag_objimg">
-<?php
-if (is_file ('images/objteam-diag.gif'))
-	echo '	<img src=\'images/objteam-diag.gif\' />'."\n";
-?>
+	<div class = 'target_image'>
+		<img src = '<?php echo IMAGE_PATH; ?>team.gif' />
 	</div>
-	<div class="educ_diag_objectivetitle">
+	<div class = 'target_title'>
 		<?php echo _("Equipe, autre que le pédiatre, soignant l'enfant en raison de son asthme"); ?>
 	</div>
 
 <?php
 $list_team = array (
-				'gp' => _("médecin généraliste"),
-				'allergo' => _("allergologue"),
-				'pneumo' => _("pneumologue"),
-				'physio' => _("kinésithérapeute"),
-				'er' => _("service hospitalier de soins d'urgence")
+				'gp' => _("Médecin généraliste"),
+				'allergo' => _("Allergologue"),
+				'pneumo' => _("Pneumologue"),
+				'physio' => _("Kinésithérapeute"),
+				'er' => _("Service hospitalier de soins d'urgence")
 			);
 			
 foreach ($list_team as $id_team => $title_team) {
-	$id_item = 'educ_diag_'.$id_team;
-	echo '	<p>'."\n";
-	
-	if (isset ($educ_diag['$id_item']))
-		$value_item = $educ_diag['$id_item'];
+	$id_item = 'educ_diag_'.$id_team;	
+	if (isset ($educ_diag[$id_item]))
+		$value_item = $educ_diag[$id_item];
 	else
 		$value_item = '';
-	
-	echo '		<label for=\''.$id_item.'\'>'.$title_team.' : </label>';
-	
-	if ($_GET['action'] == 'create_educ_diag')	
-		echo '<input type = \'text\' name = \''.$id_item.'\' id = \''.$id_item.'\' size = 40 value = \''.$value_item.'\'/>'."\n";
+?>
+
+	<div>
+		<div class = 'team_title'>
+			<label for = '<?php echo $id_item; ?>'><?php echo $title_team;?> : </label>
+		</div>
+		<div class = 'team_value'>
+<?php
+	if ($_GET['action'] == 'create_educ_diag') {
+?>
+			<input type = 'text' name = '<?php echo $id_item; ?>' id = '<?php echo $id_item; ?>' size = 40 value = "<?php echo $value_item; ?>" />
+<?php
+	}
 	else
+
 		echo $value_item."\n";
-	
-	echo '	</p>'."\n";
+?>	
+		</div>
+	</div>
+<?php
 }
+
 if ($_GET['action'] == 'create_educ_diag'){
-	echo '	<input type=\'hidden\' name = \'target_educ_diag\' value = \'team\' />'."\n";
-	echo '	<input type = \'submit\' name = \'valid_educ_diag\' value = \''._("page suivante").'\' />'."\n";
-	echo '</form>'."\n";
+?>
+	<input type = 'hidden' name = 'target_educ_diag' value = 'team'/>
+	<input type = 'submit' name = 'valid_next_page' value = "<?php echo _("Enregistrer et aller à l'étape suivante"); ?>"  class = 'button_validation'/>
+</form>
+<?php
 }
 ?>

@@ -1,0 +1,12 @@
+id_patient,id_user,patient_surname,patient_firstname,patient_date_birth,patient_date_inclusion,patient_sex,patient_height,patient_weight,patient_peakflow,patient_active
+3,2,Durand,Arthur,2015-05-13,,0,0,0,300,1
+4,2,Dupond,Catherine,2007-06-15,,1,0,0,0,0
+14,2,Hugo,Victor,1802-02-26,,0,,,,1
+15,2,Dupond,Martin,2002-09-18,2014-07-17,0,,,,1
+16,2,essai,tentative,2007-08-11,2014-08-13,1,,,,1
+17,2,boubou,germain,2006-08-25,2014-08-14,0,,,,1
+19,2,dupont,marcel,2009-08-15,2014-08-19,1,,,,1
+20,10,Premier,Napoléon,1886-09-18,2014-09-08,0,125,23,456,1
+21,10,"San Diego de Maria",Sabrina,2006-09-18,2014-09-08,1,,,,1
+22,10,Re-essai,moi,2004-08-14,2014-09-12,0,,,,1
+26,2,cououo,mlkjmlkj,2005-05-05,2015-11-13,1,,,,1

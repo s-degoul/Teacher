@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -21,8 +20,6 @@ You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
-
-
 
 <div class='content_target'>
 	
@@ -71,7 +68,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 				<ul>
 					<li><?php echo _("prévenir un adulte,"); ?></li>
 					<li><?php echo _("prendre le médicament de secours plusieurs fois,"); ?></li>
-					<li><?php echo _("prendre des comprimés ou gouttes de cortisone,"); ?></li>
+					<li><?php echo _("éventuellement prendre des comprimés ou gouttes de cortisone,"); ?></li>
 					<li><?php echo _("et demander un avis médical"); ?></li>
 				</ul>
 			</div>
@@ -79,18 +76,17 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 	</div>
 </div>
 
-<div class='advice_target'>
-
-	<p class='title_advice_target'><?php echo _("Méthode d’apprentissage").' :'; ?></p>
-	<p><?php echo _("analyse de situation"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Durée de la séance").' :'; ?></p>
-	<p><?php echo _("15 min"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Imprimer").' :'; ?></p>
-	<p><?php echo _("Objectif 7 enfant : « Je sais adapter mon traitement selon les résultats de mon débit de pointe. » (recto/verso)»"); ?></p>
-
-	<p class='title_advice_target'><?php echo _("Matériel nécessaire").' :'; ?></p>
-	<p><?php echo _("Prévoir que les parents aient le PAP"); ?></p>
-
-</div>
+<?php
+TargetInfoBox(array(
+				'learning_method' => array (_("analyse de situation")),
+				'duration' => '15 min',
+				'print' => array (
+								't7_fit_treatment_peakflow' => array (
+											'title' => _("Je sais adapter mon traitement selon les résultats de mon débit de pointe"),
+											'before_title' => _("Objectif 7 enfant"),
+											'after_title' => _("(recto/verso)")
+											)
+								),
+				'material' => array (_("Prévoir que les parents aient le PAPP"))
+				));
+?>

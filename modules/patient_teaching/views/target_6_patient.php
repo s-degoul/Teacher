@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -21,7 +20,6 @@ You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
 ?>
-
 
 <h2><?php echo _("Je sais mesurer mon souffle"); ?></h2>
 <div>
@@ -48,15 +46,15 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 		<img src='<?php echo IMAGE_PATH.'target/6/cough.jpg'; ?>' alt='cough'/>
 	</div>
 	<div class = 't6_text_near_image'>
-		<p><?php echo _("Si mon débit de pointe est en dessous de ma valeur <span class = 't6_text_orange'>« alerte »</span> qui est de"); ?> ............... <?php echo _("L/min"); ?></p>
-		<p><?php echo _("C’est que je commence une <span class = 't6_text_orange'>crise d’asthme</span>"); ?></p>
+		<p><?php echo _("Si mon débit de pointe est en dessous de ma valeur <span class = 'target_text_orange'>&laquo; alerte &raquo;</span> qui est de"); ?> ............... <?php echo _("L/min"); ?></p>
+		<p><?php echo _("C’est que je commence une <span class = 'target_text_orange'>crise d’asthme</span>"); ?></p>
 	</div>
 </div>
 
 <div>
 	<div class = 't6_text_near_image'>
-		<p><?php echo _("Si mon débit de pointe est en dessous de ma valeur <span class = 't6_text_red'>« alerte grave »</span> qui est de"); ?> ............... <?php echo _("L/min"); ?></p>
-		<p><?php echo _("C’est une <span class = 't6_text_red'>crise d’asthme grave</span>"); ?></p>
+		<p><?php echo _("Si mon débit de pointe est en dessous de ma valeur <span class = 'target_text_red'>« alerte grave »</span> qui est de"); ?> ............... <?php echo _("L/min"); ?></p>
+		<p><?php echo _("C’est une <span class = 'target_text_red'>crise d’asthme grave</span>"); ?></p>
 	</div>
 	<div class = 't6_image_near_text'>
 		<img src='<?php echo IMAGE_PATH.'target/6/breathless.jpg'; ?>' alt='breathless'/>
@@ -68,7 +66,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 <ul>
 	<li><?php echo _("Au départ, matin et soir avant la prise de mon traitement, pour mieux connaître mon souffle puis 1 fois par semaine ou par mois"); ?></li>
 	<li><?php echo _("Avant le sport, ou en cas de pic de pollution ou de brouillard, pour m’assurer que mes bronches ne sont pas resserrées"); ?></li>
-	<li><?php echo _("Chez mon pédiatre ou médecin, 2 fois par an car la valeur du débit de pointe change en grandissant"); ?></li>
+	<li><?php echo _("Chez mon médecin, 2 fois par an car la valeur du débit de pointe change en grandissant"); ?></li>
 	<li><?php echo _("En cas de gêne respiratoire ou crise d’asthme, pour m’aider à adapter mon traitement"); ?></li>
 </ul>
 
@@ -78,7 +76,7 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 <p>
 <?php
 if (CheckPDFExists ('target_6_table_peakflow'))
-	echo '<a href = \''.CheckPDFExists ('target_6_table_peakflow').'\'>'._("Télécharger").'</a><br/>'."\n";
+	echo '<a href = \''.CheckPDFExists ('t6_table_peakflow').'\'>'._("Télécharger").'</a><br/>'."\n";
 else
 	echo _("Erreur: fichier introuvable")."\n";
 ?>

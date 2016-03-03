@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 
 /*************************************************
  * configuration of header top menu.
@@ -35,86 +31,128 @@ along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 
 if (isset ($_SESSION['id_user'])) {
 	$links_menu_top = array(
-				0 => array('module' => 'start', 'action' => 'start_user', 'title' => _('Accueil')),
-				1 => array('module' => 'start', 'action' => 'introduction', 'title' => _('Pourquoi ce site ?')),
-				2 => array('module' => 'user_management', 'action' => 'show_profile', 'title' => _('Mon profil')),
-				3 => array(
-									'module' => 'user_teaching',
-									'action' => 'show_teacher',
-									'title' => _('Teacher pas à pas'),
-									'submenu' => array(
-												0 => array(
-													'module' => 'user_teaching',
-													'action' => 'create_eval',
-													'title' => _("J'évalue mes compétences pour dispenser l'ETP"),
-													'active' => 0
-															),
-												1 => array(
-													'module' => 'user_teaching',
-													'action' => 'show_essential',
-													'title' => _("L'essentiel à savoir avant de commencer"),
-													'active' => 0
-															),
-												2 => array(
-													'module' => 'patient_teaching',
-													'action' => 'show_educ_program',
-													'title' => _("Le programme éducatif personnalisé"),
-													'active' => 1
-															),
-												3 => array(
-													'module' => 'user_teaching',
-													'action' => 'create_eval',
-													'title' => _("J'évalue mes compétences pour dispenser l'ETP en fin de programme"),
-													'active' => 0
-															),
-												4 => array(
-													'module' => 'user_teaching',
-													'action' => 'show_essential',
-													'title' => _("Je rafraîchis mes connaissances"),
-													'active' => 1
-															)											
-												)
-									),
+				0 => array(
+							'module' => 'start',
+							'action' => 'start_user',
+							'title' => _('Accueil')
+						),
+				1 => array('module' => '',
+							'action' => '',
+							'title' => _("Présentation"),
+							'submenu' => array (
+											array (
+												'module' => 'start',
+												'action' => 'introduction',
+												'title' => _("Pourquoi ce site ?"),
+												'active' => 1
+											),
+											array (
+												'module' => 'start',
+												'action' => 'summary',
+												'title' => _("Coup d'oeil"),
+												'active' => 1
+											),
+											array (
+												'module' => 'start',
+												'action' => 'references',
+												'title' => _("Experts et références"),
+												'active' => 1
+											),
+											array (
+												'module' => 'start',
+												'action' => 'show_color_code',
+												'title' => _("Code couleur"),
+												'active' => 1
+											)
+										)
+						),
+				2 => array('module' => 'user_management', 'action' => 'show_profile', 'title' => _("Mon profil")),
 				4 => array(
-										'module' => 'patient_management',
-										'action' => 'show_patient_list',
-										'title' => _('Mes patients'),
+										'module' => '',
+										'action' => '',
+										'title' => _("Mes patients"),
 										'submenu' => array(
-													0 => array(
-														'module' => 'patient_management',
-														'action' => 'add_new_patient',
-														'title' => _('Ajouter un patient'),
-														'active' => 1
-																),
-													1 => array(
-														'module' => 'patient_management',
-														'action' => 'show_patient_list',
-														'title' => _('Voir la liste de tous mes patients'),
-														'active' => 1
-																)
+														array(
+															'module' => 'patient_management',
+															'action' => 'show_patient_list',
+															'title' => _("Voir la liste de tous mes patients"),
+															'active' => 1
+														),
+														array(
+															'module' => 'patient_management',
+															'action' => 'add_new_patient',
+															'title' => _("Ajouter un patient"),
+															'active' => 1
+														)
 													)
 										)
 					);
+//~ 3 => array(
+									//~ 'module' => 'user_teaching',
+									//~ 'action' => 'show_teacher',
+									//~ 'title' => _('Teacher pas à pas'),
+									//~ 'submenu' => array(
+												//~ 0 => array(
+													//~ 'module' => 'user_teaching',
+													//~ 'action' => 'create_eval',
+													//~ 'title' => _("J'évalue mes compétences pour dispenser l'ETP"),
+													//~ 'active' => 0
+															//~ ),
+												//~ 1 => array(
+													//~ 'module' => 'user_teaching',
+													//~ 'action' => 'show_essential',
+													//~ 'title' => _("L'essentiel à savoir avant de commencer"),
+													//~ 'active' => 0
+															//~ ),
+												//~ 2 => array(
+													//~ 'module' => 'patient_teaching',
+													//~ 'action' => 'show_educ_program',
+													//~ 'title' => _("Le programme éducatif personnalisé"),
+													//~ 'active' => 1
+															//~ ),
+												//~ 3 => array(
+													//~ 'module' => 'user_teaching',
+													//~ 'action' => 'create_eval',
+													//~ 'title' => _("J'évalue mes compétences pour dispenser l'ETP en fin de programme"),
+													//~ 'active' => 0
+															//~ ),
+												//~ 4 => array(
+													//~ 'module' => 'user_teaching',
+													//~ 'action' => 'show_essential',
+													//~ 'title' => _("Je rafraîchis mes connaissances"),
+													//~ 'active' => 1
+															//~ )											
+												//~ )
+									//~ ),
 					
 	// to determine which item is active or not according to user's progress
 	if ($_SESSION['user_validation_essential'] == 0) {
-		$links_menu_top[3]['submenu'][2]['active'] = 0;
-		$links_menu_top[3]['submenu'][4]['active'] = 0;
+//		$links_menu_top[3]['submenu'][2]['active'] = 0;
+//		$links_menu_top[3]['submenu'][4]['active'] = 0;
 													
 		$links_menu_top[4]['submenu'][0]['active'] = 0;
 		$links_menu_top[4]['submenu'][1]['active'] = 0;
 												
 		if ($_SESSION['user_first_eval'] == 0) {
-			$links_menu_top[3]['submenu'][0]['active'] = 1;
+//			$links_menu_top[3]['submenu'][0]['active'] = 1;
 		}
 		else {
-			$links_menu_top[3]['submenu'][1]['active'] = 1;
+//			$links_menu_top[3]['submenu'][1]['active'] = 1;
 		}
 		
 	}
 
-	if ($_SESSION['user_eval_to_do'] == 1)
-		$links_menu_top[3]['submenu'][3]['active'] = 1;
+//	if ($_SESSION['user_eval_to_do'] == 1)
+//		$links_menu_top[3]['submenu'][3]['active'] = 1;
+
+	if($_SESSION['user_rights'] == 'admin') {
+		$links_menu_top[5] = array(
+							'module' => 'administration',
+							'action' => 'show_actions',
+							'title' => _("Administration")
+							);
+	}
+	
 }
 
 elseif (isset ($_SESSION['visitor'])) {
@@ -122,7 +160,7 @@ elseif (isset ($_SESSION['visitor'])) {
 				0 => array('module' => 'start', 'action' => 'start_visitor', 'title' => _("Accueil")),
 				1 => array('module' => 'patient_teaching', 'action' => 'show_target_list', 'title' => _("Objectifs pédagogiques")),
 				2 => array('module' => 'patient_teaching', 'action' => 'show_eval', 'title' => _("Évaluation de l'enfant")),
-				3 => array('module' => 'patient_teaching', 'action' => 'create_parent_eval', 'title' => _("Évaluation des parents"))
+				//~ 3 => array('module' => 'patient_teaching', 'action' => 'create_parent_eval', 'title' => _("Évaluation des parents"))
 				);
 }
 

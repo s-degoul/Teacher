@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,40 +19,46 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
-$title_view = 'Ce patient';
+$title_view = _("Profil de").' '.$patient['patient_firstname'].' '.strtoupper($patient['patient_surname']);
 $style[] = 'patient_profile';
 $style[] = 'patient_teaching';
 ?>
 
-<h1><?php echo strtoupper($patient['patient_surname']).' '.$patient['patient_firstname']; ?></h1>
 
 <div class='patient_profile'>
 	<form method='post' action='.?module=patient_management&action=modify_profile'>
 	<div class='patient_profile_side'>
-		<h3>Identité</h3>
-		<ul>
-			<li>
-				<label for='patient_surname'>Nom : </label>
+		<h3><?php echo _("Identité"); ?></h3>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_surname'><?php echo _("Nom"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<input type='text' name='patient_surname' id='patient_surname'
 					value = "<?php echo $patient['patient_surname']; ?>" />
-			</li>
-			<li>
-				<label for='patient_firstname'>Prénom : </label>
+			</p>
+		</div>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_firstname'><?php echo _("Prénom"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<input type='text' name='patient_firstname' id='patient_firstname'
 					value = "<?php echo $patient['patient_firstname']; ?>" />
-			</li>
-			<li>
-				<label for='patient_sex'>Sexe : </label>
+			</p>
+		</div>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_sex'><?php echo _("Sexe"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<select name='patient_sex' id='patient_sex'>
 <?php
 
 	$list_sex = array (
-			0 => 'garçon',
-			1 => 'fille'
+			0 => _("fille"),
+			1 => _("garçon")
 		);
 	foreach ($list_sex as $value_sex => $title_sex) {
 		if ($patient['patient_sex'] == $value_sex)
@@ -65,37 +70,53 @@ $style[] = 'patient_teaching';
 	}
 ?>
 				</select>
-			</li>
-			<li>
-				<label for='patient_date_birth'>Date de naissance (format JJ/MM/AAAA) : </label>
+			</p>
+		</div>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_date_birth'><?php echo _("Date de naissance (format JJ/MM/AAAA)"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<input type='text' name='patient_date_birth' id='patient_date_birth'
 					value = "<?php echo showDate ($patient['patient_date_birth']); ?>" />
-			</li>
-		</ul>
+			</p>
+		</div>
 	</div>
+	
+	
 	<div class='patient_profile_side'>
-		<h3>Données physiologiques</h3>
-		<ul>
-			<li>
-				<label for='patient_height'>Taille : </label>
+		<h3><?php echo _("Données physiologiques"); ?></h3>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_height'><?php echo _("Taille"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<input type='text' name='patient_height' id='patient_height'
-					value = "<?php echo $patient['patient_height']; ?>" /> cm
-			</li>
-			<li>
-				<label for='patient_weight'>Poids : </label>
+					value = "<?php echo $patient['patient_height']; ?>" size=3 /> <?php echo _("cm"); ?>
+			</p>
+		</div>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_weight'><?php echo _("Poids"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<input type='text' name='patient_weight' id='patient_weight'
-					value = "<?php echo $patient['patient_weight']; ?>" /> kg
-			</li>
-			<li>
-				<label for='patient_peakflow'>Débit expiratoire de pointe (DEP) : </label>
+					value = "<?php echo $patient['patient_weight']; ?>" size=3 /> <?php echo _("kg"); ?>
+			</p>
+		</div>
+		<div>
+			<p class = 'patient_profile_title'>
+				<label for='patient_peakflow'><?php echo _("Débit expiratoire de pointe (DEP)"); ?> : </label>
+			</p>
+			<p class = 'patient_profile_field'>
 				<input type='text' name='patient_peakflow' id='patient_peakflow'
-					value = "<?php echo $patient['patient_peakflow']; ?>" /> L/min
-			</li>
-
-		</ul>
+					value = "<?php echo $patient['patient_peakflow']; ?>" size=3 /> <?php echo _("L/min"); ?>
+			</p>
+		</div>
 	</div>
 
-	<input type='submit' name='valid_modif_profile' value='Valider' />
+	<input type='submit' name='valid_modif_profile' value = "<?php echo _("Valider"); ?>" title = "<?php echo _("enregistrer les modifications"); ?>" class = 'button_validation' />
+	<input type='submit' name='cancel_modif_profile' value = "<?php echo _("Annuler les modifications"); ?>" title = "<?php echo _("revenir au profil sans enregistrer"); ?>" class = 'button_cancel' />
 	</form>
 </div>
 

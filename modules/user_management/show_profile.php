@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,17 +19,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
+	$id_user = $_SESSION['id_user'];
 	require (MODEL_PATH.'select_user_all.php');
 	require (MODEL_PATH.'select_user_speciality.php');
-	require (MODEL_PATH.'select_user_eval_list.php');
 	
 	require ('list_practice.php');
 
-//	print_r ($_SESSION);
 
 	require (VIEW_RELATIVE_PATH.'show_profile.php');
 ?>

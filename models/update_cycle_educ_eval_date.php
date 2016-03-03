@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 
 try {
 	if (!isset ($db))
@@ -32,12 +29,13 @@ try {
 	$request = $db -> prepare (
 		'UPDATE table_cycle_educ
 		SET cycle_educ_eval_date = :cycle_educ_eval_date
-		WHERE id_cycle_educ = :id_cycle_educ'
+		WHERE id_cycle_educ = :id_cycle_educ and id_patient = :id_patient'
 		);
 
 	$request -> execute (array (
 							'cycle_educ_eval_date' => $cycle_educ_eval_date,
-							'id_cycle_educ' => $id_cycle_educ
+							'id_cycle_educ' => $id_cycle_educ,
+							'id_patient' => $id_patient
 						));
  
 	$request -> closeCursor();

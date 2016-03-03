@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
 
-<?php
 
 try {
 	if (!isset ($db))
@@ -37,7 +34,7 @@ try {
 		);
 
 	$request -> execute (array (
-		'id_patient' => $_SESSION['patient']['id_patient'],
+		'id_patient' => $id_patient,
 		'id_cycle_educ' => $id_cycle_educ
 	));
 
