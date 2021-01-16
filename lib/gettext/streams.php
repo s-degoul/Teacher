@@ -1,4 +1,3 @@
-  
 <?php
 /*********************************************************************
 Teacher
@@ -20,10 +19,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Teacher.  If not, see <http://www.gnu.org/licenses/>
 *********************************************************************/
-?>
 
-
-<?php
 /*
    Copyright (c) 2003, 2005, 2006, 2009 Danilo Segan <danilo@kvota.net>.
 
